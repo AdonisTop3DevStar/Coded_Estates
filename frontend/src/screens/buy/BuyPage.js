@@ -1,0 +1,27 @@
+import { Row, Col, Button } from "react-bootstrap";
+import { NormalCard } from "../../components/card/card";
+import { SearchBar } from "../../components/searchbar/SearchBar";
+import { buyPageData } from "../../utils/data";
+import { FaMap } from "react-icons/fa";
+import { GoogleMapElement } from "../../components/map/map";
+
+function BuyPage() {
+    return (
+      <div className="BuyPage position-relative">
+        <SearchBar/>
+        <Row className="Search-result">
+            {
+                buyPageData.map((item, idx) => (
+                    <Col xs={12} sm={12} md={2}>
+                        <NormalCard key={idx} title={item.title} network={item.network} price={item.price} images={item.images}/>
+                    </Col>
+                ))
+            }
+        </Row>
+        <Button className="rounded-pill position-ablsolute show-map-btn px-4">Show Map<FaMap className="ms-2"/></Button>
+      </div>
+    );
+  }
+  
+  export default BuyPage;
+  
