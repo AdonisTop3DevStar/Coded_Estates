@@ -17,9 +17,11 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.7.1",
     "react-multi-carousel": "^2.8.2",
+    "react-multi-date-picker": "^3.3.4",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-static-google-map": "^0.9.0",
+    "react-switch-selector": "^2.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

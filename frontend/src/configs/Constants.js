@@ -3,33 +3,38 @@ export const THEME_TYPE = {
     LIGHT : "LIGHT",
 }
 
+const MAINCOLOR = {
+    WHITE : "#FFFFFF",
+    WHITE_CUSTOM : "#F7F8FA",
+    RED : "#FFFFFF",
+    ORANGE : "#FFB800",
+    GRAY : "#32326080",
+    PURPLE : "#6317F7",
+    DARK_PURPLE : "#323260",
+    LIGHT_PURPLE : "#6317F780",
+};
+
 export const Theme = {
     [THEME_TYPE.LIGHT] : {
-        background : "#FFFFFF",
-        text : "#222222",
-        border : "#ebebeb",
-        boxShadow : "#B8B8B8",
-        primaryBtnBG : "",
-        primaryBtnText : "",
-        secondPrimaryBtnBG : "#FFFFFF",
-        secondPrimaryBtnText : "#121315",
-        secondPrimaryBtnBorder : "#ebebeb",
-        secondPrimaryFillBtnBG : "#121315",
-        secondPrimaryFillBtnText : "#FFFFFF",
+        WHITE : "#FFFFFF",
+        WHITE_CUSTOM : "#F7F8FA",
+        RED : "#FFFFFF",
+        ORANGE : "#FFB800",
+        GRAY : "#32326080",
+        PURPLE : "#6317F7",
+        DARK_PURPLE : "#323260",
+        LIGHT_PURPLE : "#6317F780",
     },
     [THEME_TYPE.DARK] : {
-        background : "#222222",
-        text : "#FFFFFF",
-        border : "#ebebeb",
-        boxShadow : "#B8B8B8",
-        primaryBtnBG : "",
-        primaryBtnText : "",
-        secondPrimaryBtnBG : "",
-        secondPrimaryBtnText : "",
-        secondPrimaryFillBtnBG : "",
-        secondPrimaryFillBtnText : "",
+        WHITE : "#FFFFFF",
+        WHITE_CUSTOM : "#F7F8FA",
+        RED : "#FFFFFF",
+        ORANGE : "#FFB800",
+        GRAY : "#32326080",
+        PURPLE : "#6317F7",
+        DARK_PURPLE : "#323260",
+        LIGHT_PURPLE : "#6317F780",
     }
 }
 
 export const GOOGLE_MAP_API = "AIzaSyCVW86OyHByj-7UidYfxC_ihn5vCSAWy34";
-

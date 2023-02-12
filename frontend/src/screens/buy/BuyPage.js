@@ -9,6 +9,7 @@ function BuyPage() {
     return (
       <div className="BuyPage position-relative">
         <SearchBar/>
+        <small className="my-5">Over {buyPageData.length} homes within map area</small>
         <Row className="Search-result">
             {
                 buyPageData.map((item, idx) => (
@@ -18,7 +19,7 @@ function BuyPage() {
                 ))
             }
         </Row>
-        <Button className="rounded-pill position-ablsolute show-map-btn px-4">Show Map<FaMap className="ms-2"/></Button>
+        <Button className="round-btn position-ablsolute show-map-btn px-4">Show Map<FaMap className="ms-2"/></Button>
       </div>
     );
   }

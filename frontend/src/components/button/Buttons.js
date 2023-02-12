@@ -1,4 +1,10 @@
-import { Button } from "react-bootstrap"
+import { Button } from "react-bootstrap";
+
+export const RoundedMainBtn = ({title}) => {
+    return (
+        <Button className="rounded-circle" >{title}</Button>
+    )
+}
 
 export const DefaultBtn = ({title}) => {
     return (
@@ -8,7 +14,7 @@ export const DefaultBtn = ({title}) => {
 
 export const PrimaryBtn = ({title}) => {
     return (
-        <Button className="PrymaryBtn">{title}</Button>
+        <Button className="PrimaryBtn">{title}</Button>
     )
 }
 

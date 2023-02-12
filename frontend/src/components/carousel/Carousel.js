@@ -2,11 +2,11 @@ import { Badge, Carousel, Image } from "react-bootstrap";
 
 export const DetailCarousel = ({images}) => {
   return (
-    <Carousel className="p-3 border border-1 rounded-1 DetailCarousel">
+    <Carousel className="my-2 DetailCarousel">
         {
             images.map((item, idx) => (
                 <Carousel.Item key={idx}>
-                    <Image src={item.src} width="100%" height="500" className="rounded-1"/>
+                    <Image src={item.src} width="100%" height="500" className="rounded-1" style={{objectFit : "cover"}}/>
                 </Carousel.Item>
             ))
         }      

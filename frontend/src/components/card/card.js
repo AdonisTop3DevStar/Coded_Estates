@@ -1,5 +1,5 @@
-import { Card, Carousel, Col, Image, Row } from "react-bootstrap";
-import { FaRuler, FaBath, FaBed, FaHeart, FaRegHeart} from "react-icons/fa";
+import { Card, Carousel, Col, Image, Row, Button } from "react-bootstrap";
+import { FaRuler, FaBath, FaBed, FaHeart, FaRegHeart, FaStar} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PrimaryBtn, SecondPrimaryBtn } from "../button/Buttons";
 import VerifyIcon from '../../assets/images/icons/verify.svg';
@@ -36,11 +36,11 @@ export const NormalCard = ({title, network, price, images}) => {
                     }                    
                 </Carousel>
                 <Link className="nav-link" to="/detail/1">
-                <Card.Title className="fs-6 d-flex align-items-center justify-content-between my-1">
-                    <div>{price} {network}</div>
-                    <small>{price} {network}</small>
+                <Card.Title className="d-flex align-items-center justify-content-between my-1">
+                    <div className="card-price">{price} {network}</div>
+                    <small className="card-reviews d-flex "><FaStar className="review-icon me-1"/><span>4.8</span></small>
                 </Card.Title>
-                <Card.Subtitle className="fw-semibold fs-6 my-1">{title}</Card.Subtitle>
+                <Card.Subtitle className="my-1 normal-card-title">{title}</Card.Subtitle>
                 <div className="d-flex align-items-center justify-content-between card-properties">
                     <div><FaRuler/><span className="ms-2">300</span></div>
                     <div><FaBath/><span className="ms-2">2</span></div>
@@ -151,10 +151,10 @@ export const MintedPropertiesCard = () => {
 export const PropertyInfoCard = () => {
     return (
         <div className="PropertyInfoCard mt-4">
-            <Card>
+            <Card className="shadow ">
                 <Card.Body className="d-flex align-items-center row">
                     <Col sm={12} md={3} className="d-flex align-items-center">
-                        <Image src={BarChartIcon} width="100" height="100"/>
+                        <Image src={BarChartIcon} width="75" height="75"/>
                         <div className="ms-3 d-flex flex-column justify-content-around">
                             <div className="fs-5 fw-bold my-2">Properties States</div>
                             <div className="opacity-50 my-2">3 items</div>
@@ -265,11 +265,10 @@ export const ListPropertyCard = () => {
                     <Link to="/dashboard/properties/1" className="nav-link">
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <div className="fw-bold">Kent Avenue #310</div>
-                        <div className="opacity-50">4.7 USD</div>
+                        <div className="opacity-50">4.7 SEI</div>
                     </div>
-                    </Link>
-                    
-                    <SecondPrimaryBtn title="Unlisted"/>
+                    </Link>                    
+                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlisted</Button>
                 </Card.Body>
             </Card>
         </div>
@@ -286,10 +285,10 @@ export const BidPropertyCard = () => {
                         <div className="fw-bold">Kent Avenue #310</div>
                     </div>
                     <div className="d-flex align-items-center justify-content-between">
-                        <SecondPrimaryBtn title="439 USD"/>
-                        <div className="text-right">
+                        <Button className="fw-bold text-dark-purple bg-white border-dark-purple">439 USD</Button>
+                        <div className="text-end">
                             <div className="opacity-50">Offer</div>
-                            <div>4.7<span className="ms-2 opacity-50">USD</span></div>
+                            <div>4.7<span className="ms-2 opacity-50 fw-semibold">SEI</span></div>
                         </div>
                     </div>
                 </Card.Body>

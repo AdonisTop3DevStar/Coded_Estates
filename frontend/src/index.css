@@ -83,8 +83,11 @@
 
 .Sidebar {
   width: 300px;
-  border-right: 1px solid;
-  height: 87vh;
+  height: calc(100vh - 5rem);
+}
+
+.Header {
+  height: 5rem;
 }
 
 /* MintCard Style */
@@ -142,4 +145,41 @@
 
 .chat-body {
   min-height: 66.5vh !important;
+}
+
+.DetailPage .rmdp-shadow {
+  margin: 0 !important;
+}
+
+.nav-link:hover, 
+.nav-link:active, 
+.nav-link:focus {
+  color: #6317F7 !important;
+}
+
+.nav-link {
+  color: #323260 !important;
+}
+
+.PropertiesTabContent {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.PropertiesTabContent .SearchPropertiesBar {
+  z-index: 100;
+  right: 0;
+  top: -2.75rem;
+}
+
+.PropertiesTabContent .SearchPropertiesBar .input-group-text {
+  background-color: white;
+  border-right: none;  
+  color: #32326080 !important;
+}
+
+.PropertiesTabContent .SearchPropertiesBar input {
+  background-color: white;
+  border-left: none;  
+  color: #32326080 !important;
 }

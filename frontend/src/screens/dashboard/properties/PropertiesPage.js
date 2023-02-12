@@ -1,6 +1,6 @@
-import { Container, Tab, Tabs } from "react-bootstrap";
+import { Container, Tab, Tabs, Row, InputGroup, Form } from "react-bootstrap";
 import { BidPropertyCard, ListPropertyCard, PropertyInfoCard } from "../../../components/card/card";
-
+import { FaSearch } from "react-icons/fa";
 
 function PropertiesPage() {
     return (
@@ -9,37 +9,115 @@ function PropertiesPage() {
         <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
         <PropertyInfoCard/>
         <Tabs
-          defaultActiveKey="properties"
+          defaultActiveKey="verified"
           id="uncontrolled-tab-example"
           className="mt-5"
         >
-          <Tab eventKey="properties" title="My Properties">
-            <div className="PropertiesTabContent p-2 border row border-1 border-top-0">
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
+          <Tab eventKey="verified" title="Verified NFTs">
+            <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
+              <div className="SearchPropertiesBar position-absolute ">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                <Form.Control
+                  placeholder="Search for Property"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+              </div>
+              <Row>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+              </Row>
             </div>
           </Tab>
-          <Tab eventKey="listings" title="My Listings">
-            <div className="PropertiesTabContent p-2 border border-1 border-top-0">
-              sdfsdfsdff
+          <Tab eventKey="unverified" title="Unverified NFTs">
+            <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
+            <div className="SearchPropertiesBar position-absolute ">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                <Form.Control
+                  placeholder="Search for Property"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+              </div>
+            <Row>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+                <ListPropertyCard/>
+              </Row>
             </div>
           </Tab>
-          <Tab eventKey="bids" title="My Bids">
-            <div className="PropertiesTabContent row p-2 border border-1 border-top-0">
-              <BidPropertyCard/>
-              <BidPropertyCard/>
-              <BidPropertyCard/>
-              <BidPropertyCard/>
-              <BidPropertyCard/>
+          <Tab eventKey="listing" title="My Listings">
+            <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
+            <div className="SearchPropertiesBar position-absolute ">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                <Form.Control
+                  placeholder="Search for Property"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+              </div>
+              <Row>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+              </Row>
             </div>
           </Tab>
-          <Tab eventKey="offers" title="My Offers">
-            <div className="PropertiesTabContent p-2 border border-1 border-top-0">
-              sdfsdfsdff
+          <Tab eventKey="bookings" title="My Bookings">
+            <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
+            <div className="SearchPropertiesBar position-absolute ">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                <Form.Control
+                  placeholder="Search for Property"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+              </div>
+            <Row>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+              </Row>
+            </div>
+          </Tab>
+          <Tab eventKey="notlisted" title="Not listed">
+            <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
+            <div className="SearchPropertiesBar position-absolute ">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                <Form.Control
+                  placeholder="Search for Property"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+              </div>
+            <Row>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+                <BidPropertyCard/>
+              </Row>
             </div>
           </Tab>
         </Tabs>
