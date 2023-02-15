@@ -8,4 +8,4 @@ const Store = {
     VerifyMode : true
 }
 
-store.setState(Store);
+store.setState("Mode", true);
