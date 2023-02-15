@@ -7,7 +7,7 @@ import { GoogleMapElement } from "../../components/map/map";
 
 function BuyPage() {
     return (
-      <div className="BuyPage position-relative">
+      <div className="BuyPage position-relative" style={{marginTop:"81"}}>
         <SearchBar/>
         <small className="my-5">Over {buyPageData.length} homes within map area</small>
         <Row className="Search-result">
