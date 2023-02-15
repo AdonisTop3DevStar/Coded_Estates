@@ -18,6 +18,11 @@ export const Style = (theme) => `
 
     .Header {
         box-shadow : 0 0 1px 0 ${Theme[theme].GRAY} !important;
+        top: 0;
+    }
+
+    .DetailPage {
+        margin-top : 85px !important;
     }
 
     .round-btn {

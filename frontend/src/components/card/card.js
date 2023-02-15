@@ -21,6 +21,7 @@ import DownIcon from '../../assets/images/icons/down.svg';
 
 
 
+
 export const NormalCard = ({title, network, price, images}) => {
     return (
         <Card className="NormalCard my-2">
@@ -204,7 +205,7 @@ export const PropertyInfoCard = () => {
 
 export const FavouritInfoCard = () => {
     return (
-        <div className="PropertyInfoCard mt-4">
+        <div className="PropertyInfoCard mt-4 shadow">
             <Card>
                 <Card.Body className="d-flex align-items-center row">
                     <Col sm={12} md={3} className="d-flex align-items-center">
@@ -269,6 +270,24 @@ export const ListPropertyCard = () => {
                     </div>
                     </Link>                    
                     <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlisted</Button>
+                </Card.Body>
+            </Card>
+        </div>
+    )
+}
+
+export const MyNFTCard = () => {
+    return (
+        <div className="MyNFTCard col-sm-12 col-md-2">
+            <Card className="border-0">
+                <Card.Body>
+                    <Image src={BuildingImage} width="100%" height="250" className="rounded mb-3"/>
+                    <Link to="/dashboard/properties/1" className="nav-link">
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                        <div className="fw-bold">Kent Avenue #310</div>
+                    </div>
+                    </Link>                    
+                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">View</Button>
                 </Card.Body>
             </Card>
         </div>

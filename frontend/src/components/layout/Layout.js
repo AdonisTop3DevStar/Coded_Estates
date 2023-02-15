@@ -20,7 +20,7 @@ export const DashboardLayout = () => {
             <Header/>
             <Container fluid className="d-flex">
                 <Sidebar/>
-                <Container fluid className="px-4">
+                <Container fluid className="px-4 dashboard-layout">
                     <Outlet/>
                 </Container>
             </Container>

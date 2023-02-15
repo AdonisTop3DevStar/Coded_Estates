@@ -10,6 +10,10 @@ import RewardsIcon from '../../assets/images/icons/gift.svg';
 import HoldingIcon from '../../assets/images/icons/hand.svg';
 import Logo from '../../assets/images/Logo-white.svg';
 import { RoundedMainBtn } from "../button/Buttons";
+import { useState } from "react";
+import {store} from '../../configs/Store';
+import createSwitch,{ deleteSwitch } from 'switch-button'
+import 'switch-button/dist/index.css'
 
 const NavListItem = ({icon, title, link}) => {
   return (
@@ -21,48 +25,70 @@ const NavListItem = ({icon, title, link}) => {
 
 const NavListData = [
   {title : "Dashboard", link : "/dashboard/overview", icon : DashboardIcon},
-  {title : "My Properties", link : "/dashboard/properties", icon : PropertiesIcon},
-  {title : "Messages", link : "/dashboard/message", icon : MessageIcon},
-  {title : "Favorites", link : "/dashboard/favorite", icon : FavoritesIcon},
-  {title : "Activity", link : "/dashboard/activity", icon : ActivityIcon},
-  {title : "My Rewards", link : "/dashboard/rewards", icon : RewardsIcon},
-  {title : "My Holdings", link : "/dashboard/holding", icon : HoldingIcon},
-  {title : "Transactions", link : "/dashboard/transactions", icon : OffersIcon},
+  {title : "My Properties", link : "/dashboard/buy/properties", icon : PropertiesIcon},
+  {title : "Messages", link : "/dashboard/buy/message", icon : MessageIcon},
+  {title : "Favorites", link : "/dashboard/buy/favorite", icon : FavoritesIcon},
+  {title : "My Rewards", link : "/dashboard/buy/rewards", icon : RewardsIcon},
+  {title : "My Holdings", link : "/dashboard/buy/holding", icon : HoldingIcon},
+  {title : "Transactions", link : "/dashboard/buy/transactions", icon : OffersIcon},
 ];
 
 const RentalNavListData = [
   {title : "Dashboard", link : "/dashboard/overview", icon : DashboardIcon},
-  {title : "My Properties", link : "/dashboard/properties", icon : PropertiesIcon},
-  {title : "Messages", link : "/dashboard/message", icon : MessageIcon},
-  {title : "Favorites", link : "/dashboard/favorite", icon : FavoritesIcon},
-  {title : "Activity", link : "/dashboard/activity", icon : ActivityIcon},
-  {title : "My Rewards", link : "/dashboard/rewards", icon : RewardsIcon},
-  {title : "My Holdings", link : "/dashboard/holding", icon : HoldingIcon},
-  {title : "Transactions", link : "/dashboard/transactions", icon : OffersIcon},
-  {title : "My Trips", link : "/dashboard/transactions", icon : OffersIcon},
-  {title : "Reservations", link : "/dashboard/transactions", icon : OffersIcon},
-  {title : "Reviews", link : "/dashboard/transactions", icon : OffersIcon},
+  {title : "My Properties", link : "/dashboard/rent/properties", icon : PropertiesIcon},
+  {title : "Messages", link : "/dashboard/rent/message", icon : MessageIcon},
+  {title : "Favorites", link : "/dashboard/rent/favorite", icon : FavoritesIcon},
+  {title : "My Rewards", link : "/dashboard/rent/rewards", icon : RewardsIcon},
+  {title : "My Holdings", link : "/dashboard/rent/holding", icon : HoldingIcon},
+  {title : "Transactions", link : "/dashboard/rent/transactions", icon : OffersIcon},
+  {title : "My Trips", link : "/dashboard/rent/trips", icon : OffersIcon},
+  {title : "Reservations", link : "/dashboard/rent/reservations", icon : OffersIcon},
+  {title : "Reviews", link : "/dashboard/rent/reviews", icon : OffersIcon},
 ];
 
+
 export default function Sidebar() {
+   
+  const [mode, setMode, updateMode] = store.useState('Mode');
+  const [buyMode, setBuyMode] = useState(true);  
+  const toggleValue = () => {
+    setBuyMode((prevState) => !prevState);
+    setMode(mode => {
+      mode = !mode;
+      return mode;
+    });
+  }
   
 
     return (
-      <div className="Sidebar position-relative">
+      <div className="Sidebar">
         <Container className="">
+          <div className="SwitchMode">
+            {mode}
+          <div>
+            {buyMode ? (
+              <div className="toggle-btn mt-3">
+                <div className="text-center"><span  onClick={toggleValue} className="bg-purple text-white py-1 px-3 rounded-5">Buy/Sell Mode</span></div>
+              </div>
+            ) : (
+              <div className="toggle-btn mt-3">
+                <div className="text-center"><span  onClick={toggleValue} className="bg-dark-purple text-white py-1 px-3 rounded-5">Rental Mode</span></div>
+              </div>
+            )}
+          </div>
+          </div>
           <div className="Sidebar-Navlist">            
-            {
+            {mode ? (
               NavListData.map((item, idx) => (
                 <NavListItem icon={item.icon} title={item.title} link={item.link} key={idx}/>
               ))
+            ) : (
+              RentalNavListData.map((item, idx) => (
+                <NavListItem icon={item.icon} title={item.title} link={item.link} key={idx}/>
+              ))
+            )             
             }
           </div>
-            {/* <Card className="position-absolute bottom-0 mb-3 bg-dark-purple text-white">
-              <Card.Body>
-                <Image src={Logo}/>
-                <Button className="round-btn bg-light">Switch</Button>      
-              </Card.Body>
-            </Card> */}
         </Container>
       </div>
     );

@@ -84,6 +84,20 @@
 .Sidebar {
   width: 300px;
   height: calc(100vh - 5rem);
+  position: fixed !important;
+  margin-top: 81px !important;
+}
+
+.Header {
+  position: fixed !important;
+  background: white !important;
+  width: 100% !important;
+  z-index: 100;
+}
+
+.dashboard-layout {
+  margin-left: 300px !important;
+  margin-top: 81px !important;
 }
 
 .Header {
@@ -182,4 +196,102 @@
   background-color: white;
   border-left: none;  
   color: #32326080 !important;
+}
+
+.MessagePage .user-list,
+.MessagePage .content-list,
+.MessagePage .content-detail {
+  height: calc(100vh - 90px);
+}
+
+.MessagePage .Message-content {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.MessagePage .Message-content::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+.MessagePage .Message-contenty:-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+.MessagePage .Message-content::-webkit-scrollbar-thumb {
+  background-color: #323260;    /* color of the scroll thumb */
+  border-radius: 20px;  
+}
+
+.nav-tabs .nav-link {
+  font-weight: bold;
+}
+
+.toggle-btn span {
+  cursor: pointer;
+}
+
+.TripsPage .nav.nav-tabs {
+  border : 1px solid;
+  width: 15%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.TripsPage .nav.nav-tabs .nav-item button {
+  padding: 0.25rem 1rem;
+  border-width: 1px;
+}
+
+.TripsPage .nav.nav-tabs .nav-item button:hover {
+  padding: 0.25rem 1rem;
+  border-width: 1px;
+  border-color: white !important;
+  color: #323260 !important;
+}
+
+.TripsPage .nav.nav-tabs .nav-item button[aria-selected="true"] {
+  background: #323260 !important;
+  border-radius: 1rem !important;
+  border-width: 1px;
+  color: white !important;
+  padding: 0.25rem 1rem;
+}
+
+
+.TripsPage .card {
+  cursor: pointer;
+}
+
+.step.bg-white-custom::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+.step.bg-white-custom:-webkit-scrollbar-track {
+  background: white;        /* color of the tracking area */
+}
+
+.step.bg-white-custom::-webkit-scrollbar-thumb {
+  background-color: #323260;    /* color of the scroll thumb */
+  border-radius: 20px;  
+}
+
+.RSPBprogression {
+  background: #323260 !important;
+  border-radius: 0px !important;
+}
+
+.RSPBprogressBar {
+ border-radius: 0px !important;
+}
+
+label[for="file"] {
+  border-color: #323260 !important;
+  padding: 9.5rem 1rem;
+}
+
+label[for="file"] svg,
+label[for="file"] div {
+  display: none;
 }

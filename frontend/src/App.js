@@ -7,11 +7,11 @@ import { Style } from "./assets/style/index";
 import { ThemeContext, ThemeProvider } from "./configs/ThemeProvider";
 import AboutPage from "./screens/about/AboutPage";
 import BuyPage from "./screens/buy/BuyPage";
-import ActivityPage from "./screens/dashboard/activity/ActivityPage";
+import TransactionPage from "./screens/dashboard/transaction/TransactionPage";
 import FavoritesPage from "./screens/dashboard/favorite/FavoritesPage";
 import HoldingPage from "./screens/dashboard/holding/HoldingPage";
 import MessagePage from "./screens/dashboard/message/MessagePage";
-import OffersPage from "./screens/dashboard/offer/OffersPage";
+import OffersPage from "./screens/dashboard/trip/TripsPage";
 import OverviewPage from "./screens/dashboard/overview/OverviewPage";
 import PropertiesPage from "./screens/dashboard/properties/PropertiesPage";
 import RewardsPage from "./screens/dashboard/rewards/RewardsPags";
@@ -20,6 +20,11 @@ import RentPage from "./screens/rent/RentPage";
 import SellPage from "./screens/sell/SellPage";
 import { DetailPage } from "./screens/buy/DetailPage";
 import PropertiesDetail from "./screens/dashboard/properties/Details";
+import TripsPage from "./screens/dashboard/trip/TripsPage";
+import { TripsDetailPage } from "./screens/dashboard/trip/TripsDetailPage";
+import ReservationPage from "./screens/dashboard/reservations/ReservationPage";
+import ReviewsPage from "./screens/dashboard/reviews/ReviewsPage";
+import ReviewDetailPage from "./screens/dashboard/reviews/ReviewDetailPage";
 
 
 const StyleTag = () => {
@@ -49,14 +54,27 @@ function App() {
             </Route>
             <Route element={<DashboardLayout/>}>
               <Route path="/dashboard/overview" element={<OverviewPage/>}/>
-              <Route path="/dashboard/properties" element={<PropertiesPage/>}/>
-              <Route path="/dashboard/properties/:detailID" element={<PropertiesDetail/>}/>
-              <Route path="/dashboard/message" element={<MessagePage/>}/>
-              <Route path="/dashboard/favorite" element={<FavoritesPage/>}/>
-              <Route path="/dashboard/activity" element={<ActivityPage/>}/>
-              <Route path="/dashboard/offers" element={<OffersPage/>}/>
-              <Route path="/dashboard/rewards" element={<RewardsPage/>}/>
-              <Route path="/dashboard/holding" element={<HoldingPage/>}/>
+              <Route path="/dashboard/buy/properties" element={<PropertiesPage/>}/>
+              <Route path="/dashboard/buy/properties/:detailID" element={<PropertiesDetail/>}/>
+              <Route path="/dashboard/buy/message" element={<MessagePage/>}/>
+              <Route path="/dashboard/buy/favorite" element={<FavoritesPage/>}/>
+              <Route path="/dashboard/buy/transactions" element={<TransactionPage/>}/>
+              <Route path="/dashboard/buy/offers" element={<OffersPage/>}/>
+              <Route path="/dashboard/buy/rewards" element={<RewardsPage/>}/>
+              <Route path="/dashboard/buy/holding" element={<HoldingPage/>}/>
+            </Route>
+            <Route element={<DashboardLayout/>}>
+              <Route path="/dashboard/overview" element={<OverviewPage/>}/>
+              <Route path="/dashboard/rent/properties" element={<PropertiesPage/>}/>
+              <Route path="/dashboard/rent/properties/:detailID" element={<PropertiesDetail/>}/>
+              <Route path="/dashboard/rent/message" element={<MessagePage/>}/>
+              <Route path="/dashboard/rent/favorite" element={<FavoritesPage/>}/>
+              <Route path="/dashboard/rent/transactions" element={<TransactionPage/>}/>
+              <Route path="/dashboard/rent/trips" element={<TripsPage/>}/>
+              <Route path="/dashboard/rent/trips/detail/:ID" element={<TripsDetailPage/>}/>
+              <Route path="/dashboard/rent/reservations" element={<ReservationPage/>}/>
+              <Route path="/dashboard/rent/reviews" element={<ReviewsPage/>}/>
+              <Route path="/dashboard/rent/reviews/detail/:ID" element={<ReviewDetailPage/>}/>
             </Route>
             <Route path="*" element={<Navigate to="/" replace/>}/>
           </Routes>

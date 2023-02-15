@@ -18,7 +18,7 @@ export const Theme = {
     [THEME_TYPE.LIGHT] : {
         WHITE : "#FFFFFF",
         WHITE_CUSTOM : "#F7F8FA",
-        RED : "#FFFFFF",
+        RED : "#F24822",
         ORANGE : "#FFB800",
         GRAY : "#32326080",
         PURPLE : "#6317F7",

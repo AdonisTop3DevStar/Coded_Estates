@@ -1,4 +1,4 @@
-import { Accordion, Button, Col, Image, Row, Table } from "react-bootstrap";
+import { Accordion, Button, Col, Image, Row, Table, Card, Form } from "react-bootstrap";
 import { DetailCarousel } from "../../components/carousel/Carousel";
 import { GoogleMapElement } from "../../components/map/map";
 import { DetailData } from "../../utils/data";
@@ -22,7 +22,13 @@ import Icon12 from '../../assets/images/icons/mdi_smoke-detector-off-outline.svg
 import Icon13 from '../../assets/images/icons/ic_round-live-tv.svg';
 import { Calendar, DateObject } from "react-multi-date-picker";
 import Footer from "react-multi-date-picker/plugins/range_picker_footer";
-
+import GalleryImg1 from '../../assets/images/building/10.webp';
+import GalleryImg2 from '../../assets/images/building/3.webp';
+import GalleryImg3 from '../../assets/images/building/4.webp';
+import GalleryImg4 from '../../assets/images/building/5.webp';
+import GalleryImg5 from '../../assets/images/building/6.webp';
+import Star from '../../assets/images/icons/star.svg';
+import Check from '../../assets/images/icons/check.svg';
 
 
 export function DetailPage () {
@@ -37,11 +43,23 @@ export function DetailPage () {
                 <span className="ms-5">Save</span>
             </div>
            </div>
+           <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{height:'500px'}}>
+                <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden">
+                <div className="w-50 overflow-hidden" style={{height:'500px'}}><Image src={GalleryImg4} width="100%" height="100%" style={{objectFit:"cover", cursor: 'pointer'}}/></div>
+                <div className="w-50 overflow-hidden" style={{height:'500px'}}>
+                    <div className="d-flex align-items-center justify-content-between gap-2 mb-2">
+                    <div className="w-50 overflow-hidden" style={{height:'250px'}}><Image src={GalleryImg2} width="100%" height="100%" style={{objectFit:"cover", cursor: 'pointer'}}/></div>
+                    <div className="w-50 overflow-hidden" style={{height:'250px'}}><Image src={GalleryImg3} width="100%" height="100%" style={{objectFit:"cover", cursor: 'pointer'}}/></div>              
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between gap-2 mb-2">
+                    <div className="w-50 overflow-hidden" style={{height:'250px'}}><Image src={GalleryImg1} width="100%" height="100%" style={{objectFit:"cover", cursor: 'pointer'}}/></div>
+                    <div className="w-50 overflow-hidden" style={{height:'250px'}}><Image src={GalleryImg5} width="100%" height="100%" style={{objectFit:"cover", cursor: 'pointer'}}/></div>              
+                    </div>
+                </div>
+                </div>
+            </div>
            <Row>
-            <DetailCarousel images={DetailData.images}/>
-           </Row>
-           <Row>
-            <Col sm={12} md={7}>
+            <Col sm={12} md={8}>
                 <div className="d-flex align-items-center justify-content-between my-2 border-bottom pb-2">
                     <div className="">
                         <div className="text-dark-purple fs-5 fw-semibold">Entire villa hosted by Bookiply</div>
@@ -81,7 +99,7 @@ export function DetailPage () {
                     <p className="text-gray">The new Villa Goyen - The View House impresses with its exclusive location and the unique panoramic views of the surrounding mountain panorama and the Merano valley basin. The large window areas, the elegant sun terraces with glass balustrade and the modern Desgin make the mansion Goyen an exclusive vacation domicile, which fulfills highest requirements at cosiness, comfort and situation.
                     200m² living space, 400m² garden, sun terrace and roof terrace with floating bed.
                     3 suites all with terrace.</p>
-                    <p className="text-dark-purple fw-semibold">how more > </p>
+                    <p className="text-dark-purple fw-semibold">how more </p>
                 </div>
                 <div className="my-2 border-bottom pb-2">
                     <div className="text-dark-purple fs-5 fw-semibold mb-3">What this place offers</div>
@@ -155,7 +173,21 @@ export function DetailPage () {
                   />
                 </div>
             </Col>
-            <Col sm={12} md={5}></Col>
+            <Col sm={12} md={4}>
+          <Card className="shadow">
+            <Card.Body>
+              <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
+              <div className="fs-6 fw-semibold mb-2">Bid Price</div>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="number" placeholder="Enter your Bid Price" />
+              </Form.Group>
+              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button>
+              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
+              <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button>
+              <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
+            </Card.Body>
+          </Card>
+        </Col>
            </Row>
            <Row className="my-2 border-bottom py-2">
                 <div className="text-dark-purple fs-5 fw-semibold mb-3">No review (yet  )</div>
@@ -166,10 +198,40 @@ export function DetailPage () {
            </Row>
            <Row className="my-2 border-bottom py-2">
                 <div className="text-dark-purple fs-5 fw-semibold mb-3">Where you'll be</div>
+                <iframe className="w-100 rounded" style={{height:"600px"}} src="https://maps.google.com/maps?q=18%20Ezekia%20Papaioannou%20Str.%20Off.104%2C%201075%20%20Nicosia%2C%20Cyprus&t=m&z=15&output=embed&iwloc=near"></iframe>
            </Row>
-           <Row className="my-2 border-bottom py-2">
-
-           </Row>
+           <div className="">
+        <Row className="my-2 border-bottom pb-3 pt-3">
+            <div className="d-flex align-items-center">
+              <Image src={GalleryImg1} width="80" height="80" className="rounded-circle"/>
+              <div className="ms-3">
+                <div className="fw-semibold fs-5 mb-2">Hosted by Bookiply</div>
+                <div className="text-gray">Joined in April 2018</div>
+              </div>
+            </div>
+          <Col sm={12} md={6} className="my-2">
+            <div className="d-flex align-items-center">
+              <div className="text-dark-purple d-flex align-items-center me-5">
+                <Image src={Star} className="me-3" width="25" height="25"/>
+                <div>1,429 Reviews</div>
+              </div>
+              <div className="text-dark-purple d-flex align-items-center">
+                <Image src={Check} className="me-3" width="25" height="25"/>
+                <span>Identify verified</span>
+              </div>
+            </div>
+            <div className="text-gray mt-3">DE<br/>Mit Bookiply finden Sie ganz einfach Ihre perfekte Ferienunterkunft. Eine schöne Villa mit Meerblick auf Sardinien? Ein gemütliches Apartment am Gardasee oder ein Chalet in…<span className="ms-2 text-dark-purple"><u>read me</u></span></div>
+          </Col>
+          <Col sm={12} md={6}>
+            <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
+            <div className="text-gray mb-2">Response rate : 100%</div>
+            <div className="text-gray mb-2">Response time : within an hour</div>
+            <Button className="border-gray bg-white text-dark-purple">
+              Contact Host
+            </Button>
+          </Col>
+        </Row>        
+      </div>
         </div>
     )
 }
