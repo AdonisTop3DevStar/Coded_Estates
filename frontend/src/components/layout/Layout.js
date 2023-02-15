@@ -7,7 +7,7 @@ export const HomeLayout = () => {
     return (
         <div className="HomeLayout">
             <Header/>
-            <Container fluid>
+            <Container fluid style={{marginTop:"81"}}>
                 <Outlet/>
             </Container>
         </div>
