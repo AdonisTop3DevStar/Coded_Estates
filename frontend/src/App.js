@@ -25,6 +25,7 @@ import { TripsDetailPage } from "./screens/dashboard/trip/TripsDetailPage";
 import ReservationPage from "./screens/dashboard/reservations/ReservationPage";
 import ReviewsPage from "./screens/dashboard/reviews/ReviewsPage";
 import ReviewDetailPage from "./screens/dashboard/reviews/ReviewDetailPage";
+import { RentDetailPage } from "./screens/rent/DetailPage";
 
 
 const StyleTag = () => {
@@ -50,7 +51,8 @@ function App() {
               <Route path="/buy" element={<BuyPage/>}/>
               <Route path="/sell" element={<SellPage/>}/>
               <Route path="/rent" element={<RentPage/>}/>
-              <Route path="/detail/:detailID" element={<DetailPage/>}/>
+              <Route path="/detail/buy/:detailID" element={<DetailPage/>}/>
+              <Route path="/detail/rent/:detailID" element={<RentDetailPage/>}/>
             </Route>
             <Route element={<DashboardLayout/>}>
               <Route path="/dashboard/overview" element={<OverviewPage/>}/>

@@ -47,7 +47,7 @@ export default function Header() {
               <Link to="/buy" className="nav-link fw-bold">
                Buy / Sell
               </Link>
-              <Link to="" className="nav-link fw-bold">
+              <Link to="/rent" className="nav-link fw-bold">
                 Rent
               </Link>
               <Link to="/dashboard/overview" className="nav-link fw-bold">

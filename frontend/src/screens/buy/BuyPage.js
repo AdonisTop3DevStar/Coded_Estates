@@ -5,11 +5,11 @@ import { buyPageData } from "../../utils/data";
 import { FaMap } from "react-icons/fa";
 import { GoogleMapElement } from "../../components/map/map";
 
+
 function BuyPage() {
     return (
-      <div className="BuyPage position-relative" style={{marginTop:"81px"}}>
-        <SearchBar/>
-        <small className="my-5">Over {buyPageData.length} homes within map area</small>
+      <div className="BuyPage position-relative" style={{marginTop:"7.5rem"}}>
+        <small className="my-5 pt-2">Over {buyPageData.length} homes within map area</small>
         <Row className="Search-result">
             {
                 buyPageData.map((item, idx) => (

@@ -295,3 +295,15 @@ label[for="file"] svg,
 label[for="file"] div {
   display: none;
 }
+
+.rentCard .rmdp-container {
+ display: flex !important;
+
+}
+
+.rentCard .rmdp-container input {
+  width: 100% !important;
+  border: none;
+  text-align-last: justify;
+  color: #32326080 !important;
+ }

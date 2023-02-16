@@ -10,7 +10,7 @@ import LocationImg3 from '../../assets/images/location/turkey.jpg';
 import LocationImg4 from '../../assets/images/location/southeast_asia.jpg';
 import LocationImg5 from '../../assets/images/location/thailand.jpg';
 import LocationImg6 from '../../assets/images/location/south_america.jpg';
-import DatePicker from "react-multi-date-picker"
+import DatePicker from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import { FaMinus, FaPlus } from "react-icons/fa";
 

@@ -36,7 +36,38 @@ export const NormalCard = ({title, network, price, images}) => {
                         ))
                     }                    
                 </Carousel>
-                <Link className="nav-link" to="/detail/1">
+                <Link className="nav-link" to="/detail/buy/1">
+                <Card.Title className="d-flex align-items-center justify-content-between my-1">
+                    <div className="card-price">{price} {network}</div>
+                    <small className="card-reviews d-flex "><FaStar className="review-icon me-1"/><span>4.8</span></small>
+                </Card.Title>
+                <Card.Subtitle className="my-1 normal-card-title">{title}</Card.Subtitle>
+                <div className="d-flex align-items-center justify-content-between card-properties">
+                    <div><FaRuler/><span className="ms-2">300</span></div>
+                    <div><FaBath/><span className="ms-2">2</span></div>
+                    <div><FaBed/><span className="ms-2">3</span></div>
+                </div>
+                </Link>
+            </Card.Body>
+        </Card>
+    )
+}
+
+export const NormalRentCard = ({title, network, price, images}) => {
+    return (
+        <Card className="NormalCard my-2">
+            <Card.Body className="position-relative">
+                <FaRegHeart className="heart-icon"/>
+                <Carousel fade>
+                    {
+                        images.map((item, idx) => (
+                            <Carousel.Item>
+                                <Image src={item.src} key={idx} width="100%" height="250" className="object-fit-none border rounded"/>
+                            </Carousel.Item>
+                        ))
+                    }                    
+                </Carousel>
+                <Link className="nav-link" to="/detail/rent/1">
                 <Card.Title className="d-flex align-items-center justify-content-between my-1">
                     <div className="card-price">{price} {network}</div>
                     <small className="card-reviews d-flex "><FaStar className="review-icon me-1"/><span>4.8</span></small>
@@ -263,7 +294,7 @@ export const ListPropertyCard = () => {
             <Card className="border-0">
                 <Card.Body>
                     <Image src={BuildingImage} width="100%" height="250" className="rounded mb-3"/>
-                    <Link to="/dashboard/properties/1" className="nav-link">
+                    <Link to="/dashboard/buy/properties/1" className="nav-link">
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <div className="fw-bold">Kent Avenue #310</div>
                         <div className="opacity-50">4.7 SEI</div>
