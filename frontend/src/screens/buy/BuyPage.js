@@ -1,6 +1,6 @@
 import { Row, Col, Button } from "react-bootstrap";
 import { NormalCard } from "../../components/card/card";
-import { SearchBar } from "../../components/searchbar/SearchBar";
+import { BuySearchBar } from "../../components/searchbar/SearchBar";
 import { buyPageData } from "../../utils/data";
 import { FaMap } from "react-icons/fa";
 import { GoogleMapElement } from "../../components/map/map";
@@ -8,9 +8,10 @@ import { GoogleMapElement } from "../../components/map/map";
 
 function BuyPage() {
     return (
-      <div className="BuyPage position-relative" style={{marginTop:"7.5rem"}}>
+      <div className="BuyPage position-relative" style={{marginTop:"81px"}}>
+        <BuySearchBar/>
         <small className="my-5 pt-2">Over {buyPageData.length} homes within map area</small>
-        <Row className="Search-result">
+        <Row className="Search-result mt-2">
             {
                 buyPageData.map((item, idx) => (
                     <Col xs={12} sm={12} md={2}>

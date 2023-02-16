@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Col, Container, Nav, Row, Modal, Image, Tab, ButtonGroup  } from "react-bootstrap";
+import { Button, Col, Container, Nav, Row, Modal, Image, Tab, ButtonGroup, Form  } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import React from "react";
 import { Calendar, DateObject } from "react-multi-date-picker";
@@ -13,6 +13,7 @@ import LocationImg6 from '../../assets/images/location/south_america.jpg';
 import DatePicker from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import FilterIcon from '../../assets/images/icons/filter.svg';
 
 
 export const SearchBar = () => {
@@ -160,3 +161,51 @@ export const SearchBar = () => {
     </div>
   );
 };
+
+export const BuySearchBar = () => {
+  return (
+    <div className="BuySearchBar  border-bottom py-2">
+      <div className="w-75 mx-auto rounded-5 border d-flex align-items-center justify-content-between p-1">
+        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center"><Image src={FilterIcon} width="25" height="25"/></Button>
+        <div className="fs-6 fw-bold">House Type :</div>
+        <div className="">
+          <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end">
+            <option value="1">All</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </Form.Select>
+        </div>|
+        <div className="">
+          <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end">
+            <option value="1">1 bedroom, 1 bedroom</option>
+            <option value="2">2 bedrooms, 2 bedrooms</option>
+            <option value="3">3 bedrooms, 3 bedrooms</option>
+            <option value="4">4 bedrooms, 4 bedrooms</option>
+          </Form.Select>
+        </div>|
+        <div className="">
+          <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end">
+            <option value="1">300 - 500 sq ft</option>
+            <option value="1">500 - 1000 sq ft</option>
+            <option value="1">1000 - 1500 sq ft</option>
+            <option value="1">1500 - 5000 sq ft</option>
+          </Form.Select>
+        </div>|
+        <div className="">
+          <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end">
+            <option value="1">$10K ~ $20K</option>
+            <option value="1">$30K ~ $50K</option>
+            <option value="1">$60K ~ $100K</option>
+            <option value="1">$120K ~ $1000K</option>
+          </Form.Select>
+        </div>|
+        <div className="">
+          <Form.Group  controlId="exampleForm.ControlInput1">
+            <Form.Control type="text" placeholder="Enter address or city or pin code" className="border-0"/>
+          </Form.Group>
+        </div>
+        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center fs-4"><FaSearch/></Button>
+      </div>
+    </div>
+  )
+}

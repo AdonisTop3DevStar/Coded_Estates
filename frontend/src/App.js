@@ -72,6 +72,8 @@ function App() {
               <Route path="/dashboard/rent/message" element={<MessagePage/>}/>
               <Route path="/dashboard/rent/favorite" element={<FavoritesPage/>}/>
               <Route path="/dashboard/rent/transactions" element={<TransactionPage/>}/>
+              <Route path="/dashboard/rent/rewards" element={<RewardsPage/>}/>
+              <Route path="/dashboard/rent/holding" element={<HoldingPage/>}/>
               <Route path="/dashboard/rent/trips" element={<TripsPage/>}/>
               <Route path="/dashboard/rent/trips/detail/:ID" element={<TripsDetailPage/>}/>
               <Route path="/dashboard/rent/reservations" element={<ReservationPage/>}/>
