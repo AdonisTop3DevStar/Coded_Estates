@@ -31,7 +31,7 @@ export const NormalCard = ({title, network, price, images}) => {
                     {
                         images.map((item, idx) => (
                             <Carousel.Item>
-                                <Image src={item.src} key={idx} width="100%" height="250" className="object-fit-cover border rounded"/>
+                                <Image src={item.src} key={idx} height="245" className="w-100 object-fit-cover border rounded"/>
                             </Carousel.Item>
                         ))
                     }                    
