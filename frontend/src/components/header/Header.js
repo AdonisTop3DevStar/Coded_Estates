@@ -80,9 +80,12 @@ export default function Header() {
               <Link to="/rent" className="nav-link fw-bold">
                 Rent
               </Link>
-              <Link to="/dashboard/overview" className="nav-link fw-bold">
+              {connected == false ? ("") : (
+                <Link to="/dashboard/overview" className="nav-link fw-bold">
                 Dashboard
-              </Link>
+                </Link>
+              )}
+             
               {/* <Link to="/about" className="nav-link fw-bold">
                 About Us
               </Link> */}
