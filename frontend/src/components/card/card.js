@@ -5,7 +5,7 @@ import { PrimaryBtn, SecondPrimaryBtn } from "../button/Buttons";
 import VerifyIcon from '../../assets/images/icons/verify.svg';
 import UploadIcon from '../../assets/images/icons/upload.svg';
 import MintIcon from '../../assets/images/icons/mint.svg';
-import { MintedPropertiesCardCarousel } from "../carousel/Carousel";
+import { MintedPropertiesCardCarousel, UnverifiedCardCarousel } from "../carousel/Carousel";
 import { DetailData } from "../../utils/data";
 import BarChartIcon from '../../assets/images/icons/barchart.svg';
 import SumIcon from '../../assets/images/icons/sum.svg';
@@ -31,7 +31,7 @@ export const NormalCard = ({title, network, price, images}) => {
                     {
                         images.map((item, idx) => (
                             <Carousel.Item>
-                                <Image src={item.src} key={idx} height="245" className="w-100 object-fit-cover border rounded"/>
+                                <Link className="nav-link" to="/detail/buy/1"><Image src={item.src} key={idx} height="245" className="w-100 object-fit-cover border rounded" style={{objectFit : "cover"}}/></Link>
                             </Carousel.Item>
                         ))
                     }                    
@@ -62,7 +62,7 @@ export const NormalRentCard = ({title, network, price, images}) => {
                     {
                         images.map((item, idx) => (
                             <Carousel.Item>
-                                <Image src={item.src} key={idx} width="100%" height="250" className="object-fit-cover border rounded"/>
+                               <Link className="nav-link" to="/detail/rent/1"><Image src={item.src} key={idx} width="100%" style={{objectFit : "cover"}} height="250" className="object-fit-cover border rounded"/></Link> 
                             </Carousel.Item>
                         ))
                     }                    
@@ -168,7 +168,7 @@ export const MintedPropertiesCard = () => {
                 <Card.Body>
                 <Row>
                     <Col sm={12} md={6}>
-                        <MintedPropertiesCardCarousel images={DetailData.images}/>
+                        <UnverifiedCardCarousel images={DetailData.images}/>
                     </Col>
                     <Col sm={12} md={6}>
                         <MintedPropertiesCardCarousel images={DetailData.images}/>

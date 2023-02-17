@@ -46,7 +46,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<HomeLayout/>}>
-              <Route path="/" element={<HomePage/>}/>
+              {/* <Route path="/" element={<RentPage/>}/> */}
               <Route path="/about" element={<AboutPage/>}/>
               <Route path="/buy" element={<BuyPage/>}/>
               <Route path="/sell" element={<SellPage/>}/>
@@ -80,7 +80,7 @@ function App() {
               <Route path="/dashboard/rent/reviews" element={<ReviewsPage/>}/>
               <Route path="/dashboard/rent/reviews/detail/:ID" element={<ReviewDetailPage/>}/>
             </Route>
-            <Route path="*" element={<Navigate to="/" replace/>}/>
+            <Route path="*" element={<Navigate to="/rent" replace/>}/>
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

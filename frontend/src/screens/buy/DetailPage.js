@@ -39,7 +39,7 @@ export function DetailPage() {
   const [minDate, setMinDate] = useState(new Date());
   return (
     <div className="DetailPage my-4 container">
-      <Link to="/buy" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />back</Link>
+      <Link to="/buy" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
       <div className="fs-5 fw-bold" >70 Wahington Street #9G</div>
       <div className="d-flex align-items-center justify-content-between my-2">
         <div className="">70 Wahington Street #9G</div>

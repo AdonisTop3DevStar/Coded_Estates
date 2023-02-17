@@ -31,7 +31,7 @@ import { FaAngleLeft } from "react-icons/fa";
 export default function PropertiesDetail() {
   return (
     <div className="PropertiesDetail">
-      <Link to="/dashboard/buy/properties" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2"/>back</Link>
+      <Link to="/dashboard/buy/properties" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2"/>Back</Link>
       <div className="fs-4 fw-bold">Properties Detail</div>
       <div className="fs-6 opacity-50 mb-3">
         Welcome to Coede Estate Property Admin

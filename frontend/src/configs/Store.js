@@ -5,7 +5,8 @@ export const store = createStore();
 
 const Store = {
     Mode : true,
-    VerifyMode : true
+    VerifyMode : true,
+    Connected : false
 }
 
-store.setState("Mode", true);
+store.setState(Store);
