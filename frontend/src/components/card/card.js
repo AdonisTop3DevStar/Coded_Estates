@@ -164,7 +164,7 @@ export const MintCard = () => {
 export const MintedPropertiesCard = () => {
     return (
         <div className="MintedPropertiesCard my-1">
-            <Card>
+            <Card className="shadow">
                 <Card.Body>
                 <Row>
                     <Col sm={12} md={6}>

@@ -63,20 +63,7 @@ export default function Sidebar() {
     return (
       <div className="Sidebar">
         <Container className="">
-          <div className="SwitchMode">
-            {mode}
-          <div>
-            {buyMode ? (
-              <div className="toggle-btn mt-3">
-                <div className="text-center"><span  onClick={toggleValue} className="bg-purple text-white py-1 px-3 rounded-5">Buy/Sell Mode</span></div>
-              </div>
-            ) : (
-              <div className="toggle-btn mt-3">
-                <div className="text-center"><span  onClick={toggleValue} className="bg-dark-purple text-white py-1 px-3 rounded-5">Rental Mode</span></div>
-              </div>
-            )}
-          </div>
-          </div>
+        
           <div className="Sidebar-Navlist">            
             {mode ? (
               NavListData.map((item, idx) => (

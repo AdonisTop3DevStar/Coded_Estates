@@ -63,14 +63,7 @@ export default function VerifyMode () {
 
     return (
         <div className="VerifyMode position-relative" style={{height:"70vh"}}>
-            <div className="bg-white pb-2">
-                <Container>
-                    <div className="d-flex align-items-center justify-content-between">
-                        <Image src={Logo} height="40"/>
-                        <Button className="bg-white text-dark-purple border-dark-purple rounded-5 py-1 px-3 fs-6" >Save & exit</Button>
-                    </div>
-                </Container>
-            </div>
+            
             {steps.map((item, idx) => (
                 <div key={idx} className={`step p-3 bg-white-custom  ${item.stepNumber === currentStep ? "d-block" : "d-none"}`} style={{maxHeight:'60vh', overflowY:'scroll'}}>
                     <Container>{item.element}</Container>                    
@@ -696,5 +689,7 @@ export const Step19 = () => {
         </div>  
     )
 }
+
+
 
 
