@@ -6,7 +6,8 @@ export const store = createStore();
 const Store = {
     Mode : true,
     VerifyMode : true,
-    Connected : false
+    Connected : false,
+    WalletModalShow : false
 }
 
 store.setState(Store);

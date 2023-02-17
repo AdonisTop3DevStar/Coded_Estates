@@ -17,23 +17,36 @@ import { store } from "../../configs/Store";
 export default function Header() {
     const [themeMode, setThemeMode] = useContext(ThemeContext);
     const [connected, setConnected, updateConnected] = store.useState('Connected');
+    const [walletModalShow, setWalletModalShow, updateWalletModalShow] = store.useState("WalletModalShow");
 
     const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleClose = () => {
+      // setShow(false);
+      setWalletModalShow(walletModalShow => {
+        walletModalShow = false;
+        return walletModalShow;
+      });
+    }
+    const handleShow = () => {
+      // setShow(true);
+      setWalletModalShow(walletModalShow => {
+        walletModalShow = true;
+        return walletModalShow;
+      });
+    }
 
     const connectWallet = () => {
       setConnected(connected => {
-        connected = !connected;
+        connected = true;
         return connected;
       });
-      setShow(false);
+      handleClose();
     }
 
     const disConnectWallet = () => {
       setConnected(connected => {
-        connected = !connected;
+        connected = false;
         return connected;
       });
     }
@@ -83,12 +96,12 @@ export default function Header() {
                 <Button className="round-btn" onClick={handleShow}>Connect Wallet</Button>              
               ) : (
                 <Dropdown>
-                  <Dropdown.Toggle className="bg-purple border-purple rounded-5" onClick={disConnectWallet} id="dropdown-basic">
+                  <Dropdown.Toggle className="bg-purple border-purple rounded-5"  id="dropdown-basic">
                   0xbf4fa...079f
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="bg-red">
-                    <Dropdown.Item className="bg-red text-white" >Disconnect Wallet</Dropdown.Item>
+                    <Dropdown.Item className="bg-red text-white" onClick={disConnectWallet}>Disconnect Wallet</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
               )}
@@ -97,7 +110,7 @@ export default function Header() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <Modal show={show} onHide={handleClose} centered>        
+      <Modal show={walletModalShow} onHide={handleClose} centered>        
         <Modal.Body>
           <div className="text-end"><FaWindowClose onClick={handleClose}/></div>
           <div className="fs-4 text-center fw-semibold mb-3">Connect Wallet</div>

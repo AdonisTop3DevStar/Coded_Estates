@@ -35,6 +35,7 @@ import Star from '../../assets/images/icons/star.svg';
 import Check from '../../assets/images/icons/check.svg';
 import { FaAngleLeft } from "react-icons/fa";
 import { BookingMode } from "../../components/modal/BookingMode";
+import { store } from '../../configs/Store';
 
 
 export function RentDetailPage() {
@@ -48,6 +49,24 @@ export function RentDetailPage() {
     new DateObject().setDay(4).subtract(1, "month"),
     new DateObject().setDay(4).add(1, "month")
   ])
+
+  const [connected, setConnected, updateConnected] = store.useState('Connected');
+  const [walletModalShow, setWalletModalShow, updateWalletModalShow] = store.useState("WalletModalShow");
+
+  const walletConnectModalClose = () => {
+    // setShow(false);
+    setWalletModalShow(walletModalShow => {
+      walletModalShow = false;
+      return walletModalShow;
+    });
+  }
+  const walletConnectModalShow = () => {
+    // setShow(true);
+    setWalletModalShow(walletModalShow => {
+      walletModalShow = true;
+      return walletModalShow;
+    });
+  }
   return (
     <div className="DetailPage my-4 container" style={{ marginTop: "81px" }}>
       <Link to="/rent" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
@@ -220,8 +239,19 @@ export function RentDetailPage() {
                   </Form.Group>
                 </div>
               </div>
-              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Reserve</Button>
-              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
+              {connected == false ? (
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={walletConnectModalShow}>Reserve</Button>
+              ) : (
+                <Link to="/dashboard/rent/properties"><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" >Reserve</Button></Link>
+              )}
+
+              {connected == false ? (
+               <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={walletConnectModalShow}>Send Message</Button>
+              ) : (
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" >Send Message</Button>
+              )}
+
+              
               <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
               <div className="d-flex align-items-center justify-content-between my-2"><small className="text-gray">357 SEI X 27 night</small><small className="text-gray">9,650 SEI</small></div>
               <div className="d-flex align-items-center justify-content-between my-2"><small className="text-gray">Cleaning fee</small><small className="text-gray">131 SEI</small></div>
@@ -269,20 +299,24 @@ export function RentDetailPage() {
             <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
             <div className="text-gray mb-2">Response rate : 100%</div>
             <div className="text-gray mb-2">Response time : within an hour</div>
-            <Button className="border-gray bg-white text-dark-purple">
-              Contact Host
-            </Button>
+            {connected == false ? (
+               <Button className="border-gray bg-white text-dark-purple" onClick={walletConnectModalShow}>Contact Host</Button>
+              ) : (
+                <Button className="border-gray bg-white text-dark-purple">Contact Host</Button>
+              )}
+
+            
           </Col>
         </Row>
       </div>
       <Modal show={show} size="xl" centered>
         <Modal.Header className="d-flex align-items-center justify-content-between">
-         
-            <Image src={Logo} height="50"/>
-            <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
+
+          <Image src={Logo} height="50" />
+          <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
         </Modal.Header>
         <Modal.Body className="bg-white-custom">
-            <BookingMode/>
+          <BookingMode />
         </Modal.Body>
       </Modal>
     </div>

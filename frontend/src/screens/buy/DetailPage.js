@@ -33,10 +33,28 @@ import Check from '../../assets/images/icons/check.svg';
 import { Link } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 import SEI from '../../assets/images/crypto/sei.svg';
+import { store } from "../../configs/Store";
 
 
 export function DetailPage() {
   const [minDate, setMinDate] = useState(new Date());
+  const [connected, setConnected, updateConnected] = store.useState('Connected');
+  const [walletModalShow, setWalletModalShow, updateWalletModalShow] = store.useState("WalletModalShow");
+
+  const handleClose = () => {
+    // setShow(false);
+    setWalletModalShow(walletModalShow => {
+      walletModalShow = false;
+      return walletModalShow;
+    });
+  }
+  const handleShow = () => {
+    // setShow(true);
+    setWalletModalShow(walletModalShow => {
+      walletModalShow = true;
+      return walletModalShow;
+    });
+  }
   return (
     <div className="DetailPage my-4 container">
       <Link to="/buy" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
@@ -164,15 +182,26 @@ export function DetailPage() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="number" placeholder="Enter your Bid Price" />
               </Form.Group>
-              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button>
-              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
-              <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button>
+              {connected == false ? (
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Make an Offer</Button>
+              ) : (
+                <Link to="/dashboard/rent/properties"><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button></Link>
+              )}
+
+              {connected == false ? (
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Send Message</Button>
+              ) : (
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
+              )}
+
+              
+              {/* <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button> */}
               <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
             </Card.Body>
           </Card>
         </Col>
       </Row>
-      <Row className="my-2 border-bottom pb-3">
+      {/* <Row className="my-2 border-bottom pb-3">
         <Col sm={12} md={12}>
           <div className="fs-5 fw-bold">Bid</div>
           <div className="opacity-50 mb-2">Highest Bid : <strong>520 SEI</strong></div>
@@ -357,7 +386,7 @@ export function DetailPage() {
             </div>
           </div>
         </Col>
-      </Row>
+      </Row> */}
       <Row className="my-2 border-bottom py-2">
         <div className="text-dark-purple fs-5 fw-semibold mb-3">No review (yet  )</div>
         <div className="d-flex align-items-center my-2">
@@ -395,9 +424,11 @@ export function DetailPage() {
             <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
             <div className="text-gray mb-2">Response rate : 100%</div>
             <div className="text-gray mb-2">Response time : within an hour</div>
-            <Button className="border-gray bg-white text-dark-purple">
-              Contact Host
-            </Button>
+            {connected == false ? (
+              <Button className="border-gray bg-white text-dark-purple" onClick={handleShow}>Contact Host</Button>
+            ) : (
+              <Button className="border-gray bg-white text-dark-purple">Contact Host</Button>
+            )}
           </Col>
         </Row>
       </div>
