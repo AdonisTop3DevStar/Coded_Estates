@@ -18,6 +18,8 @@ import NetIcon from '../../assets/images/verify/net.svg';
 import Icon1 from '../../assets/images/icons/swimming-pool.svg';
 import Icon2 from '../../assets/images/icons/star-border.svg';
 import Icon3 from '../../assets/images/icons/heart-outline.svg';
+import { Link } from "react-router-dom";
+import { store } from "../../configs/Store";
 
 const data = [
     {no : 1}, {no : 1}, {no : 1}, {no : 1}, {no : 1}, {no : 1},{no : 1},{no : 1}, {no : 1}, {no : 1},{no : 1},{no : 1},{no : 1}, {no : 1},{no : 1}, {no : 1},{no : 1}, {no : 1},{no : 1},{no : 1}, {no : 1},
@@ -48,6 +50,7 @@ export default function VerifyMode () {
     ];
 
     const [currentStep, setCurrentStep] = useState(0);
+    const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
 
     const goToNextStep = () => {
         if (currentStep < (steps.length-1) && currentStep < 19) {
@@ -62,7 +65,7 @@ export default function VerifyMode () {
       };
 
     return (
-        <div className="VerifyMode position-relative" style={{height:"70vh"}}>
+        <div className="VerifyMode position-relative" style={{height:"65vh"}}>
             
             {steps.map((item, idx) => (
                 <div key={idx} className={`step p-3 bg-white-custom  ${item.stepNumber === currentStep ? "d-block" : "d-none"}`} style={{maxHeight:'60vh', overflowY:'scroll'}}>
@@ -79,10 +82,15 @@ export default function VerifyMode () {
                         <div className="d-flex align-items-center justify-content-end">
                             <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-4 py-1 mt-1" onClick={goToNextStep}>Get Start</Button>
                         </div>
-                    ) : (
+                    ) : (                        
                         <div className="d-flex align-items-center justify-content-between">
                             <Button className="bg-white text-dark-purple border-white  px-2 py-2" onClick={goToPreviousStep}><u>Back</u></Button>
-                            <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-3 py-1" onClick={goToNextStep}>Next</Button>
+                            {currentStep == 19 ? (
+                                <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(1)}><Button className="bg-dark-purple text-white border-dark-purple fw-bold px-3 py-1" onClick={goToNextStep}>Let's get started</Button></Link>
+                            ) : (
+                                <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-3 py-1" onClick={goToNextStep}>Next</Button>
+                            )}
+                            
                         </div>
                     )}
                     
@@ -95,7 +103,7 @@ export default function VerifyMode () {
 export const Step0 = () => {
     return (
         <div className="Step0 py-5">
-            <Row className="align-items-center">
+            <Row className="align-items-center my-1">
                 <Col sm={6} md={6} className="">
                     <div className="fs-3 fw-bold w-50 mx-auto">Get Your NFT</div>
                     <div className="fs-3 fw-bold w-50 mx-auto">ready for rental</div>
@@ -131,7 +139,7 @@ export const Step0 = () => {
 export const Step1 = () => {
     return (
         <div className="Step1 py-5 my-3">
-            <Row className="align-items-center">
+            <Row className="align-items-center my-1">
                 <Col sm={6} md={6}>
                     <div className="w-75 mx-auto">
                         <div className="fs-6 fw-semibold mb-2">Step 1</div>
@@ -171,7 +179,7 @@ export const Step2 = () => {
 export const Step3 = () => {
     return (
         <div className="Step3 py-5 my-3">
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto my-1">
                 <div className="fs-5 fw-bold">What type of place will guests have?</div>
                 <Card className="mt-4">
                     <Card.Body>
@@ -214,7 +222,7 @@ export const Step3 = () => {
 export const Step4 = () => {
     return (
         <div className="Step4 py-5 my-3">
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto my-1">
                 <div className="fs-5 fw-bold mb-2">What type of place will guests have?</div>
                 <div className="text-gray mb-2">Guest have the whole place to themselves</div>
                 <Card className="mt-4 mb-1">
@@ -289,7 +297,7 @@ export const Step5 = () => {
 export const Step6 = () => {
     return (
         <div className="Step6 py-5 my-3">
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto my-1">
                 <div className="fs-5 fw-bold mb-2">Is the pin in the right spot?</div>
                 <div className="text-gray mb-2">Your address is only shared with guests after they’ve made a reservation.</div>
                 <Card className="mt-4 mb-1">
@@ -301,9 +309,13 @@ export const Step6 = () => {
 }
 
 export const Step7 = () => {
+    const [guest, setGuest] = useState(1);
+    const [bed, setBed] = useState(1);
+    const [bedRoom, setBedRoom] = useState(1);
+    const [bath, setBathRoom] = useState(1);
     return (
         <div className="Step7 py-5 my-3">
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold mb-2">Share some basic about your place</div>
                 <div className="text-gray mb-2">You’ll add more details later, like bed type</div>
                 <div className="mt-2">
@@ -314,7 +326,7 @@ export const Step7 = () => {
                         <div className="stepper">
                         <ButtonGroup className="align-items-center ">
                             <Button><FaMinus/></Button>
-                            <span className="px-3">1</span>
+                            <span className="px-3">{guest}</span>
                             <Button ><FaPlus/></Button>
                         </ButtonGroup>
                         </div>
@@ -326,7 +338,7 @@ export const Step7 = () => {
                         <div className="stepper">
                         <ButtonGroup className="align-items-center ">
                             <Button><FaMinus/></Button>
-                            <span className="px-3">1</span>
+                            <span className="px-3">{bedRoom}</span>
                             <Button ><FaPlus/></Button>
                         </ButtonGroup>
                         </div>
@@ -338,7 +350,7 @@ export const Step7 = () => {
                         <div className="stepper">
                         <ButtonGroup className="align-items-center ">
                             <Button><FaMinus/></Button>
-                            <span className="px-3">1</span>
+                            <span className="px-3">{bed}</span>
                             <Button ><FaPlus/></Button>
                         </ButtonGroup>
                         </div>
@@ -350,7 +362,7 @@ export const Step7 = () => {
                     <div className="stepper">
                     <ButtonGroup className="align-items-center ">
                         <Button><FaMinus/></Button>
-                        <span className="px-3">1</span>
+                        <span className="px-3">{bath}</span>
                         <Button ><FaPlus/></Button>
                     </ButtonGroup>
                     </div>
@@ -364,7 +376,7 @@ export const Step7 = () => {
 export const Step8 = () => {
     return (
         <div className="Step8 py-5 my-3">
-            <Row className="align-items-center">
+            <Row className="align-items-center my-1">
                 <Col sm={6} md={6}>
                     <div className="w-75 mx-auto">
                         <div className="fs-6 fw-semibold mb-2">Step 2</div>
@@ -436,7 +448,7 @@ export const Step10 = () => {
 export const Step11 = () => {
     return (
         <div className="Step11 py-5 my-3">
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto my-2">
                 <div className="fs-5 fw-bold mb-2">Now, let’s give your house a title</div>
                 <div className="text-gray mb-2">Short titles work best. Have fun with it - you can always change it later.</div>
                 <Form.Group className="mt-1 mb-3" controlId="exampleForm.ControlTextarea1">
@@ -450,7 +462,7 @@ export const Step11 = () => {
 
 export const Step12 = () => {
     return (
-        <div className="Step12 py-5 my-3">
+        <div className="Step12 py-5 my-4">
             <div className="w-50 mx-auto my-5 py-5">
                 <div className="fs-5 fw-bold mb-2">Next, let’s describe your house</div>
                 <div className="text-gray mb-2">Choose up to 2 highlights. We’ll use these to get your description started.</div>
@@ -482,7 +494,7 @@ export const Step12 = () => {
 export const Step13 = () => {
     return (
         <div className="Step13 py-5 my-3">
-            <div className="w-50 mx-auto">
+            <div className="w-50 mx-auto my-2">
                 <div className="fs-5 fw-bold mb-2">Create your description</div>
                 <div className="text-gray mb-2">Share what makes your place special.</div>
                 <Form.Group className="mt-1 mb-3" controlId="exampleForm.ControlTextarea1">
@@ -497,7 +509,7 @@ export const Step13 = () => {
 export const Step14 = () => {
     return (
         <div className="Step14 py-5 my-3">
-            <Row className="align-items-center">
+            <Row className="align-items-center my-1">
                 <Col sm={6} md={6}>
                     <div className="w-75 mx-auto">
                         <div className="fs-6 fw-semibold mb-2">Step 3</div>
@@ -515,7 +527,7 @@ export const Step14 = () => {
 
 export const Step15 = () => {
     return (
-        <div className="Step15 py-5 my-3">
+        <div className="Step15 py-5 my-4">
         <div className="w-50 mx-auto mt-5 mb-4">
             <div className="fs-5 fw-bold mb-2">Choose who to welcome for your first reservation</div>
             <div className="text-gray mb-2">Short titles work best. Have fun with it - you can always change it later.</div>
@@ -552,7 +564,7 @@ export const Step15 = () => {
 
 export const Step16 = () => {
     return (
-        <div className="Step16 py-4 my-3">
+        <div className="Step16 py-4 my-4">
         <div className="w-50 mx-auto mt-4">
             <div className="fs-5 fw-bold mb-2">Now, set your price</div>
             <div className="text-gray mb-2">You can change it anytime.</div>
@@ -585,7 +597,7 @@ export const Step16 = () => {
 
 export const Step17 = () => {
     return (
-        <div className="Step16 py-4 my-3">
+        <div className="Step16 py-4 my-4">
             <div className="w-50 mx-auto mt-4">
                 <div className="fs-5 fw-bold mb-2">Just one last step!</div>
                 <div className="fs-6 fw-bold mb-2">How are you hosting on Coded Estate ? </div>
@@ -637,7 +649,7 @@ export const Step17 = () => {
 
 export const Step18 = () => {
     return (
-        <div className="Step18 py-4 my-3">
+        <div className="Step18 py-4 my-4">
         <div className="w-50 mx-auto mt-4">
             <div className="fs-5 fw-bold mb-2">Yay ! It’s time to publish.</div>
             <div className="text-gray mb-2">Here’s what we’ll show to gests. Before you publish, make sure to review the details.</div>
@@ -681,10 +693,10 @@ export const Step18 = () => {
 
 export const Step19 = () => {
     return (
-        <div className="Step19 py-5 my-5 my-3" style={{height:"45vh"}}>
-            <div className="w-50 mx-auto my-5">
+        <div className="Step19 py-5 my-5 h-100" style={{height:"45vh"}}>
+            <div className="w-50 mx-auto my-5 py-5">
             <div className="fs-5 fw-bold mt-5 mb-2">Congratulations, Didrik !</div>
-                <div className="text-gray mb-4">From one Host to another -welcome aboard. Thanks you for sharing your home and helping to create incredible experieces for out case.</div>
+            <div className="text-gray mb-4">From one Host to another -welcome aboard. Thanks you for sharing your home and helping to create incredible experieces for out case.</div>
             </div>    
         </div>  
     )

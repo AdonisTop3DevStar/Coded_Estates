@@ -1,11 +1,11 @@
-import { Card, Carousel, Col, Image, Row, Button } from "react-bootstrap";
+import { Card, Carousel, Col, Image, Row, Button, Modal } from "react-bootstrap";
 import { FaRuler, FaBath, FaBed, FaHeart, FaRegHeart, FaStar} from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { PrimaryBtn, SecondPrimaryBtn } from "../button/Buttons";
 import VerifyIcon from '../../assets/images/icons/verify.svg';
 import UploadIcon from '../../assets/images/icons/upload.svg';
 import MintIcon from '../../assets/images/icons/mint.svg';
-import { MintedPropertiesCardCarousel, UnverifiedCardCarousel } from "../carousel/Carousel";
+import { DetailCarousel, MintedPropertiesCardCarousel, UnverifiedCardCarousel } from "../carousel/Carousel";
 import { DetailData } from "../../utils/data";
 import BarChartIcon from '../../assets/images/icons/barchart.svg';
 import SumIcon from '../../assets/images/icons/sum.svg';
@@ -17,6 +17,9 @@ import FHeartIcon from '../../assets/images/icons/fheart.svg';
 import BuildingIcon from '../../assets/images/icons/building.svg';
 import UpIcon from '../../assets/images/icons/up.svg';
 import DownIcon from '../../assets/images/icons/down.svg';
+import VerifyMode from "../modal/VerifyMode";
+import { useState } from "react";
+import Logo from '../../assets/images/Logo.svg';
 
 
 
@@ -292,17 +295,52 @@ export const ListPropertyCard = () => {
     return (
         <div className="ListPropertyCard col-sm-12 col-md-2">
             <Card className="border-0">
-                <Card.Body>
-                    <Image src={BuildingImage} width="100%" height="250" className="rounded mb-3"/>
+                <Card.Body>                    
                     <Link to="/dashboard/buy/properties/1" className="nav-link">
+                        <DetailCarousel images={DetailData.images}/>
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <div className="fw-bold">Kent Avenue #310</div>
                         <div className="opacity-50">4.7 SEI</div>
                     </div>
                     </Link>                    
-                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlisted</Button>
+                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlist</Button>
                 </Card.Body>
             </Card>
+        </div>
+    )
+}
+
+export const UnVerifyPropertyCard = () => {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+        <div className="ListPropertyCard col-sm-12 col-md-2">
+            <Card className="border-0">
+                <Card.Body>                    
+                    <Link to="/dashboard/buy/properties/1" className="nav-link">
+                        <DetailCarousel images={DetailData.images}/>
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                        <div className="fw-bold">Kent Avenue #310</div>
+                    </div>
+                    </Link>                    
+                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple" onClick={handleShow}>Verify</Button>
+                </Card.Body>
+            </Card>
+            <Modal
+                show={show}
+                onHide={handleClose}
+                size="xl"
+                aria-labelledby="contained-modal-title-vcenter"
+                centered>
+                <Modal.Header className="d-flex align-items-center justify-content-between">
+                <Image src={Logo} height="50" />
+                <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
+                </Modal.Header>
+                <Modal.Body>
+                <VerifyMode/>
+                </Modal.Body>
+            </Modal>
         </div>
     )
 }
@@ -330,7 +368,7 @@ export const BidPropertyCard = () => {
         <div className="BidPropertyCard col-sm-12 col-md-2">
             <Card className="border-0">
                 <Card.Body>
-                    <Image src={BuildingImage} width="100%" height="250" className="rounded mb-3"/>
+                    <NavLink to=""> <DetailCarousel images={DetailData.images}/></NavLink>
                     <div className="d-flex align-items-center justify-content-between mb-2">
                         <div className="fw-bold">Kent Avenue #310</div>
                     </div>

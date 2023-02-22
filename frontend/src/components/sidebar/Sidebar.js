@@ -1,5 +1,5 @@
 import { Container, Image, ButtonGroup, Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import DashboardIcon from '../../assets/images/icons/dashboard.svg';
 import PropertiesIcon from '../../assets/images/icons/properties.svg';
 import MessageIcon from '../../assets/images/icons/messages.svg';
@@ -17,9 +17,9 @@ import 'switch-button/dist/index.css'
 
 const NavListItem = ({icon, title, link}) => {
   return (
-    <Link to={link} className="nav-link my-4 d-flex align-items-center">
+    <NavLink to={link} className="nav-link my-4 d-flex align-items-center">
       <Image src={icon} width="25" height="25"/><span className="fs-5 fw-semibold ms-3">{title}</span>
-    </Link>
+    </NavLink>
   )
 }
 
@@ -42,7 +42,7 @@ const RentalNavListData = [
   {title : "My Holdings", link : "/dashboard/rent/holding", icon : HoldingIcon},
   {title : "Transactions", link : "/dashboard/rent/transactions", icon : OffersIcon},
   {title : "My Trips", link : "/dashboard/rent/trips", icon : OffersIcon},
-  {title : "Reservations", link : "/dashboard/rent/reservations", icon : OffersIcon},
+  // {title : "Reservations", link : "/dashboard/rent/reservations", icon : OffersIcon},
   {title : "Reviews", link : "/dashboard/rent/reviews", icon : OffersIcon},
 ];
 

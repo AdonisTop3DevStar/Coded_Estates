@@ -269,11 +269,11 @@
 }
 
 .step.bg-white-custom:-webkit-scrollbar-track {
-  background: white;        /* color of the tracking area */
+  background: none;        /* color of the tracking area */
 }
 
 .step.bg-white-custom::-webkit-scrollbar-thumb {
-  background-color: #323260;    /* color of the scroll thumb */
+  background-color: transparent;    /* color of the scroll thumb */
   border-radius: 20px;  
 }
 
@@ -307,3 +307,22 @@ label[for="file"] div {
   text-align-last: justify;
   color: #32326080 !important;
  }
+
+ .PropertiesPage .nav-item button[aria-selected="true"],
+ .Header .navbar .nav-link.active,
+ .Sidebar  .nav-link.active{
+  color: #6317F7 !important;
+ }
+
+body::-webkit-scrollbar {
+  width: 0px;               /* width of the entire scrollbar */
+}
+
+body:-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;    /* color of the scroll thumb */
+  border-radius: 20px;  
+}

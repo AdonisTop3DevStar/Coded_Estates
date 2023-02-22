@@ -26,6 +26,7 @@ import ReservationPage from "./screens/dashboard/reservations/ReservationPage";
 import ReviewsPage from "./screens/dashboard/reviews/ReviewsPage";
 import ReviewDetailPage from "./screens/dashboard/reviews/ReviewDetailPage";
 import { RentDetailPage } from "./screens/rent/DetailPage";
+import TripActivePage from "./screens/dashboard/trip/TripActivePage";
 
 
 const StyleTag = () => {
@@ -75,6 +76,7 @@ function App() {
               <Route path="/dashboard/rent/rewards" element={<RewardsPage/>}/>
               <Route path="/dashboard/rent/holding" element={<HoldingPage/>}/>
               <Route path="/dashboard/rent/trips" element={<TripsPage/>}/>
+              <Route path="/dashboard/rent/trips/active" element={<TripActivePage/>}/>
               <Route path="/dashboard/rent/trips/detail/:ID" element={<TripsDetailPage/>}/>
               <Route path="/dashboard/rent/reservations" element={<ReservationPage/>}/>
               <Route path="/dashboard/rent/reviews" element={<ReviewsPage/>}/>

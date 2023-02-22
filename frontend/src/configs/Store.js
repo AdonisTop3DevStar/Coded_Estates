@@ -7,7 +7,8 @@ const Store = {
     Mode : true,
     VerifyMode : true,
     Connected : false,
-    WalletModalShow : false
+    WalletModalShow : false,
+    PropertiesTabActiveNum : 1,
 }
 
 store.setState(Store);

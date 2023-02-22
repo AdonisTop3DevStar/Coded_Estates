@@ -1,4 +1,4 @@
-import { Accordion, Button, Col, Image, Row, Table, Card, Form } from "react-bootstrap";
+import { Accordion, Button, Col, Image, Row, Table, Card, Form, Modal } from "react-bootstrap";
 import { DetailCarousel } from "../../components/carousel/Carousel";
 import { GoogleMapElement } from "../../components/map/map";
 import { DetailData } from "../../utils/data";
@@ -10,6 +10,7 @@ import Img1 from '../../assets/images/building/4.webp';
 import Icon1 from '../../assets/images/icons/swimming-pool.svg';
 import Icon2 from '../../assets/images/icons/star-border.svg';
 import Icon3 from '../../assets/images/icons/heart-outline.svg';
+import { BuyBookMode } from "../../components/modal/BookingMode";
 
 import Icon4 from '../../assets/images/icons/majesticons_flower-2-line.svg';
 import Icon5 from '../../assets/images/icons/tools-kitchen.svg';
@@ -30,17 +31,31 @@ import GalleryImg4 from '../../assets/images/building/5.webp';
 import GalleryImg5 from '../../assets/images/building/6.webp';
 import Star from '../../assets/images/icons/star.svg';
 import Check from '../../assets/images/icons/check.svg';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaAngleLeft } from "react-icons/fa";
 import SEI from '../../assets/images/crypto/sei.svg';
 import { store } from "../../configs/Store";
-
+import { AiOutlineClose } from "react-icons/ai";
 
 export function DetailPage() {
   const [minDate, setMinDate] = useState(new Date());
   const [connected, setConnected, updateConnected] = store.useState('Connected');
   const [walletModalShow, setWalletModalShow, updateWalletModalShow] = store.useState("WalletModalShow");
+  const [show, setShow] = useState(false);
+  const [messageModal, setMessageModal] = useState(false);
 
+  const showModal = () => {
+    setShow(true);
+  }
+  const hideModal = () => {
+    setShow(false);
+  }
+  const showMessageModal = () => {
+    setMessageModal(true);
+  }
+  const hideMessageModal = () => {
+    setMessageModal(false);
+  }
   const handleClose = () => {
     // setShow(false);
     setWalletModalShow(walletModalShow => {
@@ -182,16 +197,16 @@ export function DetailPage() {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="number" placeholder="Enter your Bid Price" />
               </Form.Group>
-              {connected == false ? (
+              {!connected ? (
                 <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Make an Offer</Button>
               ) : (
-                <Link to="/dashboard/rent/properties"><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button></Link>
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={showModal}>Make an Offer</Button>
               )}
 
-              {connected == false ? (
+              {!connected ? (
                 <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Send Message</Button>
               ) : (
-                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={showMessageModal}>Send Message</Button>
               )}
 
               
@@ -424,14 +439,40 @@ export function DetailPage() {
             <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
             <div className="text-gray mb-2">Response rate : 100%</div>
             <div className="text-gray mb-2">Response time : within an hour</div>
-            {connected == false ? (
+            {!connected ? (
               <Button className="border-gray bg-white text-dark-purple" onClick={handleShow}>Contact Host</Button>
             ) : (
-              <Button className="border-gray bg-white text-dark-purple">Contact Host</Button>
+              <Button className="border-gray bg-white text-dark-purple" onClick={showMessageModal}>Contact Host</Button>
             )}
           </Col>
         </Row>
       </div>
+      <Modal show={show} size="xl" centered>
+        <Modal.Header className="d-flex align-items-center justify-content-between">
+
+          <Image src={Logo} height="50" />
+          <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={hideModal}>Save & exit</Button>
+        </Modal.Header>
+        <Modal.Body className="bg-white-custom">
+          <BuyBookMode />
+        </Modal.Body>
+      </Modal>
+      <Modal show={messageModal} size="sm" centered>
+        <Modal.Body>
+        <div className="text-end"><AiOutlineClose onClick={hideMessageModal}/></div>
+         <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
+         <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control type="text" placeholder="Receiver Address" className="borer-gray"/>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Control as="textarea" rows={3} placeholder="Type your message"  className="borer-gray"/>
+          </Form.Group>
+          <div className="d-flex align-items-center justify-content-around">
+            <Button className="border-dark-purple bg-white text-dark-purple fw-bold fs-6 px-4" onClick={hideMessageModal}>Cancel</Button>
+            <NavLink to="/dashboard/rent/message"><Button className="border-dark-purple bg-dark-purple text-white fw-bold fs-6 px-4">Send</Button></NavLink>
+          </div>
+        </Modal.Body>
+      </Modal>
     </div>
   )
 }
