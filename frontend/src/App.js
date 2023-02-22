@@ -27,6 +27,7 @@ import ReviewsPage from "./screens/dashboard/reviews/ReviewsPage";
 import ReviewDetailPage from "./screens/dashboard/reviews/ReviewDetailPage";
 import { RentDetailPage } from "./screens/rent/DetailPage";
 import TripActivePage from "./screens/dashboard/trip/TripActivePage";
+import BidOfferPage from "./screens/dashboard/bid_offer/BidOfferPage";
 
 
 const StyleTag = () => {
@@ -62,7 +63,7 @@ function App() {
               <Route path="/dashboard/buy/message" element={<MessagePage/>}/>
               <Route path="/dashboard/buy/favorite" element={<FavoritesPage/>}/>
               <Route path="/dashboard/buy/transactions" element={<TransactionPage/>}/>
-              <Route path="/dashboard/buy/offers" element={<OffersPage/>}/>
+              <Route path="/dashboard/buy/offers" element={<BidOfferPage/>}/>
               <Route path="/dashboard/buy/rewards" element={<RewardsPage/>}/>
               <Route path="/dashboard/buy/holding" element={<HoldingPage/>}/>
             </Route>

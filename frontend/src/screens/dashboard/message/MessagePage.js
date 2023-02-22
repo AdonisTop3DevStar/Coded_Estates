@@ -1,4 +1,4 @@
-import { Button, Card, Col, Form, ListGroup, Row, InputGroup, Image } from "react-bootstrap";
+import { Button, ButtonGroup, Col, Form, ListGroup, Row, InputGroup, Image } from "react-bootstrap";
 import { FaSearch, FaTelegramPlane } from "react-icons/fa";
 import Map from '../../../assets/images/icons/map.svg';
 import User from '../../../assets/images/icons/user.svg';
@@ -10,6 +10,10 @@ function MessagePage() {
       <div className="MessagePage mt-2">
         <Row>
           <Col md={2} className="border-end user-list">
+          <ButtonGroup className="border-gray bg-white p-2 w-100">
+            <Button variant="secondary">My Offers</Button>
+            <Button variant="secondary">My Bids</Button>
+          </ButtonGroup>
             <div className="fs-5 fw-bold my-3">All Messages</div>
             <InputGroup className="mb-3 rounded border text-gray">
               <InputGroup.Text id="basic-addon1" className="bg-white border-0 text-gray"><FaSearch/></InputGroup.Text>

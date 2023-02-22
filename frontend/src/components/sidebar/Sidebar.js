@@ -31,6 +31,7 @@ const NavListData = [
   {title : "My Rewards", link : "/dashboard/buy/rewards", icon : RewardsIcon},
   {title : "My Holdings", link : "/dashboard/buy/holding", icon : HoldingIcon},
   {title : "Transactions", link : "/dashboard/buy/transactions", icon : OffersIcon},
+  {title : "Bids and offers", link : "/dashboard/buy/offers", icon : OffersIcon},
 ];
 
 const RentalNavListData = [

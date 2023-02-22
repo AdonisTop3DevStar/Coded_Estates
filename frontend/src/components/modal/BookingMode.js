@@ -12,6 +12,8 @@ export const BuyBookMode = () => {
         <div className="BuyBookMode mb-4">
             <Row>
                 <Col sm={12} md={6}>
+                <div className='fs-5 fw-semibold my-2'>Verify</div>
+                    <Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Due Diligence</Button>
                     <div className='fs-5 fw-semibold my-2'>Pay with</div>
                     <Dropdown>
                         <Dropdown.Toggle className="bg-white border-dark-purple text-dark-purple w-100 py-2 d-flex align-items-center justify-content-between" id="dropdown-basic">
@@ -25,8 +27,8 @@ export const BuyBookMode = () => {
                         </Dropdown.Menu>
                     </Dropdown>
                     <hr />
-                    <div className='fs-5 fw-semibold my-2'>Required for your trip</div>
-                    <div className='fs-6 fw-bold'>Message the Host</div>
+                    <div className='fs-5 fw-semibold my-2'>Reserve to Buy</div>
+                    <div className='fs-6 fw-bold'>Message the Seller</div>
                     <small className="text-gray mb-2">Let the Host know why you’re traveling and when you’ll check in</small>
                     <div className="d-flex align-items-center my-2">
                         <Image src={Avatar} width="50" height="50" style={{ objectFit: "cover" }} className="rounded-circle me-2" />
@@ -38,11 +40,11 @@ export const BuyBookMode = () => {
                     <Form.Group className="my-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Control as="textarea" rows={2} />
                     </Form.Group>
+                    {/* <hr /> */}
+                    {/* <div className='fs-5 fw-semibold my-2'>Cancellation policy</div> */}
+                    {/* <small className="text-gray">This reservation is non-refundable. <strong><u>Learn more</u></strong></small> */}
                     <hr />
-                    <div className='fs-5 fw-semibold my-2'>Cancellation policy</div>
-                    <small className="text-gray">This reservation is non-refundable. <strong><u>Learn more</u></strong></small>
-                    <hr />
-                    <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Request to book</Button></Link>
+                    <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Reserve to buy</Button></Link>
                 </Col>
                 <Col sm={12} md={6}>
                     <Card>
@@ -56,16 +58,12 @@ export const BuyBookMode = () => {
                                 </div>
                             </div>
                             <hr />
-                            <div>Your booking is protected by Coded Estate</div>
-                            <hr />
+                            {/* <div>Your booking is protected by Coded Estate</div> */}
+                            {/* <hr /> */}
                             <div className="fw-bold my-2">Send Message</div>
-                            {/* <div className='text-gray d-flex align-items-center justify-content-between my-3'>
-                                <div>$357 X 27 nights</div>
-                                <div>$9650</div>
-                            </div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
-                                <div>Cleaning fee</div>
-                                <div>$ 131</div>
+                                <div>Price</div>
+                                <div>$9650</div>
                             </div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
                                 <div>Service fee</div>
@@ -74,8 +72,8 @@ export const BuyBookMode = () => {
                             <hr />
                             <div className='d-flex aling-items-center justify-content-between fs-5 fw-bold'>
                                 <div>Total before taxes</div>
-                                <div>$ 9781</div>
-                            </div> */}
+                                <div>$ 9650</div>
+                            </div>
                         </Card.Body>
                     </Card>
                 </Col>
@@ -104,8 +102,7 @@ export const RentBookMode = () => {
                         </div>
                         <Link to="" className='fs-6 fw-bold text-dark-purple'><u>Edit</u></Link>
                     </div><hr />
-                    <div className='fs-5 fw-semibold my-2'>Verify</div>
-                    <Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Due Diligence</Button>
+                   
                     <div className='fs-5 fw-semibold my-2'>Pay with</div>
                     <Dropdown>
                         <Dropdown.Toggle className="bg-white border-dark-purple text-dark-purple w-100 py-2 d-flex align-items-center justify-content-between" id="dropdown-basic">

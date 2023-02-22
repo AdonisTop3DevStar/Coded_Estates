@@ -1,0 +1,145 @@
+/* Header Style */
+
+.Header .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.Header button {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+/* Searchbar Style */
+.SearchBar .rounded-pill .house-type select.form-select {
+  width: 60% !important;
+}
+.SearchBar .rounded-pill .house-type label {
+  margin: 0;
+}
+
+.SearchBar .rounded-pill select, 
+.SearchBar .rounded-pill label {
+  font-weight: 700;
+}
+
+.SearchBar .rounded-pill select {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+/* NormalCard Style */
+
+.NormalCard {
+  border: none !important;
+}
+
+.NormalCard .carousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.NormalCard .card-properties {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.NormalCard .heart-icon {
+  position: absolute;
+  z-index: 10;
+  right: 8%;
+  top: 7%;
+  font-size: 20px;
+  color: white;
+}
+
+/* BuyPage Style */
+
+.BuyPage .Search-result {
+  max-height: 80vh;
+  overflow: scroll;
+}
+
+.BuyPage .show-map-btn {
+  bottom: 5%;
+  left: 45%;
+  position: absolute;
+  z-index: 20;
+}
+
+/* DetailCarousel Style */
+
+.DetailPage .DetailCarousel.carousel .carousel-indicators button {
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50%;
+}
+
+/* SideBar Style */
+
+.Sidebar {
+  width: 300px;
+  border-right: 1px solid;
+  height: 87vh;
+}
+
+/* MintCard Style */
+
+.MintCard .card-body .border-1.rounded-2 {
+  background-color: #75757533;
+}
+
+/* MintedPropertiesCardCarousel Style */
+.MintedPropertiesCardCarousel .badge {
+  position: absolute;
+    right: 5%;
+    top: 5%;
+    background: white !important;
+    color: gray;
+    border-radius: 50px;
+    padding: 0.25rem 1rem;
+    border: 1px solid gray;
+}
+
+.MintedPropertiesCardCarousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* PropertiesPage Style */
+
+.PropertiesPage .nav-tabs .nav-item {
+  font-weight: bold;
+}
+
+/* FavoritesPage Style */
+
+.FavoritesPage .FavoritesPage-body {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+/* PropertiesDetail Style */
+
+.PropertiesDetail .history-price-option,
+.PropertiesDetail .history-price-option .btn-group button {
+  font-size: 12px;
+}
+
+.PropertiesDetail .history-datatable .history-datatable-item,
+.PropertiesDetail .history-datatable .history-datatable-item button {
+  font-size: 12px;
+}
+
+.PropertiesDetail .history-datatable .history-datatable-item button {
+  padding: 0.25rem 1rem !important;
+}
+
+.chat-body {
+  min-height: 66.5vh !important;
+}
