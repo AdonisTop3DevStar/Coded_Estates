@@ -88,7 +88,7 @@ export default function VerifyMode () {
                             {currentStep == 19 ? (
                                 <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(1)}><Button className="bg-dark-purple text-white border-dark-purple fw-bold px-3 py-1" onClick={goToNextStep}>Let's get started</Button></Link>
                             ) : (
-                                <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-3 py-1" onClick={goToNextStep}>Next</Button>
+                                <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-4 py-1" onClick={goToNextStep}>Next</Button>
                             )}
                             
                         </div>
@@ -103,7 +103,7 @@ export default function VerifyMode () {
 export const Step0 = () => {
     return (
         <div className="Step0 py-5">
-            <Row className="align-items-center my-1">
+            <Row className="align-items-center my-3">
                 <Col sm={6} md={6} className="">
                     <div className="fs-3 fw-bold w-50 mx-auto">Get Your NFT</div>
                     <div className="fs-3 fw-bold w-50 mx-auto">ready for rental</div>
@@ -139,7 +139,7 @@ export const Step0 = () => {
 export const Step1 = () => {
     return (
         <div className="Step1 py-5 my-3">
-            <Row className="align-items-center my-1">
+            <Row className="align-items-center my-3">
                 <Col sm={6} md={6}>
                     <div className="w-75 mx-auto">
                         <div className="fs-6 fw-semibold mb-2">Step 1</div>
@@ -179,7 +179,7 @@ export const Step2 = () => {
 export const Step3 = () => {
     return (
         <div className="Step3 py-5 my-3">
-            <div className="w-50 mx-auto my-1">
+            <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold">What type of place will guests have?</div>
                 <Card className="mt-4">
                     <Card.Body>
@@ -222,7 +222,7 @@ export const Step3 = () => {
 export const Step4 = () => {
     return (
         <div className="Step4 py-5 my-3">
-            <div className="w-50 mx-auto my-1">
+            <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold mb-2">What type of place will guests have?</div>
                 <div className="text-gray mb-2">Guest have the whole place to themselves</div>
                 <Card className="mt-4 mb-1">
@@ -297,7 +297,7 @@ export const Step5 = () => {
 export const Step6 = () => {
     return (
         <div className="Step6 py-5 my-3">
-            <div className="w-50 mx-auto my-1">
+            <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold mb-2">Is the pin in the right spot?</div>
                 <div className="text-gray mb-2">Your address is only shared with guests after they’ve made a reservation.</div>
                 <Card className="mt-4 mb-1">
@@ -314,7 +314,7 @@ export const Step7 = () => {
     const [bedRoom, setBedRoom] = useState(1);
     const [bath, setBathRoom] = useState(1);
     return (
-        <div className="Step7 py-5 my-3">
+        <div className="Step7 py-5 my-4">
             <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold mb-2">Share some basic about your place</div>
                 <div className="text-gray mb-2">You’ll add more details later, like bed type</div>
@@ -376,7 +376,7 @@ export const Step7 = () => {
 export const Step8 = () => {
     return (
         <div className="Step8 py-5 my-3">
-            <Row className="align-items-center my-1">
+            <Row className="align-items-center my-3">
                 <Col sm={6} md={6}>
                     <div className="w-75 mx-auto">
                         <div className="fs-6 fw-semibold mb-2">Step 2</div>
@@ -433,7 +433,7 @@ export const Step10 = () => {
       setFile(file);
     };
     return (
-        <div className="Step10 py-5 my-3">
+        <div className="Step10 py-5 my-4">
             <div className="w-50 mx-auto">
                 <div className="fs-5 fw-bold mb-2">Add some photos of your house</div>
                 <div className="text-gray mb-2">You’ll need 5 photos to get started. You can add more or make changes later</div>
@@ -447,8 +447,8 @@ export const Step10 = () => {
 
 export const Step11 = () => {
     return (
-        <div className="Step11 py-5 my-3">
-            <div className="w-50 mx-auto my-2">
+        <div className="Step11 py-5 my-4">
+            <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold mb-2">Now, let’s give your house a title</div>
                 <div className="text-gray mb-2">Short titles work best. Have fun with it - you can always change it later.</div>
                 <Form.Group className="mt-1 mb-3" controlId="exampleForm.ControlTextarea1">
@@ -462,7 +462,7 @@ export const Step11 = () => {
 
 export const Step12 = () => {
     return (
-        <div className="Step12 py-5 my-4">
+        <div className="Step12 py-5 my-5">
             <div className="w-50 mx-auto my-5 py-5">
                 <div className="fs-5 fw-bold mb-2">Next, let’s describe your house</div>
                 <div className="text-gray mb-2">Choose up to 2 highlights. We’ll use these to get your description started.</div>
@@ -493,8 +493,8 @@ export const Step12 = () => {
 
 export const Step13 = () => {
     return (
-        <div className="Step13 py-5 my-3">
-            <div className="w-50 mx-auto my-2">
+        <div className="Step13 py-5 my-4">
+            <div className="w-50 mx-auto my-3">
                 <div className="fs-5 fw-bold mb-2">Create your description</div>
                 <div className="text-gray mb-2">Share what makes your place special.</div>
                 <Form.Group className="mt-1 mb-3" controlId="exampleForm.ControlTextarea1">
@@ -508,7 +508,7 @@ export const Step13 = () => {
 
 export const Step14 = () => {
     return (
-        <div className="Step14 py-5 my-3">
+        <div className="Step14 py-5 my-4">
             <Row className="align-items-center my-1">
                 <Col sm={6} md={6}>
                     <div className="w-75 mx-auto">
@@ -527,7 +527,7 @@ export const Step14 = () => {
 
 export const Step15 = () => {
     return (
-        <div className="Step15 py-5 my-4">
+        <div className="Step15 py-5 my-5">
         <div className="w-50 mx-auto mt-5 mb-4">
             <div className="fs-5 fw-bold mb-2">Choose who to welcome for your first reservation</div>
             <div className="text-gray mb-2">Short titles work best. Have fun with it - you can always change it later.</div>
@@ -565,7 +565,7 @@ export const Step15 = () => {
 export const Step16 = () => {
     return (
         <div className="Step16 py-4 my-4">
-        <div className="w-50 mx-auto mt-4">
+        <div className="w-50 mx-auto my-4">
             <div className="fs-5 fw-bold mb-2">Now, set your price</div>
             <div className="text-gray mb-2">You can change it anytime.</div>
             <Card className="my-3">
@@ -598,7 +598,7 @@ export const Step16 = () => {
 export const Step17 = () => {
     return (
         <div className="Step16 py-4 my-4">
-            <div className="w-50 mx-auto mt-4">
+            <div className="w-50 mx-auto my-4">
                 <div className="fs-5 fw-bold mb-2">Just one last step!</div>
                 <div className="fs-6 fw-bold mb-2">How are you hosting on Coded Estate ? </div>
                 <Form.Check 
@@ -650,7 +650,7 @@ export const Step17 = () => {
 export const Step18 = () => {
     return (
         <div className="Step18 py-4 my-4">
-        <div className="w-50 mx-auto mt-4">
+        <div className="w-50 mx-auto my-4">
             <div className="fs-5 fw-bold mb-2">Yay ! It’s time to publish.</div>
             <div className="text-gray mb-2">Here’s what we’ll show to gests. Before you publish, make sure to review the details.</div>
             <div className="my-3">
@@ -695,7 +695,7 @@ export const Step19 = () => {
     return (
         <div className="Step19 py-5 my-5 h-100" style={{height:"45vh"}}>
             <div className="w-50 mx-auto my-5 py-5">
-            <div className="fs-5 fw-bold mt-5 mb-2">Congratulations, Didrik !</div>
+            <div className="fs-5 fw-bold mt-5 mb-3">Congratulations, Didrik !</div>
             <div className="text-gray mb-4">From one Host to another -welcome aboard. Thanks you for sharing your home and helping to create incredible experieces for out case.</div>
             </div>    
         </div>  

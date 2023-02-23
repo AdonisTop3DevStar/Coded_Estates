@@ -28,6 +28,8 @@ import ReviewDetailPage from "./screens/dashboard/reviews/ReviewDetailPage";
 import { RentDetailPage } from "./screens/rent/DetailPage";
 import TripActivePage from "./screens/dashboard/trip/TripActivePage";
 import BidOfferPage from "./screens/dashboard/bid_offer/BidOfferPage";
+import RentMessagePage from "./screens/dashboard/message/RentMessagePage";
+import { store } from "./configs/Store";
 
 
 const StyleTag = () => {
@@ -41,6 +43,7 @@ const StyleTag = () => {
 }
 
 function App() {
+  const [connected, setConnected, updateConnected] = store.useState('Connected');
   return (
     <div className="App">
       <ThemeProvider>
@@ -48,7 +51,6 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<HomeLayout/>}>
-              {/* <Route path="/" element={<RentPage/>}/> */}
               <Route path="/about" element={<AboutPage/>}/>
               <Route path="/buy" element={<BuyPage/>}/>
               <Route path="/sell" element={<SellPage/>}/>
@@ -56,7 +58,8 @@ function App() {
               <Route path="/detail/buy/:detailID" element={<DetailPage/>}/>
               <Route path="/detail/rent/:detailID" element={<RentDetailPage/>}/>
             </Route>
-            <Route element={<DashboardLayout/>}>
+            {connected ? (
+              <Route element={<DashboardLayout/>}>
               <Route path="/dashboard/overview" element={<OverviewPage/>}/>
               <Route path="/dashboard/buy/properties" element={<PropertiesPage/>}/>
               <Route path="/dashboard/buy/properties/:detailID" element={<PropertiesDetail/>}/>
@@ -66,23 +69,27 @@ function App() {
               <Route path="/dashboard/buy/offers" element={<BidOfferPage/>}/>
               <Route path="/dashboard/buy/rewards" element={<RewardsPage/>}/>
               <Route path="/dashboard/buy/holding" element={<HoldingPage/>}/>
-            </Route>
-            <Route element={<DashboardLayout/>}>
-              <Route path="/dashboard/overview" element={<OverviewPage/>}/>
-              <Route path="/dashboard/rent/properties" element={<PropertiesPage/>}/>
-              <Route path="/dashboard/rent/properties/:detailID" element={<PropertiesDetail/>}/>
-              <Route path="/dashboard/rent/message" element={<MessagePage/>}/>
-              <Route path="/dashboard/rent/favorite" element={<FavoritesPage/>}/>
-              <Route path="/dashboard/rent/transactions" element={<TransactionPage/>}/>
-              <Route path="/dashboard/rent/rewards" element={<RewardsPage/>}/>
-              <Route path="/dashboard/rent/holding" element={<HoldingPage/>}/>
-              <Route path="/dashboard/rent/trips" element={<TripsPage/>}/>
-              <Route path="/dashboard/rent/trips/active" element={<TripActivePage/>}/>
-              <Route path="/dashboard/rent/trips/detail/:ID" element={<TripsDetailPage/>}/>
-              <Route path="/dashboard/rent/reservations" element={<ReservationPage/>}/>
-              <Route path="/dashboard/rent/reviews" element={<ReviewsPage/>}/>
-              <Route path="/dashboard/rent/reviews/detail/:ID" element={<ReviewDetailPage/>}/>
-            </Route>
+              </Route>
+            ) : (<Route path="*" element={<Navigate to="/rent" replace/>}/>)}
+            {connected ? (
+               <Route element={<DashboardLayout/>}>
+               <Route path="/dashboard/overview" element={<OverviewPage/>}/>
+               <Route path="/dashboard/rent/properties" element={<PropertiesPage/>}/>
+               <Route path="/dashboard/rent/properties/:detailID" element={<PropertiesDetail/>}/>
+               <Route path="/dashboard/rent/message" element={<RentMessagePage/>}/>
+               <Route path="/dashboard/rent/favorite" element={<FavoritesPage/>}/>
+               <Route path="/dashboard/rent/transactions" element={<TransactionPage/>}/>
+               <Route path="/dashboard/rent/rewards" element={<RewardsPage/>}/>
+               <Route path="/dashboard/rent/holding" element={<HoldingPage/>}/>
+               <Route path="/dashboard/rent/trips" element={<TripsPage/>}/>
+               <Route path="/dashboard/rent/trips/active" element={<TripActivePage/>}/>
+               <Route path="/dashboard/rent/trips/detail/:ID" element={<TripsDetailPage/>}/>
+               <Route path="/dashboard/rent/reservations" element={<ReservationPage/>}/>
+               <Route path="/dashboard/rent/reviews" element={<ReviewsPage/>}/>
+               <Route path="/dashboard/rent/reviews/detail/:ID" element={<ReviewDetailPage/>}/>
+             </Route>
+            ) : ( <Route path="*" element={<Navigate to="/rent" replace/>}/>)}
+           
             <Route path="*" element={<Navigate to="/rent" replace/>}/>
           </Routes>
         </BrowserRouter>
