@@ -90,7 +90,7 @@ function OverviewPage() {
           <Image src={Logo} height="50" />
           <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body  className="position-relative">
           <VerifyMode />
         </Modal.Body>
       </Modal>

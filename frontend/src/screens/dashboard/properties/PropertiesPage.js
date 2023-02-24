@@ -1,12 +1,13 @@
 import { Container, Tab, Tabs, Row, InputGroup, Form } from "react-bootstrap";
-import { BidPropertyCard, ListPropertyCard, PropertyInfoCard, UnVerifyPropertyCard } from "../../../components/card/card";
+import { BidPropertyCard, ListPropertyCard, PropertyInfoCard, UnVerifyPropertyCard, MListPropertyCard } from "../../../components/card/card";
 import { FaSearch } from "react-icons/fa";
 import React, { useState } from 'react';
 import { store } from "../../../configs/Store";
+import { MyBidData, MyListingData, UnVerifyNFTData, VerifyNFTData, } from "../../../utils/data";
 
 function PropertiesPage() {
   const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
-console.log(tabKey)
+  
 
     return (
       <div className="PropertiesPage my-2">
@@ -31,12 +32,9 @@ console.log(tabKey)
               </InputGroup>
               </div>
               <Row>
-                <ListPropertyCard/>
-                <ListPropertyCard/>
-                <ListPropertyCard/>
-                <ListPropertyCard/>
-                <ListPropertyCard/>
-                <ListPropertyCard/>
+                { VerifyNFTData.map((item, idx) => (
+                  <ListPropertyCard title={item.title} price={item.price} currency={item.currency} images={item.images}/>
+                ))}
               </Row>
             </div>
           </Tab>
@@ -53,12 +51,9 @@ console.log(tabKey)
               </InputGroup>
               </div>
             <Row>
-                <UnVerifyPropertyCard/>
-                <UnVerifyPropertyCard/>
-                <UnVerifyPropertyCard/>
-                <UnVerifyPropertyCard/>
-                <UnVerifyPropertyCard/>
-                <UnVerifyPropertyCard/>
+              {UnVerifyNFTData.map(((item, idx) => (
+                <UnVerifyPropertyCard title={item.title} images={item.images}/>
+              )))}
               </Row>
             </div>
           </Tab>
@@ -75,11 +70,9 @@ console.log(tabKey)
               </InputGroup>
               </div>
               <Row>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
-              <ListPropertyCard/>
+                {MyListingData.map(((item, idx) => (
+                  <MListPropertyCard title={item.title} price={item.price} currency={item.currency} images={item.images}/>
+                )))}
               </Row>
             </div>
           </Tab>
@@ -96,11 +89,9 @@ console.log(tabKey)
               </InputGroup>
               </div>
             <Row>
-                <BidPropertyCard/>
-                <BidPropertyCard/>
-                <BidPropertyCard/>
-                <BidPropertyCard/>
-                <BidPropertyCard/>
+              {MyBidData.map((item, idx) => (
+                <BidPropertyCard title={item.title} price={item.price} currency={item.currency} images={item.images} bPrice={item.bPrice}/>
+              ))}
               </Row>
             </div>
           </Tab>

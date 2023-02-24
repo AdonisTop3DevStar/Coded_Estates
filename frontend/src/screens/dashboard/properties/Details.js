@@ -4,7 +4,8 @@ import {
   Row,
   Button,
   Card,
-  Form
+  Form,
+  Dropdown
 } from "react-bootstrap";
 import "react-alice-carousel/lib/alice-carousel.css";
 import {
@@ -27,8 +28,12 @@ import Star from '../../../assets/images/icons/star.svg';
 import Check from '../../../assets/images/icons/check.svg';
 import Logo from '../../../assets/images/Logo.svg';
 import { FaAngleLeft } from "react-icons/fa";
+import { store } from "../../../configs/Store";
 
 export default function PropertiesDetail() {
+
+  const [type, setType, updateType] = store.useState("DetailType");
+
   return (
     <div className="PropertiesDetail">
       <Link to="/dashboard/buy/properties" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2"/>Back</Link>
@@ -126,17 +131,85 @@ export default function PropertiesDetail() {
         </Col>
         <Col sm={12} md={4}>
           <Card className="shadow">
+          {type == "verify" && (
             <Card.Body>
               <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
               <div className="fs-6 fw-semibold mb-2">Bid Price</div>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="number" placeholder="Enter your Bid Price" />
-              </Form.Group>
+              </Form.Group>              
               <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button>
               <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
               <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button>
               <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
             </Card.Body>
+          )}
+          {type == "listing" && (
+            <Card.Body>
+              <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
+              <div className="border rounded">
+                <Dropdown>
+                  <label className="ms-2 fw-middle">CURRENCY</label>
+                  <Dropdown.Toggle className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple" id="dropdown-basic">
+                    <div className="d-flex align-items-center">
+                      <Image src={SEI} width="30" className="me-2"/><span>SEI</span>
+                    </div>
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu className="w-100">
+                    <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                    <div className="d-flex align-items-center">
+                      <Image src={SEI} width="30" className="me-2"/><span>SEI</span>
+                    </div>
+                    </Dropdown.Item>
+                    <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                    <div className="d-flex align-items-center">
+                      <Image src={SEI} width="30" className="me-2"/><span>SEI</span>
+                    </div>
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+                <div className="border-top">
+                  <label className="ms-2 fw-middle" muted>PRICE</label>  
+                  <Form.Control
+                    type="number"
+                    id="inputPassword5"
+                    placeholder="125,000,000"
+                    className="border-0"
+                  />
+                </div>
+              </div>            
+              <div className="d-flex align-items-center justify-content-between my-3">
+                <div className="f-semibold">Allow Bids</div>
+                <Form.Check 
+                  type="switch"
+                  id="custom-switch"
+                />
+              </div>
+              <div className="d-flex align-items-center justify-content-between my-3">
+                <div className="f-semibold">Min. Price</div>
+                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                  <Form.Control type="text" placeholder="" />
+                </Form.Group>
+              </div>
+              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
+              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Unlist Property</Button>
+            </Card.Body>
+          )}
+          {type == "bid" && (
+            <Card.Body>
+              <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
+              <div className="fs-6 fw-semibold mb-2">Bid Price</div>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="number" placeholder="Enter your Bid Price" />
+              </Form.Group>              
+              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Update Bid Price</Button>
+              <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Send Message</Button>
+              <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Cancel</Button>
+              <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button>
+              <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
+            </Card.Body>
+          )}
           </Card>
         </Col>
       </Row>

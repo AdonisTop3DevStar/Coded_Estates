@@ -6,7 +6,7 @@ import VerifyIcon from '../../assets/images/icons/verify.svg';
 import UploadIcon from '../../assets/images/icons/upload.svg';
 import MintIcon from '../../assets/images/icons/mint.svg';
 import { DetailCarousel, MintedPropertiesCardCarousel, UnverifiedCardCarousel } from "../carousel/Carousel";
-import { DetailData } from "../../utils/data";
+import { DetailData, UnVerifyNFTData, VerifyNFTData } from "../../utils/data";
 import BarChartIcon from '../../assets/images/icons/barchart.svg';
 import SumIcon from '../../assets/images/icons/sum.svg';
 import AmountListIcon from '../../assets/images/icons/amount_list.svg';
@@ -20,6 +20,7 @@ import DownIcon from '../../assets/images/icons/down.svg';
 import VerifyMode from "../modal/VerifyMode";
 import { useState } from "react";
 import Logo from '../../assets/images/Logo.svg';
+import { store } from "../../configs/Store";
 
 
 
@@ -171,10 +172,10 @@ export const MintedPropertiesCard = () => {
                 <Card.Body>
                 <Row>
                     <Col sm={12} md={6}>
-                        <UnverifiedCardCarousel images={DetailData.images}/>
+                        <UnverifiedCardCarousel images={UnVerifyNFTData[0].images}/>
                     </Col>
                     <Col sm={12} md={6}>
-                        <MintedPropertiesCardCarousel images={DetailData.images}/>
+                        <MintedPropertiesCardCarousel images={VerifyNFTData[2].images}/>
                     </Col>
                 </Row>
                 </Card.Body>
@@ -291,16 +292,17 @@ export const FavouritInfoCard = () => {
     )
 }
 
-export const ListPropertyCard = () => {
+export const ListPropertyCard = ({title, price, currency, images}) => {
+    const [type, setType, updateType] = store.useState("DetailType");
     return (
         <div className="ListPropertyCard col-sm-12 col-md-2">
             <Card className="border-0">
                 <Card.Body>                    
-                    <Link to="/dashboard/buy/properties/1" className="nav-link">
-                        <DetailCarousel images={DetailData.images}/>
+                    <Link to="/dashboard/buy/properties/1" className="nav-link" onClick={() => setType("verify")}>
+                        <DetailCarousel images={images}/>
                     <div className="d-flex align-items-center justify-content-between mb-2">
-                        <div className="fw-bold">Kent Avenue #310</div>
-                        <div className="opacity-50">4.7 SEI</div>
+                        <div className="fw-bold">{title}</div>
+                        <div className="opacity-50">{price} {currency}</div>
                     </div>
                     </Link>                    
                     <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlist</Button>
@@ -310,7 +312,27 @@ export const ListPropertyCard = () => {
     )
 }
 
-export const UnVerifyPropertyCard = () => {
+export const MListPropertyCard = ({title, price, currency, images}) => {
+    const [type, setType, updateType] = store.useState("DetailType");
+    return (
+        <div className="ListPropertyCard col-sm-12 col-md-2">
+            <Card className="border-0">
+                <Card.Body>                    
+                    <Link to="/dashboard/buy/properties/1" className="nav-link" onClick={() => setType("listing")}>
+                        <DetailCarousel images={images}/>
+                    <div className="d-flex align-items-center justify-content-between mb-2">
+                        <div className="fw-bold">{title}</div>
+                        <div className="opacity-50">{price} {currency}</div>
+                    </div>
+                    </Link>                    
+                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlist</Button>
+                </Card.Body>
+            </Card>
+        </div>
+    )
+}
+
+export const UnVerifyPropertyCard = ({title, images}) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -318,10 +340,10 @@ export const UnVerifyPropertyCard = () => {
         <div className="ListPropertyCard col-sm-12 col-md-2">
             <Card className="border-0">
                 <Card.Body>                    
-                    <Link to="/dashboard/buy/properties/1" className="nav-link">
-                        <DetailCarousel images={DetailData.images}/>
+                    <Link className="nav-link">
+                        <DetailCarousel images={images}/>
                     <div className="d-flex align-items-center justify-content-between mb-2">
-                        <div className="fw-bold">Kent Avenue #310</div>
+                        <div className="fw-bold">{title}</div>
                     </div>
                     </Link>                    
                     <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple" onClick={handleShow}>Verify</Button>
@@ -337,7 +359,7 @@ export const UnVerifyPropertyCard = () => {
                 <Image src={Logo} height="50" />
                 <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className="position-relative">
                 <VerifyMode/>
                 </Modal.Body>
             </Modal>
@@ -363,22 +385,24 @@ export const MyNFTCard = () => {
     )
 }
 
-export const BidPropertyCard = () => {
+export const BidPropertyCard = ({title, bPrice, price, currency, images}) => {
+    const [type, setType, updateType] = store.useState("DetailType");
     return (
         <div className="BidPropertyCard col-sm-12 col-md-2">
             <Card className="border-0">
                 <Card.Body>
-                    <NavLink to=""> <DetailCarousel images={DetailData.images}/></NavLink>
-                    <div className="d-flex align-items-center justify-content-between mb-2">
-                        <div className="fw-bold">Kent Avenue #310</div>
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between">
-                        <Button className="fw-bold text-dark-purple bg-white border-dark-purple">439 USD</Button>
-                        <div className="text-end">
-                            <div className="opacity-50">Offer</div>
-                            <div>4.7<span className="ms-2 opacity-50 fw-semibold">SEI</span></div>
+                    <NavLink to="/dashboard/buy/properties/1" onClick={() => setType("bid")} className="nav-link"> <DetailCarousel images={images} />
+                        <div className="d-flex align-items-center justify-content-between mb-2">
+                            <div className="fw-bold">{title}</div>
                         </div>
-                    </div>
+                        <div className="d-flex align-items-center justify-content-between">
+                            <Button className="fw-bold text-dark-purple bg-white border-dark-purple">{bPrice} {currency}</Button>
+                            <div className="text-end">
+                                <div className="opacity-50">Offer</div>
+                                <div>{price}<span className="ms-2 opacity-50 fw-semibold">{currency}</span></div>
+                            </div>
+                        </div>
+                    </NavLink>
                 </Card.Body>
             </Card>
         </div>

@@ -326,3 +326,32 @@ body::-webkit-scrollbar-thumb {
   background-color: transparent;    /* color of the scroll thumb */
   border-radius: 20px;  
 }
+
+.VerifyModePlaceButton:hover,
+.VerifyModePlaceButton:active
+.VerifyModePlaceButton:focus,
+.VerifyModePlaceButton:focus-visible {
+  border-color: #323260 !important;
+}
+
+.Step3 .btn-check:checked+.btn,
+.Step2 .btn-check:checked+.btn,
+.Step9 .btn-check:checked+.btn,
+.Step12 .btn-check:checked+.btn,
+.Step15 .btn-check:checked+.btn {
+  border-color: #323260 !important;
+  background: white !important;
+  color: #323260 !important;
+  box-shadow: none;
+}
+
+.Step2 .btn,
+.Step3 .btn,
+.Step9 .btn,
+.Step12 .btn,
+.Step15 .btn
+ {
+  border-color: #0000002d !important;
+  background: white !important;
+  color: #323260 !important;
+}

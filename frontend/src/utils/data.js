@@ -30,10 +30,7 @@ export const buyPageData = [
         images : [
             {src : Building1},
             {src : Building2},
-            {src : Building3},
-            {src : Building4},
-            {src : Building5},
-            {src : Building6},            
+            {src : Building3},        
         ]    
     },
     { 
@@ -43,10 +40,27 @@ export const buyPageData = [
         images : [
             {src : Building7},
             {src : Building8},
-            {src : Building9},
+            {src : Building9},        
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building4},
+            {src : Building5},
+            {src : Building6},        
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
             {src : Building10},
             {src : Building11},
-            {src : Building12},            
+            {src : Building12},         
         ]    
     },
     { 
@@ -56,10 +70,17 @@ export const buyPageData = [
         images : [
             {src : Building13},
             {src : Building14},
-            {src : Building15},
+            {src : Building15},          
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
             {src : Building16},
             {src : Building17},
-            {src : Building18},            
+            {src : Building18},       
         ]    
     },
     { 
@@ -69,7 +90,74 @@ export const buyPageData = [
         images : [
             {src : Building19},
             {src : Building20},
-            {src : Building21},
+            {src : Building21},         
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building22},
+            {src : Building23},
+            {src : Building1},         
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building2},
+            {src : Building3},
+            {src : Building4},          
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building5},
+            {src : Building6},            
+            {src : Building7},            
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building8},
+            {src : Building9},
+            {src : Building10},        
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building11},
+            {src : Building12},            
+            {src : Building13},
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
+            {src : Building14},
+            {src : Building15},
+            {src : Building16},          
+        ]    
+    },
+    { 
+        title: "Kent Avenue #",
+        price: "420", 
+        network: "ETH",
+        images : [
             {src : Building22},
             {src : Building23},
             {src : Building1},            
@@ -80,9 +168,6 @@ export const buyPageData = [
         price: "420", 
         network: "ETH",
         images : [
-            {src : Building10},
-            {src : Building2},
-            {src : Building3},
             {src : Building4},
             {src : Building5},
             {src : Building6},            
@@ -95,8 +180,6 @@ export const buyPageData = [
         images : [
             {src : Building1},
             {src : Building2},
-            {src : Building3},
-            {src : Building4},
             {src : Building5},
             {src : Building6},            
         ]    
@@ -108,8 +191,6 @@ export const buyPageData = [
         images : [
             {src : Building7},
             {src : Building8},
-            {src : Building9},
-            {src : Building10},
             {src : Building11},
             {src : Building12},            
         ]    
@@ -121,9 +202,6 @@ export const buyPageData = [
         images : [
             {src : Building13},
             {src : Building14},
-            {src : Building15},
-            {src : Building16},
-            {src : Building17},
             {src : Building18},            
         ]    
     },
@@ -134,8 +212,6 @@ export const buyPageData = [
         images : [
             {src : Building19},
             {src : Building20},
-            {src : Building21},
-            {src : Building22},
             {src : Building23},
             {src : Building1},            
         ]    
@@ -147,21 +223,6 @@ export const buyPageData = [
         images : [
             {src : Building10},
             {src : Building2},
-            {src : Building3},
-            {src : Building4},
-            {src : Building5},
-            {src : Building6},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building1},
-            {src : Building2},
-            {src : Building3},
-            {src : Building4},
             {src : Building5},
             {src : Building6},            
         ]    
@@ -172,9 +233,6 @@ export const buyPageData = [
         network: "ETH",
         images : [
             {src : Building7},
-            {src : Building8},
-            {src : Building9},
-            {src : Building10},
             {src : Building11},
             {src : Building12},            
         ]    
@@ -184,89 +242,8 @@ export const buyPageData = [
         price: "420", 
         network: "ETH",
         images : [
-            {src : Building13},
-            {src : Building14},
-            {src : Building15},
-            {src : Building16},
-            {src : Building17},
-            {src : Building18},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building19},
-            {src : Building20},
-            {src : Building21},
-            {src : Building22},
-            {src : Building23},
-            {src : Building1},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building10},
-            {src : Building2},
-            {src : Building3},
-            {src : Building4},
-            {src : Building5},
-            {src : Building6},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building1},
-            {src : Building2},
-            {src : Building3},
-            {src : Building4},
-            {src : Building5},
-            {src : Building6},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
+            {src : Building18},
             {src : Building7},
-            {src : Building8},
-            {src : Building9},
-            {src : Building10},
-            {src : Building11},
-            {src : Building12},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building13},
-            {src : Building14},
-            {src : Building15},
-            {src : Building16},
-            {src : Building17},
-            {src : Building18},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building19},
-            {src : Building20},
-            {src : Building21},
-            {src : Building22},
-            {src : Building23},
             {src : Building1},            
         ]    
     },
@@ -275,51 +252,9 @@ export const buyPageData = [
         price: "420", 
         network: "ETH",
         images : [
-            {src : Building10},
-            {src : Building2},
-            {src : Building3},
-            {src : Building4},
-            {src : Building5},
-            {src : Building6},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building7},
-            {src : Building8},
-            {src : Building9},
-            {src : Building10},
-            {src : Building11},
-            {src : Building12},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
-            {src : Building13},
-            {src : Building14},
-            {src : Building15},
-            {src : Building16},
-            {src : Building17},
-            {src : Building18},            
-        ]    
-    },
-    { 
-        title: "Kent Avenue #",
-        price: "420", 
-        network: "ETH",
-        images : [
             {src : Building19},
-            {src : Building20},
-            {src : Building21},
-            {src : Building22},
-            {src : Building23},
-            {src : Building1},            
+            {src : Building10},
+            {src : Building13},         
         ]    
     },
     { 
@@ -327,10 +262,7 @@ export const buyPageData = [
         price: "420", 
         network: "ETH",
         images : [
-            {src : Building10},
-            {src : Building2},
-            {src : Building3},
-            {src : Building4},
+            {src : Building12},
             {src : Building5},
             {src : Building6},            
         ]    
@@ -776,3 +708,286 @@ export const ChartData = {
       }
     ]
   };
+
+export const VerifyNFTData = [
+    {
+        title : "Kent Avenue #310", 
+        price : 4.7, 
+        currency : "SEI",
+        images : [
+            { src : Building1 },
+            { src : Building2 },
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building5 },
+            { src : Building6 },
+            { src : Building7 },
+            { src : Building8 },
+            { src : Building9 },
+        ]
+    },
+    {
+        title : "Kent Avenue #312", 
+        price : 10.7, 
+        currency : "SEI",
+        images : [
+            { src : Building11 },
+            { src : Building12 },
+            { src : Building13 },
+            { src : Building14 },
+            { src : Building15 },
+            { src : Building16 },
+            { src : Building17 },
+            { src : Building18 },
+            { src : Building19 },
+        ]
+    },
+    {
+        title : "Kent Avenue #313", 
+        price : 100.0, 
+        currency : "SEI",
+        images : [
+            { src : Building21 },
+            { src : Building22 },
+            { src : Building23 },
+            { src : Building14 },
+            { src : Building20 },
+            { src : Building6 },
+            { src : Building10 },
+            { src : Building13 },
+            { src : Building15 },
+        ]
+    },
+    {
+        title : "Kent Avenue #314", 
+        price : 41.7, 
+        currency : "SEI",
+        images : [
+            { src : Building9 },
+            { src : Building8 },
+            { src : Building7 },
+            { src : Building6 },
+            { src : Building10 },
+            { src : Building4 },
+            { src : Building3 },
+            { src : Building2 },
+            { src : Building1 },
+        ]
+    },
+    {
+        title : "Kent Avenue #315", 
+        price : 7.1, 
+        currency : "SEI",
+        images : [
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building6 },
+            { src : Building5 },
+            { src : Building7 },
+            { src : Building6 },
+            { src : Building8 },
+            { src : Building9 },
+            { src : Building19 },
+        ]
+    },
+];
+export const UnVerifyNFTData = [
+    {
+        title : "Kent Avenue #310", 
+        images : [
+            { src : Building1 },
+            { src : Building2 },
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building5 },
+            { src : Building6 },
+            { src : Building7 },
+            { src : Building8 },
+            { src : Building9 },
+        ]
+    },
+    {
+        title : "Kent Avenue #312", 
+        images : [
+            { src : Building11 },
+            { src : Building12 },
+            { src : Building13 },
+            { src : Building14 },
+            { src : Building15 },
+            { src : Building16 },
+            { src : Building17 },
+            { src : Building18 },
+            { src : Building19 },
+        ]
+    },
+];
+export const MyListingData = [
+    {
+        title : "Kent Avenue #310", 
+        price : 4.7, 
+        currency : "SEI",
+        images : [
+            { src : Building1 },
+            { src : Building2 },
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building5 },
+            { src : Building6 },
+            { src : Building7 },
+            { src : Building8 },
+            { src : Building9 },
+        ]
+    },
+    {
+        title : "Kent Avenue #312", 
+        price : 10.7, 
+        currency : "SEI",
+        images : [
+            { src : Building11 },
+            { src : Building12 },
+            { src : Building13 },
+            { src : Building14 },
+            { src : Building15 },
+            { src : Building16 },
+            { src : Building17 },
+            { src : Building18 },
+            { src : Building19 },
+        ]
+    },
+    {
+        title : "Kent Avenue #313", 
+        price : 100.0, 
+        currency : "SEI",
+        images : [
+            { src : Building21 },
+            { src : Building22 },
+            { src : Building23 },
+            { src : Building14 },
+            { src : Building20 },
+            { src : Building6 },
+            { src : Building10 },
+            { src : Building13 },
+            { src : Building15 },
+        ]
+    },
+    {
+        title : "Kent Avenue #314", 
+        price : 41.7, 
+        currency : "SEI",
+        images : [
+            { src : Building9 },
+            { src : Building8 },
+            { src : Building7 },
+            { src : Building6 },
+            { src : Building10 },
+            { src : Building4 },
+            { src : Building3 },
+            { src : Building2 },
+            { src : Building1 },
+        ]
+    },
+    {
+        title : "Kent Avenue #315", 
+        price : 7.1, 
+        currency : "SEI",
+        images : [
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building6 },
+            { src : Building5 },
+            { src : Building7 },
+            { src : Building6 },
+            { src : Building8 },
+            { src : Building9 },
+            { src : Building19 },
+        ]
+    },
+];
+export const MyBidData = [
+    {
+        title : "Kent Avenue #310", 
+        price : 4.7, 
+        currency : "SEI",
+        bPrice : 439,
+        images : [
+            { src : Building1 },
+            { src : Building2 },
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building5 },
+            { src : Building6 },
+            { src : Building7 },
+            { src : Building8 },
+            { src : Building9 },
+        ]
+    },
+    {
+        title : "Kent Avenue #312", 
+        price : 10.7, 
+        currency : "SEI",
+        bPrice : 49,
+        images : [
+            { src : Building11 },
+            { src : Building12 },
+            { src : Building13 },
+            { src : Building14 },
+            { src : Building15 },
+            { src : Building16 },
+            { src : Building17 },
+            { src : Building18 },
+            { src : Building19 },
+        ]
+    },
+    {
+        title : "Kent Avenue #313", 
+        price : 100.0, 
+        currency : "SEI",
+        bPrice : 197,
+        images : [
+            { src : Building21 },
+            { src : Building22 },
+            { src : Building23 },
+            { src : Building14 },
+            { src : Building20 },
+            { src : Building6 },
+            { src : Building10 },
+            { src : Building13 },
+            { src : Building15 },
+        ]
+    },
+    {
+        title : "Kent Avenue #314", 
+        price : 41.7, 
+        currency : "SEI",
+        bPrice : 420,
+        images : [
+            { src : Building9 },
+            { src : Building8 },
+            { src : Building7 },
+            { src : Building6 },
+            { src : Building10 },
+            { src : Building4 },
+            { src : Building3 },
+            { src : Building2 },
+            { src : Building1 },
+        ]
+    },
+    {
+        title : "Kent Avenue #315", 
+        price : 7.1, 
+        currency : "SEI",
+        bPrice : 910,
+        images : [
+            { src : Building3 },
+            { src : Building4 },
+            { src : Building6 },
+            { src : Building5 },
+            { src : Building7 },
+            { src : Building6 },
+            { src : Building8 },
+            { src : Building9 },
+            { src : Building19 },
+        ]
+    },
+];
+
