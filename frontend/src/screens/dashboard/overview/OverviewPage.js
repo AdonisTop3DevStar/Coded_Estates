@@ -18,10 +18,13 @@ function OverviewPage() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleValue = () => {
-    setMode(mode => {
-      mode = !mode;
-      return mode;
-    });
+    if(mode == "BUY") {
+      setMode('RENT')
+    }
+    else 
+    {
+      setMode('BUY')
+    }
   }
   return (
     <div className="OverviewPage mt-2">

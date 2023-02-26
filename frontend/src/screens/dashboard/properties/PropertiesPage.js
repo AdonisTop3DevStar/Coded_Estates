@@ -7,7 +7,7 @@ import { MyBidData, MyListingData, UnVerifyNFTData, VerifyNFTData, } from "../..
 
 function PropertiesPage() {
   const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
-  
+  const [mode, setMode, updateMode] = store.useState("Mode");
 
     return (
       <div className="PropertiesPage my-2">
@@ -76,7 +76,8 @@ function PropertiesPage() {
               </Row>
             </div>
           </Tab>
-          <Tab eventKey={4}  title="My Bids">
+          {mode != "BUY" ? (
+            <Tab eventKey={4}  title="My Booking">
             <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
             <div className="SearchPropertiesBar position-absolute ">
               <InputGroup className="mb-3">
@@ -94,7 +95,29 @@ function PropertiesPage() {
               ))}
               </Row>
             </div>
-          </Tab>
+            </Tab>
+          ) : (
+            <Tab eventKey={4}  title="My Bids">
+            <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
+            <div className="SearchPropertiesBar position-absolute ">
+              <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1"><FaSearch/></InputGroup.Text>
+                <Form.Control
+                  placeholder="Search for Property"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </InputGroup>
+              </div>
+            <Row>
+              {MyBidData.map((item, idx) => (
+                <BidPropertyCard title={item.title} price={item.price} currency={item.currency} images={item.images} bPrice={item.bPrice}/>
+              ))}
+              </Row>
+            </div>
+            </Tab>
+          )}
+         
         </Tabs>
       </div>
     );

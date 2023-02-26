@@ -14,6 +14,7 @@ import { useState } from "react";
 import {store} from '../../configs/Store';
 import createSwitch,{ deleteSwitch } from 'switch-button'
 import 'switch-button/dist/index.css'
+import SwitchIcon from '../../assets/images/icons/switch.svg';
 
 const NavListItem = ({icon, title, link}) => {
   return (
@@ -53,20 +54,21 @@ export default function Sidebar() {
   const [mode, setMode, updateMode] = store.useState('Mode');
   const [buyMode, setBuyMode] = useState(true);  
   const toggleValue = () => {
-    setBuyMode((prevState) => !prevState);
-    setMode(mode => {
-      mode = !mode;
-      return mode;
-    });
+    // setBuyMode((prevState) => !prevState);
+    if(mode == "BUY") {
+      setMode("RENT");
+    }
+    else {
+      setMode("BUY");
+    }
   }
   
 
     return (
       <div className="Sidebar">
         <Container className="">
-        
           <div className="Sidebar-Navlist">            
-            {mode ? (
+            {mode == "BUY" ? (
               NavListData.map((item, idx) => (
                 <NavListItem icon={item.icon} title={item.title} link={item.link} key={idx}/>
               ))
@@ -77,6 +79,15 @@ export default function Sidebar() {
             )             
             }
           </div>
+          <Card className="shadow position-absolute w-75 bottom-0 mb-3 bg-dark-purple">
+            <Card.Body className="text-center">
+              <Image src={Logo} width="150" className="my-2" />
+              <div className="text-center">
+              <div className="text-white mb-2">{mode != "BUY" ? ("Rent Mode") : ("Buy Mode")}</div>
+                <Button className='border border-gray rounded-5 bg-white fw-bold fs-6 text-dark-purple py-2 px-4' onClick={toggleValue}>Switch</Button>
+              </div>
+            </Card.Body>
+          </Card>
         </Container>
       </div>
     );

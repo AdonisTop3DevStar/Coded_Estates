@@ -4,7 +4,6 @@ import { store } from "../../configs/Store";
 import { useState } from "react";
 
 export const DetailCarousel = ({images}) => {
-  console.log('ad->', images)
   return (
     <Carousel className="my-2 DetailCarousel">     
         {

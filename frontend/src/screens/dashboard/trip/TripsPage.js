@@ -7,6 +7,8 @@ import { DetailCarousel } from "../../../components/carousel/Carousel";
 import { DetailData } from "../../../utils/data";
 import TrackIcon from '../../../assets/images/icons/track.svg';
 import HostMessageIcon from '../../../assets/images/icons/hostmessage.svg';
+import BuildingImg from '../../../assets/images/building/4.webp';
+import BuildingImg1 from '../../../assets/images/building/4.webp';
 
 
 function TripsPage() {
@@ -145,7 +147,117 @@ function TripsPage() {
           </Row>
         </Tab>
         <Tab eventKey="visitors" title="Visitors">
-          <Card className="border-dark-purple">
+        <Row className="py-2">
+                <Col sm={12} md={8}>
+                    <Card>
+                        <Row>
+                            <Col sm={6} md={8} className="card-body ps-5 py-3">
+                                <div className="fs-5 fw-bold my-2">Paris</div>
+                                <small>Private room in loft hosted by Liubomyr</small>
+                                <hr />
+                                <Row>
+                                    <Col md={6} className="border-end">
+                                        <div>14 Sept - <br />17 Sept</div>
+                                        <small>2023</small>
+                                    </Col>
+                                    <Col md={6}>
+                                        <div>20 Rue Jean Mermoz <br />Paris, lle-de-France</div>
+                                        <small>France</small>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col sm={6} md={4}>
+                                <Image src={BuildingImg} className="w-100" height="100%" style={{ objectFit: 'cover' }} />
+                            </Col>
+                        </Row>
+                    </Card>
+                </Col>
+                <Col sm={12} md={4}>
+                    <div className="mb-3">Explore things to do near Paris</div>
+                    <Row>
+                        <Col sm={6} md={6} className="my-2">
+                            <div className="d-flex align-items-center">
+                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                                <div className="">
+                                    <div className="fw-bold mb-1">Just for you</div>
+                                    <div className="text-gray">18 experiences</div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col sm={6} md={6} className="my-2">
+                            <div className="d-flex align-items-center">
+                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                                <div className="">
+                                    <div className="fw-bold mb-1">Just for you</div>
+                                    <div className="text-gray">18 experiences</div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col sm={6} md={6} className="my-2">
+                            <div className="d-flex align-items-center">
+                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                                <div className="">
+                                    <div className="fw-bold mb-1">Just for you</div>
+                                    <div className="text-gray">18 experiences</div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col sm={6} md={6} className="my-2">
+                            <div className="d-flex align-items-center">
+                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                                <div className="">
+                                    <div className="fw-bold mb-1">Just for you</div>
+                                    <div className="text-gray">18 experiences</div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col sm={6} md={6} className="my-2">
+                            <div className="d-flex align-items-center">
+                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                                <div className="">
+                                    <div className="fw-bold mb-1">Just for you</div>
+                                    <div className="text-gray">18 experiences</div>
+                                </div>
+                            </div>
+                        </Col>
+                        <Col sm={6} md={6} className="my-2">
+                            <div className="d-flex align-items-center">
+                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                                <div className="">
+                                    <div className="fw-bold mb-1">Just for you</div>
+                                    <div className="text-gray">18 experiences</div>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            <div className="my-3 fs-5">Where you've been</div>
+            <Row>
+                <Col sm={6} md={4} className="my-2">
+                    <div className="d-flex align-items-center">
+                        <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
+                        <div className="">
+                            <div className="fw-bold mb-1">Gamle Oslo</div>
+                            <div className="text-gray">Hosted by Per-Christian</div>
+                            <div className="text-gray">20 May 2022 - 22 May 2022</div>
+                        </div>
+                    </div>
+                </Col>
+                <Col sm={6} md={4} className="my-2">
+                    <div className="d-flex align-items-center">
+                        <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
+                        <div className="">
+                            <div className="fw-bold mb-1">Gamle Oslo</div>
+                            <div className="text-gray">Hosted by Per-Christian</div>
+                            <div className="text-gray">20 May 2022 - 22 May 2022</div>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
+            <hr/>
+            <div className="text-gray">Can't find your reservation here? <u className="text-dark-purple">Visit the Help Centre</u></div>
+          {/* <Card className="border-dark-purple">
             <Row>
               <Col sm={12} md={4} className="px-4">
                 <div className="fs-5 fw-bold mt-5 mb-2">No One Has Booked... Yet!</div>
@@ -153,11 +265,11 @@ function TripsPage() {
                 <Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button>
               </Col>
               <Col sm={12} md={8}>
-                {/* <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/> */}
+                <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/>
               </Col>
             </Row>
-          </Card>
-          <div className="fs-4 fw-bold my-2">Previous booking</div>
+          </Card> */}
+          {/* <div className="fs-4 fw-bold my-2">Previous booking</div>
           <Row>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>
@@ -312,7 +424,7 @@ function TripsPage() {
                 </Card.Body>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
         </Tab>
       </Tabs>
       <Modal show={show} onHide={handleClose}>

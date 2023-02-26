@@ -44,6 +44,7 @@ export function RentDetailPage() {
   const [messageModal, setMessageModal] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [host, setHost] = useState(false);
 
   const [values, setValues] = useState([
     new DateObject().setDay(4).subtract(1, "month"),
@@ -309,7 +310,7 @@ export function RentDetailPage() {
             {!connected ? (
               <Button className="border-gray bg-white text-dark-purple" onClick={walletConnectModalShow}>Contact Host</Button>
             ) : (
-              <Button className="border-gray bg-white text-dark-purple" onClick={showMessageModal}>Contact Host</Button>
+              <Button className="border-gray bg-white text-dark-purple" onClick={() => {setHost(true); showMessageModal()}}>Contact Host</Button>
             )}
 
           </Col>
@@ -328,9 +329,15 @@ export function RentDetailPage() {
         <Modal.Body>
           <div className="text-end"><AiOutlineClose onClick={hideMessageModal} /></div>
           <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" />
-          </Form.Group>
+          {host == true ? (
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="0xbf4fa...079f" readOnly/>
+            </Form.Group>
+          ) : (
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" />
+            </Form.Group>
+          )}
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Control as="textarea" rows={3} placeholder="Type your message" className="borer-gray" />
           </Form.Group>

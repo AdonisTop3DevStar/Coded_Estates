@@ -4,7 +4,7 @@ import { createStore } from 'state-pool';
 export const store = createStore();
 
 const Store = {
-    Mode : true,
+    Mode : "BUY",
     VerifyMode : true,
     Connected : false,
     WalletModalShow : false,
