@@ -26,7 +26,7 @@ import { store } from "../../configs/Store";
 
 
 
-export const NormalCard = ({title, network, price, images}) => {
+export const NormalCard = ({title, network, price, images, bed, bath, size}) => {
     return (
         <Card className="NormalCard my-2">
             <Card.Body className="position-relative">
@@ -35,7 +35,7 @@ export const NormalCard = ({title, network, price, images}) => {
                     {
                         images.map((item, idx) => (
                             <Carousel.Item>
-                                <Link className="nav-link" to="/detail/buy/1"><Image src={item.src} key={idx} height="245" className="w-100 object-fit-cover border rounded" style={{objectFit : "cover"}}/></Link>
+                                <Link className="nav-link" to="/detail/buy/1"><Image src={item} key={idx} height="245" className="w-100 object-fit-cover border rounded" style={{objectFit : "cover"}}/></Link>
                             </Carousel.Item>
                         ))
                     }                    
@@ -47,9 +47,9 @@ export const NormalCard = ({title, network, price, images}) => {
                 </Card.Title>
                 <Card.Subtitle className="my-1 normal-card-title">{title}</Card.Subtitle>
                 <div className="d-flex align-items-center justify-content-between card-properties">
-                    <div><FaRuler/><span className="ms-2">300</span></div>
-                    <div><FaBath/><span className="ms-2">2</span></div>
-                    <div><FaBed/><span className="ms-2">3</span></div>
+                    <div><FaRuler/><span className="ms-2">{size}</span></div>
+                    <div><FaBath/><span className="ms-2">{bath}</span></div>
+                    <div><FaBed/><span className="ms-2">{bed}</span></div>
                 </div>
                 </Link>
             </Card.Body>

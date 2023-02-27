@@ -205,20 +205,23 @@ export default function PropertiesDetail() {
                           className="border-0"
                         />
                       </div>
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between my-3">
-                      <div className="f-semibold">Allow Bids</div>
-                      <Form.Check
-                        type="switch"
-                        id="custom-switch"
-                      />
-                    </div>
-                    <div className="d-flex align-items-center justify-content-between my-3">
-                      <div className="f-semibold">Min. Price</div>
-                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                        <Form.Control type="text" placeholder="" />
-                      </Form.Group>
-                    </div>
+                      <div className="border-top px-2">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <div className="d-flex align-items-center justify-content-between">
+                              <Form.Label className="">CHECK-IN</Form.Label>
+                              <Form.Label className="me-2">CHECKOUT</Form.Label>
+                            </div>
+                            <DatePicker
+                              value={values}
+                              onChange={setValues}
+                              range
+                              numberOfMonths={2}
+                              showOtherDays
+                              className="d-flex"
+                            />
+                          </Form.Group>
+                      </div>
+                    </div>                   
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Unlist Property</Button>
                   </Card.Body>
@@ -704,7 +707,11 @@ export default function PropertiesDetail() {
           </Form.Group>
           <div className="d-flex align-items-center justify-content-around">
             <Button className="border-dark-purple bg-white text-dark-purple fw-bold fs-6 px-4" onClick={hideMessageModal}>Cancel</Button>
-            <NavLink to="/dashboard/rent/message"><Button className="border-dark-purple bg-dark-purple text-white fw-bold fs-6 px-4">Send</Button></NavLink>
+            {mode != "BUY" ? (
+              <NavLink to="/dashboard/rent/message"><Button className="border-dark-purple bg-dark-purple text-white fw-bold fs-6 px-4">Send</Button></NavLink>
+            ) : (
+              <NavLink to="/dashboard/buy/message"><Button className="border-dark-purple bg-dark-purple text-white fw-bold fs-6 px-4">Send</Button></NavLink>
+            )}
           </div>
         </Modal.Body>
       </Modal>

@@ -282,6 +282,19 @@
   border-radius: 0px !important;
 }
 
+.Search-result::-webkit-scrollbar {
+  width: 5px;               /* width of the entire scrollbar */
+}
+
+.Search-result:-webkit-scrollbar-track {
+  background: none;        /* color of the tracking area */
+}
+
+.Search-result::-webkit-scrollbar-thumb {
+  background-color: transparent;    /* color of the scroll thumb */
+  border-radius: 20px;  
+}
+
 .RSPBprogressBar {
  border-radius: 0px !important;
 }
@@ -302,6 +315,17 @@ label[for="file"] div {
 }
 
 .rentCard .rmdp-container input {
+  width: 100% !important;
+  border: none;
+  text-align-last: justify;
+  color: #32326080 !important;
+ }
+
+ .PropertiesDetail .rmdp-container {
+  width: 100% !important;
+ }
+
+ .PropertiesDetail .rmdp-container input {
   width: 100% !important;
   border: none;
   text-align-last: justify;

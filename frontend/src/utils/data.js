@@ -24,7 +24,8 @@ import Building23 from '../assets/images/building/23.webp';
 
 export const buyPageData = [
     { 
-        title: "Kent Avenue #",
+        title: "Jokkmokk",
+        country : "Sweden",
         price: "420", 
         network: "ETH",
         images : [
