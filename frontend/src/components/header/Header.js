@@ -18,6 +18,7 @@ export default function Header() {
     const [themeMode, setThemeMode] = useContext(ThemeContext);
     const [connected, setConnected, updateConnected] = store.useState('Connected');
     const [walletModalShow, setWalletModalShow, updateWalletModalShow] = store.useState("WalletModalShow");
+    const [header, setHeader, updateHeader] = store.useState('Header');
 
     const [show, setShow] = useState(false);
 
@@ -71,19 +72,41 @@ export default function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              {/* <Link to="/" className="nav-link  fw-bold">
-                Home
-              </Link>               */}
-              <NavLink to="/buy" className="nav-link fw-bold">
-               Buy / Sell
+            {header == "BUY" ? (
+              <NavLink to="/buy" className="nav-link fw-bold active"onClick={() => setHeader('BUY')}>
+                Buy / Sell
               </NavLink>
-              <NavLink to="/rent" className="nav-link fw-bold">
-                Rent
-              </NavLink>
-              {!connected ? ("") : (
-                <NavLink to="/dashboard/overview" className="nav-link fw-bold">
-                Dashboard
+              ) : (
+                <NavLink to="/buy" className="nav-link fw-bold" onClick={() => setHeader('BUY')}>
+                Buy / Sell
+               </NavLink>
+              )}
+             
+              {header == "RENT" ? (
+                <NavLink to="/rent" className="nav-link fw-bold active"onClick={() => setHeader('RENT')}>
+                  Rent
                 </NavLink>
+                ) : (
+                  <NavLink to="/rent" className="nav-link fw-bold" onClick={() => setHeader('RENT')}>
+                    Rent
+                  </NavLink>
+                )
+              }                
+                
+              {!connected ? ("") : (
+                <span>
+                  {header == "DASHBOARD" ? (
+                    <NavLink to="/dashboard/overview" className="nav-link fw-bold active" onClick={() => setHeader('DASHBOARD')}>
+                      Dashboard
+                    </NavLink>
+                  ) : (
+                    <NavLink to="/dashboard/overview" className="nav-link fw-bold" onClick={() => setHeader('DASHBOARD')}>
+                      Dashboard
+                    </NavLink>
+                  )}
+                  
+                </span>
+                
               )}
              
               {/* <Link to="/about" className="nav-link fw-bold">

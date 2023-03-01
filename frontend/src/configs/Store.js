@@ -10,6 +10,11 @@ const Store = {
     WalletModalShow : false,
     PropertiesTabActiveNum : 1,
     DetailType : "",
+    Header : "RENT"
 }
 
-store.setState(Store);
+const keys  = Object.keys(Store);
+
+keys.map((key) => {
+    store.setState(key, Store[key]);
+})
