@@ -23,8 +23,8 @@ export const ActivityTable = () => {
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
-            <td>Ox20jsd...90b</td>
-            <td>Ox20jsd...90b</td>
+            <td>sei14zd...0qzk</td>
+            <td>sei14zd...0qzk</td>
             <td>3 mins ago</td>
           </tr>
           <tr>
@@ -34,8 +34,8 @@ export const ActivityTable = () => {
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
-            <td>Ox20jsd...90b</td>
-            <td>Ox20jsd...90b</td>
+            <td>sei14zd...0qzk</td>
+            <td>sei14zd...0qzk</td>
             <td>3 mins ago</td>
           </tr>
           <tr>
@@ -45,8 +45,8 @@ export const ActivityTable = () => {
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
-            <td>Ox20jsd...90b</td>
-            <td>Ox20jsd...90b</td>
+            <td>sei14zd...0qzk</td>
+            <td>sei14zd...0qzk</td>
             <td>3 mins ago</td>
           </tr>
           <tr>
@@ -56,8 +56,8 @@ export const ActivityTable = () => {
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
-            <td>Ox20jsd...90b</td>
-            <td>Ox20jsd...90b</td>
+            <td>sei14zd...0qzk</td>
+            <td>sei14zd...0qzk</td>
             <td>3 mins ago</td>
           </tr>
           <tr>
@@ -67,8 +67,8 @@ export const ActivityTable = () => {
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
-            <td>Ox20jsd...90b</td>
-            <td>Ox20jsd...90b</td>
+            <td>sei14zd...0qzk</td>
+            <td>sei14zd...0qzk</td>
             <td>3 mins ago</td>
           </tr>
           <tr>
@@ -78,8 +78,8 @@ export const ActivityTable = () => {
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
-            <td>Ox20jsd...90b</td>
-            <td>Ox20jsd...90b</td>
+            <td>sei14zd...0qzk</td>
+            <td>sei14zd...0qzk</td>
             <td>3 mins ago</td>
           </tr>
         </tbody>

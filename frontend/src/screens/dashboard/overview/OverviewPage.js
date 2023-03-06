@@ -1,5 +1,5 @@
-import { Col, Row, Modal, Card, Button, Image } from "react-bootstrap";
-import { MintCard, MintedPropertiesCard, StartCard, UploadCard, VerifyCard } from "../../../components/card/card";
+import { Col, Row, Modal, Card, Button, Image, Carousel } from "react-bootstrap";
+import { ListPropertiesCard, MintCard, MintedPropertiesCard, StartCard, UploadCard, VerifyCard } from "../../../components/card/card";
 import { MintedPropertiesChart } from "../../../components/chart/Charts";
 import { ActivityTable } from "../../../components/table/tables";
 import VerifyMode from "../../../components/modal/VerifyMode";
@@ -10,11 +10,13 @@ import CheckIcon from '../../../assets/images/icons/check-circle.svg';
 import MintIcon from '../../../assets/images/icons/mint.svg';
 import Logo from '../../../assets/images/Logo.svg';
 import {store} from '../../../configs/Store';
+import { NavLink } from "react-router-dom";
 
 
 function OverviewPage() {
   const [show, setShow] = useState(false);
   const [mode, setMode, updateMode] = store.useState('Mode');
+  const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const toggleValue = () => {
@@ -33,15 +35,8 @@ function OverviewPage() {
 
       <Row>
         <Col sm={12} md={3}>
-          <div className="my-2 fs-5 fw-bold">Choose Dashboard</div>
-          <Card className="shadow">
-            <Card.Body className="text-center">
-              <Image src={SwitchIcon} width="100" height="100" className="my-5" />
-              <div className="text-center">
-                <Button className='border border-gray rounded-5 bg-white fw-bold fs-6 text-dark-purple py-2 px-4' onClick={toggleValue}>Switch</Button>
-              </div>
-            </Card.Body>
-          </Card>
+          <div className="my-2 fs-5 fw-bold">List Properties</div>
+          <ListPropertiesCard/>
         </Col>
         <Col sm={12} md={3}>
           <div className="my-2 fs-5 fw-bold">Verify Wallet</div>
@@ -77,7 +72,7 @@ function OverviewPage() {
             <Card.Body className="text-center">
               <Image src={CheckIcon} width="100" height="100" className="my-5" />
               <div className="text-center">
-                <Button className='border border-gray rounded-5 bg-white fw-bold fs-6 text-dark-purple py-2 px-5 mt-5' onClick={handleShow}>Verify</Button>
+              <NavLink to="/dashboard/buy/properties"  onClick={(e) => setTabKey(2)}><Button className='border border-gray rounded-5 bg-white fw-bold fs-6 text-dark-purple py-2 px-5 mt-5'>Verify</Button></NavLink>
               </div>
             </Card.Body>
           </Card>

@@ -22,7 +22,7 @@ export default function ReviewsPage () {
                         <Image src={BuildingImg} width="70" height="40" style={{objectFit:'cover'}} className="border-gray rounded border me-3"/>
                         <div className="fw-semibold">Kent Avenue #310</div>
                     </Col>
-                    <Col md={2}><div className="fw-semibold">Ox20jsd...90b</div></Col>
+                    <Col md={2}><div className="fw-semibold">sei14zd...0qzk</div></Col>
                     <Col md={2}><small>2 days ago</small></Col>
                     <Col md={2} className="d-flex align-items-center">
                         <FaStar className="text-orange me-2"/>

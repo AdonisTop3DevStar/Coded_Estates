@@ -1,7 +1,7 @@
 import { Container, Button, Card, Row, Col, Image, Tabs, Tab, Modal } from "react-bootstrap";
 import Banner1 from '../../../assets/images/banners/trips.png';
 import { FaStar, FaRegStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { DetailCarousel } from "../../../components/carousel/Carousel";
 import { DetailData } from "../../../utils/data";
@@ -26,7 +26,7 @@ function TripsPage() {
         id="uncontrolled-tab-example"
         className="my-3"
       >
-        <Tab eventKey="visits" title="Your Visits">
+        <Tab eventKey="visitors" title="Visitors">
           <Card className="border-dark-purple">
             <Row>
               <Col sm={12} md={4} className="px-4">
@@ -49,7 +49,7 @@ function TripsPage() {
                   </Link>
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -66,7 +66,7 @@ function TripsPage() {
                   </Link>
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -83,7 +83,7 @@ function TripsPage() {
                   </Link>
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -100,7 +100,7 @@ function TripsPage() {
                   </Link>
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -117,7 +117,7 @@ function TripsPage() {
                   </Link>
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -135,7 +135,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -146,9 +146,10 @@ function TripsPage() {
             </Col>
           </Row>
         </Tab>
-        <Tab eventKey="visitors" title="Visitors">
+        <Tab eventKey="visits" title="Your Visits">
         <Row className="py-2">
                 <Col sm={12} md={8}>
+                  <NavLink to="/dashboard/rent/message" className="nav-link">
                     <Card>
                         <Row>
                             <Col sm={6} md={8} className="card-body ps-5 py-3">
@@ -171,6 +172,7 @@ function TripsPage() {
                             </Col>
                         </Row>
                     </Card>
+                  </NavLink>
                 </Col>
                 <Col sm={12} md={4}>
                     <div className="mb-3">Explore things to do near Paris</div>
@@ -277,7 +279,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -292,7 +294,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -307,7 +309,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -322,7 +324,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -337,7 +339,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -355,7 +357,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -370,7 +372,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -385,7 +387,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -400,7 +402,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
@@ -415,7 +417,7 @@ function TripsPage() {
                   <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                   <div className="">
                     <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by 020sd...90bd</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
                     <div className="text-gray">Jun 2-5, 2022</div>
                     <div className="d-flex align-items-center text-orange">
                       <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />

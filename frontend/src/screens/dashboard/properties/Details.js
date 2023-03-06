@@ -161,12 +161,12 @@ export default function PropertiesDetail() {
               <div>
                 {type == "verify" && (
                   <Card.Body>
-                    <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
-                    <div className="fs-6 fw-semibold mb-2">Bid Price</div>
+                    {/* <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
+                    <div className="fs-6 fw-semibold mb-2">Bid Price</div> */}
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Control type="number" placeholder="Enter your Bid Price" />
+                      <Form.Control type="number" placeholder="Enter your New Price" />
                     </Form.Group>
-                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Update Price</Button>
                     <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button>
                     <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
                   </Card.Body>
@@ -465,7 +465,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -482,7 +482,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -499,7 +499,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -516,7 +516,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -533,7 +533,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -550,7 +550,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -567,7 +567,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -584,7 +584,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -601,7 +601,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -618,7 +618,7 @@ export default function PropertiesDetail() {
                       </div>
                     </div>
                   </Col>
-                  <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
                   <Col sm={3} md={3}><small>2 days ago</small></Col>
                   <Col sm={2} md={2} className="text-end">
                     <Button className="bg-white border-gray text-gray">Message</Button>
@@ -694,7 +694,7 @@ export default function PropertiesDetail() {
           <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
           {host == true ? (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="0xbf4fa...079f" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
             </Form.Group>
           ) : (
             <Form.Group className="mb-3" controlId="formBasicEmail">

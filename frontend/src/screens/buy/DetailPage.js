@@ -41,6 +41,7 @@ export function DetailPage() {
   const [minDate, setMinDate] = useState(new Date());
   const [connected, setConnected, updateConnected] = store.useState('Connected');
   const [walletModalShow, setWalletModalShow, updateWalletModalShow] = store.useState("WalletModalShow");
+  const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
   const [show, setShow] = useState(false);
   const [host, setHost] = useState(false);
   const [messageModal, setMessageModal] = useState(false);
@@ -201,7 +202,7 @@ export function DetailPage() {
               {!connected ? (
                 <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Direct Buy</Button>
               ) : (
-                <NavLink to="/dashboard/buy/message"><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Direct Buy</Button></NavLink>
+                <NavLink to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Direct Buy</Button></NavLink>
               )}
 
               {!connected ? (
@@ -245,7 +246,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -262,7 +263,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -279,7 +280,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -296,7 +297,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -313,7 +314,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -330,7 +331,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -347,7 +348,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -364,7 +365,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -381,7 +382,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -398,7 +399,7 @@ export function DetailPage() {
                     </div>
                   </div>
                 </Col>
-                <Col sm={4} md={4}>Ox20jsd...900b</Col>
+                <Col sm={4} md={4}>sei14zd...0qzk</Col>
                 <Col sm={3} md={3}><small>2 days ago</small></Col>
                 <Col sm={2} md={2} className="text-end">
                   <Button className="bg-white border-gray text-gray">Message</Button>
@@ -470,7 +471,7 @@ export function DetailPage() {
          <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
          {host == true ? (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="0xbf4fa...079f" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
             </Form.Group>
           ) : (
             <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -24,7 +24,7 @@ function BuyPage() {
   const [data, setData] = useState([]);
   const findProperties = (type, keyWord, bed, size, price, bath) => {
     
-    if (type == '' && keyWord == '' && bed == '' && size == '' && price == '' && bath == "") {
+    if (type === '' && keyWord === '' && bed === '' && size === '' && price === '' && bath === "") {
       let tempData = [];
       for(let i = 0; i < sampleData.length; i++) {
         const _data = {
@@ -45,100 +45,83 @@ function BuyPage() {
       setData(tempData)
     }
     else {
-      if (keyWord != "") {
-        const _data = sampleData.filter( obj => obj.address.state == keyWord.toUpperCase());
-        setData(_data);
-        return;
+      if (keyWord !== "") {
+          const _data = sampleData.filter( obj => obj.address.state == keyWord.toUpperCase());
+          setData(_data);  
       }
       
-      if (type != "") {
-        const _data = sampleData.filter( obj => obj.homeType == type.toUpperCase());
-        setData(_data);
-        return;
+      if (type !== "") {
+        if(type === "all") {
+          const _data = sampleData.filter( obj => obj.homeType !== "");
+          setData(_data);          
+        } else {
+          const _data = sampleData.filter( obj => obj.homeType == type.toUpperCase());
+          setData(_data);
+        }
       }
       
-      if (bed != "") {
+      if (bed !== "") {
         if (bed == 4) {
           const _data = sampleData.filter( obj => obj.bedrooms >= bed);
           setData(_data);  
-          return;        
         }
         else {
-          const _data = sampleData.filter( obj => obj.bedrooms = bed);
+          const _data = sampleData.filter( obj => obj.bedrooms == bed);
           setData(_data);   
-          return;
         }
       }
 
-      if (bath != "") {
-        if (bath == 4) {
+      if (bath !== "") {
+        if (bath === 4) {
           const _data = sampleData.filter( obj => obj.bathrooms >= bath);
           setData(_data);              
           console.log(_data)
-          return;      
         }
         else {
-          const _data = sampleData.filter( obj => obj.bathrooms = bath);
+          const _data = sampleData.filter( obj => obj.bathrooms == bath);
           setData(_data);   
-          return;
         }
       }
       
-      if (size != "") {
+      if (size !== "") {
 
-        if(size == "s1") {
-          const _data = sampleData.filter( obj => 300 >= obj.livingArea <= 500);
+        if(size === "s1") {
+          const _data = sampleData.filter( obj => obj.livingArea <= 500);
           setData(_data);
-          return;
-        }
-        
-        if(size == "s2") {
-          const _data = sampleData.filter( obj => 500 >= obj.livingArea <= 1000);
+        } else if (size === "s2") {
+          const _data = sampleData.filter( obj => obj.livingArea <= 1000);
           setData(_data);
-          return;
-        }
-        if(size == "s3") {
-          const _data = sampleData.filter( obj => 1000 >= obj.livingArea <= 1500);
+        } else if (size === "s3") {
+          const _data = sampleData.filter( obj => obj.livingArea <= 1500);
           setData(_data);
-          return;
-        }
-        if(size == "s4") {
-          const _data = sampleData.filter( obj => 1500 >= obj.livingArea <= 5000);
+        } else if (size === "s4") {
+          const _data = sampleData.filter( obj => obj.livingArea <= 5000);
           setData(_data);
-          return;
         }
 
       }
       
-      if (price != "") {
+      if (price !== "") {
         console.log("price", price)
-        if(price == "p1") {
-          const _data = sampleData.filter( obj => obj.price < 20000);
+        if(price === "p1") {
+          const _data = sampleData.filter( obj => obj.price <= 20000);
           setData(_data);
           console.log("p1--", _data)
-          return;
-        }
-        
-        if(price == "p2") {
-          const _data = sampleData.filter( obj => obj.price < 50000);
+        } else if (price === "p2") {
+          const _data = sampleData.filter( obj => obj.price <= 50000);
           setData(_data);
           console.log("p2--", _data)
-          return;
-        }
-        if(price == "p3") {
-          const _data = sampleData.filter( obj => obj.price < 100000);
+        } else if (price === "p3") {
+          const _data = sampleData.filter( obj => obj.price <= 100000);
           setData(_data);
           console.log("p3--", _data)
-          return;
-        }
-        if(price == "p4") {
-          const _data = sampleData.filter( obj => obj.price < 1000000);
+        } else if (price === "p4") {
+          const _data = sampleData.filter( obj => obj.price <= 1000000);
           setData(_data);
           console.log("p4--", _data)
-          return;
         }
       }
-      
+      return;
     }
   };
 
@@ -162,6 +145,8 @@ function BuyPage() {
           <div className="fs-6 fw-bold">House Type :</div>
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={type} onChange={(e) => setType(e.target.value)}>
+              <option>Select Type</option>
+              <option value="all">All</option>
               <option value="house">House</option>
               <option value="apartment">Apartment</option>
               <option value="tea">Tea</option>
@@ -173,7 +158,7 @@ function BuyPage() {
               <option value="cave">Cave</option>
               <option value="container">Container</option>
               <option value="cycladic">Cycladic</option>
-              <option value="dammuso">Dammuso</option>
+              <option value="dammuso">Dammuso</option>              
             </Form.Select>
           </div>|
           <div className="">

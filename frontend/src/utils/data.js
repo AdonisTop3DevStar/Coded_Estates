@@ -822,6 +822,20 @@ export const UnVerifyNFTData = [
         ]
     },
 ];
+
+export const ListCarouselData = [
+   { images : [
+        { src : Building10 },
+        { src : Building9 },
+        { src : Building8 },
+        { src : Building7 },
+        { src : Building6 },
+        { src : Building6 },
+        { src : Building7 },
+        { src : Building8 },
+        { src : Building9 },
+    ] }
+];
 export const MyListingData = [
     {
         title : "Kent Avenue #310", 
@@ -989,6 +1003,114 @@ export const MyBidData = [
             { src : Building9 },
             { src : Building19 },
         ]
+    },
+];
+
+export const FavoriteData = [
+    {
+      "zpid": 2059039488,
+      "address": {
+        "streetAddress": "6119 Alcott St #1/2",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipcode": "90035",
+        "area" : "WORLD"
+      },
+      "guest" : {
+        "adults" : 3,
+        "childrens" : 2,
+        "infants" : 1,
+        "pets" : 0,
+      },
+      "bedrooms": 1,
+      "bathrooms": 5,
+      "price": 10000,
+      "homeStatus": "BUY",
+      "livingArea": 1123,
+      "size" : 350,
+      "currency": "SEI",
+      "homeType": "HOUSE",
+      "url": "https://www.zillow.com/homedetails/6119-Alcott-St-1-2-Los-Angeles-CA-90035/2059039488_zpid/",
+      "photos": [
+        "https://photos.zillowstatic.com/fp/e7e3a9bcec490b5c7513e718e3ff9b0c-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/ac7847c805868e5be31c7b254d663f5b-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/e4680e54e44e233318c00983837de6cd-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/7db7d0b63dbea09f4a097d712130f2c8-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/508fc2e3d123f04010bc3db82384bf31-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/ce7cfc6442a83c307770647b06f880aa-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/ac77165c145a4a8714f626ac97dfe2fe-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/7d0e55b70e7fd37a8b9a3aa937f11dea-p_d.jpg",
+      ],  
+    },
+    {
+      "zpid": 2062516140,
+      "address": {
+        "streetAddress": "1033 N Normandie Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zipcode": "90029",
+        "area" : "WORLD"
+      },
+      "guest" : {
+        "adults" : 2,
+        "childrens" : 1,
+        "infants" : 1,
+        "pets" : 1,
+      },
+      "bedrooms": 2,
+      "bathrooms": 4,
+      "price": 12000,
+      "homeStatus": "BUY",
+      "livingArea": 1123,
+      "size" : 752,
+      "currency": "SEI",
+      "homeType": "DAMMUSO",
+      "url": "https://www.zillow.com/homedetails/6119-Alcott-St-1-2-Los-Angeles-CA-90035/2059039488_zpid/",
+      "photos": [
+        "https://photos.zillowstatic.com/fp/4edfba0b0863ee8eceb366e1967c6352-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/7b3fabd1dbd111b06b158a69ba4b94f7-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/53d4c6b5cecea521a4a79e049dfd1f82-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/dc30c9dd38ae448e3f02b93425e9f63b-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/e86c62b85488c473258a32e8026a925f-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/86e7dfbc4ad847ca15fb753b8b403595-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/457c41fafab718ac013f230ecf20cc30-p_d.jpg",
+      ],  
+    },
+    {
+      "zpid": 19943219,
+      "address": {
+        "streetAddress": "22030 Velicata St",
+        "city": "Woodland Hills",
+        "state": "CA",
+        "zipcode": "91364",
+        "area" : "WORLD"
+      },
+      "guest" : {
+        "adults" : 1,
+        "childrens" : 2,
+        "infants" : 3,
+        "pets" : 1,
+      },
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "price": 24000,
+      "homeStatus": "BOAT",
+      "livingArea": 1923,
+      "size" : 752,
+      "currency": "SEI",
+      "homeType": "APARTMENT",
+      "url": "https://www.zillow.com/homedetails/6119-Alcott-St-1-2-Los-Angeles-CA-90035/2059039488_zpid/",
+      "photos": [
+        "https://photos.zillowstatic.com/fp/3d6ab219d045f2a837d0e35f5f905fc7-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/ec63650e78ec22e08cbdb36323cecafe-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/33c81ff02406b22c61113890091203ac-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/660d51230c5c00f491600a23f1e3c867-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/92084ec9181a0a6f810db2a8452c6c59-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/95a70bfaa09ae3bedb65bd60b6a77542-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/50bc00d60ced7ebff2fd3799f1a2792a-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/3858f65c916bfcfcd9adddf03f3be799-p_d.jpg",
+        "https://photos.zillowstatic.com/fp/06a15c986fe7df5a1cdc69c57a8fc6c5-p_d.jpg",
+      ],  
     },
 ];
 

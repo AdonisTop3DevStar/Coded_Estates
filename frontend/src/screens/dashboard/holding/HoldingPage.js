@@ -63,7 +63,7 @@ function HoldingPage() {
                   </Row>
                 </div>
               </Tab>
-              <Tab eventKey="crypto" title="Crypto currencies">
+              {/* <Tab eventKey="crypto" title="Crypto currencies">
                 <div className="PropertiesTabContent p-2 border border-1 border-top-0 shadow position-relative">
                 <div className="SearchPropertiesBar position-absolute ">
                   <InputGroup className="mb-3">
@@ -84,7 +84,7 @@ function HoldingPage() {
                     <ListPropertyCard/>
                   </Row>
                 </div>
-              </Tab>
+              </Tab> */}
             </Tabs>
       </div>
     );

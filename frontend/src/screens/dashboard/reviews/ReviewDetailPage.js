@@ -32,7 +32,7 @@ export default function ReviewDetailPage () {
                                 <div className="fs-6 fw-bold">Kent Avenue #310</div>
                             </div>
                             <div className="">
-                                <div className="fs-6 fw-bold">0x20jsd...90bd</div>
+                                <div className="fs-6 fw-bold">sei14zd...0qzk</div>
                                 <small>2 days ago</small>
                                 <div className="fs-6 d-flex align-items-center">
                                     <FaStar className="me-2 text-orange"/>
@@ -53,7 +53,7 @@ export default function ReviewDetailPage () {
                                 <div className="fs-6 fw-bold">Kent Avenue #310</div>
                             </div>
                             <div className="">
-                                <div className="fs-6 fw-bold">0x20jsd...90bd</div>
+                                <div className="fs-6 fw-bold">sei14zd...0qzk</div>
                                 <small>2 days ago</small>
                                 <div className="fs-6 d-flex align-items-center">
                                     <FaStar className="me-2 text-orange"/>
@@ -74,7 +74,7 @@ export default function ReviewDetailPage () {
                                 <div className="fs-6 fw-bold">Kent Avenue #310</div>
                             </div>
                             <div className="">
-                                <div className="fs-6 fw-bold">0x20jsd...90bd</div>
+                                <div className="fs-6 fw-bold">sei14zd...0qzk</div>
                                 <small>2 days ago</small>
                                 <div className="fs-6 d-flex align-items-center">
                                     <FaStar className="me-2 text-orange"/>

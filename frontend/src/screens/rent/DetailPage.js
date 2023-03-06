@@ -331,7 +331,7 @@ export function RentDetailPage() {
           <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
           {host == true ? (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="0xbf4fa...079f" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
             </Form.Group>
           ) : (
             <Form.Group className="mb-3" controlId="formBasicEmail">

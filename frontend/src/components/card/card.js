@@ -5,8 +5,8 @@ import { PrimaryBtn, SecondPrimaryBtn } from "../button/Buttons";
 import VerifyIcon from '../../assets/images/icons/verify.svg';
 import UploadIcon from '../../assets/images/icons/upload.svg';
 import MintIcon from '../../assets/images/icons/mint.svg';
-import { DetailCarousel, MintedPropertiesCardCarousel, UnverifiedCardCarousel } from "../carousel/Carousel";
-import { DetailData, UnVerifyNFTData, VerifyNFTData } from "../../utils/data";
+import { DetailCarousel, ListCardCarousel, MintedPropertiesCardCarousel, UnverifiedCardCarousel } from "../carousel/Carousel";
+import { DetailData, ListCarouselData, UnVerifyNFTData, VerifyNFTData } from "../../utils/data";
 import BarChartIcon from '../../assets/images/icons/barchart.svg';
 import SumIcon from '../../assets/images/icons/sum.svg';
 import AmountListIcon from '../../assets/images/icons/amount_list.svg';
@@ -251,6 +251,20 @@ export const MintedPropertiesCard = () => {
                     <Col sm={12} md={6}>
                         <MintedPropertiesCardCarousel images={VerifyNFTData[2].images}/>
                     </Col>
+                </Row>
+                </Card.Body>
+            </Card>
+        </div>
+    )
+} 
+
+export const ListPropertiesCard = () => {
+    return (
+        <div className="MintedPropertiesCard my-1">
+            <Card className="shadow">
+                <Card.Body>
+                <Row>
+                    <ListCardCarousel images={ListCarouselData[0].images}/>
                 </Row>
                 </Card.Body>
             </Card>

@@ -67,37 +67,37 @@ function RentPage() {
       setData(tempData)
     }
     else {
-      if (location != "") {
+      if (location !== "") {
         const _data = sampleData.filter( obj => obj.address.area == location.toUpperCase());
         setData(_data);
       }
       
-      if (minDate != "" && maxDate != "") {
+      if (minDate !== "" && maxDate !== "") {
           const _data = sampleData.filter( obj => minDate >= obj.livingArea <= maxDate);
           setData(_data);
       }
       
-      if (adult != 0) {
+      if (adult !== 0) {
           const _data = sampleData.filter( obj => obj.guest.adults == adult);
           setData(_data);
       }
       
-      if (children != 0) {
+      if (children !== 0) {
           const _data = sampleData.filter( obj => obj.guest.childrens == children);
           setData(_data);
       }
       
-      if (infants != 0) {
+      if (infants !== 0) {
           const _data = sampleData.filter( obj => obj.guest.infants == infants);
           setData(_data);
       }
       
-      if (pets != 0) {
+      if (pets !== 0) {
           const _data = sampleData.filter( obj => obj.guest.pets == pets);
           setData(_data);
       }
       
-      
+      return
     }
   };
 
@@ -127,27 +127,27 @@ function RentPage() {
               <Modal.Title>Search by region</Modal.Title>
               <Row>
                 <Col xs={4} sm={4} md={4} className="my-2">
-                  <Image src={LocationImg1} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("World"); setLocationShow(false) }} />
+                  <Image src={LocationImg1} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("world");  setLocationShow(false) }} />
                   <div className="">I'm flexible</div>
                 </Col>
                 <Col xs={4} sm={4} md={4} className="my-2">
-                  <Image src={LocationImg2} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Europe"); setLocationShow(false) }} />
+                  <Image src={LocationImg2} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Europe");  setLocationShow(false) }} />
                   <div className="">Europe</div>
                 </Col>
                 <Col xs={4} sm={4} md={4} className="my-2">
-                  <Image src={LocationImg3} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Turkey"); setLocationShow(false) }} />
+                  <Image src={LocationImg3} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Turkey");  setLocationShow(false) }} />
                   <div className="">Turkey</div>
                 </Col>
                 <Col xs={4} sm={4} md={4} className="my-2">
-                  <Image src={LocationImg4} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Asia"); setLocationShow(false) }} />
+                  <Image src={LocationImg4} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Asia");  setLocationShow(false) }} />
                   <div className="">Southeast Asia</div>
                 </Col>
                 <Col xs={4} sm={4} md={4} className="my-2">
-                  <Image src={LocationImg5} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Thailand"); setLocationShow(false) }} />
+                  <Image src={LocationImg5} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("Thailand");  setLocationShow(false) }} />
                   <div className="">Thailand</div>
                 </Col>
                 <Col xs={4} sm={4} md={4} className="my-2">
-                  <Image src={LocationImg6} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("America"); setLocationShow(false) }} />
+                  <Image src={LocationImg6} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("America");  setLocationShow(false) }} />
                   <div className="">South America</div>
                 </Col>
               </Row>

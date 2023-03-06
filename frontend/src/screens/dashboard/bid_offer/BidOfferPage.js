@@ -30,7 +30,7 @@ function BidOfferPage() {
               <Col sm={12} md={4} className="px-4">
                 <div className="fs-5 fw-bold mt-5 mb-2">No bids... yet!</div>
                 <div className="text-gray">Looking for that dream house that you can call your own? Start searching now and make a offer!</div>
-                <Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button>
+                <Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">Explore your NFTs</Button>
               </Col>
               <Col sm={12} md={8}>
                 {/* <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/> */}
@@ -41,12 +41,12 @@ function BidOfferPage() {
           <Row>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -55,12 +55,12 @@ function BidOfferPage() {
             </Col>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -69,12 +69,12 @@ function BidOfferPage() {
             </Col>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -83,12 +83,12 @@ function BidOfferPage() {
             </Col>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -97,12 +97,12 @@ function BidOfferPage() {
             </Col>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -111,12 +111,12 @@ function BidOfferPage() {
             </Col>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -128,12 +128,12 @@ function BidOfferPage() {
           <Row>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -142,12 +142,12 @@ function BidOfferPage() {
             </Col>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold">Tingstadvassen</div>
-                      <div className="text-gray">Owned by 020sd...90bd</div>
+                      <div className="text-gray">Owned by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -173,12 +173,12 @@ function BidOfferPage() {
           <Row>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -187,12 +187,12 @@ function BidOfferPage() {
             </Col>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -201,12 +201,12 @@ function BidOfferPage() {
             </Col>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -215,12 +215,12 @@ function BidOfferPage() {
             </Col>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -229,12 +229,12 @@ function BidOfferPage() {
             </Col>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -243,12 +243,12 @@ function BidOfferPage() {
             </Col>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Your Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -260,12 +260,12 @@ function BidOfferPage() {
           <Row>
           <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
-                <NavLink to="/dashboard/rent/message" className="nav-link">
+                <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
                     <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
-                      <div className="text-gray">Offer by 020sd...90bd</div>
+                      <div className="text-gray">Offer by sei14zd...0qzk</div>
                       <div className="text-gray">Offer : 500000 SEI</div>
                     </div>
                   </Card.Body>
@@ -293,7 +293,7 @@ function BidOfferPage() {
               <Image src={HostMessageIcon} width="40" height="40" className="mx-3"/>
               <div className="">
                 <small className="fw-bold mb-2">Message your guest</small>
-                <small className="fw-bold mb-2">Guest: 0x20jsd...90b</small>
+                <small className="fw-bold mb-2">Guest: sei14zd...0qzk</small>
               </div>
             </div>
             <hr/>

@@ -123,7 +123,7 @@ export default function Header() {
               ) : (
                 <Dropdown>
                   <Dropdown.Toggle className="bg-purple border-purple rounded-5"  id="dropdown-basic">
-                  0xbf4fa...079f
+                  sei14zd...0qzk
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="bg-red">

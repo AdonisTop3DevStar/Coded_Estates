@@ -48,3 +48,18 @@ export const UnverifiedCardCarousel = ({images}) => {
     </Carousel>
   );
 };
+
+export const ListCardCarousel = ({images}) => {
+  const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
+  return (
+    <Carousel className="MintedPropertiesCardCarousel">
+        {
+            images.map((item, idx) => (
+                <Carousel.Item key={idx} className="position-relative text-center" onClick={(e) => setTabKey(3)}>
+                  <Link to="/dashboard/buy/properties"><Image src={item.src} width="100%" height="240" className="rounded-1" style={{objectFit:"cover"}}/></Link>
+                </Carousel.Item>
+            ))
+        }      
+    </Carousel>
+  );
+};
