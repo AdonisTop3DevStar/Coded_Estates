@@ -45,82 +45,63 @@ function BuyPage() {
       setData(tempData)
     }
     else {
+      let result = sampleData;
       if (keyWord !== "") {
-          const _data = sampleData.filter( obj => obj.address.state == keyWord.toUpperCase());
-          setData(_data);  
+        result = result.filter( obj => obj.address.state == keyWord.toUpperCase());
       }
       
       if (type !== "") {
         if(type === "all") {
-          const _data = sampleData.filter( obj => obj.homeType !== "");
-          setData(_data);          
+          result = result.filter( obj => obj.homeType !== "");
         } else {
-          const _data = sampleData.filter( obj => obj.homeType == type.toUpperCase());
-          setData(_data);
+          result = result.filter( obj => obj.homeType == type.toUpperCase());
         }
       }
       
       if (bed !== "") {
         if (bed == 4) {
-          const _data = sampleData.filter( obj => obj.bedrooms >= bed);
-          setData(_data);  
+          result = result.filter( obj => obj.bedrooms >= bed);
         }
         else {
-          const _data = sampleData.filter( obj => obj.bedrooms == bed);
-          setData(_data);   
+          result = result.filter( obj => obj.bedrooms == bed);
         }
       }
 
       if (bath !== "") {
         if (bath === 4) {
-          const _data = sampleData.filter( obj => obj.bathrooms >= bath);
-          setData(_data);              
-          console.log(_data)
+          result = result.filter( obj => obj.bathrooms >= bath);
         }
         else {
-          const _data = sampleData.filter( obj => obj.bathrooms == bath);
-          setData(_data);   
+          result = result.filter( obj => obj.bathrooms == bath);
         }
       }
       
       if (size !== "") {
 
         if(size === "s1") {
-          const _data = sampleData.filter( obj => obj.livingArea <= 500);
-          setData(_data);
+          result = result.filter( obj => obj.livingArea <= 500);
         } else if (size === "s2") {
-          const _data = sampleData.filter( obj => obj.livingArea <= 1000);
-          setData(_data);
+          result = result.filter( obj => obj.livingArea <= 1000);
         } else if (size === "s3") {
-          const _data = sampleData.filter( obj => obj.livingArea <= 1500);
-          setData(_data);
+          result = result.filter( obj => obj.livingArea <= 1500);
         } else if (size === "s4") {
-          const _data = sampleData.filter( obj => obj.livingArea <= 5000);
-          setData(_data);
+          result = result.filter( obj => obj.livingArea <= 5000);
         }
 
       }
       
       if (price !== "") {
-        console.log("price", price)
         if(price === "p1") {
-          const _data = sampleData.filter( obj => obj.price <= 20000);
-          setData(_data);
-          console.log("p1--", _data)
+          result = result.filter( obj => obj.price <= 20000);
         } else if (price === "p2") {
-          const _data = sampleData.filter( obj => obj.price <= 50000);
-          setData(_data);
-          console.log("p2--", _data)
+          result = result.filter( obj => obj.price <= 50000);
         } else if (price === "p3") {
-          const _data = sampleData.filter( obj => obj.price <= 100000);
-          setData(_data);
-          console.log("p3--", _data)
+          result = result.filter( obj => obj.price <= 100000);
         } else if (price === "p4") {
-          const _data = sampleData.filter( obj => obj.price <= 1000000);
-          setData(_data);
-          console.log("p4--", _data)
+          result = result.filter( obj => obj.price <= 1000000);
         }
       }
+      setData(result);
       return;
     }
   };

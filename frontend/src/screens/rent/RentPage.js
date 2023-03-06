@@ -46,7 +46,7 @@ function RentPage() {
   ];
 
   const findProperties = (location, minDate, maxDat, adult, children, infants, pets) => {
-    if (location == '' && minDate == '' && maxDate == '' && adult == 0 && children == 0 && infants == 0 && pets == 0) {
+    if (location === '' && minDate === '' && maxDate === '' && adult === 0 && children === 0 && infants === 0 && pets === 0) {
       let tempData = [];
       for(let i = 0; i < sampleData.length; i++) {
         const _data = {
@@ -67,36 +67,42 @@ function RentPage() {
       setData(tempData)
     }
     else {
+      let result = sampleData;
       if (location !== "") {
-        const _data = sampleData.filter( obj => obj.address.area == location.toUpperCase());
-        setData(_data);
+        if(location === "world") {
+          result = result.filter( obj => obj.address.area !== '');
+        }
+        else {
+          result = result.filter( obj => obj.address.area == location.toUpperCase());
+        }
       }
       
       if (minDate !== "" && maxDate !== "") {
-          const _data = sampleData.filter( obj => minDate >= obj.livingArea <= maxDate);
-          setData(_data);
+          result =  result.filter( obj => minDate >= obj.livingArea <= maxDate);
+          console.log("result1",result)
       }
       
       if (adult !== 0) {
-          const _data = sampleData.filter( obj => obj.guest.adults == adult);
-          setData(_data);
+        result = result.filter( obj => obj.guest.adults == adult);
+        console.log("result2",result)
       }
       
       if (children !== 0) {
-          const _data = sampleData.filter( obj => obj.guest.childrens == children);
-          setData(_data);
+        result = result.filter( obj => obj.guest.childrens == children);
+        console.log("result3",result)
       }
       
       if (infants !== 0) {
-          const _data = sampleData.filter( obj => obj.guest.infants == infants);
-          setData(_data);
+        result = result.filter( obj => obj.guest.infants == infants);
+        console.log("result4",result)
       }
       
       if (pets !== 0) {
-          const _data = sampleData.filter( obj => obj.guest.pets == pets);
-          setData(_data);
+        result = result.filter( obj => obj.guest.pets == pets);
+        console.log("result5",result)
       }
-      
+      console.log("resultt",result)
+      setData(result);
       return
     }
   };
@@ -104,7 +110,7 @@ function RentPage() {
 
   useEffect(() => {
     findProperties(location, minDate, maxDate, adult, children, infants, pets);
-  }, [location, minDate, maxDate, dates])
+  }, [location, minDate, maxDate, dates, adult, children, infants, pets])
   
   useEffect(() => {
     findProperties(location, minDate, maxDate, adult, children, infants, pets);
@@ -178,6 +184,10 @@ function RentPage() {
                   </Tab.Content>              
                 </Row>
               </Tab.Container>
+              <div className="text-end">
+                <Button className="border-dark-purple bg-white text-dark-purple px-3 me-2" onClick={()=> setTimeShow(false)}>Cancel</Button>
+                <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={()=> setTimeShow(false)}>Search</Button>
+              </div>
             </Modal.Body>
           </Modal>
 
