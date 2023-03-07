@@ -813,7 +813,7 @@ export const sampleData = [
       "infants" : 1,
       "pets" : 1,
     },
-    "date" : "2023.03.21",
+    "date" : "202303s21",
     "bedrooms": 2,
     "bathrooms": 5,
     "price": 48999,

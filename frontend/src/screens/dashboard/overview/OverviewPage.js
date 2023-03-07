@@ -33,11 +33,7 @@ function OverviewPage() {
       <div className="fs-4 fw-bold">Dashboard</div>
       <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
 
-      <Row>
-        <Col sm={12} md={3}>
-          <div className="my-2 fs-5 fw-bold">List Properties</div>
-          <ListPropertiesCard/>
-        </Col>
+      <Row>        
         <Col sm={12} md={3}>
           <div className="my-2 fs-5 fw-bold">Verify Wallet</div>
           <Card className="shadow">
@@ -48,6 +44,10 @@ function OverviewPage() {
               </div>
             </Card.Body>
           </Card>
+        </Col>
+        <Col sm={12} md={3}>
+          <div className="my-2 fs-5 fw-bold">List Properties</div>
+          <ListPropertiesCard/>
         </Col>
         <Col sm={12} md={6}>
           <div className="my-2 fs-5 fw-bold">Minted Properties</div>

@@ -47,14 +47,18 @@ function BuyPage() {
     else {
       let result = sampleData;
       if (keyWord !== "") {
-        result = result.filter( obj => obj.address.state == keyWord.toUpperCase());
+        result = result.filter( obj => (obj.address.state).toLowerCase().includes(keyWord.toLowerCase()) || (obj.address.city).toLowerCase().includes(keyWord.toLowerCase()));
+        // const regex = new RegExp('^' + keyWord.replace(/\*/g, '.') + '$');
+
+        // result = result.filter( obj => regex.test(obj.address.city));
+
       }
       
       if (type !== "") {
         if(type === "all") {
           result = result.filter( obj => obj.homeType !== "");
         } else {
-          result = result.filter( obj => obj.homeType == type.toUpperCase());
+          result = result.filter( obj => (obj.homeType).toLowerCase().includes(type.toLowerCase()));
         }
       }
       

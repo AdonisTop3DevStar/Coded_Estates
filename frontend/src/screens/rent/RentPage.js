@@ -55,25 +55,11 @@ function RentPage() {
   }
 
   const findProperties = (location, adult, dates, children, infants, pets) => {
-    if (location === '' && dates.length === 0 && adult === 0 && children === 0 && infants === 0 && pets === 0) {
-      let tempData = [];
-      for(let i = 0; i < sampleData.length; i++) {
-        const _data = {
-          "zpid": sampleData[i].zpid,
-          "address": sampleData[i].address,
-          "bedrooms": sampleData[i].bedrooms,
-          "bathrooms": sampleData[i].bathrooms,
-          "price": sampleData[i].price,
-          "homeStatus": "RENT",
-          "livingArea": 1123,
-          "size" : sampleData[i].livingArea,
-          "currency": "SEI",
-          "homeType": "CONDO",
-          "photos": sampleData[i].photos,  
-        };
-        tempData.push(_data);
-      }
-      setData(tempData)
+
+    if (location == '' &&  adult == 0 && children == 0 && infants == 0 && pets == 0) {
+      let result = sampleData;
+      result = result.filter( obj => obj.currency === 'SEI');
+      setData(result);
     }
     else {
       let result = sampleData;
@@ -82,13 +68,12 @@ function RentPage() {
           result = result.filter( obj => obj.address.area !== '');
         }
         else {
-          result = result.filter( obj => obj.address.area == location.toUpperCase());
+          result = result.filter( obj => (obj.address.area).toLowerCase().includes(location.toLowerCase()));
         }
       }
       
-      if (dates.length != 0) {
-          result =  result.filter( obj => formatDate(dates[0]?.toDate?.()) <= obj.date <= formatDate(dates[1]?.toDate?.()));
-          console.log("result1", formatDate(dates[0]?.toDate?.()), formatDate(dates[1]?.toDate?.()))
+      if (dates.length != 0) {  
+        result = result.filter( obj => (new Date(dates[0]?.toDate?.()) <= new Date(obj.date)) && (new Date(obj.date) <= new Date(dates[1]?.toDate?.())));
       }
       
       if (adult != 0) {
@@ -114,13 +99,13 @@ function RentPage() {
 
   useEffect(() => {
     findProperties(location, adult, dates, children, infants, pets);
-  }, [location, adult, dates, children, infants, pets])
+  }, [location, adult, children, infants, pets, dates])
   
   useEffect(() => {
-    findProperties(location, adult, dates, children, infants, pets);
+    findProperties(location, adult, children, infants, pets);
   }, []);
 
-  console.log(dates)
+  
 
     return (
       <div className="BuyPage position-relative" style={{marginTop:"81px"}}>
@@ -130,7 +115,7 @@ function RentPage() {
               <div className="py-1 px-3 fw-bold border-end cursor-pointer" onClick={() => (setLocationShow(true))}>Anywhere</div>
               <div className="py-1 px-3 fw-bold border-end cursor-pointer" onClick={() => (setTimeShow(true))}>Any Week</div>
               <div className="py-1 px-3 fw-semibold cursor-pointer" onClick={() => (setGuestShow(true))}>Add Guests</div>
-              <Button className="round-btn d-flex p-2" onClick={() => ( findProperties(location, minDate, maxDate, adult, children, infants, pets))}><FaSearch /></Button>
+              <Button className="round-btn d-flex p-2" onClick={() => ( findProperties(location, adult, dates, children, infants, pets))}><FaSearch /></Button>
             </div>
           </Container>
 
@@ -193,8 +178,7 @@ function RentPage() {
                 </Row>
               </Tab.Container>
               <div className="text-end">
-                <Button className="border-dark-purple bg-white text-dark-purple px-3 me-2" onClick={()=> setTimeShow(false)}>Cancel</Button>
-                <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={()=> setTimeShow(false)}>Search</Button>
+                <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={()=> setTimeShow(false)}>Okay</Button>
               </div>
             </Modal.Body>
           </Modal>
