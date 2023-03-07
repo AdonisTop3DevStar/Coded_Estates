@@ -58,8 +58,14 @@ function RentPage() {
 
     if (location == '' &&  adult == 0 && children == 0 && infants == 0 && pets == 0) {
       let result = sampleData;
+      for ( let i = 0; i < result.length; i++) {
+        let data = [
+          
+        ]
+      }
       result = result.filter( obj => obj.currency === 'SEI');
       setData(result);
+      return
     }
     else {
       let result = sampleData;
@@ -99,7 +105,7 @@ function RentPage() {
 
   useEffect(() => {
     findProperties(location, adult, dates, children, infants, pets);
-  }, [location, adult, children, infants, pets, dates])
+  }, [location, adult, dates, children, infants, pets]);
   
   useEffect(() => {
     findProperties(location, adult, children, infants, pets);

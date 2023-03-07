@@ -14,13 +14,13 @@ function MessagePage() {
         <Col md={2} className="border-end user-list">
           {mode == "bid" ? (
             <ButtonGroup className="border-gray bg-white p-2 w-100 border">
-              <Button className="bg-white text-dark-purple fw-bold rounded mx-1 border-white" onClick={() => setMode('bid')}>My Bids</Button>
-              <Button className="bg-dark-purple text-white fw-bold rounded mx-1 border-white" onClick={() => setMode('offer')}>My Offers</Button>
+              <Button className="bg-white text-dark-purple fw-bold rounded mx-1 border-white" onClick={() => setMode('offer')}>My Bids</Button>
+              <Button className="bg-dark-purple text-white fw-bold rounded mx-1 border-white" onClick={() => setMode('bid')}>My Offers</Button>
             </ButtonGroup>
           ) : (
             <ButtonGroup className="border-gray bg-white p-2 w-100 border">
-              <Button className="bg-dark-purple text-white fw-bold rounded mx-1 border-white" onClick={() => setMode('bid')}>My Bids</Button>
-              <Button className="bg-white text-dark-purple fw-bold rounded mx-1 border-white" onClick={() => setMode('offer')}>My Offers</Button>
+              <Button className="bg-dark-purple text-white fw-bold rounded mx-1 border-white" onClick={() => setMode('offer')}>My Bids</Button>
+              <Button className="bg-white text-dark-purple fw-bold rounded mx-1 border-white" onClick={() => setMode('bid')}>My Offers</Button>
             </ButtonGroup>
           )}
 
