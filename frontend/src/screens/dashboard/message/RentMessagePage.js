@@ -4,12 +4,25 @@ import Map from '../../../assets/images/icons/map.svg';
 import User from '../../../assets/images/icons/user.svg';
 import Heart from '../../../assets/images/icons/heart-fill.svg';
 import DetailImage from '../../../assets/images/building/5.webp';
+import { useState } from "react";
 
 function RentMessagePage() {
+  const [mode, setMode] = useState('host');
     return (
       <div className="MessagePage mt-2">
         <Row>
           <Col md={2} className="border-end user-list">
+          {mode == "host" ? (
+            <ButtonGroup className="border-gray bg-white p-2 w-100 border">
+              <Button className="bg-dark-purple text-white fw-bold rounded mx-1 border-white" onClick={() => setMode('host')}>Host</Button>
+              <Button className="bg-white text-dark-purple fw-bold rounded mx-1 border-white" onClick={() => setMode('travel')}>Travelling</Button>
+            </ButtonGroup>
+          ) : (
+            <ButtonGroup className="border-gray bg-white p-2 w-100 border">
+              <Button className="bg-white text-dark-purple fw-bold rounded mx-1 border-white" onClick={() => setMode('host')}>Host</Button>
+              <Button className="bg-dark-purple text-white fw-bold rounded mx-1 border-white" onClick={() => setMode('travel')}>Travelling</Button>
+            </ButtonGroup>
+          )}
             <div className="fs-5 fw-bold my-3">All Messages</div>
             <InputGroup className="mb-3 rounded border text-gray">
               <InputGroup.Text id="basic-addon1" className="bg-white border-0 text-gray"><FaSearch/></InputGroup.Text>

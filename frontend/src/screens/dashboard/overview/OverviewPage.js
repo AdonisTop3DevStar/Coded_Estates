@@ -7,7 +7,7 @@ import { useState } from "react";
 import VerifyIcon from '../../../assets/images/icons/verify.svg';
 import SwitchIcon from '../../../assets/images/icons/switch.svg';
 import CheckIcon from '../../../assets/images/icons/check-circle.svg';
-import MintIcon from '../../../assets/images/icons/mint.svg';
+import MintIcon from '../../../assets/images/icons/mint.png';
 import Logo from '../../../assets/images/Logo.svg';
 import {store} from '../../../configs/Store';
 import { NavLink } from "react-router-dom";

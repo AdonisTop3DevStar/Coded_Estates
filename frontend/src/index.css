@@ -379,3 +379,7 @@ body::-webkit-scrollbar-thumb {
   background: white !important;
   color: #323260 !important;
 }
+
+.activity-datatable tr {
+  cursor: pointer;
+}

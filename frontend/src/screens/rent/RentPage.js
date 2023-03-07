@@ -45,8 +45,17 @@ function RentPage() {
     { value: "America", image: LocationImg6, title: "South America" },
   ];
 
-  const findProperties = (location, minDate, maxDat, adult, children, infants, pets) => {
-    if (location === '' && minDate === '' && maxDate === '' && adult === 0 && children === 0 && infants === 0 && pets === 0) {
+  function formatDate(dateString) {
+    let originalDate = new Date(dateString);
+    let year = originalDate.getFullYear();
+    let month = originalDate.getMonth() + 1;
+    let day = originalDate.getDate();
+    let formattedDate = `${year}.${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')}`;
+    return formattedDate
+  }
+
+  const findProperties = (location, adult, dates, children, infants, pets) => {
+    if (location === '' && dates.length === 0 && adult === 0 && children === 0 && infants === 0 && pets === 0) {
       let tempData = [];
       for(let i = 0; i < sampleData.length; i++) {
         const _data = {
@@ -77,31 +86,26 @@ function RentPage() {
         }
       }
       
-      if (minDate !== "" && maxDate !== "") {
-          result =  result.filter( obj => minDate >= obj.livingArea <= maxDate);
-          console.log("result1",result)
+      if (dates.length != 0) {
+          result =  result.filter( obj => formatDate(dates[0]?.toDate?.()) <= obj.date <= formatDate(dates[1]?.toDate?.()));
+          console.log("result1", formatDate(dates[0]?.toDate?.()), formatDate(dates[1]?.toDate?.()))
       }
       
-      if (adult !== 0) {
+      if (adult != 0) {
         result = result.filter( obj => obj.guest.adults == adult);
-        console.log("result2",result)
       }
       
       if (children !== 0) {
         result = result.filter( obj => obj.guest.childrens == children);
-        console.log("result3",result)
       }
       
       if (infants !== 0) {
         result = result.filter( obj => obj.guest.infants == infants);
-        console.log("result4",result)
       }
       
       if (pets !== 0) {
         result = result.filter( obj => obj.guest.pets == pets);
-        console.log("result5",result)
       }
-      console.log("resultt",result)
       setData(result);
       return
     }
@@ -109,13 +113,15 @@ function RentPage() {
 
 
   useEffect(() => {
-    findProperties(location, minDate, maxDate, adult, children, infants, pets);
-  }, [location, minDate, maxDate, dates, adult, children, infants, pets])
+    findProperties(location, adult, dates, children, infants, pets);
+  }, [location, adult, dates, children, infants, pets])
   
   useEffect(() => {
-    findProperties(location, minDate, maxDate, adult, children, infants, pets);
+    findProperties(location, adult, dates, children, infants, pets);
   }, []);
- 
+
+  console.log(dates)
+
     return (
       <div className="BuyPage position-relative" style={{marginTop:"81px"}}>
         <div className="SearchBar border-bottom">
@@ -179,6 +185,8 @@ function RentPage() {
                         rangeHover
                         numberOfMonths={2}
                         minDate={minDate}
+                        onChange={setDates}
+                        format={"MM/DD/YYYY"}
                       />
                     </Tab.Pane>
                   </Tab.Content>              

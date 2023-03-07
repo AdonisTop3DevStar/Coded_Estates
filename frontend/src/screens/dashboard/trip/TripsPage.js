@@ -22,11 +22,11 @@ function TripsPage() {
       <div className="fs-4 fw-bold">My Trips</div>
       <div className="fs-6 opacity-50">Your history of trips you been on.</div>
       <Tabs
-        defaultActiveKey="visits"
+        defaultActiveKey="host"
         id="uncontrolled-tab-example"
         className="my-3"
       >
-        <Tab eventKey="visitors" title="Visitors">
+        <Tab eventKey="host" title="Host">
           <Card className="border-dark-purple">
             <Row>
               <Col sm={12} md={4} className="px-4">
@@ -146,7 +146,7 @@ function TripsPage() {
             </Col>
           </Row>
         </Tab>
-        <Tab eventKey="visits" title="Your Visits">
+        <Tab eventKey="travel" title="Travelling">
         <Row className="py-2">
                 <Col sm={12} md={8}>
                   <NavLink to="/dashboard/rent/message" className="nav-link">

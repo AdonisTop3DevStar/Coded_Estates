@@ -63,7 +63,12 @@ function BuyPage() {
           result = result.filter( obj => obj.bedrooms >= bed);
         }
         else {
-          result = result.filter( obj => obj.bedrooms == bed);
+          if (bed == 0) {
+            result = result.filter( obj => obj.bedrooms != "");
+          }
+          else {
+            result = result.filter( obj => obj.bedrooms == bed);
+          }
         }
       }
 
@@ -72,7 +77,14 @@ function BuyPage() {
           result = result.filter( obj => obj.bathrooms >= bath);
         }
         else {
-          result = result.filter( obj => obj.bathrooms == bath);
+          if (bath == 0) {
+            result = result.filter( obj => obj.bathrooms != "");
+            console.log("bath",result)
+          }
+          else {
+            result = result.filter( obj => obj.bathrooms == bath);
+            console.log("bath1",result)
+          }
         }
       }
       
@@ -86,6 +98,8 @@ function BuyPage() {
           result = result.filter( obj => obj.livingArea <= 1500);
         } else if (size === "s4") {
           result = result.filter( obj => obj.livingArea <= 5000);
+        } else if (size === 0){
+          result = result.filter( obj => obj.livingArea != "");
         }
 
       }
@@ -99,6 +113,8 @@ function BuyPage() {
           result = result.filter( obj => obj.price <= 100000);
         } else if (price === "p4") {
           result = result.filter( obj => obj.price <= 1000000);
+        } else if (price === 0){
+          result = result.filter( obj => obj.price != "");
         }
       }
       setData(result);
@@ -144,6 +160,7 @@ function BuyPage() {
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={bed} onChange={(e) => setBed(e.target.value)}>
+              <option value="0">Select Bedroom</option>
               <option value="1">1 bedroom</option>
               <option value="2">2 bedrooms</option>
               <option value="3">3 bedrooms</option>
@@ -152,6 +169,7 @@ function BuyPage() {
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={bath} onChange={(e) => setBath(e.target.value)}>
+              <option value="0">Select Bathroom</option>
               <option value="1">1 bathroom</option>
               <option value="2">2 bathrooms</option>
               <option value="3">3 bathrooms</option>
@@ -160,6 +178,7 @@ function BuyPage() {
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={size} onChange={(e) => setSize(e.target.value)}>
+              <option value="0">Select size</option>
               <option value="s1">300 - 500 sq ft</option>
               <option value="s2">500 - 1000 sq ft</option>
               <option value="s3">1000 - 1500 sq ft</option>
@@ -168,6 +187,7 @@ function BuyPage() {
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={price} onChange={(e) => setPrice(e.target.value)}>
+              <option value="0">Select price</option>
               <option value="p1">$10K ~ $20K</option>
               <option value="p2">$30K ~ $50K</option>
               <option value="p3">$60K ~ $100K</option>
@@ -176,7 +196,7 @@ function BuyPage() {
           </div>|
           <div className="">
             <Form.Group controlId="exampleForm.ControlInput1">
-              <Form.Control type="text" placeholder="Enter address or city or pin code" className="border-0" onChange={(e) => setKeyWord(e.target.value)} value={keyWord} />
+              <Form.Control type="text" placeholder="Enter address or city" className="border-0" onChange={(e) => setKeyWord(e.target.value)} value={keyWord} />
             </Form.Group>
           </div>
           <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center fs-4" onClick={() => findProperties(type, keyWord, bed, size, price, bath)}><FaSearch /></Button>

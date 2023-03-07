@@ -475,7 +475,7 @@ export function DetailPage() {
             </Form.Group>
           ) : (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" />
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
             </Form.Group>
           )}
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
