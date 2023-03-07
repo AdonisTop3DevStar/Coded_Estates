@@ -96,6 +96,73 @@ export const NormalCard = ({title, network, price, images, bed, bath, size}) => 
     )
 }
 
+export const FavoriteCard = ({title, network, price, images, bed, bath, size}) => {
+    const [loading, setLoading] = useState(true);
+    const [header, setHeader, updateHeader] = store.useState('Header');
+    setTimeout(() => {
+        setLoading(false)
+      }, "3000");
+
+    return (
+        <Card className="NormalCard my-2">
+            <Card.Body className="position-relative">
+                <FaRegHeart className="heart-icon"/>
+                {loading ? 
+                (
+                    <Skeleton
+                        height="245px"
+                        containerClassName="avatar-skeleton"
+                    />
+                ) : (
+                    <Carousel>
+                        {
+                            images.map((item, idx) => (
+                                <Carousel.Item>
+                                    <Link className="nav-link" to="/detail/buy/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="245" className="w-100 object-fit-cover border rounded" style={{objectFit : "cover"}}/></Link>
+                                </Carousel.Item>
+                            ))
+                        }                    
+                    </Carousel>
+                )}
+                
+                <Link className="nav-link" to="/detail/buy/1" onClick={() => setHeader('BUY')}>
+                {loading ? 
+                (
+                    <Skeleton
+                        containerClassName="avatar-skeleton"
+                    />
+                ) : (
+                    <Card.Title className="d-flex align-items-center justify-content-between my-1">
+                        <div className="card-price">{price} {network}</div>
+                        <small className="card-reviews d-flex "><FaStar className="review-icon me-1"/><span>4.8</span></small>
+                    </Card.Title>
+                )}
+                 {loading ? 
+                (
+                    <Skeleton
+                        containerClassName="avatar-skeleton"
+                    />
+                ) : (
+                    <Card.Subtitle className="my-1 normal-card-title">{title}</Card.Subtitle>
+                )}
+                 {loading ? 
+                (
+                    <Skeleton
+                        containerClassName="avatar-skeleton"
+                    />
+                ) : (
+                    <div className="d-flex align-items-center justify-content-between card-properties">
+                    <div><FaRuler/><span className="ms-2">{size}</span></div>
+                    <div><FaBath/><span className="ms-2">{bath}</span></div>
+                    <div><FaBed/><span className="ms-2">{bed}</span></div>
+                </div>
+                )}
+                </Link>
+            </Card.Body>
+        </Card>
+    )
+}
+
 export const NormalRentCard = ({title, network, price, images, bed, bath, size}) => {
     const [loading, setLoading] = useState(true);
     const [header, setHeader, updateHeader] = store.useState('Header');

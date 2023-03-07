@@ -110,7 +110,7 @@ function MessagePage() {
                 <div><small className="text-gray mb-2">200,000 SEI</small></div>
               </div>
               <Row className="border-top py-1">
-                <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Approve</Button></Col>
+                <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Modify</Button></Col>
                 <Col><Button className="border-gray bg-white text-dark-purple fw-bold w-100">Decline</Button></Col>
               </Row>
               <div className="border-top py-1">
@@ -150,7 +150,7 @@ function MessagePage() {
                 <div><small className="text-gray mb-2">500,000 SEI</small></div>
               </div>
               <Row className="border-top py-2">
-                <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Modify</Button></Col>
+                <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Approve</Button></Col>
                 <Col><Button className="border-gray bg-white text-dark-purple fw-bold w-100">Cancel</Button></Col>
               </Row>
               <div className="border-top py-2">

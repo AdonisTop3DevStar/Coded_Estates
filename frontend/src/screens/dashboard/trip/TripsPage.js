@@ -146,7 +146,7 @@ function TripsPage() {
             </Col>
           </Row>
         </Tab>
-        <Tab eventKey="travel" title="Travelling">
+        <Tab eventKey="travel" title="Traveller">
         <Row className="py-2">
                 <Col sm={12} md={8}>
                   <NavLink to="/dashboard/rent/message" className="nav-link">
