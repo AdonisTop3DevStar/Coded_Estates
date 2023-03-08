@@ -272,8 +272,8 @@ function RentPage() {
           <Row style={{minHeight:"81.5vh"}} className="d-flex align-items-center justify-content-center w-25 mx-auto">
             
             <div className="fs-5 fw-bold text-center">
-            {/* <Image src={EmptyImg} className="w-100 mb-2"/>
-            <div>Don't have Result!</div> */}
+            <Image src={EmptyImg} className="w-100 mb-2"/>
+            <div>Don't have Result!</div>
             </div>
           </Row>
         )}

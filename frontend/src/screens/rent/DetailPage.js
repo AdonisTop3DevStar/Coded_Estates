@@ -4,7 +4,7 @@ import { GoogleMapElement } from "../../components/map/map";
 import { DetailData } from "../../utils/data";
 import { FaHeart, FaShareAlt, FaExclamationCircle, FaMapMarkerAlt, FaBed, FaBath } from "react-icons/fa";
 import { TraitCard } from "../../components/card/card";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Img1 from '../../assets/images/building/4.webp';
 import Icon1 from '../../assets/images/icons/swimming-pool.svg';
 import Icon2 from '../../assets/images/icons/star-border.svg';
@@ -37,14 +37,19 @@ import { FaAngleLeft } from "react-icons/fa";
 import { RentBookMode } from "../../components/modal/BookingMode";
 import { store } from '../../configs/Store';
 import { AiOutlineClose } from "react-icons/ai";
+import ImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
+import { sampleData } from "../../utils/sampledata";
 
 export function RentDetailPage() {
+  const myGallery = useRef();
   const [minDate, setMinDate] = useState(new Date());
   const [show, setShow] = useState(false);
   const [messageModal, setMessageModal] = useState(false);
+  const [host, setHost] = useState(false);
+  const [showGallery, setShowGallery] = useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [host, setHost] = useState(false);
 
   const [values, setValues] = useState([
     new DateObject().setDay(4).subtract(1, "month"),
@@ -86,7 +91,9 @@ export function RentDetailPage() {
           <span className="ms-5">Save</span>
         </div>
       </div>
-      <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{ height: '500px' }}>
+      <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{ height: '500px' }} onClick={() => {
+       
+      }}>
         <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden">
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}><Image src={GalleryImg4} width="100%" height="100%" style={{ objectFit: "cover", cursor: 'pointer' }} /></div>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}>
@@ -345,6 +352,11 @@ export function RentDetailPage() {
             <Button className="border-dark-purple bg-white text-dark-purple fw-bold fs-6 px-4" onClick={hideMessageModal}>Cancel</Button>
             <NavLink to="/dashboard/rent/message"><Button className="border-dark-purple bg-dark-purple text-white fw-bold fs-6 px-4">Send</Button></NavLink>
           </div>
+        </Modal.Body>
+      </Modal>
+      <Modal show={showGallery} size="xl" className="h-100 w-100" onHide={() => setShowGallery(false)} style={{minHeight:"60vh"}}>
+        <Modal.Body>
+          <ImageGallery ref={myGallery} items={DetailData.images} showThumbnails={false} showBullets={false} useBrowserFullscreen={true} isFullscreen={true} fullscreen={true}/>
         </Modal.Body>
       </Modal>
     </div>

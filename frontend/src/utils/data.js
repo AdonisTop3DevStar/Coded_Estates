@@ -305,15 +305,42 @@ export const DetailData = {
         {type : "List", price : 598, network : "USD", from : "89SMS1563F215RF353W5132135H5302O3", to : "89SMS1563F215RF353W5132135H5302O3", date : "12 Mins ago"},
     ],
     images : [
-        { src : Building1 },
-        { src : Building2 },
-        { src : Building3 },
-        { src : Building4 },
-        { src : Building5 },
-        { src : Building6 },
-        { src : Building7 },
-        { src : Building8 },
-        { src : Building9 },
+        {
+            original: Building1,
+            thumbnail: Building1,
+        },
+        {
+            original: Building2,
+            thumbnail: Building2,
+        },
+        {
+            original: Building3,
+            thumbnail: Building3,
+        },
+        {
+            original: Building4,
+            thumbnail: Building4,
+        },
+        {
+            original: Building5,
+            thumbnail: Building5,
+        },
+        {
+            original: Building6,
+            thumbnail: Building6,
+        },
+        {
+            original: Building7,
+            thumbnail: Building7,
+        },
+        {
+            original: Building8,
+            thumbnail: Building8,
+        },
+        {
+            original: Building9,
+            thumbnail: Building9,
+        },
     ],
     social : {
         favorite : 0,
