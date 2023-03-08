@@ -110,7 +110,8 @@ export const FavoriteCard = ({title, network, price, images, bed, bath, size}) =
                 {loading ? 
                 (
                     <Skeleton
-                        height="245px"
+                        height="200px"
+                        width="200px"
                         containerClassName="avatar-skeleton"
                     />
                 ) : (
@@ -118,7 +119,7 @@ export const FavoriteCard = ({title, network, price, images, bed, bath, size}) =
                         {
                             images.map((item, idx) => (
                                 <Carousel.Item>
-                                    <Link className="nav-link" to="/detail/buy/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="245" className="w-100 object-fit-cover border rounded" style={{objectFit : "cover"}}/></Link>
+                                    <Link className="nav-link" to="/detail/buy/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="200" width="200" className="w-100 object-fit-cover border rounded" style={{objectFit : "cover"}}/></Link>
                                 </Carousel.Item>
                             ))
                         }                    

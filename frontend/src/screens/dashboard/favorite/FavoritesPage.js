@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import { FavouritInfoCard, NormalCard } from "../../../components/card/card";
+import { FavoriteCard, FavouritInfoCard, NormalCard } from "../../../components/card/card";
 import { FavoriteData, buyPageData } from "../../../utils/data";
 
 function FavoritesPage() {
@@ -12,7 +12,7 @@ function FavoritesPage() {
         {     
           FavoriteData.map((item, idx) => (
             <Col xs={12} sm={12} md={2}>
-              <NormalCard key={item.idx} title={item?.address?.city + " , " + item?.address?.state} network={item?.currency} price={item?.price} bed={item?.bedrooms} bath={item?.bathrooms} size={item?.size} images={item?.photos} />
+              <FavoriteCard key={item.idx} title={item?.address?.city + " , " + item?.address?.state} network={item?.currency} price={item?.price} bed={item?.bedrooms} bath={item?.bathrooms} size={item?.size} images={item?.photos} />
             </Col>
           ))
         }
