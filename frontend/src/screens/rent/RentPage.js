@@ -134,7 +134,7 @@ function RentPage() {
     <div className="BuyPage position-relative" style={{ marginTop: "81px" }}>
       <div className="SearchBar border-bottom">
         <Container className="d-flex justify-content-center">
-          <div className="my-2 p-2 border rounded-5 d-flex align-items-center">
+          <div className="my-2 p-2 border rounded-5 d-flex align-items-center" style={{height: "50px"}}>
             <div className="py-1 px-3 fw-bold border-end cursor-pointer " onClick={() => (setLocationShow(true))}>
               {location == "" && keyword == "" ? ("AnyWhere") : (
                 <div className=" d-flex flex-column">

@@ -141,7 +141,7 @@ function BuyPage() {
   return (
     <div className="BuyPage position-relative" style={{ marginTop: "81px" }}>
       <div className="BuySearchBar  border-bottom py-2">
-        <div className="w-75 mx-auto rounded-5 border d-flex align-items-center justify-content-between p-1">
+        <div className="w-75 mx-auto rounded-5 border d-flex align-items-center justify-content-between p-2" style={{height: "50px"}}>
           <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center" onClick={ResetFilter}><FaUndoAlt/></Button>
           <div className="py-1 px-3 fw-bold border-end cursor-pointer ">House Type :</div>
           <div className="">
