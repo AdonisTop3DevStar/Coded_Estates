@@ -162,15 +162,57 @@ export default function PropertiesDetail() {
                 {type == "verify" && (
                   
                   <Card.Body>
-                    {/* <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
-                    <div className="fs-6 fw-semibold mb-2">Bid Price</div> */}
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Control type="number" placeholder="Enter your New Price" />
-                    </Form.Group>
-                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Update Price</Button>
-                    <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">List</Button>
-                    <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
-                  </Card.Body>
+                  <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
+                  <div className="border rounded">
+                    <Dropdown>
+                      <label className="ms-2 fw-middle">CURRENCY</label>
+                      <Dropdown.Toggle className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple" id="dropdown-basic">
+                        <div className="d-flex align-items-center">
+                          <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                        </div>
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu className="w-100">
+                        <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                          <div className="d-flex align-items-center">
+                            <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                          </div>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                          <div className="d-flex align-items-center">
+                            <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                          </div>
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                    <div className="border-top">
+                      <label className="ms-2 fw-middle" muted>PRICE</label>
+                      <Form.Control
+                        type="number"
+                        id="inputPassword5"
+                        placeholder="125,000,000"
+                        className="border-0"
+                      />
+                    </div>
+                    <div className="border-top px-2">
+                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                          <div className="d-flex align-items-center justify-content-between">
+                            <Form.Label className="">Availability</Form.Label>
+                          </div>
+                          <DatePicker
+                            value={values}
+                            onChange={setValues}
+                            range
+                            numberOfMonths={2}
+                            showOtherDays
+                            className="d-flex"
+                          />
+                        </Form.Group>
+                    </div>
+                  </div>                   
+                  <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
+                  <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">List Property</Button>
+                </Card.Body>
                 )}
                 {type == "listing" && (
                   <Card.Body>
