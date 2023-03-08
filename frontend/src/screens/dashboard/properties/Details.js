@@ -312,16 +312,6 @@ export default function PropertiesDetail() {
             ) : (
               <div>
                 {type == "verify" && (
-                  // <Card.Body>
-                  //   <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
-                  //   <div className="fs-6 fw-semibold mb-2">Bid Price</div>
-                  //   <Form.Group className="mb-3" controlId="formBasicEmail">
-                  //     <Form.Control type="number" placeholder="Enter your Bid Price" />
-                  //   </Form.Group>
-                  //   <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
-                  //   <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Unlist</Button>
-                  //   <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
-                  // </Card.Body>
                   <Card.Body>
                     <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
                     <div className="border rounded">
@@ -469,7 +459,7 @@ export default function PropertiesDetail() {
                     <Col sm={4} md={4}><small className="text-gray"><strong>Adult :</strong> 1 • <strong>Children :</strong> 1 • <strong>Pet :</strong> 1 </small></Col>
                     <Col sm={3} md={3}><small>03/07/2023 ~ 03/10/2023 ( 3 nights )</small></Col>
                     <Col sm={2} md={2} className="text-end">
-                      <Button className="bg-white border-gray text-gray">Message</Button>
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
                       <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
                     </Col>
                   </Row>
@@ -486,7 +476,7 @@ export default function PropertiesDetail() {
                     <Col sm={4} md={4}><small className="text-gray"><strong>Adult :</strong> 1 • <strong>Children :</strong> 1 • <strong>Pet :</strong> 1 </small></Col>
                     <Col sm={3} md={3}><small>03/07/2023 ~ 03/10/2023 ( 3 nights )</small></Col>
                     <Col sm={2} md={2} className="text-end">
-                      <Button className="bg-white border-gray text-gray">Message</Button>
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
                       <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
                     </Col>
                   </Row>
@@ -503,7 +493,7 @@ export default function PropertiesDetail() {
                     <Col sm={4} md={4}><small className="text-gray"><strong>Adult :</strong> 1 • <strong>Children :</strong> 1 • <strong>Pet :</strong> 1 </small></Col>
                     <Col sm={3} md={3}><small>03/07/2023 ~ 03/10/2023 ( 3 nights )</small></Col>
                     <Col sm={2} md={2} className="text-end">
-                      <Button className="bg-white border-gray text-gray">Message</Button>
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
                       <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
                     </Col>
                   </Row>
@@ -520,7 +510,7 @@ export default function PropertiesDetail() {
                     <Col sm={4} md={4}><small className="text-gray"><strong>Adult :</strong> 1 • <strong>Children :</strong> 1 • <strong>Pet :</strong> 1 </small></Col>
                     <Col sm={3} md={3}><small>03/07/2023 ~ 03/10/2023 ( 3 nights )</small></Col>
                     <Col sm={2} md={2} className="text-end">
-                      <Button className="bg-white border-gray text-gray">Message</Button>
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
                       <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
                     </Col>
                   </Row>
@@ -532,190 +522,361 @@ export default function PropertiesDetail() {
         </Row>
       ) : (
         <Row className="my-2 border-bottom pb-3">
-          <Col sm={12} md={12}>
-            <div className="fs-5 fw-bold">Bid</div>
-            <div className="opacity-50 mb-2">Highest Bid : <strong>520 SEI</strong></div>
-            <div className="BidTable mx-2">
-              <Row className="table-header border py-3 rounded mb-2">
-                <Col sm={3} md={3}><strong>Bid Price</strong></Col>
-                <Col sm={4} md={4}><strong>From</strong></Col>
-                <Col sm={3} md={3}><strong>Bid Date</strong></Col>
-                <Col sm={2} md={2}><strong> </strong></Col>
-              </Row>
-              <div className="table-body">
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
+          {type == "bid" ? (
+            <Col sm={12} md={12}>
+              <div className="fs-5 fw-bold">Bid</div>
+              <div className="opacity-50 mb-2">Highest Bid : <strong>520 SEI</strong></div>
+              <div className="BidTable mx-2">
+                <Row className="table-header border py-3 rounded mb-2">
+                  <Col sm={3} md={3}><strong>Bid Price</strong></Col>
+                  <Col sm={4} md={4}><strong>From</strong></Col>
+                  <Col sm={3} md={3}><strong>Bid Date</strong></Col>
+                  <Col sm={2} md={2}><strong> </strong></Col>
                 </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                <div className="table-body">
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
-                <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
-                  <Col sm={3} md={3}>
-                    <div className="d-flex align-items-center">
-                      <Image src={SEI} />
-                      <div className="ms-3">
-                        <div className="fw-bold">100</div>
-                        <div className="text-gray">SEI</div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                  <Col sm={4} md={4}>sei14zd...0qzk</Col>
-                  <Col sm={3} md={3}><small>2 days ago</small></Col>
-                  <Col sm={2} md={2} className="text-end">
-                    <Button className="bg-white border-gray text-gray">Message</Button>
-                    <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
-                  </Col>
-                </Row>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      {/* <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button> */}
+                    </Col>
+                  </Row>
+                </div>
               </div>
-            </div>
-          </Col>
+            </Col>
+          ) : (
+            <Col sm={12} md={12}>
+              <div className="fs-5 fw-bold">Bid</div>
+              <div className="opacity-50 mb-2">Highest Bid : <strong>520 SEI</strong></div>
+              <div className="BidTable mx-2">
+                <Row className="table-header border py-3 rounded mb-2">
+                  <Col sm={3} md={3}><strong>Bid Price</strong></Col>
+                  <Col sm={4} md={4}><strong>From</strong></Col>
+                  <Col sm={3} md={3}><strong>Bid Date</strong></Col>
+                  <Col sm={2} md={2}><strong> </strong></Col>
+                </Row>
+                <div className="table-body">
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                  <Row className="table-body-row  border py-2 align-items-center rounded mb-2">
+                    <Col sm={3} md={3}>
+                      <div className="d-flex align-items-center">
+                        <Image src={SEI} />
+                        <div className="ms-3">
+                          <div className="fw-bold">100</div>
+                          <div className="text-gray">SEI</div>
+                        </div>
+                      </div>
+                    </Col>
+                    <Col sm={4} md={4}>sei14zd...0qzk</Col>
+                    <Col sm={3} md={3}><small>2 days ago</small></Col>
+                    <Col sm={2} md={2} className="text-end">
+                      <Button className="bg-white border-gray text-gray" onClick={() => { setHost(true); showMessageModal() }}>Message</Button>
+                      <Button className="bg-white border-dark-purple text-dark-purple ms-3">Accept</Button>
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+            </Col>
+          )}
+
         </Row>
       )}
 

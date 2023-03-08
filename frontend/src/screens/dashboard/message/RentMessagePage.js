@@ -92,7 +92,7 @@ function RentMessagePage() {
           </div>
         </Col>
         <Col md={3} className="border-end content-detail">
-          <div className="fs-5 fw-bold my-3">Reservation Details</div>
+          <div className="fs-5 fw-bold my-3">{mode == "host" ? ("Host Details") : ("Traveller Details")}</div>
           <Image src={DetailImage} className="rounded w-100 mb-2" height="200" style={{ objectFit: "cover" }} />
           <div className="border-top py-2">
             <div className="fw-semibold text-gray mb-1">Inquiry</div>

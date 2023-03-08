@@ -188,6 +188,7 @@ export function DetailPage() {
         <Col sm={12} md={4}>
           <Card className="shadow">
             <Card.Body>
+              <div className="fs-6 fw-semibold mb-2">Current Price : <span className="fw-bold fs-5">630 SEI</span></div>
               <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
               <div className="fs-6 fw-semibold mb-2">Bid Price</div>
               <Form.Group className="mb-3" controlId="formBasicEmail">

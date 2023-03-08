@@ -17,49 +17,49 @@ export function TripsDetailPage() {
                     <Col sm={12} md={3} className="pe-0">
                         <Image src={BuildingImg} width="100%" height="250" style={{ objectFit: "cover" }} />
                         <Container>
-                            <Row className="my-2 py-2 border-bottom">
+                            <Row className="my-2 py-1 border-bottom">
                                 <Col sm={6} md={6} className="border-end border-gray">
                                     <small className="text-gray">Check-in</small>
-                                    <div className="fs-6 fw-bold">Thu, 2 Jun</div>
+                                    <div className="fs-6 fw-bold">Thu, 2 Mar</div>
                                     <div className="fs-6 fw-bold">15:00</div>
                                 </Col>
                                 <Col sm={6} md={6}>
-                                    <small className="text-gray">Check-in</small>
-                                    <div className="fs-6 fw-bold">Thu, 2 Jun</div>
+                                    <small className="text-gray">Check-out</small>
+                                    <div className="fs-6 fw-bold">Mon, 13 Mar</div>
                                     <div className="fs-6 fw-bold">15:00</div>
                                 </Col>
                             </Row>
-                            <div className="my-2 pb-2 border-bottom d-flex align-items-center">
+                            <div className="mt-2 pb-1 border-bottom d-flex align-items-center">
                                 <Image src={LocationIcon} width="40" height="40" className="me-2" />
                                 <div className="">
                                     <div className="fs-6 fw-bold">Location</div>
                                     <small>Address : Green Pointe drice 2</small>
                                 </div>
                             </div>
-                            <div className="my-2 pb-2 border-bottom d-flex align-items-center">
-                                <Image src={LocationIcon} width="40" height="40" className="me-2" />
+                            <div className="my-2 pb-1 border-bottom d-flex align-items-center">
+                                <Image src={HostMessageIcon} width="40" height="40" className="me-2" />
                                 <div className="">
-                                    <div className="fs-6 fw-bold">Location</div>
-                                    <small>Address : Green Pointe drice 2</small>
+                                    <div className="fs-6 fw-bold">Message your host</div>
+                                    <small>Host : sei14zd...0qzk</small>
                                 </div>
                             </div>
-                            <div className="my-2 pb-2 border-bottom d-flex align-items-center">
-                                <Image src={LocationIcon} width="40" height="40" className="me-2" />
+                            <div className="my-2 pb-1 border-bottom d-flex align-items-center">
+                                <Image src={PlaceIcon} width="40" height="40" className="me-2" />
                                 <div className="">
-                                    <div className="fs-6 fw-bold">Location</div>
-                                    <small>Address : Green Pointe drice 2</small>
+                                    <div className="fs-6 fw-bold">Your place</div>
+                                    <small>House in Gothenburg 56 on Trendy Ring Island</small>
                                 </div>
                             </div>
-                            <div className="my-2 pb-2 border-bottom">
+                            <div className="my-2 pb-1 border-bottom">
                                 <div className="fs-6 fw-bold">Rating & Review</div>
                                 <small className="d-flex align-items-center"><FaStar className="text-orange me-2" /><FaStar className="text-orange me-2" /><FaStar className="text-orange me-2" /><FaStar className="text-orange me-2" /><FaStar className="text-gray me-2" />4 / 5</small>
                             </div>
-                            <div className="my-2 pb-2 border-bottom">
+                            <div className="my-2 pb-1 border-bottom">
                                 <small>Place was well kept and clean. Food was amazing too. We really enjoyed the trip and we were really taken care of. Will be coming back again in the Summer!</small>
                             </div>
-                            <div className="my-2 pb-2">
+                            <div className="mt-2 pb-1">
                                 <div className="fs-6 fw-bold mb-3">Reservation Details</div>
-                                <small>Adults : 2</small>
+                                <small>Adults : 2</small><br/>
                                 <small>Kids : 1</small>
                             </div>
                         </Container>
