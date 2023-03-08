@@ -37,17 +37,15 @@ import { FaAngleLeft } from "react-icons/fa";
 import { RentBookMode } from "../../components/modal/BookingMode";
 import { store } from '../../configs/Store';
 import { AiOutlineClose } from "react-icons/ai";
-import ImageGallery from 'react-image-gallery';
-import "react-image-gallery/styles/css/image-gallery.css";
 import { sampleData } from "../../utils/sampledata";
+import Viewer from 'react-viewer';
 
 export function RentDetailPage() {
-  const myGallery = useRef();
   const [minDate, setMinDate] = useState(new Date());
   const [show, setShow] = useState(false);
   const [messageModal, setMessageModal] = useState(false);
+  const [ visible, setVisible ] = useState(false);
   const [host, setHost] = useState(false);
-  const [showGallery, setShowGallery] = useState(false)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -91,9 +89,7 @@ export function RentDetailPage() {
           <span className="ms-5">Save</span>
         </div>
       </div>
-      <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{ height: '500px' }} onClick={() => {
-       
-      }}>
+      <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{ height: '500px' }} onClick={() => { setVisible(true); } }>
         <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden">
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}><Image src={GalleryImg4} width="100%" height="100%" style={{ objectFit: "cover", cursor: 'pointer' }} /></div>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}>
@@ -354,11 +350,11 @@ export function RentDetailPage() {
           </div>
         </Modal.Body>
       </Modal>
-      <Modal show={showGallery} size="xl" className="h-100 w-100" onHide={() => setShowGallery(false)} style={{minHeight:"60vh"}}>
-        <Modal.Body>
-          <ImageGallery ref={myGallery} items={DetailData.images} showThumbnails={false} showBullets={false} useBrowserFullscreen={true} isFullscreen={true} fullscreen={true}/>
-        </Modal.Body>
-      </Modal>
+      <Viewer
+      visible={visible}
+      onClose={() => { setVisible(false); } }
+      images={DetailData.images}
+      />
     </div>
   )
 }

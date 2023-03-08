@@ -306,40 +306,40 @@ export const DetailData = {
     ],
     images : [
         {
-            original: Building1,
-            thumbnail: Building1,
+            src: Building1,
+            alt: Building1,
         },
         {
-            original: Building2,
-            thumbnail: Building2,
+            src: Building2,
+            alt: Building2,
         },
         {
-            original: Building3,
-            thumbnail: Building3,
+            src: Building3,
+            alt: Building3,
         },
         {
-            original: Building4,
-            thumbnail: Building4,
+            src: Building4,
+            alt: Building4,
         },
         {
-            original: Building5,
-            thumbnail: Building5,
+            src: Building5,
+            alt: Building5,
         },
         {
-            original: Building6,
-            thumbnail: Building6,
+            src: Building6,
+            alt: Building6,
         },
         {
-            original: Building7,
-            thumbnail: Building7,
+            src: Building7,
+            alt: Building7,
         },
         {
-            original: Building8,
-            thumbnail: Building8,
+            src: Building8,
+            alt: Building8,
         },
         {
-            original: Building9,
-            thumbnail: Building9,
+            src: Building9,
+            alt: Building9,
         },
     ],
     social : {

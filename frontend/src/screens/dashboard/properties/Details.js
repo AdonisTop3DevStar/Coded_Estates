@@ -35,12 +35,15 @@ import { store } from "../../../configs/Store";
 import { Calendar, DateObject } from "react-multi-date-picker";
 import { RentBookMode } from "../../../components/modal/BookingMode";
 import { AiOutlineClose } from "react-icons/ai";
+import { DetailData } from "../../../utils/data";
+import Viewer from 'react-viewer';
 
 export default function PropertiesDetail() {
 
   const [type, setType, updateType] = store.useState("DetailType");
   const [mode, setMode, updateMode] = store.useState("Mode");
   const [show, setShow] = useState(false);
+  const [ visible, setVisible ] = useState(false);
 
   const [values, setValues] = useState([
     new DateObject().setDay(4).subtract(1, "month"),
@@ -76,7 +79,7 @@ export default function PropertiesDetail() {
         </div>
       </div>
       <div className="NFTGallary my-3 border-bottom pb-3">
-        <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden">
+        <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden" onClick={() => { setVisible(true); } }>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}><Image src={GalleryImg4} width="100%" style={{ objectFit: "cover", cursor: 'pointer' }} /></div>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}>
             <div className="d-flex align-items-center justify-content-between gap-2 mb-2">
@@ -808,6 +811,11 @@ export default function PropertiesDetail() {
           </div>
         </Modal.Body>
       </Modal>
+      <Viewer
+      visible={visible}
+      onClose={() => { setVisible(false); } }
+      images={DetailData.images}
+      />
     </div>
   );
 }

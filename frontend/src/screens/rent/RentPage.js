@@ -106,7 +106,7 @@ function RentPage() {
         result = result.filter( obj => obj.guest.pets == pets);
       }
       setData(result);
-      
+      return;
     }
   };
 
