@@ -391,3 +391,15 @@ body::-webkit-scrollbar-thumb {
 .location-search-b {
   font-size: 0.75rem;
 }
+
+.BuySearchBar,
+.SearchBar,
+.BuySearchBar select {
+  font-size: 14px !important;
+}
+
+.BuySearchBar button,
+.SearchBar button {
+ width: 2rem !important;
+ height: 2rem !important;
+}

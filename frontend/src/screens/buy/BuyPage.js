@@ -2,7 +2,7 @@ import { Row, Col, Button, Image, Form } from "react-bootstrap";
 import { NormalCard } from "../../components/card/card";
 import { FaMap } from "react-icons/fa";
 import FilterIcon from '../../assets/images/icons/filter.svg';
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaUndoAlt } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { sampleData } from "../../utils/sampledata";
 import EmptyImg from '../../assets/images/empty.png';
@@ -18,6 +18,17 @@ function BuyPage() {
   const [size, setSize] = useState('');
   const [price, setPrice] = useState('');
   const [data, setData] = useState([]);
+
+  const ResetFilter = () => {
+    setKeyWord('');
+    setType('');
+    setBed('');
+    setBath('');
+    setBedrooms('');
+    setSize('');
+    setPrice('')
+    setData([]);
+  }
 
   const findProperties = (type, keyWord, bed, size, price, bath) => {
 
@@ -131,60 +142,60 @@ function BuyPage() {
     <div className="BuyPage position-relative" style={{ marginTop: "81px" }}>
       <div className="BuySearchBar  border-bottom py-2">
         <div className="w-75 mx-auto rounded-5 border d-flex align-items-center justify-content-between p-1">
-          <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center"><Image src={FilterIcon} width="25" height="25" /></Button>
-          <div className="fs-6 fw-bold">House Type :</div>
+          <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center" onClick={ResetFilter}><FaUndoAlt/></Button>
+          <div className="py-1 px-3 fw-bold border-end cursor-pointer ">House Type :</div>
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={type} onChange={(e) => setType(e.target.value)}>
-              <option>Select Type</option>
-              <option value="all">All</option>
-              <option value="house">House</option>
-              <option value="apartment">Apartment</option>
-              <option value="tea">Tea</option>
-              <option value="boat">Boat</option>
-              <option value="cabin">Cabin</option>
-              <option value="camper">Camper</option>
-              <option value="casa">Casa</option>
-              <option value="castle">Castle</option>
-              <option value="cave">Cave</option>
-              <option value="container">Container</option>
-              <option value="cycladic">Cycladic</option>
-              <option value="dammuso">Dammuso</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer ">Select Type</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="all">All</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="house">House</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="apartment">Apartment</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="tea">Tea</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="boat">Boat</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="cabin">Cabin</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="camper">Camper</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="casa">Casa</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="castle">Castle</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="cave">Cave</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="container">Container</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="cycladic">Cycladic</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="dammuso">Dammuso</option>
             </Form.Select>
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={bed} onChange={(e) => setBed(e.target.value)}>
-              <option value="0">Select Bedroom</option>
-              <option value="1">1 bedroom</option>
-              <option value="2">2 bedrooms</option>
-              <option value="3">3 bedrooms</option>
-              <option value="4">4+ bedrooms</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="0">Select Bedroom</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="1">1 bedroom</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="2">2 bedrooms</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="3">3 bedrooms</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="4">4+ bedrooms</option>
             </Form.Select>
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={bath} onChange={(e) => setBath(e.target.value)}>
-              <option value="0">Select Bathroom</option>
-              <option value="1">1 bathroom</option>
-              <option value="2">2 bathrooms</option>
-              <option value="3">3 bathrooms</option>
-              <option value="4">4+ bathrooms</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="0">Select Bathroom</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="1">1 bathroom</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="2">2 bathrooms</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="3">3 bathrooms</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="4">4+ bathrooms</option>
             </Form.Select>
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={size} onChange={(e) => setSize(e.target.value)}>
-              <option value="0">Select size</option>
-              <option value="s1">300 - 500 sq ft</option>
-              <option value="s2">500 - 1000 sq ft</option>
-              <option value="s3">1000 - 1500 sq ft</option>
-              <option value="s4">1500 - 5000 sq ft</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="0">Select size</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="s1">300 - 500 sq ft</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="s2">500 - 1000 sq ft</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="s3">1000 - 1500 sq ft</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="s4">1500 - 5000 sq ft</option>
             </Form.Select>
           </div>|
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={price} onChange={(e) => setPrice(e.target.value)}>
-              <option value="0">Select price</option>
-              <option value="p1">$10K ~ $20K</option>
-              <option value="p2">$30K ~ $50K</option>
-              <option value="p3">$60K ~ $100K</option>
-              <option value="p4">$120K ~ $1000K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="0">Select price</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p1">$10K ~ $20K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p2">$30K ~ $50K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p3">$60K ~ $100K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p4">$120K ~ $1000K</option>
             </Form.Select>
           </div>|
           <div className="">
@@ -192,7 +203,7 @@ function BuyPage() {
               <Form.Control type="text" placeholder="Enter address or city" className="border-0" onChange={(e) => setKeyWord(e.target.value)} value={keyWord} />
             </Form.Group>
           </div>
-          <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center fs-4" onClick={() => findProperties(type, keyWord, bed, size, price, bath)}><FaSearch /></Button>
+          <Button className="round-btn d-flex p-2" onClick={() => findProperties(type, keyWord, bed, size, price, bath)}><FaSearch /></Button>
         </div>
       </div>
       <small className="my-5 pt-2">Over {data.length} homes within map area</small>

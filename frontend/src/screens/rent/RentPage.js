@@ -11,7 +11,8 @@ import LocationImg3 from '../../assets/images/location/turkey.jpg';
 import LocationImg4 from '../../assets/images/location/southeast_asia.jpg';
 import LocationImg5 from '../../assets/images/location/thailand.jpg';
 import LocationImg6 from '../../assets/images/location/south_america.jpg';
-import { FaMinus, FaPlus, FaSearch, FaTrashAlt } from "react-icons/fa";
+import ResetIcon from '../../assets/images/icons/reset.png';
+import { FaMinus, FaPlus, FaSearch, FaUndoAlt } from "react-icons/fa";
 
 
 function RentPage() {
@@ -44,7 +45,7 @@ function RentPage() {
     let year = originalDate.getFullYear();
     let month = originalDate.getMonth() + 1;
     let day = originalDate.getDate();
-    let formattedDate = `${year}.${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')}`;
+    let formattedDate = `${month.toString().padStart(2, '0')}.${day.toString().padStart(2, '0')}`;
     return formattedDate
   }
 
@@ -133,8 +134,8 @@ function RentPage() {
     <div className="BuyPage position-relative" style={{ marginTop: "81px" }}>
       <div className="SearchBar border-bottom">
         <Container className="d-flex justify-content-center">
-          <div className="my-3 p-2 border rounded-5 d-flex align-items-center">
-            <div className="py-1 px-3 fw-bold border-end cursor-pointer" onClick={() => (setLocationShow(true))}>
+          <div className="my-2 p-2 border rounded-5 d-flex align-items-center">
+            <div className="py-1 px-3 fw-bold border-end cursor-pointer " onClick={() => (setLocationShow(true))}>
               {location == "" && keyword == "" ? ("AnyWhere") : (
                 <div className=" d-flex flex-column">
                   <div className="location-search-t">Where</div>
@@ -146,11 +147,11 @@ function RentPage() {
             {dates[0]?.toDate?.() == undefined && dates[1]?.toDate?.() == undefined ? ("Any Week") : (
                 <div className=" d-flex flex-column">
                   <div className="location-search-t">Week</div>
-                  <div className="location-search-b">{formatDate(dates[0]?.toDate?.()) + "~" + formatDate(dates[1]?.toDate?.())}</div>
+                  <div className="location-search-b">{formatDate(dates[0]?.toDate?.()) + "~" + (dates[1]?.toDate?.() != undefined ? formatDate(dates[1]?.toDate?.()) : "00.00")}</div>
                 </div>
               )}
             </div>
-            <div className="py-1 px-3 fw-semibold cursor-pointer" onClick={() => (setGuestShow(true))}>
+            <div className="py-1 px-3 fw-bold border-end cursor-pointer" onClick={() => (setGuestShow(true))}>
             {adult == 0 && children == 0 && infants == 0 && pets == 0 ? ("Add Guests") : (
                 <div className=" d-flex flex-column">
                   <div className="location-search-t">Guest</div>
@@ -162,13 +163,24 @@ function RentPage() {
                 </div>
               )}
             </div>
-            <Button className="round-btn d-flex p-2" onClick={resetFilter}><FaTrashAlt /></Button>
+            <Button className="round-btn d-flex p-2 ms-2" onClick={resetFilter}><FaUndoAlt/></Button>
           </div>
         </Container>
 
         <Modal show={locationShow} onHide={() => setLocationShow(false)} aria-labelledby="contained-modal-title-vcenter" centered>
           <Modal.Body className="p-3">
-            <Modal.Title>Search by region</Modal.Title>
+          <Modal.Title className="">Search by Keyword</Modal.Title>
+            <div className="d-flex align-items-center justify-content-between mt-3">
+              <Form.Control
+                type="text"
+                className="me-3"
+                value={keyword}
+                onChange={(e) => setKeyWord(e.target.value)}
+              />
+              <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={() => {findProperties(location, adult, dates, children, infants, pets, keyword); setLocationShow(false)}}>Okay</Button>
+            </div>
+            <hr/>
+            <Modal.Title  className="">Search by region</Modal.Title>
             <Row>
               <Col xs={4} sm={4} md={4} className="my-2">
                 <Image src={LocationImg1} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("world"); setLocationShow(false) }} />
@@ -194,18 +206,7 @@ function RentPage() {
                 <Image src={LocationImg6} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("America"); setLocationShow(false) }} />
                 <div className="">South America</div>
               </Col>
-            </Row>
-            <hr/>
-            <Modal.Title>Search by Keyword</Modal.Title>
-            <div className="d-flex align-items-center justify-content-between mt-3">
-              <Form.Control
-                type="text"
-                className="me-3"
-                value={keyword}
-                onChange={(e) => setKeyWord(e.target.value)}
-              />
-              <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={() => {findProperties(location, adult, dates, children, infants, pets, keyword); setLocationShow(false)}}>Okay</Button>
-            </div>
+            </Row>           
           </Modal.Body>
         </Modal>
 
