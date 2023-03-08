@@ -4,12 +4,14 @@ import SEIIcon from '../../../assets/images/crypto/sei.svg';
 import TypeIcon from '../../../assets/images/icons/type.svg';
 import Logo from '../../../assets/images/Logo.svg';
 import DocumentImg from '../../../assets/images/icons/document.svg';
+import { store } from "../../../configs/Store";
 
 import { useState } from "react";
 
 
 function TransactionPage() {
   const [show, setShow] = useState(false);
+  const [mode, setMode, updateMode] = store.useState('Mode');
   const showModal = () => {
     setShow(true);
   }
@@ -63,7 +65,7 @@ function TransactionPage() {
                 <td className="text-start border-bottom-0 py-3 text-gray">3 mins ago</td>
                 <td className="text-start border-bottom-0 py-3 fs-6 fw-bold">Pending</td>
               </tr>
-              <tr className="rounded-2 align-middle" onClick={showModal}>
+              <tr className="rounded-2 align-middle" onClick={mode == "BUY" && showModal}>
                 <td className="border-bottom-0 ">
                   <Image src={BuildingImage} width="90" height="50" className="rounded-1 me-3 border-bottom-0"/>
                   <span className="fw-bold">Kent Avenue #310</span>
@@ -91,7 +93,7 @@ function TransactionPage() {
                 <td className="text-start border-bottom-0 py-3 text-gray">3 mins ago</td>
                 <td className="text-start border-bottom-0 py-3 fs-6 fw-bold">Pending</td>
               </tr>
-              <tr className="rounded-2 align-middle" onClick={showModal}>
+              <tr className="rounded-2 align-middle" onClick={mode == "BUY" && showModal}>
                 <td className="border-bottom-0 ">
                   <Image src={BuildingImage} width="90" height="50" className="rounded-1 me-3 border-bottom-0"/>
                   <span className="fw-bold">Kent Avenue #310</span>
@@ -119,7 +121,7 @@ function TransactionPage() {
                 <td className="text-start border-bottom-0 py-3 text-gray">3 mins ago</td>
                 <td className="text-start border-bottom-0 py-3 fs-6 fw-bold">Pending</td>
               </tr>
-              <tr className="rounded-2 align-middle" onClick={showModal}>
+              <tr className="rounded-2 align-middle" onClick={mode == "BUY" && showModal}>
                 <td className="border-bottom-0 ">
                   <Image src={BuildingImage} width="90" height="50" className="rounded-1 me-3 border-bottom-0"/>
                   <span className="fw-bold">Kent Avenue #310</span>
@@ -147,7 +149,7 @@ function TransactionPage() {
                 <td className="text-start border-bottom-0 py-3 text-gray">3 mins ago</td>
                 <td className="text-start border-bottom-0 py-3 fs-6 fw-bold">Pending</td>
               </tr>
-              <tr className="rounded-2 align-middle" onClick={showModal}>
+              <tr className="rounded-2 align-middle" onClick={mode == "BUY" && showModal}>
                 <td className="border-bottom-0 ">
                   <Image src={BuildingImage} width="90" height="50" className="rounded-1 me-3 border-bottom-0"/>
                   <span className="fw-bold">Kent Avenue #310</span>
@@ -189,9 +191,9 @@ function TransactionPage() {
                     <small className="text-gray mb-3">Documents that require uploading for verification for <b>Kent Avenue #310.</b></small>
                     <div className="badge-group mb-3"></div>
                     <div className="Document-tabl p-2" style={{minHeight:"50vh"}}>
-                    <div className="d-flex">
-                    <span className="me-3 rounded-5 text-dark purplplpurple">You (2)</span>
-                    <span className="border-gray border bg-gray-500 stext-gray py-1 px-3  rounded-circle me-3">Other Party (1)</span>
+                    <div className="d-flex mb-3">
+                    <span className="border-gray border bg-gray-500 text-dark-purple py-1 px-3  rounded-5 me-3">You (2)</span>
+                    <span className="border-gray border bg-gray-500 text-dark-purple py-1 px-3  rounded-5 me-3">Other Party (1)</span>
                    </div>
                         <Row className="Document-table-header py-3 my-2 bg-white rounded border">
                             <Col md={4} className="fs-6 fw-bold">Document Required</Col>
