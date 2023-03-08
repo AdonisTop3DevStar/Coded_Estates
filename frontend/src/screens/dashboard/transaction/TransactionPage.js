@@ -20,6 +20,7 @@ function TransactionPage() {
       <div className="ActivityPage mt-2">
         <div className="fs-4 fw-bold">Activity</div>
         <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
+        
         <div className="activity-datatable mt-5">
           <Table stripe>
             <thead>
@@ -188,6 +189,10 @@ function TransactionPage() {
                     <small className="text-gray mb-3">Documents that require uploading for verification for <b>Kent Avenue #310.</b></small>
                     <div className="badge-group mb-3"></div>
                     <div className="Document-tabl p-2" style={{minHeight:"50vh"}}>
+                    <div className="d-flex">
+                    <span className="me-3 rounded-5 text-dark purplplpurple">You (2)</span>
+                    <span className="border-gray border bg-gray-500 stext-gray py-1 px-3  rounded-circle me-3">Other Party (1)</span>
+                   </div>
                         <Row className="Document-table-header py-3 my-2 bg-white rounded border">
                             <Col md={4} className="fs-6 fw-bold">Document Required</Col>
                             <Col md={2} className="fs-6 fw-bold">Update</Col>
