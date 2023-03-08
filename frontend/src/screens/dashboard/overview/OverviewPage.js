@@ -59,7 +59,7 @@ function OverviewPage() {
           <div className="my-2 fs-5 fw-bold mt-5">Minted New Real Estate</div>
           <Card className="shadow">
             <Card.Body className="text-center">
-              <Image src={MintIcon} width="100" height="100" className="my-5" />
+              <Image src={MintIcon} width="150" height="150" className="mt-5" />
               <div className="text-center">
                 <Button className='border border-gray rounded-5 bg-white fw-bold fs-6 text-dark-purple py-2 px-5 mt-5'>Mint</Button>
               </div>

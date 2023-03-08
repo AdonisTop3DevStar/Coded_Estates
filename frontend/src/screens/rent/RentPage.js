@@ -113,8 +113,7 @@ function RentPage() {
 
   useEffect(() => {
     findProperties(location, adult, dates, children, infants, pets);
-  }, [location, adult, dates, children, infants, pets]);
-  
+  }, [location]);
   useEffect(() => {
     findProperties(location, adult, children, infants, pets);
   }, []);
@@ -252,6 +251,9 @@ function RentPage() {
                     <Button onClick={() => setPets(pets + 1)}><FaPlus/></Button>
                   </ButtonGroup>
                 </div>
+              </div>
+              <div className="text-end">
+                <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={()=> setGuestShow(false)}>Okay</Button>
               </div>
             </Modal.Body>
           </Modal>
