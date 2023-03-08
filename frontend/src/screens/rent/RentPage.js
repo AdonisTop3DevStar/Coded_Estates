@@ -169,7 +169,7 @@ function RentPage() {
 
         <Modal show={locationShow} onHide={() => setLocationShow(false)} aria-labelledby="contained-modal-title-vcenter" centered>
           <Modal.Body className="p-3">
-          <Modal.Title className="">Search by Keyword</Modal.Title>
+          <Modal.Title className="fs-6">Search by Keyword</Modal.Title>
             <div className="d-flex align-items-center justify-content-between mt-3">
               <Form.Control
                 type="text"
@@ -180,7 +180,7 @@ function RentPage() {
               <Button className="bg-dark-purple border-dark-purple text-white px-3" onClick={() => {findProperties(location, adult, dates, children, infants, pets, keyword); setLocationShow(false)}}>Okay</Button>
             </div>
             <hr/>
-            <Modal.Title  className="">Search by region</Modal.Title>
+            <Modal.Title  className="fs-6">Search by region</Modal.Title>
             <Row>
               <Col xs={4} sm={4} md={4} className="my-2">
                 <Image src={LocationImg1} className="rounded w-100 border cursor-pointer" onClick={() => { setLocation("world"); setLocationShow(false) }} />
@@ -247,7 +247,7 @@ function RentPage() {
             <div className="d-flex justify-content-end"><Button className="btn-close" onClick={() => setGuestShow(false)}></Button></div>
             <div className="d-flex align-items-center justify-content-between my-2 guest-stepper border-bottom">
               <div className="guest-content">
-                <div className="guest-title">Adults</div>
+                <div className="guest-title fs-6">Adults</div>
                 <p className="guest-condition">Ages 13 or above</p>
               </div>
               <div className="stepper">
@@ -260,7 +260,7 @@ function RentPage() {
             </div>
             <div className="d-flex align-items-center justify-content-between my-2 guest-stepper border-bottom">
               <div className="guest-content">
-                <div className="guest-title">Children</div>
+                <div className="guest-title fs-6">Children</div>
                 <p className="guest-condition">Ages 2-12</p>
               </div>
               <div className="stepper">
@@ -273,7 +273,7 @@ function RentPage() {
             </div>
             <div className="d-flex align-items-center justify-content-between my-2 guest-stepper border-bottom">
               <div className="guest-content">
-                <div className="guest-title">Infants</div>
+                <div className="guest-title fs-6">Infants</div>
                 <p className="guest-condition">Under 2</p>
               </div>
               <div className="stepper">
@@ -286,7 +286,7 @@ function RentPage() {
             </div>
             <div className="d-flex align-items-center justify-content-between my-2 guest-stepper">
               <div className="guest-content">
-                <div className="guest-title">Pets</div>
+                <div className="guest-title fs-6">Pets</div>
                 <p className="guest-condition fw-bold">Bringing a service animal?</p>
               </div>
               <div className="stepper">
