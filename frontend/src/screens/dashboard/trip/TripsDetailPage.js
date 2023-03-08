@@ -3,11 +3,13 @@ import BuildingImg from '../../../assets/images/building/10.webp';
 import LocationIcon from '../../../assets/images/icons/location.svg';
 import HostMessageIcon from '../../../assets/images/icons/hostmessage.svg';
 import PlaceIcon from '../../../assets/images/icons/place.svg';
-import { FaStar, FaRegStar } from "react-icons/fa";
+import { FaStar, FaAngleLeft } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 export function TripsDetailPage() {
     return (
         <div className="TripsDetailPage my-2">
+            <NavLink to="/dashboard/rent/trips" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</NavLink>
             <div className="fs-4 fw-bold">My Trips / detail</div>
             <div className="fs-6 opacity-50">Your history of trips you been on.</div>
             <Card>

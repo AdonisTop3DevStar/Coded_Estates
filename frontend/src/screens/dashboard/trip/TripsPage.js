@@ -9,11 +9,13 @@ import TrackIcon from '../../../assets/images/icons/track.svg';
 import HostMessageIcon from '../../../assets/images/icons/hostmessage.svg';
 import BuildingImg from '../../../assets/images/building/4.webp';
 import BuildingImg1 from '../../../assets/images/building/4.webp';
+import { store } from "../../../configs/Store";
 
 
 function TripsPage() {
   const [show, setShow] = useState(false);
   const [booked, setBooked] = useState(false);
+  const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -32,7 +34,7 @@ function TripsPage() {
               <Col sm={12} md={4} className="px-4">
                 <div className="fs-5 fw-bold mt-5 mb-2">No One Has Booked... Yet!</div>
                 <div className="text-gray">Need more visibility? Boost your properties to the front page and get noticed more!</div>
-                <Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button>
+                <NavLink to="/dashboard/rent/properties" onClick={()=>setTabKey(3)} className="nav-link"><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
                 {/* <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/> */}
@@ -237,16 +239,19 @@ function TripsPage() {
           <div className="my-3 fs-5">Where you've been</div>
           <Row>
             <Col sm={6} md={4} className="my-2">
-              <div className="d-flex align-items-center">
-                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
-                <div className="">
-                  <div className="fw-bold mb-1">Gamle Oslo</div>
-                  <div className="text-gray">Hosted by Per-Christian</div>
-                  <div className="text-gray">20 May 2022 - 22 May 2022</div>
+              <NavLink to="/dashboard/rent/trips/detail/1" className="nav-link">
+                <div className="d-flex align-items-center">
+                  <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
+                  <div className="">
+                    <div className="fw-bold mb-1">Gamle Oslo</div>
+                    <div className="text-gray">Hosted by Per-Christian</div>
+                    <div className="text-gray">20 May 2022 - 22 May 2022</div>
+                  </div>
                 </div>
-              </div>
+              </NavLink>
             </Col>
             <Col sm={6} md={4} className="my-2">
+            <NavLink to="/dashboard/rent/trips/detail/1" className="nav-link">
               <div className="d-flex align-items-center">
                 <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
                 <div className="">
@@ -255,6 +260,7 @@ function TripsPage() {
                   <div className="text-gray">20 May 2022 - 22 May 2022</div>
                 </div>
               </div>
+              </NavLink>
             </Col>
           </Row>
           <hr />

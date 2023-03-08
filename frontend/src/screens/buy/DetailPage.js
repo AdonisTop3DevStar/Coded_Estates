@@ -194,15 +194,15 @@ export function DetailPage() {
                 <Form.Control type="number" placeholder="Enter your Bid Price" />
               </Form.Group>
               {!connected ? (
-                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Direct Buy</Button>
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Make an Offer</Button>
               ) : (
-                <NavLink to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Direct Buy</Button></NavLink>
+                <NavLink to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button></NavLink>
               )}
 
               {!connected ? (
-                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Make an Offer</Button>
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Direct Buy</Button>
               ) : (
-                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={showModal}>Make an Offer</Button>
+                <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={showModal}>Direct Buy</Button>
               )}
 
               {!connected ? (

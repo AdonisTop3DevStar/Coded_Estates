@@ -23,21 +23,6 @@ function HoldingPage() {
           </div>
         </Card.Body>
       </Card>
-      <Card className="mb-3">
-        <Card.Body className="d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center">
-            <Image src={SolanaIcon} className="me-3" width="50" />
-            <div>
-              <div className="fs-6 fw-bold">Solana</div>
-              <div className="text-gray">SOL</div>
-            </div>
-          </div>
-          <div className="">
-            <div className="text-success"><small>+0.20%</small></div>
-            <div className="">$9.25</div>
-          </div>
-        </Card.Body>
-      </Card>
       <Tabs
         defaultActiveKey="nfts"
         id="uncontrolled-tab-example"

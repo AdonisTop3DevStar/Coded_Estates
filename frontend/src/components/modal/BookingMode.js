@@ -47,7 +47,7 @@ export const BuyBookMode = () => {
                         <Form.Control as="textarea" rows={2} />
                     </Form.Group>
                     <hr />
-                    <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Reserve to buy</Button></Link>
+                    <Link to="/dashboard/buy/transactions" ><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Reserve to buy</Button></Link>
                 </Col>
                 <Col sm={12} md={6}>
                     <Card>
