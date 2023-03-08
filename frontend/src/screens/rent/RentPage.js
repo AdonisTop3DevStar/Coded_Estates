@@ -55,17 +55,25 @@ function RentPage() {
   }
 
   const findProperties = (location, adult, dates, children, infants, pets) => {
-
-    if (location == '' &&  adult == 0 && children == 0 && infants == 0 && pets == 0) {
-      let result = sampleData;
-      for ( let i = 0; i < result.length; i++) {
-        let data = [
-          
-        ]
+    if (location == '' && dates[0]?.toDate?.() === undefined && dates[1]?.toDate?.() === undefined &&  adult == 0 && children == 0 && infants == 0 && pets == undefined) {
+      let tempData = [];
+      for(let i = 0; i < sampleData.length; i++) {
+        const _data = {
+          "zpid": sampleData[i].zpid,
+          "address": sampleData[i].address,
+          "bedrooms": sampleData[i].bedrooms,
+          "bathrooms": sampleData[i].bathrooms,
+          "price": sampleData[i].price,
+          "homeStatus": "FOR_SALE",
+          "livingArea": 1123,
+          "size" : sampleData[i].livingArea,
+          "currency": "SEI",
+          "homeType": "CONDO",
+          "photos": sampleData[i].photos,  
+        };
+        tempData.push(_data);
       }
-      result = result.filter( obj => obj.currency === 'SEI');
-      setData(result);
-      return
+      setData(tempData)
     }
     else {
       let result = sampleData;
@@ -78,7 +86,7 @@ function RentPage() {
         }
       }
       
-      if (dates.length != 0) {  
+      if (dates[0]?.toDate?.() !== undefined  && dates[1]?.toDate?.() !== undefined ) { 
         result = result.filter( obj => (new Date(dates[0]?.toDate?.()) <= new Date(obj.date)) && (new Date(obj.date) <= new Date(dates[1]?.toDate?.())));
       }
       
@@ -98,7 +106,7 @@ function RentPage() {
         result = result.filter( obj => obj.guest.pets == pets);
       }
       setData(result);
-      return
+      
     }
   };
 
@@ -110,6 +118,7 @@ function RentPage() {
   useEffect(() => {
     findProperties(location, adult, children, infants, pets);
   }, []);
+
 
   
 
@@ -263,8 +272,8 @@ function RentPage() {
           <Row style={{minHeight:"81.5vh"}} className="d-flex align-items-center justify-content-center w-25 mx-auto">
             
             <div className="fs-5 fw-bold text-center">
-            <Image src={EmptyImg} className="w-100 mb-2"/>
-            <div>Don't have Result!</div>
+            {/* <Image src={EmptyImg} className="w-100 mb-2"/>
+            <div>Don't have Result!</div> */}
             </div>
           </Row>
         )}

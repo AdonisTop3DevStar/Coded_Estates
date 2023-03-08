@@ -22,6 +22,7 @@ function BuyPage() {
   const [size, setSize] = useState('');
   const [price, setPrice] = useState('');
   const [data, setData] = useState([]);
+
   const findProperties = (type, keyWord, bed, size, price, bath) => {
     
     if (type === '' && keyWord === '' && bed === '' && size === '' && price === '' && bath === "") {
@@ -126,7 +127,6 @@ function BuyPage() {
     }
   };
 
-
   useEffect(() => {
     findProperties(type, keyWord, bed, size, price, bath);
   }, [type, bed, size, price, bath])
@@ -134,9 +134,6 @@ function BuyPage() {
   useEffect(() => {
     findProperties(type, keyWord, bed, size, price, bath);
   }, [])
-
-  console.log(type, keyWord, bed, size, price, bath);
-  
 
   return (
     <div className="BuyPage position-relative" style={{ marginTop: "81px" }}>
