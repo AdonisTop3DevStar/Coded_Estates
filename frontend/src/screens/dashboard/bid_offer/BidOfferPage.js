@@ -4,8 +4,7 @@ import Banner2 from '../../../assets/images/building/11.webp';
 import Banner3 from '../../../assets/images/building/12.webp';
 import Banner4 from '../../../assets/images/building/13.webp';
 import Banner5 from '../../../assets/images/building/14.webp';
-import { FaStar, FaRegStar } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { DetailCarousel } from "../../../components/carousel/Carousel";
 import { DetailData } from "../../../utils/data";
@@ -30,7 +29,7 @@ function BidOfferPage() {
         id="uncontrolled-tab-example"
         className="my-3"
       >
-         <Tab eventKey="bids" title="My Bids">
+        <Tab eventKey="bids" title="My Bids">
           <Card className="border-dark-purple">
             <Row>
               <Col sm={12} md={4} className="px-4">
@@ -39,7 +38,7 @@ function BidOfferPage() {
                 <NavLink to="/buy"><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">Explore NFTs</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
-                <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/>
+                <Image src={Banner1} width="100%" height="250" style={{ objectFit: 'cover' }} />
               </Col>
             </Row>
           </Card>
@@ -157,13 +156,13 @@ function BidOfferPage() {
                 <NavLink to="/dashboard/buy/properties" className="nav-link" onClick={(e) => setTabKey(3)}><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List a Property</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
-                <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/>
+                <Image src={Banner1} width="100%" height="250" style={{ objectFit: 'cover' }} />
               </Col>
             </Row>
           </Card>
           <div className="fs-4 fw-bold my-2">Current Offers</div>
           <Row>
-          <Col sm={12} md={4} className="my-2">
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
                 <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
@@ -177,7 +176,7 @@ function BidOfferPage() {
                 </NavLink>
               </Card>
             </Col>
-          <Col sm={12} md={4} className="my-2">
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
                 <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
@@ -191,7 +190,7 @@ function BidOfferPage() {
                 </NavLink>
               </Card>
             </Col>
-          <Col sm={12} md={4} className="my-2">
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
                 <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
@@ -205,7 +204,7 @@ function BidOfferPage() {
                 </NavLink>
               </Card>
             </Col>
-          <Col sm={12} md={4} className="my-2">
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
                 <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
@@ -219,7 +218,7 @@ function BidOfferPage() {
                 </NavLink>
               </Card>
             </Col>
-          <Col sm={12} md={4} className="my-2">
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
                 <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
@@ -236,7 +235,7 @@ function BidOfferPage() {
           </Row>
           <div className="fs-4 fw-bold my-2">Rejected Offers</div>
           <Row>
-          <Col sm={12} md={4} className="my-2">
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-0'>
                 <NavLink to="/dashboard/buy/message" className="nav-link">
                   <Card.Body className="d-flex align-items-center">
@@ -252,36 +251,36 @@ function BidOfferPage() {
             </Col>
           </Row>
         </Tab>
-       
+
       </Tabs>
       <Modal show={show} onHide={handleClose}>
-        <div className="position-relative overflow-hidden" style={{height:"400px"}}>          
-            <DetailCarousel images={DetailData.images}/>
+        <div className="position-relative overflow-hidden" style={{ height: "400px" }}>
+          <DetailCarousel images={DetailData.images} />
         </div>
-         <Container className="mt-2">
-            <div className="d-flex align-items-center">
-              <Image src={TrackIcon} className="me-2" width="40" height="40"/>
-              <small>We sent you 1500 SEI refund on 1 Mar. If you haven’t received it yet, contact your bank to find out when it will arrive.</small>
+        <Container className="mt-2">
+          <div className="d-flex align-items-center">
+            <Image src={TrackIcon} className="me-2" width="40" height="40" />
+            <small>We sent you 1500 SEI refund on 1 Mar. If you haven’t received it yet, contact your bank to find out when it will arrive.</small>
+          </div>
+          <div className="text-center my-2">
+            <Button className="bg-white px-3 border-dark-purple"><small className="fw-bold text-dark-purple">Track Refund</small></Button>
+          </div>
+          <hr />
+          <div className="d-flex align-items-center">
+            <Image src={HostMessageIcon} width="40" height="40" className="mx-3" />
+            <div className="">
+              <small className="fw-bold mb-2">Message your guest</small>
+              <small className="fw-bold mb-2">Guest: sei14zd...0qzk</small>
             </div>
-            <div className="text-center my-2">
-              <Button className="bg-white px-3 border-dark-purple"><small className="fw-bold text-dark-purple">Track Refund</small></Button>
-            </div>
-            <hr/>
-            <div className="d-flex align-items-center">
-              <Image src={HostMessageIcon} width="40" height="40" className="mx-3"/>
-              <div className="">
-                <small className="fw-bold mb-2">Message your guest</small>
-                <small className="fw-bold mb-2">Guest: sei14zd...0qzk</small>
-              </div>
-            </div>
-            <hr/>
-            <div className="fs-6 fw-bold mb-2">Reservation Details</div>
-            <small className="fw-bold mb-2">Confirmation code</small><br/>
-            <small>JT5A5A</small>
-            <div className="text-center my-3">
+          </div>
+          <hr />
+          <div className="fs-6 fw-bold mb-2">Reservation Details</div>
+          <small className="fw-bold mb-2">Confirmation code</small><br />
+          <small>JT5A5A</small>
+          <div className="text-center my-3">
             <Button onClick={handleClose} className="bg-white px-3 fw-bold fs-6 border-dark-purple text-dark-purple">Close</Button>
-            </div>
-         </Container>
+          </div>
+        </Container>
       </Modal>
     </div>
   );

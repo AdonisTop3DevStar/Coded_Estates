@@ -10,14 +10,6 @@ import {
 } from "react-bootstrap";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { useState } from "react";
-import {
-  FaHeart,
-  FaShareAlt,
-  FaExclamationCircle,
-  FaMapMarkerAlt,
-  FaBed,
-  FaBath,
-} from "react-icons/fa";
 import DatePicker from "react-multi-date-picker";
 import { AiOutlineHeart, AiOutlineUpload } from "react-icons/ai";
 import { Link, NavLink } from "react-router-dom";
@@ -32,7 +24,7 @@ import Check from '../../../assets/images/icons/check.svg';
 import Logo from '../../../assets/images/Logo.svg';
 import { FaAngleLeft } from "react-icons/fa";
 import { store } from "../../../configs/Store";
-import { Calendar, DateObject } from "react-multi-date-picker";
+import { DateObject } from "react-multi-date-picker";
 import { RentBookMode } from "../../../components/modal/BookingMode";
 import { AiOutlineClose } from "react-icons/ai";
 import { DetailData } from "../../../utils/data";
@@ -43,7 +35,7 @@ export default function PropertiesDetail() {
   const [type, setType, updateType] = store.useState("DetailType");
   const [mode, setMode, updateMode] = store.useState("Mode");
   const [show, setShow] = useState(false);
-  const [ visible, setVisible ] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   const [values, setValues] = useState([
     new DateObject().setDay(4).subtract(1, "month"),
@@ -79,7 +71,7 @@ export default function PropertiesDetail() {
         </div>
       </div>
       <div className="NFTGallary my-3 border-bottom pb-3">
-        <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden" onClick={() => { setVisible(true); } }>
+        <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden" onClick={() => { setVisible(true); }}>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}><Image src={GalleryImg4} width="100%" style={{ objectFit: "cover", cursor: 'pointer' }} /></div>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}>
             <div className="d-flex align-items-center justify-content-between gap-2 mb-2">
@@ -163,42 +155,42 @@ export default function PropertiesDetail() {
             {mode != "BUY" ? (
               <div>
                 {type == "verify" && (
-                  
-                  <Card.Body>
-                  <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
-                  <div className="border rounded">
-                    <Dropdown>
-                      <label className="ms-2 fw-middle">CURRENCY</label>
-                      <Dropdown.Toggle className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple" id="dropdown-basic">
-                        <div className="d-flex align-items-center">
-                          <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
-                        </div>
-                      </Dropdown.Toggle>
 
-                      <Dropdown.Menu className="w-100">
-                        <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                  <Card.Body>
+                    <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
+                    <div className="border rounded">
+                      <Dropdown>
+                        <label className="ms-2 fw-middle">CURRENCY</label>
+                        <Dropdown.Toggle className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple" id="dropdown-basic">
                           <div className="d-flex align-items-center">
                             <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
                           </div>
-                        </Dropdown.Item>
-                        <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
-                          <div className="d-flex align-items-center">
-                            <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
-                          </div>
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                    <div className="border-top">
-                      <label className="ms-2 fw-middle" muted>PRICE</label>
-                      <Form.Control
-                        type="number"
-                        id="inputPassword5"
-                        placeholder="125,000,000"
-                        className="border-0"
-                      />
-                    </div>
-                    <div className="border-top px-2">
-                      <Form.Group className="mb-3" controlId="formBasicEmail">
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu className="w-100">
+                          <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                            <div className="d-flex align-items-center">
+                              <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                            <div className="d-flex align-items-center">
+                              <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                            </div>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                      <div className="border-top">
+                        <label className="ms-2 fw-middle" muted>PRICE</label>
+                        <Form.Control
+                          type="number"
+                          id="inputPassword5"
+                          placeholder="125,000,000"
+                          className="border-0"
+                        />
+                      </div>
+                      <div className="border-top px-2">
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
                           <div className="d-flex align-items-center justify-content-between">
                             <Form.Label className="">Availability</Form.Label>
                           </div>
@@ -211,11 +203,11 @@ export default function PropertiesDetail() {
                             className="d-flex"
                           />
                         </Form.Group>
+                      </div>
                     </div>
-                  </div>                   
-                  <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
-                  <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">List Property</Button>
-                </Card.Body>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">List Property</Button>
+                  </Card.Body>
                 )}
                 {type == "listing" && (
                   <Card.Body>
@@ -253,21 +245,21 @@ export default function PropertiesDetail() {
                       </div>
                       <div className="border-top px-2">
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <div className="d-flex align-items-center justify-content-between">
-                              <Form.Label className="">Availability</Form.Label>
-                              {/* <Form.Label className="me-2">CHECKOUT</Form.Label> */}
-                            </div>
-                            <DatePicker
-                              value={values}
-                              onChange={setValues}
-                              range
-                              numberOfMonths={2}
-                              showOtherDays
-                              className="d-flex"
-                            />
-                          </Form.Group>
+                          <div className="d-flex align-items-center justify-content-between">
+                            <Form.Label className="">Availability</Form.Label>
+                            {/* <Form.Label className="me-2">CHECKOUT</Form.Label> */}
+                          </div>
+                          <DatePicker
+                            value={values}
+                            onChange={setValues}
+                            range
+                            numberOfMonths={2}
+                            showOtherDays
+                            className="d-flex"
+                          />
+                        </Form.Group>
                       </div>
-                    </div>                   
+                    </div>
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Unlist Property</Button>
                   </Card.Body>
@@ -304,7 +296,7 @@ export default function PropertiesDetail() {
                     </div>
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Update Reserve</Button>
 
-                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={()=> {setHost(false); showMessageModal()}}>Send Message</Button>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={() => { setHost(false); showMessageModal() }}>Send Message</Button>
 
 
                     <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
@@ -331,55 +323,55 @@ export default function PropertiesDetail() {
                   //   <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
                   // </Card.Body>
                   <Card.Body>
-                  <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
-                  <div className="border rounded">
-                    <Dropdown>
-                      <label className="ms-2 fw-middle">CURRENCY</label>
-                      <Dropdown.Toggle className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple" id="dropdown-basic">
-                        <div className="d-flex align-items-center">
-                          <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
-                        </div>
-                      </Dropdown.Toggle>
+                    <div className="fs-6 fw-semibold mb-2">Property Listing Details</div>
+                    <div className="border rounded">
+                      <Dropdown>
+                        <label className="ms-2 fw-middle">CURRENCY</label>
+                        <Dropdown.Toggle className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple" id="dropdown-basic">
+                          <div className="d-flex align-items-center">
+                            <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                          </div>
+                        </Dropdown.Toggle>
 
-                      <Dropdown.Menu className="w-100">
-                        <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
-                          <div className="d-flex align-items-center">
-                            <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
-                          </div>
-                        </Dropdown.Item>
-                        <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
-                          <div className="d-flex align-items-center">
-                            <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
-                          </div>
-                        </Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-                    <div className="border-top">
-                      <label className="ms-2 fw-middle" muted>PRICE</label>
-                      <Form.Control
-                        type="number"
-                        id="inputPassword5"
-                        placeholder="125,000,000"
-                        className="border-0"
+                        <Dropdown.Menu className="w-100">
+                          <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                            <div className="d-flex align-items-center">
+                              <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item className="w-100 d-flex align-items-center justify-content-between bg-white border-white text-dark-purple">
+                            <div className="d-flex align-items-center">
+                              <Image src={SEI} width="30" className="me-2" /><span>SEI</span>
+                            </div>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                      <div className="border-top">
+                        <label className="ms-2 fw-middle" muted>PRICE</label>
+                        <Form.Control
+                          type="number"
+                          id="inputPassword5"
+                          placeholder="125,000,000"
+                          className="border-0"
+                        />
+                      </div>
+                    </div>
+                    <div className="d-flex align-items-center justify-content-between my-3">
+                      <div className="f-semibold">Allow Bids</div>
+                      <Form.Check
+                        type="switch"
+                        id="custom-switch"
                       />
                     </div>
-                  </div>
-                  <div className="d-flex align-items-center justify-content-between my-3">
-                    <div className="f-semibold">Allow Bids</div>
-                    <Form.Check
-                      type="switch"
-                      id="custom-switch"
-                    />
-                  </div>
-                  <div className="d-flex align-items-center justify-content-between my-3">
-                    <div className="f-semibold">Min. Price</div>
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                      <Form.Control type="text" placeholder="" />
-                    </Form.Group>
-                  </div>
-                  <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
-                  <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">List Property</Button>
-                </Card.Body>
+                    <div className="d-flex align-items-center justify-content-between my-3">
+                      <div className="f-semibold">Min. Price</div>
+                      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Control type="text" placeholder="" />
+                      </Form.Group>
+                    </div>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Edit Price</Button>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">List Property</Button>
+                  </Card.Body>
                 )}
                 {type == "listing" && (
                   <Card.Body>
@@ -441,7 +433,7 @@ export default function PropertiesDetail() {
                       <Form.Control type="number" placeholder="Enter your Bid Price" />
                     </Form.Group>
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Update Bid Price</Button>
-                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={()=>{setHost(false); showMessageModal()}}>Send Message</Button>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={() => { setHost(false); showMessageModal() }}>Send Message</Button>
                     <Button className="text-dark-purple bg-white border-dark-purple fs-5 fw-bold w-100 my-2">Cancel</Button>
                     <div className="my-3 text-gray text-center">You will not be charged yet. You will be required to sign a message from your wallet to confirm the reservation</div>
                   </Card.Body>
@@ -769,7 +761,7 @@ export default function PropertiesDetail() {
             <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
             <div className="text-gray mb-2">Response rate : 100%</div>
             <div className="text-gray mb-2">Response time : within an hour</div>
-            <Button className="border-gray bg-white text-dark-purple" onClick={()=> {setHost(true); showMessageModal()}}>
+            <Button className="border-gray bg-white text-dark-purple" onClick={() => { setHost(true); showMessageModal() }}>
               Contact Us
             </Button>
           </Col>
@@ -790,11 +782,11 @@ export default function PropertiesDetail() {
           <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
           {host == true ? (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly />
             </Form.Group>
           ) : (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly />
             </Form.Group>
           )}
 
@@ -812,9 +804,9 @@ export default function PropertiesDetail() {
         </Modal.Body>
       </Modal>
       <Viewer
-      visible={visible}
-      onClose={() => { setVisible(false); } }
-      images={DetailData.images}
+        visible={visible}
+        onClose={() => { setVisible(false); }}
+        images={DetailData.images}
       />
     </div>
   );

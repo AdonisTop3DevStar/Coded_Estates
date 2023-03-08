@@ -41,7 +41,7 @@ function TripsPage() {
           </Card>
           <div className="fs-4 fw-bold my-2">Previous booking</div>
           <Row>
-            <Col sm={12} md={4} className="my-2">     
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>
                 <Card.Body className="d-flex align-items-center">
                   <Link to="detail/1">
@@ -58,7 +58,7 @@ function TripsPage() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm={12} md={4} className="my-2">     
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>
                 <Card.Body className="d-flex align-items-center">
                   <Link to="detail/1">
@@ -75,7 +75,7 @@ function TripsPage() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm={12} md={4} className="my-2">     
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>
                 <Card.Body className="d-flex align-items-center">
                   <Link to="detail/1">
@@ -92,7 +92,7 @@ function TripsPage() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm={12} md={4} className="my-2">     
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>
                 <Card.Body className="d-flex align-items-center">
                   <Link to="detail/1">
@@ -109,7 +109,7 @@ function TripsPage() {
                 </Card.Body>
               </Card>
             </Col>
-            <Col sm={12} md={4} className="my-2">     
+            <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>
                 <Card.Body className="d-flex align-items-center">
                   <Link to="detail/1">
@@ -147,118 +147,118 @@ function TripsPage() {
           </Row>
         </Tab>
         <Tab eventKey="travel" title="Traveller">
-        <Row className="py-2">
-                <Col sm={12} md={8}>
-                  <NavLink to="/dashboard/rent/message" className="nav-link">
-                    <Card>
-                        <Row>
-                            <Col sm={6} md={8} className="card-body ps-5 py-3">
-                                <div className="fs-5 fw-bold my-2">Paris</div>
-                                <small>Private room in loft hosted by Liubomyr</small>
-                                <hr />
-                                <Row>
-                                    <Col md={6} className="border-end">
-                                        <div>14 Sept - <br />17 Sept</div>
-                                        <small>2023</small>
-                                    </Col>
-                                    <Col md={6}>
-                                        <div>20 Rue Jean Mermoz <br />Paris, lle-de-France</div>
-                                        <small>France</small>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col sm={6} md={4}>
-                                <Image src={BuildingImg} className="w-100" height="100%" style={{ objectFit: 'cover' }} />
-                            </Col>
-                        </Row>
-                    </Card>
-                  </NavLink>
-                </Col>
-                <Col sm={12} md={4}>
-                    <div className="mb-3">Explore things to do near Paris</div>
-                    <Row>
-                        <Col sm={6} md={6} className="my-2">
-                            <div className="d-flex align-items-center">
-                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
-                                <div className="">
-                                    <div className="fw-bold mb-1">Just for you</div>
-                                    <div className="text-gray">18 experiences</div>
-                                </div>
-                            </div>
+          <Row className="py-2">
+            <Col sm={12} md={8}>
+              <NavLink to="/dashboard/rent/message" className="nav-link">
+                <Card>
+                  <Row>
+                    <Col sm={6} md={8} className="card-body ps-5 py-3">
+                      <div className="fs-5 fw-bold my-2">Paris</div>
+                      <small>Private room in loft hosted by Liubomyr</small>
+                      <hr />
+                      <Row>
+                        <Col md={6} className="border-end">
+                          <div>14 Sept - <br />17 Sept</div>
+                          <small>2023</small>
                         </Col>
-                        <Col sm={6} md={6} className="my-2">
-                            <div className="d-flex align-items-center">
-                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
-                                <div className="">
-                                    <div className="fw-bold mb-1">Just for you</div>
-                                    <div className="text-gray">18 experiences</div>
-                                </div>
-                            </div>
+                        <Col md={6}>
+                          <div>20 Rue Jean Mermoz <br />Paris, lle-de-France</div>
+                          <small>France</small>
                         </Col>
-                        <Col sm={6} md={6} className="my-2">
-                            <div className="d-flex align-items-center">
-                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
-                                <div className="">
-                                    <div className="fw-bold mb-1">Just for you</div>
-                                    <div className="text-gray">18 experiences</div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col sm={6} md={6} className="my-2">
-                            <div className="d-flex align-items-center">
-                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
-                                <div className="">
-                                    <div className="fw-bold mb-1">Just for you</div>
-                                    <div className="text-gray">18 experiences</div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col sm={6} md={6} className="my-2">
-                            <div className="d-flex align-items-center">
-                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
-                                <div className="">
-                                    <div className="fw-bold mb-1">Just for you</div>
-                                    <div className="text-gray">18 experiences</div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col sm={6} md={6} className="my-2">
-                            <div className="d-flex align-items-center">
-                                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
-                                <div className="">
-                                    <div className="fw-bold mb-1">Just for you</div>
-                                    <div className="text-gray">18 experiences</div>
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-            <div className="my-3 fs-5">Where you've been</div>
-            <Row>
-                <Col sm={6} md={4} className="my-2">
-                    <div className="d-flex align-items-center">
-                        <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
-                        <div className="">
-                            <div className="fw-bold mb-1">Gamle Oslo</div>
-                            <div className="text-gray">Hosted by Per-Christian</div>
-                            <div className="text-gray">20 May 2022 - 22 May 2022</div>
-                        </div>
+                      </Row>
+                    </Col>
+                    <Col sm={6} md={4}>
+                      <Image src={BuildingImg} className="w-100" height="100%" style={{ objectFit: 'cover' }} />
+                    </Col>
+                  </Row>
+                </Card>
+              </NavLink>
+            </Col>
+            <Col sm={12} md={4}>
+              <div className="mb-3">Explore things to do near Paris</div>
+              <Row>
+                <Col sm={6} md={6} className="my-2">
+                  <div className="d-flex align-items-center">
+                    <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                    <div className="">
+                      <div className="fw-bold mb-1">Just for you</div>
+                      <div className="text-gray">18 experiences</div>
                     </div>
+                  </div>
                 </Col>
-                <Col sm={6} md={4} className="my-2">
-                    <div className="d-flex align-items-center">
-                        <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
-                        <div className="">
-                            <div className="fw-bold mb-1">Gamle Oslo</div>
-                            <div className="text-gray">Hosted by Per-Christian</div>
-                            <div className="text-gray">20 May 2022 - 22 May 2022</div>
-                        </div>
+                <Col sm={6} md={6} className="my-2">
+                  <div className="d-flex align-items-center">
+                    <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                    <div className="">
+                      <div className="fw-bold mb-1">Just for you</div>
+                      <div className="text-gray">18 experiences</div>
                     </div>
+                  </div>
                 </Col>
-            </Row>
-            <hr/>
-            <div className="text-gray">Can't find your reservation here? <u className="text-dark-purple">Visit the Help Centre</u></div>
+                <Col sm={6} md={6} className="my-2">
+                  <div className="d-flex align-items-center">
+                    <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                    <div className="">
+                      <div className="fw-bold mb-1">Just for you</div>
+                      <div className="text-gray">18 experiences</div>
+                    </div>
+                  </div>
+                </Col>
+                <Col sm={6} md={6} className="my-2">
+                  <div className="d-flex align-items-center">
+                    <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                    <div className="">
+                      <div className="fw-bold mb-1">Just for you</div>
+                      <div className="text-gray">18 experiences</div>
+                    </div>
+                  </div>
+                </Col>
+                <Col sm={6} md={6} className="my-2">
+                  <div className="d-flex align-items-center">
+                    <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                    <div className="">
+                      <div className="fw-bold mb-1">Just for you</div>
+                      <div className="text-gray">18 experiences</div>
+                    </div>
+                  </div>
+                </Col>
+                <Col sm={6} md={6} className="my-2">
+                  <div className="d-flex align-items-center">
+                    <Image src={BuildingImg1} className="rounded-2 me-2 border" width="50" height="50" style={{ objectFit: "cover" }} />
+                    <div className="">
+                      <div className="fw-bold mb-1">Just for you</div>
+                      <div className="text-gray">18 experiences</div>
+                    </div>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+          <div className="my-3 fs-5">Where you've been</div>
+          <Row>
+            <Col sm={6} md={4} className="my-2">
+              <div className="d-flex align-items-center">
+                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
+                <div className="">
+                  <div className="fw-bold mb-1">Gamle Oslo</div>
+                  <div className="text-gray">Hosted by Per-Christian</div>
+                  <div className="text-gray">20 May 2022 - 22 May 2022</div>
+                </div>
+              </div>
+            </Col>
+            <Col sm={6} md={4} className="my-2">
+              <div className="d-flex align-items-center">
+                <Image src={BuildingImg1} className="rounded-2 me-2 border" width="80" height="80" style={{ objectFit: "cover" }} />
+                <div className="">
+                  <div className="fw-bold mb-1">Gamle Oslo</div>
+                  <div className="text-gray">Hosted by Per-Christian</div>
+                  <div className="text-gray">20 May 2022 - 22 May 2022</div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          <hr />
+          <div className="text-gray">Can't find your reservation here? <u className="text-dark-purple">Visit the Help Centre</u></div>
           {/* <Card className="border-dark-purple">
             <Row>
               <Col sm={12} md={4} className="px-4">
@@ -430,33 +430,33 @@ function TripsPage() {
         </Tab>
       </Tabs>
       <Modal show={show} onHide={handleClose}>
-        <div className="position-relative overflow-hidden" style={{height:"400px"}}>          
-            <DetailCarousel images={DetailData.images}/>
+        <div className="position-relative overflow-hidden" style={{ height: "400px" }}>
+          <DetailCarousel images={DetailData.images} />
         </div>
-         <Container className="mt-2">
-            <div className="d-flex align-items-center">
-              <Image src={TrackIcon} className="me-2" width="40" height="40"/>
-              <small>We sent you 1500 SEI refund on 1 Mar. If you haven’t received it yet, contact your bank to find out when it will arrive.</small>
+        <Container className="mt-2">
+          <div className="d-flex align-items-center">
+            <Image src={TrackIcon} className="me-2" width="40" height="40" />
+            <small>We sent you 1500 SEI refund on 1 Mar. If you haven’t received it yet, contact your bank to find out when it will arrive.</small>
+          </div>
+          <div className="text-center my-2">
+            <Button className="bg-white px-3 border-dark-purple"><small className="fw-bold text-dark-purple">Track Refund</small></Button>
+          </div>
+          <hr />
+          <div className="d-flex align-items-center">
+            <Image src={HostMessageIcon} width="40" height="40" className="mx-3" />
+            <div className="">
+              <small className="fw-bold mb-2">Message your guest</small>
+              <small className="fw-bold mb-2">Guest: 0x20jsd...90b</small>
             </div>
-            <div className="text-center my-2">
-              <Button className="bg-white px-3 border-dark-purple"><small className="fw-bold text-dark-purple">Track Refund</small></Button>
-            </div>
-            <hr/>
-            <div className="d-flex align-items-center">
-              <Image src={HostMessageIcon} width="40" height="40" className="mx-3"/>
-              <div className="">
-                <small className="fw-bold mb-2">Message your guest</small>
-                <small className="fw-bold mb-2">Guest: 0x20jsd...90b</small>
-              </div>
-            </div>
-            <hr/>
-            <div className="fs-6 fw-bold mb-2">Reservation Details</div>
-            <small className="fw-bold mb-2">Confirmation code</small><br/>
-            <small>JT5A5A</small>
-            <div className="text-center my-3">
+          </div>
+          <hr />
+          <div className="fs-6 fw-bold mb-2">Reservation Details</div>
+          <small className="fw-bold mb-2">Confirmation code</small><br />
+          <small>JT5A5A</small>
+          <div className="text-center my-3">
             <Button onClick={handleClose} className="bg-white px-3 fw-bold fs-6 border-dark-purple text-dark-purple">Close</Button>
-            </div>
-         </Container>
+          </div>
+        </Container>
       </Modal>
     </div>
   );

@@ -18,8 +18,8 @@ export const ActivityTable = () => {
         <tbody>
           <tr>
             <td className="d-flex align-items-center">
-                <Image src={BuildingImg} width="50" height="40"/>
-                <span className="fw-bold ms-3">Kent Anaue</span>
+              <Image src={BuildingImg} width="50" height="40" />
+              <span className="fw-bold ms-3">Kent Anaue</span>
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
@@ -29,8 +29,8 @@ export const ActivityTable = () => {
           </tr>
           <tr>
             <td className="d-flex align-items-center">
-                <Image src={BuildingImg} width="50" height="40"/>
-                <span className="fw-bold ms-3">Kent Anaue</span>
+              <Image src={BuildingImg} width="50" height="40" />
+              <span className="fw-bold ms-3">Kent Anaue</span>
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
@@ -40,8 +40,8 @@ export const ActivityTable = () => {
           </tr>
           <tr>
             <td className="d-flex align-items-center">
-                <Image src={BuildingImg} width="50" height="40"/>
-                <span className="fw-bold ms-3">Kent Anaue</span>
+              <Image src={BuildingImg} width="50" height="40" />
+              <span className="fw-bold ms-3">Kent Anaue</span>
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
@@ -51,8 +51,8 @@ export const ActivityTable = () => {
           </tr>
           <tr>
             <td className="d-flex align-items-center">
-                <Image src={BuildingImg} width="50" height="40"/>
-                <span className="fw-bold ms-3">Kent Anaue</span>
+              <Image src={BuildingImg} width="50" height="40" />
+              <span className="fw-bold ms-3">Kent Anaue</span>
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
@@ -62,8 +62,8 @@ export const ActivityTable = () => {
           </tr>
           <tr>
             <td className="d-flex align-items-center">
-                <Image src={BuildingImg} width="50" height="40"/>
-                <span className="fw-bold ms-3">Kent Anaue</span>
+              <Image src={BuildingImg} width="50" height="40" />
+              <span className="fw-bold ms-3">Kent Anaue</span>
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>
@@ -73,8 +73,8 @@ export const ActivityTable = () => {
           </tr>
           <tr>
             <td className="d-flex align-items-center">
-                <Image src={BuildingImg} width="50" height="40"/>
-                <span className="fw-bold ms-3">Kent Anaue</span>
+              <Image src={BuildingImg} width="50" height="40" />
+              <span className="fw-bold ms-3">Kent Anaue</span>
             </td>
             <td>Buy</td>
             <td>-300 ETH</td>

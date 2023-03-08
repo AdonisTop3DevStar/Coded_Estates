@@ -9,12 +9,12 @@ const render = (status) => {
 };
 
 
-const Map = ({onClick, onIdle, children, style, ...options }) => {
+const Map = ({ onClick, onIdle, children, style, ...options }) => {
     const ref = React.useRef();
     const [map, setMap] = React.useState();
-    
+
     React.useEffect(() => {
-        if (ref.current && !map) {            
+        if (ref.current && !map) {
             const map = new window.google.maps.Map(ref.current, {});
             setMap(map);
         }
@@ -23,33 +23,33 @@ const Map = ({onClick, onIdle, children, style, ...options }) => {
     useEffect(() => {
         if (map) {
             ["click", "idle"].forEach((eventName) =>
-              window.google.maps.event.clearListeners(map, eventName)
+                window.google.maps.event.clearListeners(map, eventName)
             );
             if (onClick) {
-              map.addListener("click", onClick);
+                map.addListener("click", onClick);
             }
-        
+
             if (onIdle) {
-              map.addListener("idle", () => onIdle(map));
+                map.addListener("idle", () => onIdle(map));
             }
-          }
+        }
     }, [map]);
 
-    function createMarker(options) {        
-       
+    function createMarker(options) {
+
     }
 
     return (
         <>
-            <div ref={ref} style={style}/>
+            <div ref={ref} style={style} />
         </>
     );
 };
 
-export function GoogleMapElement () {
+export function GoogleMapElement() {
     const zoom = 20;
     return (
-        <Wrapper 
+        <Wrapper
             render={render}
             apiKey={API_KEY}
         >

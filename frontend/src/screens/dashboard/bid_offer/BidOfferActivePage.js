@@ -1,14 +1,6 @@
 import { Container, Button, Card, Row, Col, Image, Tabs, Tab, Modal } from "react-bootstrap";
-import Banner1 from '../../../assets/images/banners/trips.png';
 import BuildingImg from '../../../assets/images/building/4.webp';
 import BuildingImg1 from '../../../assets/images/building/4.webp';
-import { FaStar, FaRegStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { DetailCarousel } from "../../../components/carousel/Carousel";
-import { DetailData } from "../../../utils/data";
-import TrackIcon from '../../../assets/images/icons/track.svg';
-import HostMessageIcon from '../../../assets/images/icons/hostmessage.svg';
 
 export default function BidOfferActivePage() {
     return (
@@ -123,7 +115,7 @@ export default function BidOfferActivePage() {
                     </div>
                 </Col>
             </Row>
-            <hr/>
+            <hr />
             <div className="text-gray">Can't find your reservation here? <u className="text-dark-purple">Visit the Help Centre</u></div>
         </div>
     )

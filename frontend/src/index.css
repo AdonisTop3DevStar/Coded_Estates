@@ -253,7 +253,7 @@
 
 .TripsPage .nav.nav-tabs .nav-item button[aria-selected="true"] {
   background: #323260 !important;
-  border-radius: 1rem !important;
+  border-radius: 5px !important;
   border-width: 1px;
   color: white !important;
   padding: 0.25rem 1rem;
@@ -382,4 +382,12 @@ body::-webkit-scrollbar-thumb {
 
 .activity-datatable tr {
   cursor: pointer;
+}
+
+.location-search-t {
+  font-size: 0.5rem;
+}
+
+.location-search-b {
+  font-size: 0.75rem;
 }

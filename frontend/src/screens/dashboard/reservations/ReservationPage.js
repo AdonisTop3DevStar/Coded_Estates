@@ -7,25 +7,25 @@ import { FaRegBell } from "react-icons/fa";
 
 const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 4
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4
+        breakpoint: { max: 3000, min: 1024 },
+        items: 4
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
+        breakpoint: { max: 1024, min: 464 },
+        items: 2
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+        breakpoint: { max: 464, min: 0 },
+        items: 1
     }
-  };
+};
 
-export default function ReservationPage () {
+export default function ReservationPage() {
     return (
         <div className="ReservationPage my-2 position-relative">
             <div className="fs-4 fw-bold">Activity</div>
@@ -51,9 +51,9 @@ export default function ReservationPage () {
                                         <small className="fw-bold">Arriving in 72 days</small>
                                         <p className="mt-3 mb-0 fw-bold">Bill</p>
                                     </div>
-                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle"/>
+                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle" />
                                 </div>
-                                <div className="my-2 fw-bold">10-11 Apr</div>                            
+                                <div className="my-2 fw-bold">10-11 Apr</div>
                             </Card.Body >
                             <Card.Footer className="bg-white border-dark-purple border-top-1 text-center">
                                 <Button className="bg-white border-white fw-bold text-dark-purple">Message</Button>
@@ -68,9 +68,9 @@ export default function ReservationPage () {
                                         <small className="fw-bold">Arriving in 72 days</small>
                                         <p className="mt-3 mb-0 fw-bold">Bill</p>
                                     </div>
-                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle"/>
+                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle" />
                                 </div>
-                                <div className="my-2 fw-bold">10-11 Apr</div>                            
+                                <div className="my-2 fw-bold">10-11 Apr</div>
                             </Card.Body >
                             <Card.Footer className="bg-white border-dark-purple border-top-1 text-center">
                                 <Button className="bg-white border-white fw-bold text-dark-purple">Message</Button>
@@ -85,9 +85,9 @@ export default function ReservationPage () {
                                         <small className="fw-bold">Arriving in 72 days</small>
                                         <p className="mt-3 mb-0 fw-bold">Bill</p>
                                     </div>
-                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle"/>
+                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle" />
                                 </div>
-                                <div className="my-2 fw-bold">10-11 Apr</div>                            
+                                <div className="my-2 fw-bold">10-11 Apr</div>
                             </Card.Body >
                             <Card.Footer className="bg-white border-dark-purple border-top-1 text-center">
                                 <Button className="bg-white border-white fw-bold text-dark-purple">Message</Button>
@@ -102,9 +102,9 @@ export default function ReservationPage () {
                                         <small className="fw-bold">Arriving in 72 days</small>
                                         <p className="mt-3 mb-0 fw-bold">Bill</p>
                                     </div>
-                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle"/>
+                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle" />
                                 </div>
-                                <div className="my-2 fw-bold">10-11 Apr</div>                            
+                                <div className="my-2 fw-bold">10-11 Apr</div>
                             </Card.Body >
                             <Card.Footer className="bg-white border-dark-purple border-top-1 text-center">
                                 <Button className="bg-white border-white fw-bold text-dark-purple">Message</Button>
@@ -119,9 +119,9 @@ export default function ReservationPage () {
                                         <small className="fw-bold">Arriving in 72 days</small>
                                         <p className="mt-3 mb-0 fw-bold">Bill</p>
                                     </div>
-                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle"/>
+                                    <Image src={BuildingImg} width="50" height="50" className="rounded-circle" />
                                 </div>
-                                <div className="my-2 fw-bold">10-11 Apr</div>                            
+                                <div className="my-2 fw-bold">10-11 Apr</div>
                             </Card.Body >
                             <Card.Footer className="bg-white border-dark-purple border-top-1 text-center">
                                 <Button className="bg-white border-white fw-bold text-dark-purple">Message</Button>
@@ -133,8 +133,8 @@ export default function ReservationPage () {
             <div className="my-3">
                 <Card className="border-gray">
                     <Card.Body className="text-center">
-                        <Image src={ CheckboxIcon} width="70" height="70" className="d-block mx-auto"/>
-                        <Button className="my-3 bg-dark-purple text-white fw-bold border-dark-purple d-block mx-auto">New booking request <FaRegBell className="ms-2"/></Button>
+                        <Image src={CheckboxIcon} width="70" height="70" className="d-block mx-auto" />
+                        <Button className="my-3 bg-dark-purple text-white fw-bold border-dark-purple d-block mx-auto">New booking request <FaRegBell className="ms-2" /></Button>
                         <small className="text-gray">You don’t have any guests checking out today or tomorrow</small>
                     </Card.Body>
                 </Card>

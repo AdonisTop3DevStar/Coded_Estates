@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Container, Button, Image, Row, Col, Card, ListGroup, Form, ButtonGroup, ToggleButton, ToggleButtonGroup } from "react-bootstrap";
-import Logo from '../../assets/images/Logo.svg';
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 import SBanner1 from '../../assets/images/verify/sbanner-1.png';
@@ -69,10 +68,6 @@ import SpaciousIcon from '../../assets/images/verify/icons/spacious.svg';
 
 import { Uploader } from "uploader"; // Installed by "react-uploader".
 import { UploadButton, UploadDropzone } from "react-uploader";
-
-
-
-
 
 
 const placeData = [

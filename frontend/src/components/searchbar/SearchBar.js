@@ -1,17 +1,14 @@
 import { useState } from "react";
-import { Button, Col, Container, Nav, Row, Modal, Image, Tab, ButtonGroup, Form  } from "react-bootstrap";
+import { Button, Col, Container, Nav, Row, Modal, Image, Tab, ButtonGroup, Form } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import React from "react";
-import { Calendar, DateObject } from "react-multi-date-picker";
-import Footer from "react-multi-date-picker/plugins/range_picker_footer";
+import { Calendar } from "react-multi-date-picker";
 import LocationImg1 from '../../assets/images/location/world.jpg';
 import LocationImg2 from '../../assets/images/location/europe.jpg';
 import LocationImg3 from '../../assets/images/location/turkey.jpg';
 import LocationImg4 from '../../assets/images/location/southeast_asia.jpg';
 import LocationImg5 from '../../assets/images/location/thailand.jpg';
 import LocationImg6 from '../../assets/images/location/south_america.jpg';
-import DatePicker from "react-multi-date-picker";
-import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import FilterIcon from '../../assets/images/icons/filter.svg';
 
@@ -80,13 +77,13 @@ export const SearchBar = () => {
         <Modal.Body>
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row>
-             <div className="d-flex align-item-center justify-content-center">
+              <div className="d-flex align-item-center justify-content-center">
                 <Nav variant="pills">
                   <Nav.Item>
                     <Nav.Link eventKey="first">Choose dates</Nav.Link>
                   </Nav.Item>
                 </Nav>
-             </div>      
+              </div>
 
               <Tab.Content>
                 <Tab.Pane eventKey="first">
@@ -96,7 +93,7 @@ export const SearchBar = () => {
                     minDate={minDate}
                   />
                 </Tab.Pane>
-              </Tab.Content>              
+              </Tab.Content>
             </Row>
           </Tab.Container>
         </Modal.Body>
@@ -107,52 +104,52 @@ export const SearchBar = () => {
           <div className="d-flex align-items-center justify-content-between my-2 guest-stepper border-bottom">
             <div className="guest-content">
               <div className="guest-title">Adults</div>
-              <p className="guest-condition">Ages 13 or above</p>  
+              <p className="guest-condition">Ages 13 or above</p>
             </div>
             <div className="stepper">
               <ButtonGroup className="align-items-center ">
-                <Button><FaMinus/></Button>
+                <Button><FaMinus /></Button>
                 <span className="px-3">1</span>
-                <Button ><FaPlus/></Button>
+                <Button ><FaPlus /></Button>
               </ButtonGroup>
             </div>
           </div>
           <div className="d-flex align-items-center justify-content-between my-2 guest-stepper border-bottom">
             <div className="guest-content">
               <div className="guest-title">Children</div>
-              <p className="guest-condition">Ages 2-12</p>  
+              <p className="guest-condition">Ages 2-12</p>
             </div>
             <div className="stepper">
               <ButtonGroup className="align-items-center ">
-                <Button><FaMinus/></Button>
+                <Button><FaMinus /></Button>
                 <span className="px-3">1</span>
-                <Button ><FaPlus/></Button>
+                <Button ><FaPlus /></Button>
               </ButtonGroup>
             </div>
           </div>
           <div className="d-flex align-items-center justify-content-between my-2 guest-stepper border-bottom">
             <div className="guest-content">
               <div className="guest-title">Infants</div>
-              <p className="guest-condition">Under 2</p>  
+              <p className="guest-condition">Under 2</p>
             </div>
             <div className="stepper">
               <ButtonGroup className="align-items-center ">
-                <Button><FaMinus/></Button>
+                <Button><FaMinus /></Button>
                 <span className="px-3">1</span>
-                <Button ><FaPlus/></Button>
+                <Button ><FaPlus /></Button>
               </ButtonGroup>
             </div>
           </div>
           <div className="d-flex align-items-center justify-content-between my-2 guest-stepper">
             <div className="guest-content">
               <div className="guest-title">Pets</div>
-              <p className="guest-condition fw-bold">Bringing a service animal?</p>  
+              <p className="guest-condition fw-bold">Bringing a service animal?</p>
             </div>
             <div className="stepper">
               <ButtonGroup className="align-items-center ">
-                <Button><FaMinus/></Button>
+                <Button><FaMinus /></Button>
                 <span className="px-3">1</span>
-                <Button ><FaPlus/></Button>
+                <Button ><FaPlus /></Button>
               </ButtonGroup>
             </div>
           </div>
@@ -166,7 +163,7 @@ export const BuySearchBar = () => {
   return (
     <div className="BuySearchBar  border-bottom py-2">
       <div className="w-75 mx-auto rounded-5 border d-flex align-items-center justify-content-between p-1">
-        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center"><Image src={FilterIcon} width="25" height="25"/></Button>
+        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center"><Image src={FilterIcon} width="25" height="25" /></Button>
         <div className="fs-6 fw-bold">House Type :</div>
         <div className="">
           <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end">
@@ -200,11 +197,11 @@ export const BuySearchBar = () => {
           </Form.Select>
         </div>|
         <div className="">
-          <Form.Group  controlId="exampleForm.ControlInput1">
-            <Form.Control type="text" placeholder="Enter address or city or pin code" className="border-0"/>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Control type="text" placeholder="Enter address or city or pin code" className="border-0" />
           </Form.Group>
         </div>
-        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center fs-4"><FaSearch/></Button>
+        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center fs-4"><FaSearch /></Button>
       </div>
     </div>
   )

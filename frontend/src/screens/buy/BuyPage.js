@@ -1,15 +1,11 @@
 import { Row, Col, Button, Image, Form } from "react-bootstrap";
 import { NormalCard } from "../../components/card/card";
-import { BuySearchBar } from "../../components/searchbar/SearchBar";
-import { buyPageData } from "../../utils/data";
 import { FaMap } from "react-icons/fa";
-import { GoogleMapElement } from "../../components/map/map";
 import FilterIcon from '../../assets/images/icons/filter.svg';
 import { FaSearch } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { sampleData } from "../../utils/sampledata";
 import EmptyImg from '../../assets/images/empty.png';
-import {store} from '../../configs/Store';
 
 
 function BuyPage() {
@@ -24,10 +20,11 @@ function BuyPage() {
   const [data, setData] = useState([]);
 
   const findProperties = (type, keyWord, bed, size, price, bath) => {
-    
+
     if (type === '' && keyWord === '' && bed === '' && size === '' && price === '' && bath === "") {
       let tempData = [];
-      for(let i = 0; i < sampleData.length; i++) {
+
+      for (let i = 0; i < sampleData.length; i++) {
         const _data = {
           "zpid": sampleData[i].zpid,
           "address": sampleData[i].address,
@@ -36,10 +33,10 @@ function BuyPage() {
           "price": sampleData[i].price,
           "homeStatus": "FOR_SALE",
           "livingArea": 1123,
-          "size" : sampleData[i].livingArea,
+          "size": sampleData[i].livingArea,
           "currency": "SEI",
           "homeType": "CONDO",
-          "photos": sampleData[i].photos,  
+          "photos": sampleData[i].photos,
         };
         tempData.push(_data);
       }
@@ -47,79 +44,74 @@ function BuyPage() {
     }
     else {
       let result = sampleData;
+
       if (keyWord !== "") {
-        result = result.filter( obj => (obj.address.state).toLowerCase().includes(keyWord.toLowerCase()) || (obj.address.city).toLowerCase().includes(keyWord.toLowerCase()));
-        // const regex = new RegExp('^' + keyWord.replace(/\*/g, '.') + '$');
-
-        // result = result.filter( obj => regex.test(obj.address.city));
-
+        result = result.filter(obj => (obj.address.state).toLowerCase().includes(keyWord.toLowerCase()) || (obj.address.city).toLowerCase().includes(keyWord.toLowerCase()));        
       }
-      
+
       if (type !== "") {
-        if(type === "all") {
-          result = result.filter( obj => obj.homeType !== "");
+        if (type === "all") {
+          result = result.filter(obj => obj.homeType !== "");
         } else {
-          result = result.filter( obj => (obj.homeType).toLowerCase().includes(type.toLowerCase()));
+          result = result.filter(obj => (obj.homeType).toLowerCase().includes(type.toLowerCase()));
         }
       }
-      
+
       if (bed !== "") {
         if (bed == 4) {
-          result = result.filter( obj => obj.bedrooms >= bed);
+          result = result.filter(obj => obj.bedrooms >= bed);
         }
         else {
           if (bed == 0) {
-            result = result.filter( obj => obj.bedrooms != "");
+            result = result.filter(obj => obj.bedrooms != "");
           }
           else {
-            result = result.filter( obj => obj.bedrooms == bed);
+            result = result.filter(obj => obj.bedrooms == bed);
           }
         }
       }
 
       if (bath !== "") {
         if (bath === 4) {
-          result = result.filter( obj => obj.bathrooms >= bath);
+          result = result.filter(obj => obj.bathrooms >= bath);
         }
         else {
           if (bath == 0) {
-            result = result.filter( obj => obj.bathrooms != "");
-            console.log("bath",result)
+            result = result.filter(obj => obj.bathrooms != "");
           }
           else {
-            result = result.filter( obj => obj.bathrooms == bath);
-            console.log("bath1",result)
+            result = result.filter(obj => obj.bathrooms == bath);
           }
         }
       }
-      
+
       if (size !== "") {
 
-        if(size === "s1") {
-          result = result.filter( obj => obj.livingArea <= 500);
+        if (size === "s1") {
+          result = result.filter(obj => obj.livingArea <= 500);
         } else if (size === "s2") {
-          result = result.filter( obj => obj.livingArea <= 1000);
+          result = result.filter(obj => obj.livingArea <= 1000);
         } else if (size === "s3") {
-          result = result.filter( obj => obj.livingArea <= 1500);
+          result = result.filter(obj => obj.livingArea <= 1500);
         } else if (size === "s4") {
-          result = result.filter( obj => obj.livingArea <= 5000);
-        } else if (size === 0){
-          result = result.filter( obj => obj.livingArea != "");
+          result = result.filter(obj => obj.livingArea <= 5000);
+        } else if (size === 0) {
+          result = result.filter(obj => obj.livingArea != "");
         }
 
       }
-      
+
       if (price !== "") {
-        if(price === "p1") {
-          result = result.filter( obj => obj.price <= 20000);
+        if (price === "p1") {
+          result = result.filter(obj => obj.price <= 20000);
         } else if (price === "p2") {
-          result = result.filter( obj => obj.price <= 50000);
+          result = result.filter(obj => obj.price <= 50000);
         } else if (price === "p3") {
-          result = result.filter( obj => obj.price <= 100000);
+          result = result.filter(obj => obj.price <= 100000);
         } else if (price === "p4") {
-          result = result.filter( obj => obj.price <= 1000000);
-        } else if (price === 0){
-          result = result.filter( obj => obj.price != "");
+          result = result.filter(obj => obj.price <= 1000000);
+        } else if (price === 0) {
+          result = result.filter(obj => obj.price != "");
         }
       }
       setData(result);
@@ -130,7 +122,7 @@ function BuyPage() {
   useEffect(() => {
     findProperties(type, keyWord, bed, size, price, bath);
   }, [type, bed, size, price, bath])
-  
+
   useEffect(() => {
     findProperties(type, keyWord, bed, size, price, bath);
   }, [])
@@ -152,11 +144,11 @@ function BuyPage() {
               <option value="cabin">Cabin</option>
               <option value="camper">Camper</option>
               <option value="casa">Casa</option>
-              <option value="castle">Castle</option> 
+              <option value="castle">Castle</option>
               <option value="cave">Cave</option>
               <option value="container">Container</option>
               <option value="cycladic">Cycladic</option>
-              <option value="dammuso">Dammuso</option>              
+              <option value="dammuso">Dammuso</option>
             </Form.Select>
           </div>|
           <div className="">
@@ -205,25 +197,25 @@ function BuyPage() {
       </div>
       <small className="my-5 pt-2">Over {data.length} homes within map area</small>
       {data.length > 0 ? (
-        <Row className="Search-result mt-2" style={{minHeight:"81.5vh"}}>
-        {     
-          data.map((item, idx) => (
-            <Col xs={12} sm={12} md={2}>
-              <NormalCard key={item.idx} title={item?.address?.city + " , " + item?.address?.state} network={item?.currency} price={item?.price} bed={item?.bedrooms} bath={item?.bathrooms} size={item?.size} images={item?.photos} />
-            </Col>
-          ))
-        }
-      </Row>
+        <Row className="Search-result mt-2" style={{ minHeight: "81.5vh" }}>
+          {
+            data.map((item, idx) => (
+              <Col xs={12} sm={12} md={2}>
+                <NormalCard key={item.idx} title={item?.address?.city + " , " + item?.address?.state} network={item?.currency} price={item?.price} bed={item?.bedrooms} bath={item?.bathrooms} size={item?.size} images={item?.photos} />
+              </Col>
+            ))
+          }
+        </Row>
       ) : (
-        <Row style={{minHeight:"81.5vh"}} className="d-flex align-items-center justify-content-center w-25 mx-auto">
-          
+        <Row style={{ minHeight: "81.5vh" }} className="d-flex align-items-center justify-content-center w-25 mx-auto">
+
           <div className="fs-5 fw-bold text-center">
-          <Image src={EmptyImg} className="w-100 mb-2"/>
-          <div>Don't have Result!</div>
+            <Image src={EmptyImg} className="w-100 mb-2" />
+            <div>Don't have Result!</div>
           </div>
         </Row>
       )}
-      
+
       <Button className="round-btn position-ablsolute show-map-btn px-4">Show Map<FaMap className="ms-2" /></Button>
     </div>
   );

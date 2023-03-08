@@ -1,19 +1,21 @@
-import { Accordion, Button, Col, Image, Row, Table, Card, Form, Modal } from "react-bootstrap";
-import { DetailCarousel } from "../../components/carousel/Carousel";
-import { GoogleMapElement } from "../../components/map/map";
+import { useState} from "react";
+import { Button, Col, Image, Row, Card, Form, Modal } from "react-bootstrap";
 import { DetailData } from "../../utils/data";
-import { FaHeart, FaShareAlt, FaExclamationCircle, FaMapMarkerAlt, FaBed, FaBath } from "react-icons/fa";
-import { TraitCard } from "../../components/card/card";
-import { useState, useRef } from "react";
+import DatePicker from "react-multi-date-picker";
+import Viewer from 'react-viewer';
+import { NavLink } from "react-router-dom";
+import { Calendar, DateObject } from "react-multi-date-picker";
+import { FaAngleLeft } from "react-icons/fa";
+import { RentBookMode } from "../../components/modal/BookingMode";
+import { store } from '../../configs/Store';
+import { AiOutlineClose } from "react-icons/ai";
+import Footer from "react-multi-date-picker/plugins/range_picker_footer";
+
 import Img1 from '../../assets/images/building/4.webp';
 import Icon1 from '../../assets/images/icons/swimming-pool.svg';
 import Icon2 from '../../assets/images/icons/star-border.svg';
 import Icon3 from '../../assets/images/icons/heart-outline.svg';
-import DatePicker from "react-multi-date-picker";
-import DatePanel from "react-multi-date-picker/plugins/date_panel";
-import { NavLink } from "react-router-dom";
 import Logo from '../../assets/images/Logo.svg';
-
 import Icon4 from '../../assets/images/icons/majesticons_flower-2-line.svg';
 import Icon5 from '../../assets/images/icons/tools-kitchen.svg';
 import Icon6 from '../../assets/images/icons/iconoir_desk.svg';
@@ -24,8 +26,6 @@ import Icon10 from '../../assets/images/icons/wifi-high-bold.svg';
 import Icon11 from '../../assets/images/icons/ph_car.svg';
 import Icon12 from '../../assets/images/icons/mdi_smoke-detector-off-outline.svg';
 import Icon13 from '../../assets/images/icons/ic_round-live-tv.svg';
-import { Calendar, DateObject } from "react-multi-date-picker";
-import Footer from "react-multi-date-picker/plugins/range_picker_footer";
 import GalleryImg1 from '../../assets/images/building/10.webp';
 import GalleryImg2 from '../../assets/images/building/3.webp';
 import GalleryImg3 from '../../assets/images/building/4.webp';
@@ -33,18 +33,12 @@ import GalleryImg4 from '../../assets/images/building/5.webp';
 import GalleryImg5 from '../../assets/images/building/6.webp';
 import Star from '../../assets/images/icons/star.svg';
 import Check from '../../assets/images/icons/check.svg';
-import { FaAngleLeft } from "react-icons/fa";
-import { RentBookMode } from "../../components/modal/BookingMode";
-import { store } from '../../configs/Store';
-import { AiOutlineClose } from "react-icons/ai";
-import { sampleData } from "../../utils/sampledata";
-import Viewer from 'react-viewer';
 
 export function RentDetailPage() {
   const [minDate, setMinDate] = useState(new Date());
   const [show, setShow] = useState(false);
   const [messageModal, setMessageModal] = useState(false);
-  const [ visible, setVisible ] = useState(false);
+  const [visible, setVisible] = useState(false);
   const [host, setHost] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -89,7 +83,7 @@ export function RentDetailPage() {
           <span className="ms-5">Save</span>
         </div>
       </div>
-      <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{ height: '500px' }} onClick={() => { setVisible(true); } }>
+      <div className="NFTGallary my-3 border-bottom pb-3 overflow-hidden" style={{ height: '500px' }} onClick={() => { setVisible(true); }}>
         <div className="d-flex align-items-center justify-content-between gap-2 rounded overflow-hidden">
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}><Image src={GalleryImg4} width="100%" height="100%" style={{ objectFit: "cover", cursor: 'pointer' }} /></div>
           <div className="w-50 overflow-hidden" style={{ height: '500px' }}>
@@ -313,19 +307,19 @@ export function RentDetailPage() {
             {!connected ? (
               <Button className="border-gray bg-white text-dark-purple" onClick={walletConnectModalShow}>Contact Host</Button>
             ) : (
-              <Button className="border-gray bg-white text-dark-purple" onClick={() => {setHost(true); showMessageModal()}}>Contact Host</Button>
+              <Button className="border-gray bg-white text-dark-purple" onClick={() => { setHost(true); showMessageModal() }}>Contact Host</Button>
             )}
 
           </Col>
         </Row>
       </div>
       <Modal show={show} size="xl" centered>
-      <Modal.Header className="d-flex align-items-center justify-content-between">
-        <Image src={Logo} height="50" />
-        <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
+        <Modal.Header className="d-flex align-items-center justify-content-between">
+          <Image src={Logo} height="50" />
+          <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
         </Modal.Header>
         <Modal.Body className="bg-white-custom">
-        <RentBookMode />
+          <RentBookMode />
         </Modal.Body>
       </Modal>
       <Modal show={messageModal} size="sm" centered>
@@ -334,11 +328,11 @@ export function RentDetailPage() {
           <div className="fs-5 fw-bold text-center mb-2">Send message to</div>
           {host == true ? (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly />
             </Form.Group>
           ) : (
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly/>
+              <Form.Control type="text" placeholder="Receiver Address" className="borer-gray" value="sei14zd...0qzk" readOnly />
             </Form.Group>
           )}
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -351,9 +345,9 @@ export function RentDetailPage() {
         </Modal.Body>
       </Modal>
       <Viewer
-      visible={visible}
-      onClose={() => { setVisible(false); } }
-      images={DetailData.images}
+        visible={visible}
+        onClose={() => { setVisible(false); }}
+        images={DetailData.images}
       />
     </div>
   )

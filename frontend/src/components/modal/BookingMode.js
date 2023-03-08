@@ -4,8 +4,8 @@ import Avatar from '../../assets/images/banners/trips.png';
 import Building from '../../assets/images/building/14.webp';
 import { FaStar } from "react-icons/fa";
 import SEI from '../../assets/images/crypto/sei.svg';
-import {store} from '../../configs/Store';
-import {useState} from 'react';
+import { store } from '../../configs/Store';
+import { useState } from 'react';
 import Logo from '../../assets/images/Logo.svg';
 import DocumentImg from '../../assets/images/icons/document.svg';
 
@@ -18,7 +18,7 @@ export const BuyBookMode = () => {
         <div className="BuyBookMode mb-4">
             <Row>
                 <Col sm={12} md={6}>
-                <div className='fs-5 fw-semibold my-2'>Verify</div>
+                    <div className='fs-5 fw-semibold my-2'>Verify</div>
                     <Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2" onClick={handleShow}>Due Diligence</Button>
                     <div className='fs-5 fw-semibold my-2'>Pay with</div>
                     <Dropdown>
@@ -46,9 +46,6 @@ export const BuyBookMode = () => {
                     <Form.Group className="my-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Control as="textarea" rows={2} />
                     </Form.Group>
-                    {/* <hr /> */}
-                    {/* <div className='fs-5 fw-semibold my-2'>Cancellation policy</div> */}
-                    {/* <small className="text-gray">This reservation is non-refundable. <strong><u>Learn more</u></strong></small> */}
                     <hr />
                     <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Reserve to buy</Button></Link>
                 </Col>
@@ -64,8 +61,6 @@ export const BuyBookMode = () => {
                                 </div>
                             </div>
                             <hr />
-                            {/* <div>Your booking is protected by Coded Estate</div> */}
-                            {/* <hr /> */}
                             <div className="fw-bold my-2">Send Message</div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
                                 <div>Price</div>
@@ -87,14 +82,14 @@ export const BuyBookMode = () => {
             <Modal show={show} size="xl" centered>
                 <Modal.Header className="d-flex align-items-center justify-content-between">
 
-                <Image src={Logo} height="50" />
-                <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
+                    <Image src={Logo} height="50" />
+                    <Button className="border-gray rounded-5 border bg-white text-dark-purple" onClick={handleClose}>Save & exit</Button>
                 </Modal.Header>
                 <Modal.Body className="bg-white-custom">
                     <div className="fs-5 fw-bold">Due Diligence</div>
                     <small className="text-gray mb-3">Documents that require uploading for verification for <b>Kent Avenue #310.</b></small>
                     <div className="badge-group mb-3"></div>
-                    <div className="Document-tabl p-2" style={{minHeight:"50vh"}}>
+                    <div className="Document-tabl p-2" style={{ minHeight: "50vh" }}>
                         <Row className="Document-table-header py-3 my-2 bg-white rounded border">
                             <Col md={4} className="fs-6 fw-bold">Document Required</Col>
                             <Col md={2} className="fs-6 fw-bold">Update</Col>
@@ -105,7 +100,7 @@ export const BuyBookMode = () => {
                         <Row className="Document-table-body py-2 my-2 bg-white align-items-center border rounded">
                             <Col md={4}>
                                 <div className="d-flex align-items-center">
-                                    <Image src={DocumentImg} width="35"/>
+                                    <Image src={DocumentImg} width="35" />
                                     <small className="ms-3">Title Report</small>
                                 </div>
                             </Col>
@@ -117,7 +112,7 @@ export const BuyBookMode = () => {
                         <Row className="Document-table-body py-2 my-2 bg-white align-items-center border rounded">
                             <Col md={4}>
                                 <div className="d-flex align-items-center">
-                                    <Image src={DocumentImg} width="35"/>
+                                    <Image src={DocumentImg} width="35" />
                                     <small className="ms-3">Title Report</small>
                                 </div>
                             </Col>
@@ -129,7 +124,7 @@ export const BuyBookMode = () => {
                         <Row className="Document-table-body py-2 my-2 bg-white align-items-center border rounded">
                             <Col md={4}>
                                 <div className="d-flex align-items-center">
-                                    <Image src={DocumentImg} width="35"/>
+                                    <Image src={DocumentImg} width="35" />
                                     <small className="ms-3">Title Report</small>
                                 </div>
                             </Col>
@@ -139,7 +134,7 @@ export const BuyBookMode = () => {
                             <Col md={2}><Button className="bg-white border rounded text-dark-purple px-3 fw-bold">Upload</Button></Col>
                         </Row>
                     </div>
-                </Modal.Body>                
+                </Modal.Body>
             </Modal>
         </div>
     )
@@ -165,7 +160,7 @@ export const RentBookMode = () => {
                         </div>
                         <Link to="" className='fs-6 fw-bold text-dark-purple'><u>Edit</u></Link>
                     </div><hr />
-                   
+
                     <div className='fs-5 fw-semibold my-2'>Pay with</div>
                     <Dropdown>
                         <Dropdown.Toggle className="bg-white border-dark-purple text-dark-purple w-100 py-2 d-flex align-items-center justify-content-between" id="dropdown-basic">

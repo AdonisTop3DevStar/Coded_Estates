@@ -1,5 +1,5 @@
 import { Button, ButtonGroup, Col, Form, ListGroup, Row, InputGroup, Image } from "react-bootstrap";
-import { FaSearch, FaTelegramPlane } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import Map from '../../../assets/images/icons/map.svg';
 import User from '../../../assets/images/icons/user.svg';
 import Heart from '../../../assets/images/icons/heart-fill.svg';

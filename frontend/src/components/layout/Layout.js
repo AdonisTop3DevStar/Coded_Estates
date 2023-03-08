@@ -6,9 +6,9 @@ import Sidebar from "../sidebar/Sidebar"
 export const HomeLayout = () => {
     return (
         <div className="HomeLayout">
-            <Header/>
+            <Header />
             <Container fluid>
-                <Outlet/>
+                <Outlet />
             </Container>
         </div>
     )
@@ -17,11 +17,11 @@ export const HomeLayout = () => {
 export const DashboardLayout = () => {
     return (
         <div className="DashboardLayout">
-            <Header/>
+            <Header />
             <Container fluid className="d-flex">
-                <Sidebar/>
+                <Sidebar />
                 <Container fluid className="px-4 dashboard-layout">
-                    <Outlet/>
+                    <Outlet />
                 </Container>
             </Container>
         </div>

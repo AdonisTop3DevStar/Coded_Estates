@@ -123,7 +123,7 @@ export default function TripActivePage() {
                     </div>
                 </Col>
             </Row>
-            <hr/>
+            <hr />
             <div className="text-gray">Can't find your reservation here? <u className="text-dark-purple">Visit the Help Centre</u></div>
         </div>
     )

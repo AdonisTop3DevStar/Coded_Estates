@@ -5,7 +5,7 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = (group) => {
     const [theme, setTheme] = useState({
-        theme : THEME_TYPE.LIGHT,
+        theme: THEME_TYPE.LIGHT,
     })
 
     return (
