@@ -173,7 +173,7 @@ export function DetailPage() {
               {!connected ? (
                 <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Make an Offer</Button>
               ) : (
-                <NavLink to="/dashboard/buy/properties" onClick={(e) => setTabKey(4)}><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button></NavLink>
+                <NavLink to="/dashboard/buy/message" onClick={(e) => setTabKey(4)}><Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2">Make an Offer</Button></NavLink>
               )}
 
               {!connected ? (
