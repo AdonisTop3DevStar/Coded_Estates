@@ -57,7 +57,11 @@ import {
   
     return (
       <div className="PropertiesDetail">
-        <Link to="/dashboard/buy/favorite" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
+        {mode == "BUY" ? (
+            <Link to="/dashboard/buy/favorite" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
+        ) : (
+            <Link to="/dashboard/rent/favorite" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
+        )}
         <div className="fs-4 fw-bold">Properties Detail</div>
         <div className="fs-6 opacity-50 mb-3">
           Welcome to Coede Estate Property Admin

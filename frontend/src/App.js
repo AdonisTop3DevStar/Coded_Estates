@@ -80,6 +80,7 @@ function App() {
                <Route path="/dashboard/rent/properties/:detailID" element={<PropertiesDetail/>}/>
                <Route path="/dashboard/rent/message" element={<RentMessagePage/>}/>
                <Route path="/dashboard/rent/favorite" element={<FavoritesPage/>}/>
+               <Route path="/dashboard/rent/favorite/detail/:ID" element={<FavoriteDetailPage/>}/>
                <Route path="/dashboard/rent/transactions" element={<TransactionPage/>}/>
                <Route path="/dashboard/rent/rewards" element={<RewardsPage/>}/>
                <Route path="/dashboard/rent/holding" element={<HoldingPage/>}/>

@@ -119,7 +119,11 @@ export const FavoriteCard = ({ title, network, price, images, bed, bath, size })
                             {
                                 images.map((item, idx) => (
                                     <Carousel.Item>
+                                        {mode == "BUY" ? (
                                             <Link className="nav-link" to="/dashboard/buy/favorite/detail/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="200" width="200" className="w-100 object-fit-cover border rounded" style={{ objectFit: "cover" }} /></Link>
+                                        ) : (
+                                            <Link className="nav-link" to="/dashboard/rent/favorite/detail/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="200" width="200" className="w-100 object-fit-cover border rounded" style={{ objectFit: "cover" }} /></Link>
+                                        )} 
                                        
                                     </Carousel.Item>
                                 ))
@@ -127,7 +131,7 @@ export const FavoriteCard = ({ title, network, price, images, bed, bath, size })
                         </Carousel>
                     )}
 
-                <Link className="nav-link" to="/dashboard/buy/favorite/detail/1" onClick={() => setHeader('BUY')}>
+                <Link className="nav-link" to={mode == "BUY" ? ("/dashboard/buy/favorite/detail/1") : "/dashboard/rent/favorite/detail/1"} onClick={() => setHeader('BUY')}>
                     {loading ?
                         (
                             <Skeleton
