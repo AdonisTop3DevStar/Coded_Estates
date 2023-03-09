@@ -142,7 +142,7 @@ function BuyPage() {
     <div className="BuyPage position-relative" style={{ marginTop: "81px" }}>
       <div className="BuySearchBar  border-bottom py-2">
         <div className="w-75 mx-auto rounded-5 border d-flex align-items-center justify-content-between p-2" style={{height: "50px"}}>
-          
+        <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center"><Image src={FilterIcon} width="15"/></Button>
           <div className="py-1 px-3 fw-bold border-end cursor-pointer ">House Type :</div>
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={type} onChange={(e) => setType(e.target.value)}>
@@ -203,8 +203,8 @@ function BuyPage() {
               <Form.Control type="text" placeholder="Enter address or city" className="border-0" onChange={(e) => setKeyWord(e.target.value)} value={keyWord} />
             </Form.Group>
           </div>
-          <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center" onClick={ResetFilter}><Image src={FilterIcon} width="15"/></Button>
-          {/* <Button className="round-btn d-flex p-2" onClick={() => findProperties(type, keyWord, bed, size, price, bath)}><FaSearch /></Button> */}
+          {/* <Button className="bg-purple rounded-circle border-purple p-2 d-flex align-items-center" onClick={ResetFilter}><Image src={FilterIcon} width="15"/></Button> */}
+          <Button className="round-btn d-flex p-2"  onClick={ResetFilter}><FaUndoAlt /></Button>
         </div>
       </div>
       <small className="my-5 pt-2">Over {data.length} homes within map area</small>
