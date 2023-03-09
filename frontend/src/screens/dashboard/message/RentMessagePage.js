@@ -94,17 +94,24 @@ function RentMessagePage() {
         <Col md={3} className="border-end content-detail">
           <div className="fs-5 fw-bold my-3">{mode == "host" ? ("Host Details") : ("Traveller Details")}</div>
           <Image src={DetailImage} className="rounded w-100 mb-2" height="200" style={{ objectFit: "cover" }} />
-          <div className="border-top py-2">
+          <div className="border-top py-1">
             <div className="fw-semibold text-gray mb-1">Inquiry</div>
             <div className="fw-bold mb-1">sei14zd...0qzk asked about a trip</div>
             <div><small className="text-gray mb-2">Hotel medio</small></div>
             <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
             <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
           </div>
-          <div className="border-top py-2">
-            <Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Cancel Inquiry</Button>
-          </div>
-          <div className="border-top py-2">
+          {mode == "host" ? (
+            <div className="border-top py-1">
+              <Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Cancel Inquiry</Button>
+            </div>
+          ) : (
+            <div className="border-top py-1 row">
+              <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Cancel Inquiry</Button></Col>
+              <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Approve</Button></Col>
+            </div>
+          )}
+          <div className="border-top py-1">
             <div className="fs-5 fw-bold my-2">Booking Details</div>
             <div className="fs-6 fw-bold mb-1">Guests</div>
             <div className="text-gray pb-2 border-bottom"><small>2 adults</small></div>
@@ -114,7 +121,7 @@ function RentMessagePage() {
             <div className="text-gray pb-2 border-bottom"><small>Sat, Feb 6th, 2023</small></div>
             <div className="fw-semibold"><u>Show calendar</u></div>
           </div>
-          <div className="border-top pt-2">
+          <div className="border-top pt-1">
             <div className="fs-5 fw-bold my-2">Total Cost</div>
             <div className="d-flex align-items-center justify-content-between">
               <span className="text-gray">1000 SEI X 2 nights</span>
