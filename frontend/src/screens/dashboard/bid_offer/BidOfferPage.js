@@ -1,4 +1,5 @@
 import { Container, Button, Card, Row, Col, Image, Tabs, Tab, Modal, Nav } from "react-bootstrap";
+import Banner from '../../../assets/images/banners/bid_offer.webp';
 import Banner1 from '../../../assets/images/building/10.webp';
 import Banner2 from '../../../assets/images/building/11.webp';
 import Banner3 from '../../../assets/images/building/12.webp';
@@ -38,7 +39,7 @@ function BidOfferPage() {
                 <NavLink to="/buy"><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">Explore NFTs</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
-                <Image src={Banner1} width="100%" height="250" style={{ objectFit: 'cover' }} />
+                <Image src={Banner} width="100%" height="250" style={{ objectFit: 'cover' }} />
               </Col>
             </Row>
           </Card>
@@ -156,7 +157,7 @@ function BidOfferPage() {
                 <NavLink to="/dashboard/buy/properties" className="nav-link" onClick={(e) => setTabKey(3)}><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List a Property</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
-                <Image src={Banner1} width="100%" height="250" style={{ objectFit: 'cover' }} />
+                <Image src={Banner} width="100%" height="250" style={{ objectFit: 'cover' }} />
               </Col>
             </Row>
           </Card>
