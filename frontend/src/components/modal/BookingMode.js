@@ -72,7 +72,7 @@ export const BuyBookMode = () => {
                             </div>
                             <hr />
                             <div className='d-flex aling-items-center justify-content-between fs-5 fw-bold'>
-                                <div>Total before taxes</div>
+                                <div>Total Amount</div>
                                 <div>$ 9650</div>
                             </div>
                         </Card.Body>
@@ -106,7 +106,7 @@ export const BuyBookMode = () => {
                             </Col>
                             <Col md={2}><small>2 days ago</small></Col>
                             <Col md={2}><small>48 days left</small></Col>
-                            <Col md={2}><b>Pendding</b></Col>
+                            <Col md={2}><b>Pending</b></Col>
                             <Col md={2}><Button className="bg-white border rounded text-dark-purple px-3 fw-bold">Upload</Button></Col>
                         </Row>
                         <Row className="Document-table-body py-2 my-2 bg-white align-items-center border rounded">
@@ -118,7 +118,7 @@ export const BuyBookMode = () => {
                             </Col>
                             <Col md={2}><small>2 days ago</small></Col>
                             <Col md={2}><small>48 days left</small></Col>
-                            <Col md={2}><b>Pendding</b></Col>
+                            <Col md={2}><b>Pending</b></Col>
                             <Col md={2}><Button className="bg-white border rounded text-dark-purple px-3 fw-bold">Upload</Button></Col>
                         </Row>
                         <Row className="Document-table-body py-2 my-2 bg-white align-items-center border rounded">
@@ -130,7 +130,7 @@ export const BuyBookMode = () => {
                             </Col>
                             <Col md={2}><small>2 days ago</small></Col>
                             <Col md={2}><small>48 days left</small></Col>
-                            <Col md={2}><b>Pendding</b></Col>
+                            <Col md={2}><b>Pending</b></Col>
                             <Col md={2}><Button className="bg-white border rounded text-dark-purple px-3 fw-bold">Upload</Button></Col>
                         </Row>
                     </div>
@@ -222,7 +222,7 @@ export const RentBookMode = () => {
                             </div>
                             <hr />
                             <div className='d-flex aling-items-center justify-content-between fs-5 fw-bold'>
-                                <div>Total before taxes</div>
+                                <div>Total Amount</div>
                                 <div>$ 9781</div>
                             </div>
                         </Card.Body>

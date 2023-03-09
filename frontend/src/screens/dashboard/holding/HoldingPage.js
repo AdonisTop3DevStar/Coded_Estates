@@ -34,7 +34,7 @@ function HoldingPage() {
               <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                 <Form.Control
-                  placeholder="Search for Property"
+                  placeholder="Search NFT"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
                 />

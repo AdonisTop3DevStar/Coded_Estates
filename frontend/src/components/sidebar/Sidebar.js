@@ -25,7 +25,7 @@ const NavListItem = ({ icon, title, link }) => {
 
 const NavListData = [
   { title: "Dashboard", link: "/dashboard/overview", icon: DashboardIcon },
-  { title: "My Properties", link: "/dashboard/buy/properties", icon: PropertiesIcon },
+  { title: "My Real Estate NFTs", link: "/dashboard/buy/properties", icon: PropertiesIcon },
   { title: "Messages", link: "/dashboard/buy/message", icon: MessageIcon },
   { title: "Favorites", link: "/dashboard/buy/favorite", icon: FavoritesIcon },
   { title: "My Rewards", link: "/dashboard/buy/rewards", icon: RewardsIcon },
@@ -36,13 +36,13 @@ const NavListData = [
 
 const RentalNavListData = [
   { title: "Dashboard", link: "/dashboard/overview", icon: DashboardIcon },
-  { title: "My Properties", link: "/dashboard/rent/properties", icon: PropertiesIcon },
+  { title: "My Real Estate NFTs", link: "/dashboard/rent/properties", icon: PropertiesIcon },
   { title: "Messages", link: "/dashboard/rent/message", icon: MessageIcon },
   { title: "Favorites", link: "/dashboard/rent/favorite", icon: FavoritesIcon },
   { title: "My Rewards", link: "/dashboard/rent/rewards", icon: RewardsIcon },
   { title: "My Holdings", link: "/dashboard/rent/holding", icon: HoldingIcon },
   { title: "Transactions", link: "/dashboard/rent/transactions", icon: OffersIcon },
-  { title: "My Trips", link: "/dashboard/rent/trips", icon: OffersIcon },
+  { title: "Trips", link: "/dashboard/rent/trips", icon: OffersIcon },
   { title: "Reviews", link: "/dashboard/rent/reviews", icon: OffersIcon },
 ];
 

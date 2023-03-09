@@ -26,7 +26,7 @@ function OverviewPage() {
   return (
     <div className="OverviewPage mt-2">
       <div className="fs-4 fw-bold">Dashboard</div>
-      <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
+      <div className="fs-6 opacity-50">Welcome to the Coded Estate dashboard</div>
 
       <Row>
         <Col sm={12} md={3}>
@@ -41,17 +41,17 @@ function OverviewPage() {
           </Card>
         </Col>
         <Col sm={12} md={3}>
-          <div className="my-2 fs-5 fw-bold">List Properties</div>
+          <div className="my-2 fs-5 fw-bold">List Your Real Estate NFTs</div>
           <ListPropertiesCard />
         </Col>
         <Col sm={12} md={6}>
-          <div className="my-2 fs-5 fw-bold">Minted Properties</div>
+          <div className="my-2 fs-5 fw-bold">Your Minted Real Estate NFTs</div>
           <MintedPropertiesCard />
         </Col>
       </Row>
       <Row>
         <Col sm={12} md={6}>
-          <div className="my-2 fs-5 fw-bold mt-5">Minted New Real Estate</div>
+          <div className="my-2 fs-5 fw-bold mt-5">Mint Your Real Estate NFT</div>
           <Card className="shadow">
             <Card.Body className="text-center">
               <Image src={MintIcon} width="150" height="150" className="mt-5" />
@@ -62,7 +62,7 @@ function OverviewPage() {
           </Card>
         </Col>
         <Col sm={12} md={6}>
-          <div className="my-2 fs-5 fw-bold mt-5">Verify NFTS</div>
+          <div className="my-2 fs-5 fw-bold mt-5">Verify Your Real Estate NFT</div>
           <Card className="shadow">
             <Card.Body className="text-center">
               <Image src={CheckIcon} width="100" height="100" className="my-5" />

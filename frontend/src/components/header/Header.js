@@ -70,11 +70,11 @@ export default function Header() {
             <Nav className="ms-auto">
               {header == "BUY" ? (
                 <NavLink to="/buy" className="nav-link fw-bold active" onClick={() => setHeader('BUY')}>
-                  Buy / Sell
+                  Buy
                 </NavLink>
               ) : (
                 <NavLink to="/buy" className="nav-link fw-bold" onClick={() => setHeader('BUY')}>
-                  Buy / Sell
+                  Buy
                 </NavLink>
               )}
 

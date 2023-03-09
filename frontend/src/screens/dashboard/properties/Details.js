@@ -89,7 +89,11 @@ export default function PropertiesDetail() {
         <Col sm={12} md={8}>
           <div className="d-flex align-items-center justify-content-between border-bottom pb-3">
             <div className="">
-              <div className="fw-semibold fs-5 mb-3">Entire villa hosted by Bookiply</div>
+              {mode == "BUY" ? (
+                <div className="fw-semibold fs-5 mb-3">Entire villa sold by sei14zd...0qzk</div>
+              ) : (
+                <div className="fw-semibold fs-5 mb-3">Entire villa Hosted by sei14zd...0qzk</div>
+              )}              
               <div className="d-flex align-items-center text-gray">
                 <small className="me-2">5 guests</small>
                 <small className="me-2">3 bedrooms</small>
@@ -99,6 +103,7 @@ export default function PropertiesDetail() {
             </div>
             <Image src={GalleryImg3} width="80" height="80" className="rounded-circle" />
           </div>
+          {mode != "BUY" && (
           <div className="border-bottom pb-3">
             <div className="d-flex my-2">
               <Image src={Star} width="25" height="25" />
@@ -122,9 +127,17 @@ export default function PropertiesDetail() {
               </div>
             </div>
           </div>
+          )}
           <div className="border-bottom pb-3">
             <Image src={Logo} className="mt-3" />
-            <div className="my-3 text-gray">Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.</div>
+            <div className="my-3 text-gray">
+              {mode == "BUY" ? (
+                "Every transaction includes the possibility for undercollateralized loans through Coded Estate´s partners."
+              ) : (
+                "Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in."
+              )}
+              
+            </div>
             <div className="text-dark-purple">Learn more</div>
           </div>
           <div className="border-bottom py-3">
@@ -294,7 +307,7 @@ export default function PropertiesDetail() {
                         </Form.Group>
                       </div>
                     </div>
-                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Update Reserve</Button>
+                    <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Update Reservation</Button>
 
                     <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={() => { setHost(false); showMessageModal() }}>Send Message</Button>
 
@@ -711,8 +724,8 @@ export default function PropertiesDetail() {
 
         </Row>
       )}
-
-      <Row className="my-2 border-bottom pb-3">
+      {mode != "BUY" && (
+        <Row className="my-2 border-bottom pb-3">
         <Col sm={12} md={12}>
           <div className="fs-5 fw-bold mb-3">No reviews (yet)</div>
           <div className="d-flex">
@@ -721,6 +734,7 @@ export default function PropertiesDetail() {
           </div>
         </Col>
       </Row>
+      )}      
       <Row className="my-2 border-bottom pb-3">
         <Col sm={12} md={12}>
           <div className="fs-5 fw-bold">Where you'll be</div>
@@ -733,29 +747,25 @@ export default function PropertiesDetail() {
           <div className="d-flex align-items-center">
             <Image src={GalleryImg1} width="80" height="80" className="rounded-circle" />
             <div className="ms-3">
-              <div className="fw-semibold fs-5 mb-2">Hosted by Bookiply</div>
+              <div className="fw-semibold fs-5 mb-2">{mode == "BUY" ? ("Sold by sei14zd...0qzk") : ("Hosted by sei14zd...0qzk")}</div>
               <div className="text-gray">Joined in April 2018</div>
             </div>
           </div>
           <Col sm={12} md={6} className="my-2">
             <div className="d-flex align-items-center">
-              <div className="text-dark-purple d-flex align-items-center me-5">
-                <Image src={Star} className="me-3" width="25" height="25" />
-                <div>1,429 Reviews</div>
-              </div>
               <div className="text-dark-purple d-flex align-items-center">
                 <Image src={Check} className="me-3" width="25" height="25" />
                 <span>Identify verified</span>
               </div>
             </div>
-            <div className="text-gray mt-3">DE<br />Mit Bookiply finden Sie ganz einfach Ihre perfekte Ferienunterkunft. Eine schöne Villa mit Meerblick auf Sardinien? Ein gemütliches Apartment am Gardasee oder ein Chalet in…<span className="ms-2 text-dark-purple"><u>read me</u></span></div>
+            <div className="text-gray mt-3">DE<br />Mit Bookiply finden Sie ganz einfach Ihre perfekte Ferienunterkunft. Eine schöne Villa mit Meerblick auf Sardinien? Ein gemütliches Apartment am Gardasee oder ein Chalet in…<span className="ms-2 text-dark-purple"><u>read more</u></span></div>
           </Col>
           <Col sm={12} md={6}>
             <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
             <div className="text-gray mb-2">Response rate : 100%</div>
             <div className="text-gray mb-2">Response time : within an hour</div>
             <Button className="border-gray bg-white text-dark-purple" onClick={() => { setHost(true); showMessageModal() }}>
-              Contact Us
+              Contact {mode == "BUY" ? ("seller") : ("host")}
             </Button>
           </Col>
         </Row>

@@ -150,14 +150,13 @@ export default function VerifyMode() {
         { label: "Step16", stepNumber: 16, element: <Step16 /> },
         { label: "Step17", stepNumber: 17, element: <Step17 /> },
         { label: "Step18", stepNumber: 18, element: <Step18 /> },
-        { label: "Step19", stepNumber: 19, element: <Step19 /> },
     ];
 
     const [currentStep, setCurrentStep] = useState(0);
     const [tabKey, setTabKey, updateTabKey] = store.useState("PropertiesTabActiveNum");
 
     const goToNextStep = () => {
-        if (currentStep < (steps.length - 1) && currentStep < 19) {
+        if (currentStep < (steps.length - 1) && currentStep < 18) {
             setCurrentStep(currentStep + 1);
         }
     };
@@ -179,18 +178,18 @@ export default function VerifyMode() {
 
             }
             <div className="position-absolute bottom-0 w-100">
-                <ProgressBar percent={5 * currentStep} filledBackground="linear-gradient(to right, #fefb72, #f0bb31)" />
+                <ProgressBar percent={5.3 * currentStep} filledBackground="linear-gradient(to right, #fefb72, #f0bb31)" />
                 <div className="bg-white pt-1">
 
                     <Container>
                         {currentStep == 0 ? (
                             <div className="d-flex align-items-center justify-content-end">
-                                <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-4 py-1 " onClick={goToNextStep}>Get Start</Button>
+                                <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-4 py-1 " onClick={goToNextStep}>Get Started</Button>
                             </div>
                         ) : (
                             <div className="d-flex align-items-center justify-content-between">
                                 <Button className="bg-white text-dark-purple border-white  px-2 py-1" onClick={goToPreviousStep}><u>Back</u></Button>
-                                {currentStep == 19 ? (
+                                {currentStep == 18 ? (
                                     <Link to="/dashboard/buy/properties" onClick={(e) => setTabKey(1)}><Button className="bg-dark-purple text-white border-dark-purple fw-bold px-3 py-1" onClick={goToNextStep}>Let's get started</Button></Link>
                                 ) : (
                                     <Button className="bg-dark-purple text-white border-dark-purple fw-bold px-4 py-1" onClick={goToNextStep}>Next</Button>
@@ -230,7 +229,7 @@ export const Step0 = () => {
                     <div className="py-4 border-bottom d-flex align-items-center justify-content-between">
                         <div className="">
                             <div className="fs-5 fw-semibold">3  Finish up and publish</div>
-                            <div className="text-gray ms-3">Choose it you’d like to start with an experience gest, set a starting price, and publish your listing.</div>
+                            <div className="text-gray ms-3">Choose if you’d like to start with an experienced guest, set a starting price, and publish your listing.</div>
                         </div>
                         <Image src={SBanner3} />
                     </div>
@@ -248,7 +247,7 @@ export const Step1 = () => {
                     <div className="w-75 mx-auto">
                         <div className="fs-6 fw-semibold mb-2">Step 1</div>
                         <div className="fs-3 fw-bold mb-2">Tell us about your place</div>
-                        <div className="">In this step, we’ll ask you which type of property you have and if gests will book the entire place or just a room.  Then let us know the location and how may gests can stay.</div>
+                        <div className="">In this step, we’ll ask you which type of property you have and if guests will book the entire place or just a room. Then let us know the location and how may guests that can stay.</div>
                     </div>
                 </Col>
                 <Col sm={6} md={6} className="text-center">
@@ -320,8 +319,8 @@ export const Step4 = () => {
     return (
         <div className="Step4 h-100">
             <div className="w-50 mx-auto h-100 d-flex flex-column justify-content-center">
-                <div className="fs-5 fw-bold mb-2">What type of place will guests have?</div>
-                <div className="text-gray mb-2">Guest have the whole place to themselves</div>
+                <div className="fs-5 fw-bold mb-2">Pinpoint Location</div>
+                <div className="text-gray mb-2">Move the pin to the location of your property</div>
                 <Card className="mt-4 mb-1">
                     <iframe className="w-100 rounded" style={{ height: "310px" }} src="https://maps.google.com/maps?q=18%20Ezekia%20Papaioannou%20Str.%20Off.104%2C%201075%20%20Nicosia%2C%20Cyprus&t=m&z=15&output=embed&iwloc=near"></iframe>
                 </Card>
@@ -635,7 +634,7 @@ export const Step15 = () => {
         <div className="Step15 h-100">
             <div className="w-50 mx-auto h-100 d-flex flex-column justify-content-center">
                 <div className="fs-5 fw-bold mb-2">Choose who to welcome for your first reservation</div>
-                <div className="text-gray mb-2">Short titles work best. Have fun with it - you can always change it later.</div>
+                {/* <div className="text-gray mb-2">Short titles work best. Have fun with it - you can always change it later.</div> */}
                 <ToggleButtonGroup type="radio" name="options" defaultValue={1} className="row">
                     <ToggleButton id={`step15-radio-1`} value={1} className="my-1 py-1 rounded w-100 text-start d-flex">
                         <Form.Check
@@ -683,7 +682,7 @@ export const Step16 = () => {
                                 </div>
                             </div>
                             <div className="text-gray text-center my-2">Per night</div>
-                            <div className="text-gray text-center my-2 w-75 mx-auto">Places like yours in your area usually range from 671 kr to 1,118 kr</div>
+                            <div className="text-gray text-center my-2 w-75 mx-auto">Places like yours in your area usually range from 671 Sei to 1,118 Sei</div>
                         </div>
                     </Card.Body>
                 </Card>
@@ -717,7 +716,7 @@ export const Step17 = () => {
                     label="I’m hosting as a business"
                     className="mb-2"
                 />
-                <div className="fs-6 fw-bold my-2">How are you hosting on Coded Estate ? </div>
+                <div className="fs-6 fw-bold my-2">Required info to inform about</div>
                 <div className="d-flex align-items-center justify-content-between mb-2">
                     <div className="">Security camera (s)</div>
                     <Form.Check
@@ -751,7 +750,7 @@ export const Step17 = () => {
     )
 }
 
-export const Step18 = () => {
+export const Step20 = () => {
     return (
         <div className="Step18 h-100">
             <div className="w-50 mx-auto h-100 d-flex flex-column justify-content-center">
@@ -795,11 +794,11 @@ export const Step18 = () => {
     )
 }
 
-export const Step19 = () => {
+export const Step18 = () => {
     return (
         <div className="Step19 h-100">
             <div className="w-50 mx-auto d-flex flex-column justify-content-center h-100">
-                <div className="fs-5 fw-bold mb-3">Congratulations, Didrik !</div>
+                <div className="fs-5 fw-bold mb-3">Congratulations, sei14zd...0qzk!</div>
                 <div className="text-gray">From one Host to another -welcome aboard. Thanks you for sharing your home and helping to create incredible experieces for out case.</div>
             </div>
         </div>

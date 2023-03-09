@@ -11,8 +11,8 @@ function PropertiesPage() {
 
   return (
     <div className="PropertiesPage my-2">
-      <div className="fs-4 fw-bold">My Properties</div>
-      <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
+      <div className="fs-4 fw-bold">My Real Estate NFTs</div>
+      <div className="fs-6 opacity-50">Welcome to your Coded Estate NFT overview</div>
       <PropertyInfoCard />
       <Tabs
         id="uncontrolled-tab-example"
@@ -25,7 +25,7 @@ function PropertiesPage() {
               <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                 <Form.Control
-                  placeholder="Search for Property"
+                  placeholder="Search NFT"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
                 />
@@ -44,7 +44,7 @@ function PropertiesPage() {
               <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                 <Form.Control
-                  placeholder="Search for Property"
+                  placeholder="Search NFT"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
                 />
@@ -63,7 +63,7 @@ function PropertiesPage() {
               <InputGroup className="mb-3">
                 <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                 <Form.Control
-                  placeholder="Search for Property"
+                  placeholder="Search NFT"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
                 />
@@ -83,7 +83,7 @@ function PropertiesPage() {
                 <InputGroup className="mb-3">
                   <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                   <Form.Control
-                    placeholder="Search for Property"
+                    placeholder="Search NFT"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
                   />
@@ -103,7 +103,7 @@ function PropertiesPage() {
                 <InputGroup className="mb-3">
                   <InputGroup.Text id="basic-addon1"><FaSearch /></InputGroup.Text>
                   <Form.Control
-                    placeholder="Search for Property"
+                    placeholder="Search NFT"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
                   />

@@ -21,8 +21,8 @@ function TripsPage() {
   const handleShow = () => setShow(true);
   return (
     <div className="TripsPage my-2">
-      <div className="fs-4 fw-bold">My Trips</div>
-      <div className="fs-6 opacity-50">Your history of trips you been on.</div>
+      <div className="fs-4 fw-bold">Trips</div>
+      <div className="fs-6 opacity-50">Your Coded Estate Trips</div>
       <Tabs
         defaultActiveKey="host"
         id="uncontrolled-tab-example"
@@ -33,7 +33,7 @@ function TripsPage() {
             <Row>
               <Col sm={12} md={4} className="px-4">
                 <div className="fs-5 fw-bold mt-5 mb-2">No One Has Booked... Yet!</div>
-                <div className="text-gray">Need more visibility? Boost your properties to the front page and get noticed more!</div>
+                <div className="text-gray">List your real estate NFTs on the decentralized web today</div>
                 <NavLink to="/dashboard/rent/properties" onClick={()=>setTabKey(3)} className="nav-link"><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
@@ -41,7 +41,7 @@ function TripsPage() {
               </Col>
             </Row>
           </Card>
-          <div className="fs-4 fw-bold my-2">Previous booking</div>
+          <div className="fs-4 fw-bold my-2">Previous Bookings</div>
           <Row>
             <Col sm={12} md={4} className="my-2">
               <Card className='border-dark-purple'>

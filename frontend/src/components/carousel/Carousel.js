@@ -40,7 +40,7 @@ export const UnverifiedCardCarousel = ({ images }) => {
       {
         images.map((item, idx) => (
           <Carousel.Item key={idx} className="position-relative text-center" onClick={(e) => setTabKey(2)}>
-            <Badge className="text-dark-purple">Not Verify</Badge>
+            <Badge className="text-dark-purple">Not Verified</Badge>
             <Link to="/dashboard/buy/properties"><Image src={item.src} width="100%" height="240" className="rounded-1" style={{ objectFit: "cover" }} /></Link>
           </Carousel.Item>
         ))

@@ -152,9 +152,9 @@ function BidOfferPage() {
           <Card className="border-dark-purple">
             <Row>
               <Col sm={12} md={4} className="px-4">
-                <div className="fs-5 fw-bold mt-5 mb-2">Offer start here!</div>
-                <div className="text-gray">Selling your home? List your property today and start receiving offers</div>
-                <NavLink to="/dashboard/buy/properties" className="nav-link" onClick={(e) => setTabKey(3)}><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List a Property</Button></NavLink>
+                <div className="fs-5 fw-bold mt-5 mb-2">Receive Your First Offers Today!</div>
+                <div className="text-gray">Get visability to your NFTs, and list them on on the decentralized web today!</div>
+                <NavLink to="/dashboard/buy/properties" className="nav-link" onClick={(e) => setTabKey(3)}><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List NFT</Button></NavLink>
               </Col>
               <Col sm={12} md={8}>
                 <Image src={Banner} width="100%" height="250" style={{ objectFit: 'cover' }} />

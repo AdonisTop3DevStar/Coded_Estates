@@ -3,7 +3,7 @@ import { NormalRentCard } from "../../components/card/card";
 import { FaMap } from "react-icons/fa";
 import { sampleData } from "../../utils/sampledata";
 import { useState, useEffect } from 'react';
-import EmptyImg from '../../assets/images/empty.png';
+import EmptyImg from '../../assets/images/icons/mint.png';
 import { Calendar } from "react-multi-date-picker";
 import LocationImg1 from '../../assets/images/location/world.jpg';
 import LocationImg2 from '../../assets/images/location/europe.jpg';
@@ -136,7 +136,7 @@ function RentPage() {
         <Container className="d-flex justify-content-center">
           <div className="my-2 p-2 border rounded-5 d-flex align-items-center" style={{height: "50px"}}>
             <div className="py-1 px-3 fw-bold border-end cursor-pointer " onClick={() => (setLocationShow(true))}>
-              {location == "" && keyword == "" ? ("AnyWhere") : (
+              {location == "" && keyword == "" ? ("Anywhere") : (
                 <div className=" d-flex flex-column">
                   <div className="location-search-t">Where</div>
                   <div className="location-search-b">{location || keyword}</div>
@@ -287,7 +287,6 @@ function RentPage() {
             <div className="d-flex align-items-center justify-content-between my-2 guest-stepper">
               <div className="guest-content">
                 <div className="guest-title fs-6">Pets</div>
-                <p className="guest-condition fw-bold">Bringing a service animal?</p>
               </div>
               <div className="stepper">
                 <ButtonGroup className="align-items-center ">
@@ -303,7 +302,6 @@ function RentPage() {
           </Modal.Body>
         </Modal>
       </div>
-      <small className="my-5 pt-2">Over {data.length} homes within map area</small>
       {data.length > 0 ? (
         <Row className="Search-result mt-2" style={{ minHeight: "81.5vh" }}>
           {
@@ -319,7 +317,7 @@ function RentPage() {
 
           <div className="fs-5 fw-bold text-center">
             <Image src={EmptyImg} className="w-100 mb-2" />
-            <div>Don't have Result!</div>
+            <div>No NFTs available</div>
           </div>
         </Row>
       )}

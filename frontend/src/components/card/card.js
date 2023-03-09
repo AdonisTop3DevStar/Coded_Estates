@@ -11,6 +11,7 @@ import BarChartIcon from '../../assets/images/icons/barchart.svg';
 import SumIcon from '../../assets/images/icons/sum.svg';
 import AmountListIcon from '../../assets/images/icons/amount_list.svg';
 import BidIcon from '../../assets/images/icons/bid.svg';
+import ActiveIcon from '../../assets/images/icons/active.png';
 import BuildingImage from '../../assets/images/building/1.webp';
 import FHeartIcon from '../../assets/images/icons/fheart.svg';
 import BuildingIcon from '../../assets/images/icons/building.svg';
@@ -353,7 +354,7 @@ export const PropertyInfoCard = () => {
                     <Col sm={12} md={3} className="d-flex align-items-center">
                         <Image src={BarChartIcon} width="75" height="75" />
                         <div className="ms-3 d-flex flex-column justify-content-around">
-                            <div className="fs-5 fw-bold my-2">Properties States</div>
+                            <div className="fs-5 fw-bold my-2">Your Real Estate NFT Stats</div>
                             <div className="opacity-50 my-2">3 items</div>
                         </div>
                     </Col>
@@ -362,8 +363,8 @@ export const PropertyInfoCard = () => {
                             <Image src={SumIcon} />
                         </div>
                         <div className="ms-3">
-                            <div className="opacity-50">Total Properties</div>
-                            <div className="fs-6 fw-bold">748</div>
+                            <div className="opacity-50">Total NFTs</div>
+                            <div className="fs-6 fw-bold">2</div>
                         </div>
                     </Col>
                     <Col sm={12} md={2} className="d-flex align-items-center ">
@@ -371,13 +372,13 @@ export const PropertyInfoCard = () => {
                             <Image src={AmountListIcon} />
                         </div>
                         <div className="ms-3">
-                            <div className="opacity-50">Amount listed</div>
-                            <div className="fs-6 fw-bold">1249</div>
+                            <div className="opacity-50">Total NFTs listed</div>
+                            <div className="fs-6 fw-bold">1</div>
                         </div>
                     </Col>
                     <Col sm={12} md={2} className="d-flex align-items-center ">
                         <div className="border border-1 rounded-1 p-2">
-                            <Image src={BidIcon} />
+                            <Image src={BidIcon} width="35"/>
                         </div>
                         <div className="ms-3">
                             <div className="opacity-50">Active bids</div>
@@ -386,7 +387,7 @@ export const PropertyInfoCard = () => {
                     </Col>
                     <Col sm={12} md={2} className="d-flex align-items-center ">
                         <div className="border border-1 rounded-1 p-2">
-                            <Image src={SumIcon} />
+                            <Image src={ActiveIcon} width="35"/>
                         </div>
                         <div className="ms-3">
                             <div className="opacity-50">Active offers</div>
@@ -466,7 +467,7 @@ export const ListPropertyCard = ({ title, price, currency, images }) => {
                             <div className="opacity-50">{price} {currency}</div>
                         </div>
                     </Link>
-                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlist</Button>
+                    <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">List</Button>
                 </Card.Body>
             </Card>
         </div>

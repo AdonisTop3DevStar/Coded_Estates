@@ -71,10 +71,10 @@ function RewardsPage() {
           <Card className="shadow">
             <Card.Body>
               <div className="fs-5 fw-bold mb-2">Staking Rewards</div>
-              <div className="text-gray">100% of CODEDstate’s trading fees are redistributed to CODED stakers, along with bonus with bonus CODED rewards!</div>
+              <div className="text-gray">A % of Coded Estate´s trading fees are redistributed to $CODED stakers and users on Coded Estate!</div>
               <div className="text-gray d-flex mt-3">
                 <div className="fw-bold fs-6 w-50">CODED Compounder</div>
-                <span>automatically turn your WETH earnings into more CODED !</span>
+                <span>automatically turn your $CODED earnings into more $CODED!</span>
               </div>
             </Card.Body>
           </Card>

@@ -93,7 +93,7 @@ import {
           <Col sm={12} md={8}>
             <div className="d-flex align-items-center justify-content-between border-bottom pb-3">
               <div className="">
-                <div className="fw-semibold fs-5 mb-3">Entire villa hosted by Bookiply</div>
+                <div className="fw-semibold fs-5 mb-3">{mode == "BUY" ? ("Entire villa sold by sei14zd...0qzk") : ("Entire villa Hosted by sei14zd...0qzk")}</div>
                 <div className="d-flex align-items-center text-gray">
                   <small className="me-2">5 guests</small>
                   <small className="me-2">3 bedrooms</small>
@@ -187,7 +187,7 @@ import {
                           </Form.Group>
                         </div>
                       </div>
-                      <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Update Reserve</Button>
+                      <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={handleShow}>Update Reservation</Button>
   
                       <Button className="text-white bg-dark-purple border-dark-purple fs-5 fw-bold w-100 my-2" onClick={() => { setHost(false); showMessageModal() }}>Send Message</Button>
   
@@ -262,7 +262,7 @@ import {
               <div className="text-gray mb-2">Response rate : 100%</div>
               <div className="text-gray mb-2">Response time : within an hour</div>
               <Button className="border-gray bg-white text-dark-purple" onClick={() => { setHost(true); showMessageModal() }}>
-                Contact Us
+                Contact seller
               </Button>
             </Col>
           </Row>

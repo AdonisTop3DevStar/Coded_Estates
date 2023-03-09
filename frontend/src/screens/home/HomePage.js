@@ -9,7 +9,6 @@ function HomePage() {
   return (
     <div className="HomePage position-relative" style={{ marginTop: "81px" }}>
       <SearchBar />
-      <small className="my-5">Over {buyPageData.length} homes within map area</small>
       <Row className="Search-result">
         {
           buyPageData.map((item, idx) => (

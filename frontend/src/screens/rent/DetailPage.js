@@ -102,7 +102,7 @@ export function RentDetailPage() {
         <Col sm={12} md={8}>
           <div className="d-flex align-items-center justify-content-between my-2 border-bottom pb-2">
             <div className="">
-              <div className="text-dark-purple fs-5 fw-semibold">Entire villa hosted by Bookiply</div>
+              <div className="text-dark-purple fs-5 fw-semibold">Entire villa Hosted by sei14zd...0qzk</div>
               <div className="text-gray mt-2"><small className="text-gray">5 guests • 3 bedrooms • 3beds • 2baths</small></div>
             </div>
             <Image src={Img1} width="50" height="50" className="rounded-circle" />
@@ -139,7 +139,6 @@ export function RentDetailPage() {
             <p className="text-gray">The new Villa Goyen - The View House impresses with its exclusive location and the unique panoramic views of the surrounding mountain panorama and the Merano valley basin. The large window areas, the elegant sun terraces with glass balustrade and the modern Desgin make the mansion Goyen an exclusive vacation domicile, which fulfills highest requirements at cosiness, comfort and situation.
               200m² living space, 400m² garden, sun terrace and roof terrace with floating bed.
               3 suites all with terrace.</p>
-            <p className="text-dark-purple fw-semibold">how more </p>
           </div>
           <div className="my-2 border-bottom pb-2">
             <div className="text-dark-purple fs-5 fw-semibold mb-3">What this place offers</div>
@@ -283,31 +282,27 @@ export function RentDetailPage() {
           <div className="d-flex align-items-center">
             <Image src={GalleryImg1} width="80" height="80" className="rounded-circle" />
             <div className="ms-3">
-              <div className="fw-semibold fs-5 mb-2">Hosted by Bookiply</div>
+              <div className="fw-semibold fs-5 mb-2">Hosted by sei14zd...0qzk</div>
               <div className="text-gray">Joined in April 2018</div>
             </div>
           </div>
           <Col sm={12} md={6} className="my-2">
-            <div className="d-flex align-items-center">
-              <div className="text-dark-purple d-flex align-items-center me-5">
-                <Image src={Star} className="me-3" width="25" height="25" />
-                <div>1,429 Reviews</div>
-              </div>
+            <div className="d-flex align-items-center">              
               <div className="text-dark-purple d-flex align-items-center">
                 <Image src={Check} className="me-3" width="25" height="25" />
                 <span>Identify verified</span>
               </div>
             </div>
-            <div className="text-gray mt-3">DE<br />Mit Bookiply finden Sie ganz einfach Ihre perfekte Ferienunterkunft. Eine schöne Villa mit Meerblick auf Sardinien? Ein gemütliches Apartment am Gardasee oder ein Chalet in…<span className="ms-2 text-dark-purple"><u>read me</u></span></div>
+            <div className="text-gray mt-3">DE<br />Mit Bookiply finden Sie ganz einfach Ihre perfekte Ferienunterkunft. Eine schöne Villa mit Meerblick auf Sardinien? Ein gemütliches Apartment am Gardasee oder ein Chalet in…<span className="ms-2 text-dark-purple"><u>read more</u></span></div>
           </Col>
           <Col sm={12} md={6}>
             <div className="text-gray mb-2">Languages: Nederlands, English, Français, Deutsch, Ελληνικά, Italiano, Português, Español</div>
             <div className="text-gray mb-2">Response rate : 100%</div>
             <div className="text-gray mb-2">Response time : within an hour</div>
             {!connected ? (
-              <Button className="border-gray bg-white text-dark-purple" onClick={walletConnectModalShow}>Contact Host</Button>
+              <Button className="border-gray bg-white text-dark-purple" onClick={walletConnectModalShow}>Contact host</Button>
             ) : (
-              <Button className="border-gray bg-white text-dark-purple" onClick={() => { setHost(true); showMessageModal() }}>Contact Host</Button>
+              <Button className="border-gray bg-white text-dark-purple" onClick={() => { setHost(true); showMessageModal() }}>Contact host</Button>
             )}
 
           </Col>

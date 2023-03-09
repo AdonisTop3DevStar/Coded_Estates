@@ -5,7 +5,7 @@ import FilterIcon from '../../assets/images/icons/filter.svg';
 import { FaSearch, FaUndoAlt } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { sampleData } from "../../utils/sampledata";
-import EmptyImg from '../../assets/images/empty.png';
+import EmptyImg from '../../assets/images/icons/mint.png';
 
 
 function BuyPage() {
@@ -207,7 +207,6 @@ function BuyPage() {
           <Button className="round-btn d-flex p-2"  onClick={ResetFilter}><FaUndoAlt /></Button>
         </div>
       </div>
-      <small className="my-5 pt-2">Over {data.length} homes within map area</small>
       {data.length > 0 ? (
         <Row className="Search-result mt-2" style={{ minHeight: "81.5vh" }}>
           {
@@ -223,7 +222,7 @@ function BuyPage() {
 
           <div className="fs-5 fw-bold text-center">
             <Image src={EmptyImg} className="w-100 mb-2" />
-            <div>Don't have Result!</div>
+            <div>No NFTs available</div>
           </div>
         </Row>
       )}
