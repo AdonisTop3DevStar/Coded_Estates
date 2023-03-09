@@ -98,6 +98,7 @@ export const NormalCard = ({ title, network, price, images, bed, bath, size }) =
 export const FavoriteCard = ({ title, network, price, images, bed, bath, size }) => {
     const [loading, setLoading] = useState(true);
     const [header, setHeader, updateHeader] = store.useState('Header');
+    const [mode, setMode, updateMode] = store.useState('Mode');
     setTimeout(() => {
         setLoading(false)
     }, "3000");
@@ -118,14 +119,15 @@ export const FavoriteCard = ({ title, network, price, images, bed, bath, size })
                             {
                                 images.map((item, idx) => (
                                     <Carousel.Item>
-                                        <Link className="nav-link" to="/detail/buy/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="200" width="200" className="w-100 object-fit-cover border rounded" style={{ objectFit: "cover" }} /></Link>
+                                            <Link className="nav-link" to="/dashboard/buy/favorite/detail/1" onClick={() => setHeader('BUY')}><Image src={item} key={idx} height="200" width="200" className="w-100 object-fit-cover border rounded" style={{ objectFit: "cover" }} /></Link>
+                                       
                                     </Carousel.Item>
                                 ))
                             }
                         </Carousel>
                     )}
 
-                <Link className="nav-link" to="/detail/buy/1" onClick={() => setHeader('BUY')}>
+                <Link className="nav-link" to="/dashboard/buy/favorite/detail/1" onClick={() => setHeader('BUY')}>
                     {loading ?
                         (
                             <Skeleton
