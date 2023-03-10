@@ -25,7 +25,7 @@ function BidOfferPage() {
   return (
     <div className="TripsPage my-2">
       <div className="fs-4 fw-bold">Bids and Offers</div>
-      <div className="fs-6 opacity-50">Get an overview of your bids and offerd</div>
+      <div className="fs-6 opacity-50">Get an overview of your bids and offers</div>
       <Tabs
         defaultActiveKey="bids"
         id="uncontrolled-tab-example"
