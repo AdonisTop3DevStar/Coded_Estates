@@ -20,8 +20,8 @@ function TransactionPage() {
   }
   return (
     <div className="ActivityPage mt-2">
-      <div className="fs-4 fw-bold">Activity</div>
-      <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
+      <div className="fs-4 fw-bold">Transactions</div>
+      <div className="fs-6 opacity-50">Get an overview of your Coded Estate transactions</div>
 
       <div className="activity-datatable mt-5">
         <Table stripe>

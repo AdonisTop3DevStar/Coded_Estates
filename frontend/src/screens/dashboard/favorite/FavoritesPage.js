@@ -5,8 +5,8 @@ import { FavoriteData } from "../../../utils/data";
 function FavoritesPage() {
   return (
     <div className="FavoritesPage">
-      <div className="fs-4 fw-bold">My Favorites</div>
-      <div className="fs-6 opacity-50">Welcome to Coede Estate Property Admin</div>
+      <div className="fs-4 fw-bold">Favorites</div>
+      <div className="fs-6 opacity-50">Here are your favorite NFTs listed on Coded Estate</div>
       <FavouritInfoCard />
       <Row className="mt-5 FavoritesPage-body position-relative">
         {

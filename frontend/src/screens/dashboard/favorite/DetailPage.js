@@ -62,7 +62,7 @@ import {
         ) : (
             <Link to="/dashboard/rent/favorite" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
         )}
-        <div className="fs-4 fw-bold">Properties Detail</div>
+        <div className="fs-4 fw-bold">NFT details</div>
         <div className="fs-6 opacity-50 mb-3">
           Welcome to Coede Estate Property Admin
         </div>
@@ -204,7 +204,7 @@ import {
               ) : (
                 <div>
                     <Card.Body>
-                      <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
+                      <div className="fs-6 fw-semibold mb-2 d-flex align-items-center">Highest Bid : <span className="fw-bold fs-5 d-flex align-items-center"><Image src={SEI} width="20" className="mx-2"/>520 SEI</span></div>
                       <div className="fs-6 fw-semibold mb-2">Bid Price</div>
                       <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control type="number" placeholder="Enter your Bid Price" />

@@ -12,6 +12,7 @@ import { DetailData } from "../../../utils/data";
 import TrackIcon from '../../../assets/images/icons/track.svg';
 import HostMessageIcon from '../../../assets/images/icons/hostmessage.svg';
 import { store } from "../../../configs/Store";
+import SEIIcon from '../../../assets/images/crypto/sei.svg';
 
 
 function BidOfferPage() {
@@ -23,8 +24,8 @@ function BidOfferPage() {
   const handleShow = () => setShow(true);
   return (
     <div className="TripsPage my-2">
-      <div className="fs-4 fw-bold">My Bids</div>
-      <div className="fs-6 opacity-50">Bid you send to listed homes.</div>
+      <div className="fs-4 fw-bold">Bids and Offers</div>
+      <div className="fs-6 opacity-50">Get an overview of your bids and offerd</div>
       <Tabs
         defaultActiveKey="bids"
         id="uncontrolled-tab-example"
@@ -53,7 +54,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -67,7 +68,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -81,7 +82,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -95,7 +96,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -109,7 +110,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -126,7 +127,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -140,7 +141,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold">Tingstadvassen</div>
                       <div className="text-gray">Owned by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -171,7 +172,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Offer by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -185,7 +186,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Offer by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -199,7 +200,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Offer by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -213,7 +214,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Offer by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -227,7 +228,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Offer by sei14zd...0qzk</div>
-                      <div className="text-gray">Your Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>
@@ -244,7 +245,7 @@ function BidOfferPage() {
                     <div className="">
                       <div className="fs-6 fw-bold text-dark-purple">Tingstadvassen</div>
                       <div className="text-gray">Offer by sei14zd...0qzk</div>
-                      <div className="text-gray">Offer : 500000 SEI</div>
+                      <div className="text-gray d-flex align-items-center">Your Offer : <Image src={SEIIcon} width="15" className="ms-2 me-1"/>500000 SEI</div>
                     </div>
                   </Card.Body>
                 </NavLink>

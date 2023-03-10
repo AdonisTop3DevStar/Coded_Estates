@@ -33,6 +33,7 @@ import GalleryImg4 from '../../assets/images/building/5.webp';
 import GalleryImg5 from '../../assets/images/building/6.webp';
 import Star from '../../assets/images/icons/star.svg';
 import Check from '../../assets/images/icons/check.svg';
+import SEI from '../../assets/images/crypto/sei.svg';
 
 export function RentDetailPage() {
   const [minDate, setMinDate] = useState(new Date());
@@ -215,7 +216,7 @@ export function RentDetailPage() {
         <Col sm={12} md={4}>
           <Card className="shadow rentCard">
             <Card.Body>
-              <div className="fs-6 fw-semibold mb-3"><span className="me-1">$357</span><small className="text-gray">night</small></div>
+              <div className="fs-6 fw-semibold mb-3"><span className="me-1"><Image src={SEI} width="18" className="mx-1"/>357</span><small className="text-gray">night</small></div>
               <div className="border-gray rounded border p-2">
                 <div>
                   <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -261,7 +262,7 @@ export function RentDetailPage() {
               <div className="d-flex align-items-center justify-content-between my-2"><small className="text-gray">Cleaning fee</small><small className="text-gray">131 SEI</small></div>
               <div className="d-flex align-items-center justify-content-between my-2"><small className="text-gray">Service fee</small><small className="text-gray">0 SEI</small></div>
               <hr />
-              <div className="d-flex align-items-center justify-content-between my-2"><div className="fs-6 fw-bold">Total</div><div className="fs-6 fw-bold">9,781 SEI</div></div>
+              <div className="d-flex align-items-center justify-content-between my-2"><div className="fs-6 fw-bold">Total</div><div className="fs-6 fw-bold"><Image src={SEI} width="18" className="mx-1"/>9,781 SEI</div></div>
             </Card.Body>
           </Card>
         </Col>

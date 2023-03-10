@@ -2,6 +2,7 @@ import { Row, Col, Button, Card, Accordion, Image, ButtonGroup, InputGroup, Form
 import { FaExternalLinkAlt, FaPlusCircle, FaQuestionCircle } from "react-icons/fa";
 import RefreshIcon from '../../../assets/images/icons/refresh.svg';
 import Diamond from '../../../assets/images/icons/diamond.svg';
+import SEI from '../../../assets/images/crypto/sei.svg';
 
 function RewardsPage() {
   return (
@@ -50,7 +51,7 @@ function RewardsPage() {
                   </InputGroup>
                   <div className="d-flex align-items-center justify-content-between mt-3">
                     <div className="fs-5 fw-bold text-gray">CODED in wallet : </div>
-                    <div className="text-gray d-flex align-items-center">($ 0.00) <span className="fw-bold fs-5 mx-2 text-dark-purple">0</span><Image src={Diamond} /></div>
+                    <div className="text-gray d-flex align-items-center">(<Image src={SEI} width="18" className="mx-1"/> 0.00) <span className="fw-bold fs-5 mx-2 text-dark-purple">0</span><Image src={Diamond} /></div>
                   </div>
                 </Accordion.Body>
               </Accordion.Item>
@@ -88,7 +89,7 @@ function RewardsPage() {
                     <Image src={Diamond} className="me-3" />
                     <div className="">
                       <div className="fs-5 fw-bold">20000</div>
-                      <div className="text-gray">($102283) <FaQuestionCircle className="ms-2" /></div>
+                      <div className="text-gray d-flex align-items-center">(<Image src={SEI} width="18" className="mx-1"/>102283) <FaQuestionCircle className="ms-2" /></div>
                     </div>
                   </div>
                 </Col>

@@ -58,7 +58,7 @@ export default function PropertiesDetail() {
   return (
     <div className="PropertiesDetail">
       <Link to="/dashboard/buy/properties" className="nav-link text-purple fw-bold fs-6 my-2"><FaAngleLeft className="me-2" />Back</Link>
-      <div className="fs-4 fw-bold">Properties Detail</div>
+      <div className="fs-4 fw-bold">NFT details</div>
       <div className="fs-6 opacity-50 mb-3">
         Welcome to Coede Estate Property Admin
       </div>
@@ -279,7 +279,7 @@ export default function PropertiesDetail() {
                 )}
                 {type == "bid" && (
                   <Card.Body>
-                    <div className="fs-6 fw-semibold mb-3"><span className="me-1">$357</span><small className="text-gray">night</small></div>
+                    <div className="fs-6 fw-semibold mb-3"><span className="me-1"><Image src={SEI} width="18" className="me-1"/>357</span><small className="text-gray">night</small></div>
                     <div className="border-gray rounded border p-2">
                       <div>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -317,7 +317,7 @@ export default function PropertiesDetail() {
                     <div className="d-flex align-items-center justify-content-between my-2"><small className="text-gray">Cleaning fee</small><small className="text-gray">131 SEI</small></div>
                     <div className="d-flex align-items-center justify-content-between my-2"><small className="text-gray">Service fee</small><small className="text-gray">0 SEI</small></div>
                     <hr />
-                    <div className="d-flex align-items-center justify-content-between my-2"><div className="fs-6 fw-bold">Total</div><div className="fs-6 fw-bold">9,781 SEI</div></div>
+                    <div className="d-flex align-items-center justify-content-between my-2"><div className="fs-6 fw-bold">Total</div><div className="fs-6 fw-bold"><Image src={SEI} width="20" className="me-1"/>9,781 SEI</div></div>
 
                   </Card.Body>
                 )}
@@ -430,7 +430,7 @@ export default function PropertiesDetail() {
                 )}
                 {type == "bid" && (
                   <Card.Body>
-                    <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
+                    <div className="fs-6 fw-semibold mb-2 d-flex align-items-center">Highest Bid : <Image src={SEI} width="20" className="mx-1"/><span className="fw-bold fs-5">520 SEI</span></div>
                     <div className="fs-6 fw-semibold mb-2">Bid Price</div>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Control type="number" placeholder="Enter your Bid Price" />

@@ -4,6 +4,7 @@ import Map from '../../../assets/images/icons/map.svg';
 import User from '../../../assets/images/icons/user.svg';
 import Heart from '../../../assets/images/icons/heart-fill.svg';
 import DetailImage from '../../../assets/images/building/5.webp';
+import SEIIcon from  '../../../assets/images/crypto/sei.svg';
 import { useState } from "react";
 
 function RentMessagePage() {
@@ -39,7 +40,7 @@ function RentMessagePage() {
               <div className="fw-bold f-6 mb-2">sei14zd...0qzk</div>
               <div><small className="text-gray mb-2">Hotel medio</small></div>
               <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-              <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+              <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
 
             </div>
             <div className="my-2 bg-white-custom p-2 rounded">
@@ -49,7 +50,7 @@ function RentMessagePage() {
               <div className="fw-bold f-6 mb-2">sei14zd...0qzk</div>
               <div><small className="text-gray mb-2">Hotel medio</small></div>
               <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-              <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+              <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
             </div>
             <div className="my-2 bg-white-custom p-2 rounded">
               <div className="d-flex align-items-content justify-content-between mb-2">
@@ -58,7 +59,7 @@ function RentMessagePage() {
               <div className="fw-bold f-6 mb-2">sei14zd...0qzk</div>
               <div><small className="text-gray mb-2">Hotel medio</small></div>
               <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-              <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+              <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
             </div>
           </div>
         </Col>
@@ -99,7 +100,7 @@ function RentMessagePage() {
             <div className="fw-bold mb-1">sei14zd...0qzk asked about a trip</div>
             <div><small className="text-gray mb-2">Hotel medio</small></div>
             <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-            <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+            <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
           </div>
           {mode == "host" ? (
             <div className="border-top py-1">
@@ -133,7 +134,7 @@ function RentMessagePage() {
             </div>
             <div className="d-flex align-items-center justify-content-between">
               <span className="text-gray">Total (SEI)</span>
-              <span className="fw-bold">2000 SEI</span>
+              <span className="fw-bold d-flex align-items-center"><Image src={SEIIcon} width="20" className="mx-2"/>2000 SEI</span>
             </div>
           </div>
         </Col>

@@ -30,6 +30,7 @@ import GalleryImg4 from '../../assets/images/building/5.webp';
 import GalleryImg5 from '../../assets/images/building/6.webp';
 import Star from '../../assets/images/icons/star.svg';
 import Check from '../../assets/images/icons/check.svg';
+import SEI from '../../assets/images/crypto/sei.svg';
 
 
 
@@ -164,8 +165,8 @@ export function DetailPage() {
         <Col sm={12} md={4}>
           <Card className="shadow">
             <Card.Body>
-              <div className="fs-6 fw-semibold mb-2">Current Price : <span className="fw-bold fs-5">630 SEI</span></div>
-              <div className="fs-6 fw-semibold mb-2">Highest Bid : <span className="fw-bold fs-5">520 SEI</span></div>
+              <div className="fs-6 fw-semibold mb-2 d-flex align-items-center">Current Price : <Image src={SEI} width="18" className="mx-1"/><span className="fw-bold fs-5">630 SEI</span></div>
+              <div className="fs-6 fw-semibold mb-2 d-flex align-items-center">Highest Bid : <Image src={SEI} width="18" className="mx-1"/><span className="fw-bold fs-5">520 SEI</span></div>
               <div className="fs-6 fw-semibold mb-2">Bid Price</div>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Control type="number" placeholder="Enter your Bid Price" />

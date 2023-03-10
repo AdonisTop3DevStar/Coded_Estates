@@ -21,6 +21,7 @@ import VerifyMode from "../modal/VerifyMode";
 import { useState } from "react";
 import Logo from '../../assets/images/Logo.svg';
 import { store } from "../../configs/Store";
+import SEIIcon from '../../assets/images/crypto/sei.svg';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
@@ -66,7 +67,9 @@ export const NormalCard = ({ title, network, price, images, bed, bath, size }) =
                             />
                         ) : (
                             <Card.Title className="d-flex align-items-center justify-content-between my-1">
-                                <div className="card-price">{price} {network}</div>
+                                <div className="card-price d-flex align-items-center">
+                                    <Image src={SEIIcon} width="20" className="me-2"/>{price} {network}
+                                </div>
                                 <small className="card-reviews d-flex "><FaStar className="review-icon me-1" /><span>4.8</span></small>
                             </Card.Title>
                         )}
@@ -140,7 +143,9 @@ export const FavoriteCard = ({ title, network, price, images, bed, bath, size })
                             />
                         ) : (
                             <Card.Title className="d-flex align-items-center justify-content-between my-1">
-                                <div className="card-price">{price} {network}</div>
+                                <div className="card-price d-flex align-items-center">
+                                    <Image src={SEIIcon} width="20" className="me-2"/>{price} {network}
+                                </div>
                                 <small className="card-reviews d-flex "><FaStar className="review-icon me-1" /><span>4.8</span></small>
                             </Card.Title>
                         )}
@@ -206,7 +211,9 @@ export const NormalRentCard = ({ title, network, price, images, bed, bath, size 
                             />
                         ) : (
                             <Card.Title className="d-flex align-items-center justify-content-between my-1">
-                                <div className="card-price">{price} {network}</div>
+                                <div className="card-price d-flex align-items-center">
+                                    <Image src={SEIIcon} width="20" className="me-2"/>{price} {network}
+                                </div>
                                 <small className="card-reviews d-flex "><FaStar className="review-icon me-1" /><span>4.8</span></small>
                             </Card.Title>
                         )}
@@ -464,7 +471,9 @@ export const ListPropertyCard = ({ title, price, currency, images }) => {
                         <DetailCarousel images={images} />
                         <div className="d-flex align-items-center justify-content-between mb-2">
                             <div className="fw-bold">{title}</div>
-                            <div className="opacity-50">{price} {currency}</div>
+                            <div className="d-flex align-items-center">
+                                <Image src={SEIIcon} width="20" className="me-2"/><span className="opacity-50 ">{price}</span>
+                            </div>
                         </div>
                     </Link>
                     <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">List</Button>
@@ -484,7 +493,9 @@ export const MListPropertyCard = ({ title, price, currency, images }) => {
                         <DetailCarousel images={images} />
                         <div className="d-flex align-items-center justify-content-between mb-2">
                             <div className="fw-bold">{title}</div>
-                            <div className="opacity-50">{price} {currency}</div>
+                            <div className="d-flex align-items-center">
+                                <Image src={SEIIcon} width="20" className="me-2"/><span className="opacity-50 ">{price}</span>
+                            </div>
                         </div>
                     </Link>
                     <Button className="w-100 fw-bold text-dark-purple bg-white border-dark-purple">Unlist</Button>
@@ -561,7 +572,9 @@ export const BidPropertyCard = ({ title, bPrice, price, currency, images }) => {
                             <Button className="fw-bold text-dark-purple bg-white border-dark-purple">{bPrice} {currency}</Button>
                             <div className="text-end">
                                 <div className="opacity-50">Offer</div>
-                                <div>{price}<span className="ms-2 opacity-50 fw-semibold">{currency}</span></div>
+                                <div className="d-flex align-items-center">
+                                    <Image src={SEIIcon} width="20" className="me-2"/><span className="opacity-50 ">{price}</span><span className="ms-2 opacity-50 fw-semibold">{currency}</span>
+                                </div>
                             </div>
                         </div>
                     </NavLink>

@@ -5,6 +5,7 @@ import User from '../../../assets/images/icons/user.svg';
 import Heart from '../../../assets/images/icons/heart-fill.svg';
 import DetailImage from '../../../assets/images/building/5.webp';
 import { useState } from "react";
+import SEIIcon from  '../../../assets/images/crypto/sei.svg';
 
 function MessagePage() {
   const [mode, setMode] = useState('offer');
@@ -41,7 +42,7 @@ function MessagePage() {
               <div className="fw-bold f-6 mb-2">sei14zd...0qzk</div>
               <div><small className="text-gray mb-2">Hotel medio</small></div>
               <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-              <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+              <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
 
             </div>
             <div className="my-2 bg-white-custom p-2 rounded">
@@ -52,7 +53,7 @@ function MessagePage() {
               <div className="fw-bold f-6 mb-2">sei14zd...0qzk</div>
               <div><small className="text-gray mb-2">Hotel medio</small></div>
               <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-              <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+              <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
 
             </div>
             <div className="my-2 bg-white-custom p-2 rounded">
@@ -63,7 +64,7 @@ function MessagePage() {
               <div className="fw-bold f-6 mb-2">sei14zd...0qzk</div>
               <div><small className="text-gray mb-2">Hotel medio</small></div>
               <div><small className="text-gray mb-2">Feb 4 - Feb 6 (2 nights)</small></div>
-              <div><small className="text-gray mb-2">2 guests - 2,000.00 SEI</small></div>
+              <div><small className="text-gray mb-2 d-flex align-items-center">2 guests - <Image src={SEIIcon} width="15" className="mx-2"/>2,000.00 SEI</small></div>
 
             </div>
           </div>
@@ -107,7 +108,7 @@ function MessagePage() {
                 <div className="fw-bold mb-1">sei14zd...0qzk ent a offer</div>
                 <div><small className="text-gray mb-2">162 Green Painte Drive</small></div>
                 <div><small className="text-gray mb-2">Feb 4th, 2023</small></div>
-                <div><small className="text-gray mb-2">200,000 SEI</small></div>
+                <div><small className="text-gray mb-2 d-flex align-items-center"><Image src={SEIIcon} width="20" className="me-2"/> 200,000 SEI</small></div>
               </div>
               <Row className="border-top py-1">
                 <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Modify</Button></Col>
@@ -118,7 +119,7 @@ function MessagePage() {
                 <div className="fs-6 fw-bold mb-1">Offer User</div>
                 <div className="text-gray pb-2 border-bottom"><small>sei14zd...0qzk</small></div>
                 <div className="fs-6 fw-bold mb-1">Offer Amount</div>
-                <div className="text-gray pb-2 border-bottom"><small>200,000 SEI</small></div>
+                <div className="text-gray pb-2 border-bottom"><small className="d-flex align-items-center"><Image src={SEIIcon} width="18" className="me-2"/>200,000 SEI</small></div>
                 <div className="fs-6 fw-bold mb-1">Offer Expires</div>
                 <div className="text-gray"><small>Feb 11th, 2023</small></div>
               </div>
@@ -134,7 +135,7 @@ function MessagePage() {
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
                   <span className="text-gray">Total (SEI)</span>
-                  <span className="fw-bold">198,000 SEI</span>
+                  <span className="fw-bold d-flex align-items-center"><Image src={SEIIcon} width="20" className="me-2"/>198,000 SEI</span>
                 </div>
               </div>
             </Col>
@@ -147,7 +148,7 @@ function MessagePage() {
                 <div className="fw-bold mb-1">You sent an offer to sei14zd...0qzk</div>
                 <div><small className="text-gray mb-2">162 Green Pointe Drive</small></div>
                 <div><small className="text-gray mb-2">Feb 4th, 2023</small></div>
-                <div><small className="text-gray mb-2">500,000 SEI</small></div>
+                <div><small className="text-gray mb-2 d-flex align-items-center"><Image src={SEIIcon} width="20" className="me-2"/>500,000 SEI</small></div>
               </div>
               <Row className="border-top py-2">
                 <Col><Button className="border-gray bg-white text-dark-purple fw-bold mb-2 w-100">Approve</Button></Col>
@@ -158,7 +159,7 @@ function MessagePage() {
                 <div className="fs-6 fw-bold mb-1">Bid User</div>
                 <div className="text-gray pb-2 border-bottom"><small>sei14zd...0qzk</small></div>
                 <div className="fs-6 fw-bold mb-1">Bid Amount</div>
-                <div className="text-gray pb-2 border-bottom"><small>500,000 SEI</small></div>
+                <div className="text-gray pb-2 border-bottom"><small className="d-flex align-items-center"><Image src={SEIIcon} width="18" className="me-2"/>500,000 SEI</small></div>
                 <div className="fs-6 fw-bold mb-1">Bid Expires</div>
                 <div className="text-gray pb-2 border-bottom"><small>Feb 11th, 2023</small></div>
               </div>
