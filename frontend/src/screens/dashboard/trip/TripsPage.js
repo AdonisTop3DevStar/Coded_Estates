@@ -24,130 +24,10 @@ function TripsPage() {
       <div className="fs-4 fw-bold">Trips</div>
       <div className="fs-6 opacity-50">Your Coded Estate Trips</div>
       <Tabs
-        defaultActiveKey="host"
+        defaultActiveKey="travel"
         id="uncontrolled-tab-example"
         className="my-3"
-      >
-        <Tab eventKey="host" title="Host">
-          <Card className="border-dark-purple">
-            <Row>
-              <Col sm={12} md={4} className="px-4">
-                <div className="fs-5 fw-bold mt-5 mb-2">No One Has Booked... Yet!</div>
-                <div className="text-gray">List your real estate NFTs on the decentralized web today</div>
-                <NavLink to="/dashboard/rent/properties" onClick={()=>setTabKey(3)} className="nav-link"><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button></NavLink>
-              </Col>
-              <Col sm={12} md={8}>
-                {/* <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/> */}
-              </Col>
-            </Row>
-          </Card>
-          <div className="fs-4 fw-bold my-2">Previous Bookings</div>
-          <Row>
-            <Col sm={12} md={4} className="my-2">
-              <Card className='border-dark-purple'>
-                <Card.Body className="d-flex align-items-center">
-                  <Link to="detail/1">
-                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
-                  </Link>
-                  <div className="">
-                    <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
-                    <div className="text-gray">Jun 2-5, 2022</div>
-                    <div className="d-flex align-items-center text-orange">
-                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={12} md={4} className="my-2">
-              <Card className='border-dark-purple'>
-                <Card.Body className="d-flex align-items-center">
-                  <Link to="detail/1">
-                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
-                  </Link>
-                  <div className="">
-                    <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
-                    <div className="text-gray">Jun 2-5, 2022</div>
-                    <div className="d-flex align-items-center text-orange">
-                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={12} md={4} className="my-2">
-              <Card className='border-dark-purple'>
-                <Card.Body className="d-flex align-items-center">
-                  <Link to="detail/1">
-                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
-                  </Link>
-                  <div className="">
-                    <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
-                    <div className="text-gray">Jun 2-5, 2022</div>
-                    <div className="d-flex align-items-center text-orange">
-                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={12} md={4} className="my-2">
-              <Card className='border-dark-purple'>
-                <Card.Body className="d-flex align-items-center">
-                  <Link to="detail/1">
-                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
-                  </Link>
-                  <div className="">
-                    <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
-                    <div className="text-gray">Jun 2-5, 2022</div>
-                    <div className="d-flex align-items-center text-orange">
-                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col sm={12} md={4} className="my-2">
-              <Card className='border-dark-purple'>
-                <Card.Body className="d-flex align-items-center">
-                  <Link to="detail/1">
-                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
-                  </Link>
-                  <div className="">
-                    <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
-                    <div className="text-gray">Jun 2-5, 2022</div>
-                    <div className="d-flex align-items-center text-orange">
-                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <div className="fs-4 fw-bold my-2">Cancelled bookings</div>
-          <Row>
-            <Col sm={12} md={4} className="my-2">
-              <Card className='border-dark-purple' onClick={handleShow}>
-                <Card.Body className="d-flex align-items-center">
-                  <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
-                  <div className="">
-                    <div className="fs-6 fw-bold">Tingstadvassen</div>
-                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
-                    <div className="text-gray">Jun 2-5, 2022</div>
-                    <div className="d-flex align-items-center text-orange">
-                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
-                    </div>
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Tab>
+      >        
         <Tab eventKey="travel" title="Traveller">
           <Row className="py-2">
             <Col sm={12} md={8}>
@@ -433,6 +313,126 @@ function TripsPage() {
               </Card>
             </Col>
           </Row> */}
+        </Tab>
+        <Tab eventKey="host" title="Host">
+          <Card className="border-dark-purple">
+            <Row>
+              <Col sm={12} md={4} className="px-4">
+                <div className="fs-5 fw-bold mt-5 mb-2">No One Has Booked... Yet!</div>
+                <div className="text-gray">List your real estate NFTs on the decentralized web today</div>
+                <NavLink to="/dashboard/rent/properties" onClick={()=>setTabKey(3)} className="nav-link"><Button className="bg-dark-purple text-white fw-semibold px-4 border-0 mt-4 mb-3">List your NFTs</Button></NavLink>
+              </Col>
+              <Col sm={12} md={8}>
+                {/* <Image src={Banner1} width="100%" height="250" style={{objectFit:'cover'}}/> */}
+              </Col>
+            </Row>
+          </Card>
+          <div className="fs-4 fw-bold my-2">Previous Bookings</div>
+          <Row>
+            <Col sm={12} md={4} className="my-2">
+              <Card className='border-dark-purple'>
+                <Card.Body className="d-flex align-items-center">
+                  <Link to="detail/1">
+                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
+                  </Link>
+                  <div className="">
+                    <div className="fs-6 fw-bold">Tingstadvassen</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
+                    <div className="text-gray">Jun 2-5, 2022</div>
+                    <div className="d-flex align-items-center text-orange">
+                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col sm={12} md={4} className="my-2">
+              <Card className='border-dark-purple'>
+                <Card.Body className="d-flex align-items-center">
+                  <Link to="detail/1">
+                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
+                  </Link>
+                  <div className="">
+                    <div className="fs-6 fw-bold">Tingstadvassen</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
+                    <div className="text-gray">Jun 2-5, 2022</div>
+                    <div className="d-flex align-items-center text-orange">
+                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col sm={12} md={4} className="my-2">
+              <Card className='border-dark-purple'>
+                <Card.Body className="d-flex align-items-center">
+                  <Link to="detail/1">
+                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
+                  </Link>
+                  <div className="">
+                    <div className="fs-6 fw-bold">Tingstadvassen</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
+                    <div className="text-gray">Jun 2-5, 2022</div>
+                    <div className="d-flex align-items-center text-orange">
+                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col sm={12} md={4} className="my-2">
+              <Card className='border-dark-purple'>
+                <Card.Body className="d-flex align-items-center">
+                  <Link to="detail/1">
+                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
+                  </Link>
+                  <div className="">
+                    <div className="fs-6 fw-bold">Tingstadvassen</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
+                    <div className="text-gray">Jun 2-5, 2022</div>
+                    <div className="d-flex align-items-center text-orange">
+                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col sm={12} md={4} className="my-2">
+              <Card className='border-dark-purple'>
+                <Card.Body className="d-flex align-items-center">
+                  <Link to="detail/1">
+                    <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
+                  </Link>
+                  <div className="">
+                    <div className="fs-6 fw-bold">Tingstadvassen</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
+                    <div className="text-gray">Jun 2-5, 2022</div>
+                    <div className="d-flex align-items-center text-orange">
+                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <div className="fs-4 fw-bold my-2">Cancelled bookings</div>
+          <Row>
+            <Col sm={12} md={4} className="my-2">
+              <Card className='border-dark-purple' onClick={handleShow}>
+                <Card.Body className="d-flex align-items-center">
+                  <Image src={Banner1} width="80" height="80" style={{ objectFit: 'cover' }} className="rounded-2 me-3 border-dark-purple border border-1" />
+                  <div className="">
+                    <div className="fs-6 fw-bold">Tingstadvassen</div>
+                    <div className="text-gray">Hosted by sei14zd...0qzk</div>
+                    <div className="text-gray">Jun 2-5, 2022</div>
+                    <div className="d-flex align-items-center text-orange">
+                      <FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaStar className="me-1" /><FaRegStar />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Tab>
       </Tabs>
       <Modal show={show} onHide={handleClose}>

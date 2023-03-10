@@ -37,6 +37,7 @@ import SEI from '../../assets/images/crypto/sei.svg';
 
 export function RentDetailPage() {
   const [minDate, setMinDate] = useState(new Date());
+  const [mode, setMode, updateMode] = store.useState('Mode');
   const [show, setShow] = useState(false);
   const [messageModal, setMessageModal] = useState(false);
   const [visible, setVisible] = useState(false);

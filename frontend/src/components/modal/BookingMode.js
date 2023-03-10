@@ -141,6 +141,7 @@ export const BuyBookMode = () => {
 }
 
 export const RentBookMode = () => {
+    const [mode, setMode, updateMode] = store.useState('Mode');
     return (
         <div className="RentBookMode mb-4">
             <Row>
@@ -191,7 +192,7 @@ export const RentBookMode = () => {
                     <div className='fs-5 fw-semibold my-2'>Cancellation policy</div>
                     <small className="text-gray">This reservation is non-refundable. <strong><u>Learn more</u></strong></small>
                     <hr />
-                    <Link to="/dashboard/rent/trips/active"><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2">Request to book</Button></Link>
+                    <Link to="/dashboard/rent/trips"><Button className="bg-dark-purple border-dark-purple text-white fw-bold w-100 py-2" onClick={()=>setMode("RENT")}>Request to book</Button></Link>
                 </Col>
                 <Col sm={12} md={6}>
                     <Card>
