@@ -70,7 +70,7 @@ export const NormalCard = ({ title, network, price, images, bed, bath, size }) =
                                 <div className="card-price d-flex align-items-center">
                                     <Image src={SEIIcon} width="20" className="me-2"/>{price} {network}
                                 </div>
-                                <small className="card-reviews d-flex "><FaStar className="review-icon me-1" /><span>4.8</span></small>
+                                {/* <small className="card-reviews d-flex "><FaStar className="review-icon me-1" /><span>4.8</span></small> */}
                             </Card.Title>
                         )}
                     {loading ?
@@ -434,7 +434,7 @@ export const FavouritInfoCard = () => {
                         </div>
                         <div className="ms-3">
                             <div className="opacity-50">Highest Price</div>
-                            <div className="fs-6 fw-bold">1249 USD</div>
+                            <div className="fs-6 fw-bold">1249 SEI</div>
                         </div>
                     </Col>
                     <Col sm={12} md={2} className="d-flex align-items-center ">
@@ -443,7 +443,7 @@ export const FavouritInfoCard = () => {
                         </div>
                         <div className="ms-3">
                             <div className="opacity-50">Lowest Price</div>
-                            <div className="fs-6 fw-bold">300 USD</div>
+                            <div className="fs-6 fw-bold">300 SEI</div>
                         </div>
                     </Col>
                     <Col sm={12} md={2} className="d-flex align-items-center ">
@@ -452,7 +452,7 @@ export const FavouritInfoCard = () => {
                         </div>
                         <div className="ms-3">
                             <div className="opacity-50">My Bid</div>
-                            <div className="fs-6 fw-bold">748 USD</div>
+                            <div className="fs-6 fw-bold">748 SEI</div>
                         </div>
                     </Col>
                 </Card.Body>
