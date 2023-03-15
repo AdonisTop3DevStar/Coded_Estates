@@ -19,7 +19,7 @@ function HoldingPage() {
           </div>
           <div className="">
             <div className="text-success"><small>+0.80%</small></div>
-            <div className="">$524.24</div>
+            <div className="">SEI 524.24</div>
           </div>
         </Card.Body>
       </Card>

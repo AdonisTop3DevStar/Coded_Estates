@@ -159,7 +159,7 @@ import {
               {mode != "BUY" ? (
                 <div>
                     <Card.Body>
-                      <div className="fs-6 fw-semibold mb-3"><span className="me-1">$357</span><small className="text-gray">night</small></div>
+                      <div className="fs-6 fw-semibold mb-3"><span className="me-1">SEI 357</span><small className="text-gray">night</small></div>
                       <div className="border-gray rounded border p-2">
                         <div>
                           <Form.Group className="mb-3" controlId="formBasicEmail">

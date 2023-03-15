@@ -64,16 +64,16 @@ export const BuyBookMode = () => {
                             <div className="fw-bold my-2">Send Message</div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
                                 <div>Price</div>
-                                <div>$9650</div>
+                                <div>SEI 9650</div>
                             </div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
                                 <div>Service fee</div>
-                                <div>$ 0</div>
+                                <div>SEI  0</div>
                             </div>
                             <hr />
                             <div className='d-flex aling-items-center justify-content-between fs-5 fw-bold'>
                                 <div>Total Amount</div>
-                                <div>$ 9650</div>
+                                <div>SEI  9650</div>
                             </div>
                         </Card.Body>
                     </Card>
@@ -210,21 +210,21 @@ export const RentBookMode = () => {
                             <hr />
                             <div className="fw-bold my-2">Send Message</div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
-                                <div>$357 X 27 nights</div>
-                                <div>$9650</div>
+                                <div>SEI 357 X 27 nights</div>
+                                <div>SEI 9650</div>
                             </div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
                                 <div>Cleaning fee</div>
-                                <div>$ 131</div>
+                                <div>SEI  131</div>
                             </div>
                             <div className='text-gray d-flex align-items-center justify-content-between my-3'>
                                 <div>Service fee</div>
-                                <div>$ 0</div>
+                                <div>SEI  0</div>
                             </div>
                             <hr />
                             <div className='d-flex aling-items-center justify-content-between fs-5 fw-bold'>
                                 <div>Total Amount</div>
-                                <div>$ 9781</div>
+                                <div>SEI  9781</div>
                             </div>
                         </Card.Body>
                     </Card>

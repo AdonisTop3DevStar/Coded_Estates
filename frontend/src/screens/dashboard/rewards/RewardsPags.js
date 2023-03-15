@@ -61,7 +61,7 @@ function RewardsPage() {
                   <div className="my-3 text-gray">When you stake in the CODED Compounder, the WETH you earn from staking are compouned into CODED multiple times a day. <br /><br />CODED rewards are automatically compuned and added to your staked amount.<br />No need to collect!</div>
                   <div className="d-flex align-items-center justify-content-between mt-3">
                     <div className="fs-5 fw-bold text-gray">CODED in wallet : </div>
-                    <div className="text-gray d-flex align-items-center">($ 0.00) <span className="fw-bold fs-5 mx-2 text-dark-purple">0</span><Image src={Diamond} /></div>
+                    <div className="text-gray d-flex align-items-center">(SEI 0.00) <span className="fw-bold fs-5 mx-2 text-dark-purple">0</span><Image src={Diamond} /></div>
                   </div>
                 </Accordion.Body>
               </Accordion.Item>

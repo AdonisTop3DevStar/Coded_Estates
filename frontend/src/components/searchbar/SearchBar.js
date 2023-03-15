@@ -190,10 +190,10 @@ export const BuySearchBar = () => {
         </div>|
         <div className="">
           <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end">
-            <option value="1">$10K ~ $20K</option>
-            <option value="1">$30K ~ $50K</option>
-            <option value="1">$60K ~ $100K</option>
-            <option value="1">$120K ~ $1000K</option>
+            <option value="1">SEI 10K ~ SEI 20K</option>
+            <option value="1">SEI 30K ~ SEI 50K</option>
+            <option value="1">SEI 60K ~ SEI 100K</option>
+            <option value="1">SEI 120K ~ SEI 1000K</option>
           </Form.Select>
         </div>|
         <div className="">

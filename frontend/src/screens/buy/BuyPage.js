@@ -192,10 +192,10 @@ function BuyPage() {
           <div className="">
             <Form.Select aria-label="Default select example" className="border-0 fw-bold text-end" value={price} onChange={(e) => setPrice(e.target.value)}>
               <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="0">Select price</option>
-              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p1">$10K ~ $20K</option>
-              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p2">$30K ~ $50K</option>
-              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p3">$60K ~ $100K</option>
-              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p4">$120K ~ $1000K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p1">SEI 10K ~ SEI 20K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p2">SEI 30K ~ SEI 50K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p3">SEI 60K ~ SEI 100K</option>
+              <option className="py-1 px-3 fw-bold border-end cursor-pointer " value="p4">SEI 120K ~ SEI 1000K</option>
             </Form.Select>
           </div>|
           <div className="">
